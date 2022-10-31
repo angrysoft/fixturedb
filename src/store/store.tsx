@@ -3,7 +3,7 @@ import { createContext, useReducer } from "react";
 import rootReducer, { RootState } from "../reducers/rootReducer";
 
 const initialState: RootState = {
-  users: {
+  user: {
     user: {},
     isLoading: false,
   },
