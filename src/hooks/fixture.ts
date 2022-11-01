@@ -7,20 +7,30 @@ import {
   collection,
   query,
   orderBy,
-  getDocs
+  getDocs,
+  limit,
+  startAt
 } from "firebase/firestore";
-
+const collectionId = "fixture"
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 connectFirestoreEmulator(db, 'localhost', 8080);
 
 const useFixtureList = () => {
-
-  const getList = async (offset: number, collectionId: string) => {
-    const colRef = collection(db, collectionId);
-    const q = query(colRef, orderBy('name', 'desc'));
+  
+  const getList = (itemsLimit: number = 25, offset?: number) => {
+    let q;
+    if (offset) {
+      q = query(
+        collection(db, collectionId),
+        orderBy('name', 'desc'),
+        startAt(offset),
+        limit(itemsLimit),
+      );
+    } else {
+      q = query(collection(db, collectionId), orderBy('name', 'desc'), limit(itemsLimit));
+    }
     return getDocs(q);
-    
   }
 
   return { getList };

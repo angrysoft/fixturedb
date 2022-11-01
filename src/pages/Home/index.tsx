@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useFixtureList } from '../../hooks/useFixtureRepository';
+import { useFixtureList } from '../../hooks/fixture';
 
 
 interface IHomeProps {
@@ -13,7 +13,11 @@ const Home:React.FC<IHomeProps> = (props:IHomeProps) => {
   // const {items, setItems} = useState([]);
 
   useEffect(() => {
-    getList().then((el)=> {})
+    getList().then((snapshot)=> {
+      // console.log(snapshot.docs[0].data());
+      console.log(snapshot.docs[snapshot.docs.length-1]);
+      snapshot.forEach((item) => console.log(item.data()));
+    });
 
   },[]);
 
