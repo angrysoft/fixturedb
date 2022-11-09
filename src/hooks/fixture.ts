@@ -9,8 +9,12 @@ import {
   orderBy,
   getDocs,
   limit,
-  startAt
+  startAt,
+  where,
+  Query
 } from "firebase/firestore";
+
+
 const collectionId = "fixture"
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
@@ -18,17 +22,25 @@ connectFirestoreEmulator(db, 'localhost', 8080);
 
 const useFixtureList = () => {
   
-  const getList = (itemsLimit: number = 25, offset?: number) => {
-    let q;
+  const getList = (queryString: string, itemsLimit: number = 25, offset?: number) => {
+    
+    let q: Query;
     if (offset) {
       q = query(
         collection(db, collectionId),
+        where("name", ">=", queryString),
         orderBy('name', 'desc'),
         startAt(offset),
         limit(itemsLimit),
       );
     } else {
-      q = query(collection(db, collectionId), orderBy('name', 'desc'), limit(itemsLimit));
+      q = query(
+        collection(db, collectionId),
+        where("name", ">=", queryString.toLowerCase()),
+        where("name", "<=", queryString.toLowerCase() + '\uf8ff'),
+        orderBy('name', 'desc'),
+        limit(itemsLimit),
+      );
     }
     return getDocs(q);
   }

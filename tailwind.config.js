@@ -41,8 +41,14 @@ module.exports = {
           'print': { 'raw': 'print' },
         },
         colors: {
-          primary: "#fff",
-          secondary: "rgb(34,165,78)",
+            background: "#121212",
+            surface: "#1e1e1e",
+            primary: "#bb87fa",
+            secondary: "#1cd9c5",
+            onBackground: "#d8d8d8",
+            onSurface:"#e1e1e1",
+            onPrimary: "#00000000",
+            onSecondary: "#0000",
         },
   
         minHeight: {
