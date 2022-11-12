@@ -13,11 +13,6 @@ const SearchForm: React.FC<ISearchFormProps> = (props: ISearchFormProps) => {
   const makeQuery = (ev: SyntheticEvent, values: IFormValues) => {
     ev.preventDefault();
     console.log("query", values);
-    getList(values.query).then((snapshot) => {
-      // console.log(snapshot.docs[0].data());
-      // console.log(snapshot.docs[snapshot.docs.length - 1]);
-      snapshot.forEach((item) => console.log(item.data()));
-    });
   };
   return (
     <Form handleSubmit={makeQuery}>
