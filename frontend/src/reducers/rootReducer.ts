@@ -1,9 +1,11 @@
 import { Action } from "./";
+import { fixtureReducer, fixtureState } from "./fixtureReducer";
 import { userReducer, userState } from "./userReducer";
 
 
 export type RootState = {
   user: userState,
+  fixture: fixtureState,
 }
 
 export type State = userState;
@@ -13,6 +15,7 @@ const combineReducers = () => {
     return {
       ...state,
       user: userReducer(state["user"], action),
+      fixture: fixtureReducer(state["fixture"], action),
     };
   };
 };

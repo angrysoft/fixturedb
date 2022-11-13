@@ -120,7 +120,11 @@ func InitData() {
 	})
 
 	DBConn.Create(&Connector{
-		Name: "RJ45",
+		Name: "RJ45IN",
+	})
+
+	DBConn.Create(&Connector{
+		Name: "RJ45OUT",
 	})
 
 	var martin Manufacture
@@ -134,8 +138,19 @@ func InitData() {
 	var truecon PowerPlug
 	DBConn.Model(&PowerPlug{}).Where("type = ?", "PowerCon TRUE1").Take(&truecon)
 
+	var dmx3pin Connector
+	DBConn.Model(&Connector{}).Where("name = ?", "DMX 3Pin").Take(&dmx3pin)
 
-	DBConn.Create(&FixtureModel{
+	var dmx5pin Connector
+	DBConn.Model(&Connector{}).Where("name = ?", "DMX 5Pin").Take(&dmx5pin)
+
+	var rj45in Connector
+	DBConn.Model(&Connector{}).Where("name = ?", "RJ45IN").Take(&rj45in)
+
+	var rj45out Connector
+	DBConn.Model(&Connector{}).Where("name = ?", "RJ45OUT").Take(&rj45out)
+
+	aura := FixtureModel{
 		Name:         "Mac Aura",
 		Manufacture:  martin,
 		FixtureType:  light,
@@ -143,7 +158,11 @@ func InitData() {
 		Power:        230,
 		PowerPassage: true,
 		PowerPlug: powercon,
-		Connector: ,
+	}
+
+	DBConn.Omit("Connector").Create(&aura)
+	DBConn.Model(&aura).Association("Connector").Append([]Connector{
+		dmx5pin,
 	})
 
 	DBConn.Create(&FixtureModel{
@@ -158,22 +177,40 @@ func InitData() {
 	var robe Manufacture
 	DBConn.Model(&Manufacture{}).Where("name = ?", "Robe").Take(&robe)
 
-	DBConn.Create(&FixtureModel{
+	pointe := FixtureModel{
 		Name:        "Pointe",
 		Manufacture: robe,
 		FixtureType: light,
 		Weight:      15,
 		Power:       470,
 		PowerPlug: powercon,
-	})
+		Connector: []Connector{
+			dmx3pin,
+			dmx5pin,
+			rj45in,
+		},
+	}
 
-	DBConn.Create(&FixtureModel{
+	DBConn.Create(&pointe)
+	DBConn.Save(&pointe)
+
+
+	esprint := FixtureModel{
 		Name:        "Esprite",
 		Manufacture: robe,
 		FixtureType: light,
 		Weight:      28.2,
 		Power:       950,
 		PowerPlug: truecon,
-	})
+		Connector: []Connector{
+			dmx3pin,
+			dmx5pin,
+			rj45in,
+			rj45out,
+		},
+	}
+
+	DBConn.Create(&esprint)
+	DBConn.Save(&esprint)
 
 }

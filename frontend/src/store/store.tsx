@@ -7,6 +7,10 @@ const initialState: RootState = {
     user: {},
     isLoading: false,
   },
+  fixture: {
+    list: [],
+    isLoading: false,
+  }
 };
 
 interface IProviderProps {

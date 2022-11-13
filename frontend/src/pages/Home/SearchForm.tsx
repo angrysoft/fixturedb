@@ -1,19 +1,28 @@
-import React, { SyntheticEvent } from "react";
+import React, { SyntheticEvent, useContext, useEffect } from "react";
 import { Form, IFormValues } from "../../components/Form";
 import Input from "../../components/Input";
-import { useFixtureList } from "../../hooks/fixture";
+import { useApi } from "../../hooks/useApi";
+import { AppContext } from "../../store/store";
 
 interface ISearchFormProps {
   children?: JSX.Element | JSX.Element[];
 }
 
 const SearchForm: React.FC<ISearchFormProps> = (props: ISearchFormProps) => {
-  const { getList } = useFixtureList();
+  const { call, loading, error, results} = useApi();
+  const { dispatch } = useContext(AppContext);
+
+  useEffect(() => {
+    if (! error && !loading && results) {
+      dispatch({type: "FIXTURE_LIST_LOADED", payload: results})
+    }
+  }, [results, error, loading, dispatch]);
 
   const makeQuery = (ev: SyntheticEvent, values: IFormValues) => {
     ev.preventDefault();
-    console.log("query", values);
+    call(`/api/v1/search/${values.query}`, {method: "GET"})
   };
+
   return (
     <Form handleSubmit={makeQuery}>
       <Input id="query" type="text" label="Szukaj" />
