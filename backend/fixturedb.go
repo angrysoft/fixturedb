@@ -7,6 +7,5 @@ import (
 
 func main() {
 	db.SetupDatabase()
-	db.InitData()
 	entrypoint.SetupEndpoints()
 }
