@@ -8,7 +8,8 @@ const initialState: RootState = {
     isLoading: false,
   },
   fixture: {
-    list: [],
+    light: [],
+    led: [],
     isLoading: false,
   }
 };

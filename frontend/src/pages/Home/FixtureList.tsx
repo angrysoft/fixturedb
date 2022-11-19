@@ -11,11 +11,15 @@ const FixtureList:React.FC<IFixtureListProps> = (props:IFixtureListProps) => {
   const [fixList, setFixList] = useState<JSX.Element[]>([]);
 
   useEffect(() => {
-    const items = state.fixture.list.map((fix) => {
-        return <Fixture data={fix} key={fix.ID}/>
-      });
+    const items = state.fixture.light.map((fix) => {
+      return <Fixture data={fix} key={`light-${fix.ID}`}/>
+    });
+    items.push(...state.fixture.led.map((fix) => {
+      return <Fixture data={fix} key={`led-${fix.ID}`}/>
+    }));
+    console.log('items', items);
     setFixList(items);
-  }, [state.fixture.list]);
+  }, [state.fixture.light, state.fixture.led]);
 
   return (
     <div className='grid gap-1 h-full overflow-y-auto p-1'>

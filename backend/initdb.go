@@ -14,13 +14,11 @@ func InitData() {
 		Name: "Martin",
 	})
 	db.DBConn.Create(&db.Manufacture{
+		Name: "Dicolor",
+	})
+
+	db.DBConn.Create(&db.Manufacture{
 		Name: "Robe",
-	})
-	db.DBConn.Create(&db.FixtureType{
-		Name: "Light",
-	})
-	db.DBConn.Create(&db.FixtureType{
-		Name: "LedScreen",
 	})
 
 	db.DBConn.Create(&db.PowerPlug{
@@ -57,8 +55,9 @@ func InitData() {
 
 	var martin db.Manufacture
 	db.DBConn.Model(&db.Manufacture{}).Where("name = ?", "Martin").Take(&martin)
-	var light db.FixtureType
-	db.DBConn.Model(&db.FixtureType{}).Where("name = ?", "Light").Take(&light)
+	
+	var dicolor db.Manufacture
+	db.DBConn.Model(&db.Manufacture{}).Where("name = ?", "Dicolor").Take(&dicolor)
 
 	var powercon db.PowerPlug
 	db.DBConn.Model(&db.PowerPlug{}).Where("type = ?", "PowerCon").Take(&powercon)
@@ -81,22 +80,21 @@ func InitData() {
 	aura := db.FixtureTypeLight{
 		Name:         "Mac Aura",
 		Manufacture:  martin,
-		FixtureType:  light,
 		Weight:       6.0,
 		Power:        230,
 		PowerPassage: true,
 		PowerPlug: powercon,
+		Connector: []db.Connector{
+			dmx5pin,
+		},
 	}
 
-	db.DBConn.Omit("db.Connector").Create(&aura)
-	db.DBConn.Model(&aura).Association("db.Connector").Append([]db.Connector{
-		dmx5pin,
-	})
+	db.DBConn.Create(&aura)
+	db.DBConn.Save(&aura)
 
 	db.DBConn.Create(&db.FixtureTypeLight{
 		Name:        "Quantum Wash",
 		Manufacture: martin,
-		FixtureType: light,
 		Weight:      21.0,
 		Power:       1050,
 		PowerPlug: powercon,
@@ -108,7 +106,6 @@ func InitData() {
 	pointe := db.FixtureTypeLight{
 		Name:        "Pointe",
 		Manufacture: robe,
-		FixtureType: light,
 		Weight:      15,
 		Power:       470,
 		PowerPlug: powercon,
@@ -126,7 +123,6 @@ func InitData() {
 	esprint := db.FixtureTypeLight{
 		Name:        "Esprite",
 		Manufacture: robe,
-		FixtureType: light,
 		Weight:      28.2,
 		Power:       950,
 		PowerPlug: truecon,
@@ -137,8 +133,29 @@ func InitData() {
 			rj45out,
 		},
 	}
-
+	
 	db.DBConn.Create(&esprint)
 	db.DBConn.Save(&esprint)
 
+	led := db.FixtureTypeLed{
+		Name:        "A-391",
+		Manufacture: dicolor,
+		Weight:      8.3,
+		Power:       135,
+		PowerPlug: powercon,
+		Connector: []db.Connector{
+			rj45in,
+			rj45out,
+		},
+		PowerPassage: true,
+		Width: 0.5,
+		Height: 0.5,
+		Thickness: 0.08,
+		ResolutionH: 128,
+		ResolutionV: 128,
+		Pixel: 3.91,
+		Outdoor: false,
+	}
+	db.DBConn.Create(&led)
+	db.DBConn.Save(&led)
 }

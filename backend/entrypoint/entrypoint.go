@@ -12,12 +12,7 @@ func SetupEndpoints() {
 	v1 := api.Group("/v1")
 
 	v1.Get("/search/:query", func(c *fiber.Ctx) error {
-		result, err := db.Search(c.Params("query"))
-		if err != nil {
-			return c.JSON(fiber.Map{
-				"error": err,
-			})
-		}
+		result:= db.Search(c.Params("query"))
 		return c.JSON(result)
 	})
 
@@ -26,16 +21,6 @@ func SetupEndpoints() {
 		if err != nil {
 			return c.JSON(fiber.Map{
 				"error": err,
-			})
-		}
-		return c.JSON(result)
-	})
-
-	v1.Get("/types", func(c *fiber.Ctx) error {
-		result, err := db.GetFixtureTypes()
-		if err != nil {
-			return c.JSON(fiber.Map{
-				"error": "err",
 			})
 		}
 		return c.JSON(result)
