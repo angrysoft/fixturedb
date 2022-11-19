@@ -91,17 +91,20 @@ func Search(queryText string) Result {
 
 func searchLight(queryText string) ([]FixtureTypeLight, error) {
 	var lightByName []FixtureTypeLight
-	var manufactureID []uint
-	DBConn.Model(&Manufacture{}).Where("name LIKE ?", fmt.Sprintf("%%%s%%", queryText)).Find(&manufactureID)
-	fmt.Println(manufactureID)
-	err := DBConn.Model(&FixtureTypeLight{}).Preload("Manufacture").Preload("Connector").Preload("PowerPlug").Where("name LIKE ?", fmt.Sprintf("%%%s%%", queryText)).Or("manufacture_id IN ?", manufactureID).Order("name").Find(&lightByName).Error
+	err := DBConn.Model(&FixtureTypeLight{}).Preload("Manufacture").Preload("Connector").Preload("PowerPlug").Where("name LIKE ?", fmt.Sprintf("%%%s%%", queryText)).Or("manufacture_id IN ?", searchManufacture(queryText)).Order("name").Find(&lightByName).Error
 	return lightByName, err
 }
 
 func searchLed(queryText string) ([]FixtureTypeLed, error) {
 	var led []FixtureTypeLed
-	err := DBConn.Model(&FixtureTypeLed{}).Preload("Manufacture").Preload("Connector").Preload("PowerPlug").Where("name LIKE ?", fmt.Sprintf("%%%s%%", queryText)).Order("name").Find(&led).Error
+	err := DBConn.Model(&FixtureTypeLed{}).Preload("Manufacture").Preload("Connector").Preload("PowerPlug").Where("name LIKE ?", fmt.Sprintf("%%%s%%", queryText)).Or("manufacture_id IN ?", searchManufacture(queryText)).Order("name").Find(&led).Error
 	return led, err
+}
+
+func searchManufacture(queryText string) ([]uint) {
+	var manufactureID []uint
+	DBConn.Model(&Manufacture{}).Select("ID").Where("name LIKE ?", fmt.Sprintf("%%%s%%", queryText)).Find(&manufactureID)
+	return manufactureID
 }
 
 func GetManufactures() ([]Manufacture, error) {
