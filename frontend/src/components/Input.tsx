@@ -38,7 +38,7 @@ const Input = (props: InputProps) => {
         id={props.id}
         name={props.id}
         className="md:col-span-2 w-full
-                   bg-transparent
+                   bg-transparent autofill:bg-red-500
                    border border-primary rounded
                    focus:outline-0 focus:border-primary
                    transition-border duration-500"

@@ -56,6 +56,12 @@ const fixtureReducer = (state: fixtureState, action: Action): fixtureState => {
         light: action.payload.light || [],
         led: action.payload.led || [],
       };
+    
+    case 'FIXTURE_SEARCH_CALL':
+      return {
+        ...state,
+        isLoading: true,
+      }
 
     default:
       return state;

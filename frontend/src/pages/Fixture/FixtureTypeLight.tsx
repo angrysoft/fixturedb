@@ -21,6 +21,7 @@ const FixtureTypeLight:React.FC<IFixtureTypeLightProps> = (props:IFixtureTypeLig
         <InfoItem name="Wejście prądowe" value={state.powerPlug.type} />
         <InfoItem name="Przelot zasilania" value={state.powerPassage ? "Tak" : "Nie"} />
         <InfoListItems name="Gniazda" items={state.connector} />
+        <InfoListItems name="Dmx Mode" items={state.connector} />
       </div>
     </DetailsWrapper>
   );
