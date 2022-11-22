@@ -11,62 +11,6 @@ var (
 	DBConn *gorm.DB
 )
 
-type FixtureTypeLight struct {
-	ID            uint   `gorm:"primaryKey"`
-	Name          string `gorm:"unique" json:"name"`
-	ManufactureID uint
-	Manufacture   Manufacture `json:"manufacture"`
-	FixtureType   string      `json:"type" gorm:"default:light"`
-	Weight        float32     `json:"weight"`
-	Power         uint        `json:"power"`
-	PowerPassage  bool        `gorm:"default:false" json:"powerPassage"`
-	Connector     []Connector `gorm:"many2many:fixture_light_connector;" json:"connector"`
-	PowerPlugID   uint
-	PowerPlug     PowerPlug `json:"powerPlug"`
-}
-
-type FixtureTypeLed struct {
-	ID            uint   `gorm:"primaryKey"`
-	Name          string `gorm:"unique" json:"name"`
-	ManufactureID uint
-	Manufacture   Manufacture `json:"manufacture"`
-	FixtureType   string      `json:"type" gorm:"default:led"`
-	Weight        float32     `json:"weight"`
-	Power         uint        `json:"power"`
-	PowerPassage  bool        `gorm:"default:true" json:"powerPassage"`
-	Connector     []Connector `gorm:"many2many:fixture_led_connector;" json:"connector"`
-	PowerPlugID   uint
-	PowerPlug     PowerPlug `json:"powerPlug"`
-	Width         float32   `json:"width"`
-	Height        float32   `json:"height"`
-	Thickness     float32   `json:"thickness"`
-	ResolutionH   uint      `json:"resolutionH"`
-	ResolutionV   uint      `json:"resolutionV"`
-	Pixel         float32   `json:"pixel"`
-	Outdoor       bool      `json:"outdoor"`
-}
-
-type Connector struct {
-	ID   uint   `gorm:"primaryKey"`
-	Name string `gorm:"unique" json:"name"`
-}
-
-type PowerPlug struct {
-	ID   uint   `gorm:"primaryKey"`
-	Type string `gorm:"unique" json:"type"`
-}
-
-type Manufacture struct {
-	ID   uint   `gorm:"primaryKey"`
-	Name string `gorm:"unique" json:"name"`
-}
-
-type Result struct {
-	Light  []FixtureTypeLight `json:"light"`
-	Led    []FixtureTypeLed   `json:"led"`
-	Errors []error            `json:"errors"`
-}
-
 func Search(queryText string) Result {
 	var light []FixtureTypeLight
 	var led []FixtureTypeLed
@@ -91,7 +35,8 @@ func Search(queryText string) Result {
 
 func searchLight(queryText string) ([]FixtureTypeLight, error) {
 	var lightByName []FixtureTypeLight
-	err := DBConn.Model(&FixtureTypeLight{}).Preload("Manufacture").Preload("Connector").Preload("PowerPlug").Where("name LIKE ?", fmt.Sprintf("%%%s%%", queryText)).Or("manufacture_id IN ?", searchManufacture(queryText)).Order("name").Find(&lightByName).Error
+	err := DBConn.Model(&FixtureTypeLight{}).Preload("Manufacture").Preload("Connector").Preload("PowerPlug").Preload("DmxModes").Where("name LIKE ?", fmt.Sprintf("%%%s%%", queryText)).Or("manufacture_id IN ?", searchManufacture(queryText)).Order("name").Find(&lightByName).Error
+	fmt.Println(lightByName)
 	return lightByName, err
 }
 
@@ -123,6 +68,7 @@ func SetupDatabase() {
 		&Manufacture{},
 		&PowerPlug{},
 		&Connector{},
+		&DmxModes{},
 		&FixtureTypeLight{},
 		&FixtureTypeLed{},
 	)

@@ -76,7 +76,7 @@ func InitData() {
 
 	var rj45out db.Connector
 	db.DBConn.Model(&db.Connector{}).Where("name = ?", "RJ45OUT").Take(&rj45out)
-
+	
 	aura := db.FixtureTypeLight{
 		Name:         "Mac Aura",
 		Manufacture:  martin,
@@ -86,6 +86,16 @@ func InitData() {
 		PowerPlug: powercon,
 		Connector: []db.Connector{
 			dmx5pin,
+		},
+		DmxModes: []db.DmxModes{
+			{
+				Mode: "Std",
+				Channels: 14,
+			},
+			{
+				Mode: "Ext",
+				Channels: 25,
+			},
 		},
 	}
 

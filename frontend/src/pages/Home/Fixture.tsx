@@ -20,6 +20,7 @@ const Fixture: React.FC<IFixtureProps> = (props: IFixtureProps) => {
   const navigate = useNavigate();
 
   const handleClick = () => {
+    console.log(props.data)
     navigate(`/fixture/${props.data.type}`, {state: props.data})
   }
 
