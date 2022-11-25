@@ -20,10 +20,10 @@ const BackButton: React.FC<IBackButton> = (props: IBackButton) => {
 
   return (
     <div className="grid grid-cols-5 text-onSurface bg-surface">
-      <span className="cursor-pointer p-2" onClick={handleClick}>
+      <div className="cursor-pointer p-1 text-[2rem]" onClick={handleClick}>
         <MaterialIcons name="arrow_back" />
-      </span>
-      <h1 className="text-center font-bold text-xl col-span-3 py-2">
+      </div>
+      <h1 className="text-center font-bold col-span-3 py-1">
         {props.title}
       </h1>
     </div>

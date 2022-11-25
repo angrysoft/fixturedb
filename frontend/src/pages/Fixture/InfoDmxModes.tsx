@@ -10,8 +10,8 @@ const InfoDmxModes:React.FC<IInfoDmxModeProps> = (props:IInfoDmxModeProps) => {
   const items = props.items.map((item) => {
     return (
       <div key={item.ID} className='text-onSurface py-05 pl-1'>
-        <span className="font-bold">{item.mode} </span>
-        <span className="font-bold">{item.channels} </span>
+        <span className="font-bold">{item.mode} - </span>
+        <span className="font-bold">{item.channels} ch</span>
       </div>
     );
   });

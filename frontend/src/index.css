@@ -111,8 +111,9 @@ a {
 }
 
 
-.material-icons {
+span.material-icons {
     vertical-align: middle;
+    font-size: inherit;
   }
   
   span.material-icons,

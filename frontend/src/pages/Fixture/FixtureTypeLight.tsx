@@ -1,7 +1,7 @@
 import React from 'react';
 import { useLocation } from 'react-router-dom';
 import { DetailsWrapper } from './DetailsWrapper';
-import { InfoDmxModes } from './InfoHashItmes';
+import { InfoDmxModes } from './InfoDmxModes';
 import { InfoItem } from './InfoItem';
 import { InfoListItems } from './InfoListItems';
 

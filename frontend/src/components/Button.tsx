@@ -15,11 +15,10 @@ const Button = (props: ButtonOutlineProps) => {
   return (
     <button
       className="w-full p-05 rounded
-                 
                  cursor-pointer
-                 text-xl font-bold text-center text-white
+                 text-xl font-bold text-center text-surface
                  shadow-md hover:shadow-2xl
-                 bg-secondary text-surface
+                 bg-secondary
                  transition-all-500 transition-all duration-500
                  disabled:opacity-50 disabled:hover:shadow-none"
       id={props.id}

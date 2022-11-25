@@ -11,6 +11,9 @@ const initialState: RootState = {
     light: [],
     led: [],
     isLoading: false,
+  },
+  view: {
+    viewSearch: false,
   }
 };
 

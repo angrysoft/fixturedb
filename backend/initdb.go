@@ -99,7 +99,7 @@ func InitData() {
 		},
 	}
 
-	db.DBConn.Create(&aura)
+	db.DBConn.Omit("DmxModes").Create(&aura)
 	db.DBConn.Save(&aura)
 
 	db.DBConn.Create(&db.FixtureTypeLight{
