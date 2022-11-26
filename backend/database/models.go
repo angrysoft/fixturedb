@@ -10,7 +10,7 @@ type FixtureTypeLight struct {
 	Power         uint        `json:"power"`
 	PowerPassage  bool        `gorm:"default:false" json:"powerPassage"`
 	Connector     []Connector `gorm:"many2many:fixture_light_connector;" json:"connector"`
-	DmxModes      []DmxModes  `gorm:"foreignKey:ID;constraint:OnDelete:CASCADE" json:"modes"`
+	DmxModes      []DmxModes  `gorm:"many2many:fixture_dmx_modes" json:"modes"`
 	PowerPlugID   uint
 	PowerPlug     PowerPlug `json:"powerPlug"`
 }
@@ -27,9 +27,9 @@ type FixtureTypeLed struct {
 	Connector     []Connector `gorm:"many2many:fixture_led_connector;" json:"connector"`
 	PowerPlugID   uint
 	PowerPlug     PowerPlug `json:"powerPlug"`
-	Width         float32   `json:"width"`
-	Height        float32   `json:"height"`
-	Thickness     float32   `json:"thickness"`
+	Width         uint      `json:"width"`
+	Height        uint      `json:"height"`
+	Thickness     uint      `json:"thickness"`
 	ResolutionH   uint      `json:"resolutionH"`
 	ResolutionV   uint      `json:"resolutionV"`
 	Pixel         float32   `json:"pixel"`
@@ -43,7 +43,7 @@ type Connector struct {
 
 type PowerPlug struct {
 	ID   uint   `gorm:"primaryKey"`
-	Type string `gorm:"unique" json:"type"`
+	Name string `gorm:"unique" json:"type"`
 }
 
 type Manufacture struct {
@@ -52,9 +52,9 @@ type Manufacture struct {
 }
 
 type DmxModes struct {
-	ID   uint   `gorm:"primaryKey"`
-	Mode string  `json:"mode"`
-	Channels uint `json:"channels"`
+	ID       uint   `gorm:"primaryKey"`
+	Name     string `json:"mode"`
+	Channels uint   `json:"channels"`
 }
 
 type Result struct {

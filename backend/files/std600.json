@@ -1,0 +1,22 @@
+{
+    "type": "light",
+	"name": "600",
+    "manufacture": "Studio due",
+	"weight": 31,
+    "power": 500,
+    "powerPassage": false,
+    "connector": [
+        "DMX 3pin"
+    ],
+    "dmxModes": [
+        {
+            "name": "6ch",
+            "channels": 6
+        },
+        {
+            "name": "12ch",
+            "channels": 12
+        }
+    ],
+    "powerPlug": "Schuko (230V)"
+}

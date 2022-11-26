@@ -1,0 +1,22 @@
+{
+    "type": "light",
+	"name": "Dual800",
+    "manufacture": "Studio due",
+	"weight": 39,
+    "power": 600,
+    "powerPassage": false,
+    "connector": [
+        "DMX 3pin"
+    ],
+    "dmxModes": [
+        {
+            "name": "8ch",
+            "channels": 8
+        },
+        {
+            "name": "4ch",
+            "channels": 4
+        }
+    ],
+    "powerPlug": "Schuko (230V)"
+}

@@ -5,6 +5,7 @@ import (
 
 	"gorm.io/driver/sqlite"
 	"gorm.io/gorm"
+	"gorm.io/gorm/clause"
 )
 
 var (
@@ -35,8 +36,7 @@ func Search(queryText string) Result {
 
 func searchLight(queryText string) ([]FixtureTypeLight, error) {
 	var lightByName []FixtureTypeLight
-	err := DBConn.Model(&FixtureTypeLight{}).Preload("Manufacture").Preload("Connector").Preload("PowerPlug").Preload("DmxModes").Where("name LIKE ?", fmt.Sprintf("%%%s%%", queryText)).Or("manufacture_id IN ?", searchManufacture(queryText)).Order("name").Find(&lightByName).Error
-	fmt.Println(lightByName)
+	err := DBConn.Model(&FixtureTypeLight{}).Preload(clause.Associations).Where("name LIKE ?", fmt.Sprintf("%%%s%%", queryText)).Or("manufacture_id IN ?", searchManufacture(queryText)).Order("name").Find(&lightByName).Error
 	return lightByName, err
 }
 
