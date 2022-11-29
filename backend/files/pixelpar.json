@@ -1,0 +1,30 @@
+{
+    "type": "light",
+	"name": "PixelPar 90",
+    "manufacture": "James Thomas",
+	"weight": 7,
+    "power": 120,
+    "powerPassage": false,
+    "connector": [
+        "DMX 5pin"
+    ],
+    "dmxModes": [
+        {
+            "name": "3ch",
+            "channels": 3
+        },
+        {
+            "name": "EF-D",
+            "channels": 7
+        },
+        {
+            "name": "MA-2",
+            "channels": 10
+        },
+        {
+            "name": "16bit - PixelPar90",
+            "channels": 6
+        }
+    ],
+    "powerPlug": "Schuko (230V)"
+}

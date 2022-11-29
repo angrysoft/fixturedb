@@ -16,6 +16,10 @@
         {
             "name": "4ch",
             "channels": 4
+        },
+        {
+            "name": "13ch",
+            "channels": 13
         }
     ],
     "powerPlug": "Schuko (230V)"

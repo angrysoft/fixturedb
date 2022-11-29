@@ -1,0 +1,32 @@
+{
+    "type": "light",
+	"name": "Luma 700",
+    "manufacture": "Prolights",
+	"weight": 23,
+    "power": 355,
+    "powerPassage": false,
+    "connector": [
+        "DMX 5pin",
+        "DMX 3pin",
+        "W-DMX"
+    ],
+    "dmxModes": [
+        {
+            "name": "Basic 16bit - L700",
+            "channels": 20
+        },
+        {
+            "name": "Basic 8bit - L700",
+            "channels": 19
+        },
+        {
+            "name": "Standard - L700",
+            "channels": 28
+        },
+        {
+            "name": "Extended - L700",
+            "channels": 29
+        }
+    ],
+    "powerPlug": "PowerCon TRUE1"
+}

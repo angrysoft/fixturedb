@@ -1,0 +1,38 @@
+{
+    "type": "light",
+	"name": "PixelLine 1044",
+    "manufacture": "James Thomas",
+	"weight": 12.2,
+    "power": 140,
+    "powerPassage": true,
+    "connector": [
+        "DMX 5pin"
+    ],
+    "dmxModes": [
+        {
+            "name": "3ch",
+            "channels": 3
+        },
+        {
+            "name": "6ch",
+            "channels": 6
+        },
+        {
+            "name": "9ch",
+            "channels": 9
+        },
+        {
+            "name": "18ch",
+            "channels": 18
+        },
+        {
+            "name": "27ch",
+            "channels": 27
+        },
+        {
+            "name": "54ch",
+            "channels": 54
+        }
+    ],
+    "powerPlug": "16A 1F"
+}

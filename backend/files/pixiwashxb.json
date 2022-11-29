@@ -1,0 +1,45 @@
+{
+    "type": "light",
+	"name": "PixiWash XB",
+    "manufacture": "Prolights",
+	"weight": 13.6,
+    "power": 240,
+    "powerPassage": true,
+    "connector": [
+        "DMX 5pin",
+        "RJ45IN",
+        "RJ45OUT",
+        "W-DMX"
+    ],
+    "dmxModes": [
+        {
+            "name": "13ch",
+            "channels": 13
+        },
+        {
+            "name": "15",
+            "channels": 15
+        },
+        {
+            "name": "16ch",
+            "channels": 16
+        },
+        {
+            "name": "18",
+            "channels": 18
+        },
+        {
+            "name": "22",
+            "channels": 22
+        },
+        {
+            "name": "23",
+            "channels": 23
+        },
+        {
+            "name": "27",
+            "channels": 27
+        }
+    ],
+    "powerPlug": "PowerCon TRUE1"
+}

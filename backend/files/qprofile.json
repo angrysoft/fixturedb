@@ -1,0 +1,22 @@
+{
+    "type": "light",
+	"name": "Mac Quantum Profile",
+    "manufacture": "Martin",
+	"weight": 23.2,
+    "power": 750,
+    "powerPassage": false,
+    "connector": [
+        "DMX 5pin"
+    ],
+    "dmxModes": [
+        {
+            "name": "Basic - QProfile",
+            "channels": 19
+        },
+        {
+            "name": "Extended - QProfile",
+            "channels": 27
+        }
+    ],
+    "powerPlug": "PowerCon"
+}

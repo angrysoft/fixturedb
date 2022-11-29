@@ -1,0 +1,18 @@
+{
+    "type": "light",
+	"name": "ATMOSPHEREAPS",
+    "manufacture": "MDG",
+	"weight": 19,
+    "power": 715,
+    "powerPassage": false,
+    "connector": [
+        "DMX 5pin"
+    ],
+    "dmxModes": [
+        {
+            "name": "1ch",
+            "channels": 1
+        }
+    ],
+    "powerPlug": "Schuko (230V)"
+}

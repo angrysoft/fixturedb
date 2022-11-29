@@ -1,0 +1,14 @@
+{
+    "type": "light",
+	"name": "Vip 300",
+    "manufacture": "Clay Paky",
+	"weight": 7.5,
+    "power": 450,
+    "powerPassage": false,
+    "connector": [
+    ],
+    "dmxModes": [
+ 
+    ],
+    "powerPlug": "C13"
+}

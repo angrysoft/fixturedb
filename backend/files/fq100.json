@@ -1,0 +1,19 @@
+{
+    "type": "light",
+	"name": "FQ100",
+    "manufacture": "HighEnd",
+	"weight": 16,
+    "power": 1500,
+    "powerPassage": false,
+    "connector": [
+        "DMX 5pin",
+        "DMX 3pin"
+    ],
+    "dmxModes": [
+        {
+            "name": "1ch",
+            "channels": 1
+        }
+    ],
+    "powerPlug": "Schuko (230V)"
+}

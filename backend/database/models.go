@@ -53,7 +53,7 @@ type Manufacture struct {
 
 type DmxModes struct {
 	ID       uint   `gorm:"primaryKey"`
-	Name     string `json:"mode"`
+	Name     string `gorm:"unique" json:"mode"`
 	Channels uint   `json:"channels"`
 }
 

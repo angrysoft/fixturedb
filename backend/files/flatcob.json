@@ -1,0 +1,22 @@
+{
+    "type": "light",
+	"name": "FlatCob 40",
+    "manufacture": "Prolights",
+	"weight": 1.5,
+    "power": 34.3,
+    "powerPassage": true,
+    "connector": [
+        "DMX 3pin"
+    ],
+    "dmxModes": [
+        {
+            "name": "3ch",
+            "channels": 3
+        },
+        {
+            "name": "8ch",
+            "channels": 8
+        }
+    ],
+    "powerPlug": "C13"
+}
