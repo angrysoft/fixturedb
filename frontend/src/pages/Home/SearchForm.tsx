@@ -85,8 +85,10 @@ const SearchForm: React.FC<ISearchFormProps> = (props: ISearchFormProps) => {
     >
       <div
         className="text-left p-1 text-onSurface font-bold text-[2rem]"
-        onClick={() =>
-          dispatch({ type: "SEARCH_BAR_STATE", payload: { viewSearch: false } })
+        onClick={() => {
+          dispatch({ type: "SEARCH_BAR_STATE", payload: { viewSearch: false } });
+          dispatch({ type: "FIXTURE_LIST_CLEAR" });
+        }
         }
       >
         <MaterialIcons name="arrow_back" />

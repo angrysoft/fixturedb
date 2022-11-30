@@ -11,6 +11,8 @@ func SetupEndpoints() {
 	api := app.Group("/api")
 	v1 := api.Group("/v1")
 
+	app.Static("/", "../frontend/build")
+
 	v1.Get("/search/:query", func(c *fiber.Ctx) error {
 		result:= db.Search(c.Params("query"))
 		return c.JSON(result)

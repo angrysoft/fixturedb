@@ -62,6 +62,14 @@ const fixtureReducer = (state: fixtureState, action: Action): fixtureState => {
         ...state,
         isLoading: true,
       }
+    
+    case 'FIXTURE_LIST_CLEAR':
+      return {
+        ...state,
+        isLoading: false,
+        light: [],
+        led: [],
+      }
 
     default:
       return state;

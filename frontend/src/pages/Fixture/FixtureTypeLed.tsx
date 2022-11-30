@@ -22,9 +22,9 @@ const FixtureTypeLed:React.FC<IFixtureTypeLedProps> = (props:IFixtureTypeLedProp
         <InfoItem name="Wejście prądowe" value={state.powerPlug.type} />
         <InfoItem name="Przelot zasilania" value={state.powerPassage ? "Tak" : "Nie"} />
         <InfoListItems name="Gniazda" items={state.connector} />
-        <InfoItem name="Szerokość" value={state.width} unit="m"/>
-        <InfoItem name="Wysokość" value={state.height} unit="m"/>
-        <InfoItem name="Grubość" value={state.thickness} unit="m"/>
+        <InfoItem name="Szerokość" value={state.width} unit="mm"/>
+        <InfoItem name="Wysokość" value={state.height} unit="mm"/>
+        <InfoItem name="Grubość" value={state.thickness} unit="mm"/>
         <InfoItem name="Rozdzielczość Poziom" value={state.resolutionH} unit="pix"/>
         <InfoItem name="Rozdzielczość Pion" value={state.resolutionV} unit="pix"/>
         <InfoItem name="Rozstaw Pikseli" value={state.pixel} unit="mm"/>
