@@ -1,0 +1,14 @@
+[Unit]
+Description=fixturedb
+
+[Service]
+Type=simple
+User=http
+Group=http
+Restart=always
+RestartSec=5s
+WorkingDirectory=/var/www/fixturedb
+ExecStart=/var/www/fixturedb
+
+[Install]
+WantedBy=multi-user.target
