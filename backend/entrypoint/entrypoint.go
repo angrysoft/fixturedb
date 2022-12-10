@@ -2,7 +2,6 @@ package entrypoint
 
 import (
 	"angrysoft.ovh/database"
-	"fmt"
 	"github.com/gofiber/fiber/v2"
 )
 
@@ -11,7 +10,7 @@ func SetupEndpoints() {
 	api := app.Group("/api")
 	v1 := api.Group("/v1")
 
-	app.Static("/", "../frontend/build")
+	app.Static("/", "./build")
 
 	v1.Get("/search/:query", func(c *fiber.Ctx) error {
 		result:= db.Search(c.Params("query"))
@@ -28,6 +27,5 @@ func SetupEndpoints() {
 		return c.JSON(result)
 	})
 
-	fmt.Println("Running server")
-	app.Listen(":5000")
+	app.Listen("127.0.0.1:5000")
 }
