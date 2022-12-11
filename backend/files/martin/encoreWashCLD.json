@@ -1,0 +1,18 @@
+{
+    "type": "light",
+	"name": "MAC Encore Wash CLD",
+    "manufacture": "Martin",
+	"weight": 28.5,
+    "power": 580,
+    "powerPassage": false,
+    "connector": [
+        "DMX 5pin"
+    ],
+    "dmxModes": [
+        {
+            "name": "24ch",
+            "channels": 24
+        }
+    ],
+    "powerPlug": "PowerCon TRUE1"
+}

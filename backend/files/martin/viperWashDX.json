@@ -1,0 +1,22 @@
+{
+    "type": "light",
+	"name": "MAC Viper Wash DX",
+    "manufacture": "Martin",
+	"weight": 34.1,
+    "power": 1186,
+    "powerPassage": false,
+    "connector": [
+        "DMX 5pin"
+    ],
+    "dmxModes": [
+        {
+            "name": "standard-viper-washdx",
+            "channels": 18
+        },
+        {
+            "name": "extended-viper-washdx",
+            "channels": 24
+        }
+    ],
+    "powerPlug": "PowerCon"
+}

@@ -1,0 +1,24 @@
+{
+    "type": "light",
+	"name": "Painte",
+    "manufacture": "Robe",
+	"weight": 19.6,
+    "power": 440,
+    "powerPassage": false,
+    "connector": [
+        "DMX 5pin",
+        "RJ45IN",
+        "RJ45OUT"
+    ],
+    "dmxModes": [
+        {
+            "name": "1-painte",
+            "channels": 44
+        },
+        {
+            "name": "2-painte",
+            "channels": 45
+        }
+    ],
+    "powerPlug": "PowerCon TRUE1"
+}

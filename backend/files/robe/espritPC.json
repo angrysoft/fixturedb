@@ -1,0 +1,33 @@
+{
+    "type": "light",
+	"name": "Esprite Pc",
+    "manufacture": "Robe",
+	"weight": 26,
+    "power": 950,
+    "powerPassage": false,
+    "connector": [
+        "DMX 5pin",
+        "DMX 3pin",
+        "RJ45IN",
+        "RJ45OUT"
+    ],
+    "dmxModes": [
+        {
+            "name": "1-Standard 16bit-pc",
+            "channels": 34
+        },
+        {
+            "name": "2-Reduced 8bit-pc",
+            "channels": 30
+        },
+        {
+            "name": " 3-Standard 16bit + green corre-pc",
+            "channels": 35
+        },
+        {
+            "name": "4-Reduced 8bit + green corre-pc",
+            "channels": 31
+        }
+    ],
+    "powerPlug": "PowerCon TRUE1"
+}

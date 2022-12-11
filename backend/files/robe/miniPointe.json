@@ -1,0 +1,26 @@
+{
+    "type": "light",
+	"name": "miniPointe",
+    "manufacture": "Robe",
+	"weight": 11.8,
+    "power": 260,
+    "powerPassage": true,
+    "connector": [
+        "DMX 5pin"
+    ],
+    "dmxModes": [
+        {
+            "name": "1-minip",
+            "channels": 22
+        },
+        {
+            "name": "2-minip",
+            "channels": 17
+        },
+        {
+            "name": "3-minip",
+            "channels": 27
+        }
+    ],
+    "powerPlug": "PowerCon"
+}

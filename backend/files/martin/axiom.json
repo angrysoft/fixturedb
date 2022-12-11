@@ -1,0 +1,18 @@
+{
+    "type": "light",
+	"name": "MAC Axiom Hybrid",
+    "manufacture": "Martin",
+	"weight": 24.8,
+    "power": 600,
+    "powerPassage": false,
+    "connector": [
+        "DMX 5pin"
+    ],
+    "dmxModes": [
+        {
+            "name": "axiom",
+            "channels": 23
+        }
+    ],
+    "powerPlug": "PowerCon TRUE1"
+}

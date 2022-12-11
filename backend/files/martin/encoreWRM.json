@@ -1,0 +1,18 @@
+{
+    "type": "light",
+	"name": "MAC Encore Performance WRM",
+    "manufacture": "Martin",
+	"weight": 31,
+    "power": 580,
+    "powerPassage": false,
+    "connector": [
+        "DMX 5pin"
+    ],
+    "dmxModes": [
+        {
+            "name": "38ch",
+            "channels": 38
+        }
+    ],
+    "powerPlug": "PowerCon TRUE1"
+}

@@ -1,0 +1,20 @@
+{
+    "type": "light",
+	"name": "RUSH MH 5 Profile",
+    "manufacture": "Martin",
+	"weight": 9,
+    "power": 157,
+    "powerPassage": true,
+    "connector": [
+        "DMX 5pin",
+        "DMX 3pin"
+    ],
+    "dmxModes": [
+        {
+            "name": "RushProfile",
+            "channels": 16
+        }
+    ],
+    "powerPlug": "PowerCon",
+    "outdoor": false
+}

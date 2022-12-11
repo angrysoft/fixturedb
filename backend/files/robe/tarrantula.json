@@ -1,0 +1,41 @@
+{
+    "type": "light",
+	"name": "Tarrantula",
+    "manufacture": "Robe",
+	"weight": 21.2,
+    "power": 1000,
+    "powerPassage": false,
+    "connector": [
+        "DMX 5pin",
+        "DMX 3pin",
+        "RJ45IN",
+        "RJ45OUT"
+    ],
+    "dmxModes": [
+        {
+            "name": "1-Wash-tarr",
+            "channels": 28
+        },
+        {
+            "name": "2-Pattern-tarr",
+            "channels": 48
+        },
+        {
+            "name": "7-PixelRGB-tarr",
+            "channels": 146
+        },
+        {
+            "name": "4-PixelRGBW-tarr",
+            "channels": 183
+        },
+        {
+            "name": "5-Pattern FullRGB-tarr",
+            "channels": 159
+        },
+        {
+            "name": "6-Pattern FullRGBW-tarr",
+            "channels": 196
+        }
+    ],
+    "powerPlug": "PowerCon TRUE1"
+}

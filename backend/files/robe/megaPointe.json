@@ -1,0 +1,24 @@
+{
+    "type": "light",
+	"name": "MegaPointe",
+    "manufacture": "Robe",
+	"weight": 22.0,
+    "power": 670,
+    "powerPassage": false,
+    "connector": [
+        "DMX 5pin",
+        "DMX 3pin",
+        "RJ45IN"
+    ],
+    "dmxModes": [
+        {
+            "name": "1-mpointe",
+            "channels": 39
+        },
+        {
+            "name": "2-mpointe",
+            "channels": 34
+        }
+    ],
+    "powerPlug": "PowerCon TRUE1"
+}

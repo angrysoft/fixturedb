@@ -1,0 +1,20 @@
+{
+    "type": "light",
+	"name": "RUSH MH 7 Hybrid",
+    "manufacture": "Martin",
+	"weight": 24,
+    "power": 372,
+    "powerPassage": true,
+    "connector": [
+        "DMX 5pin",
+        "DMX 3pin"
+    ],
+    "dmxModes": [
+        {
+            "name": "RushHybrid",
+            "channels": 21
+        }
+    ],
+    "powerPlug": "PowerCon",
+    "outdoor": false
+}
