@@ -1,0 +1,33 @@
+{
+    "type": "light",
+	"name": "B-EYE K15",
+    "manufacture": "Clay Paky",
+	"weight": 20.7,
+    "power": 700,
+    "powerPassage": false,
+    "connector": [
+        "DMX 5pin",
+        "DMX 3pin",
+        "RJ45IN"
+    ],
+    "dmxModes": [
+        {
+            "name": "standard-k15",
+            "channels": 22
+        },
+        {
+            "name": "shapes-k15",
+            "channels": 36
+        },
+        {
+            "name": "RGB-k15",
+            "channels": 57
+        },
+        {
+            "name": "RGBW-k15",
+            "channels": 76
+        }
+
+    ],
+    "powerPlug": "PowerCon TRUE1"
+}
