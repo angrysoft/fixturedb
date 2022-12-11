@@ -1,0 +1,20 @@
+{
+    "type": "light",
+	"name": "Axcor Spot 400",
+    "manufacture": "Clay Paky",
+	"weight": 26,
+    "power": 540,
+    "powerPassage": true,
+    "connector": [
+        "DMX 5pin",
+        "RJ45IN"
+    ],
+    "dmxModes": [
+        {
+            "name": "axcor-S400",
+            "channels": 28
+        }
+    ],
+    "powerPlug": "PowerCon TRUE1",
+    "outdoor": false
+}

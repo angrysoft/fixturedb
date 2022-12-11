@@ -1,0 +1,32 @@
+{
+    "type": "light",
+	"name": "SharBar",
+    "manufacture": "Clay Paky",
+	"weight": 15,
+    "power": 300,
+    "powerPassage": true,
+    "connector": [
+        "DMX 5pin",
+        "RJ45IN",
+        "RJ45OUT"
+    ],
+    "dmxModes": [
+        {
+            "name": "Standard-SharBar",
+            "channels": 24
+        },
+        {
+            "name": "Shape-SharBar",
+            "channels": 30
+        },
+        {
+            "name": "RGB-SharBar",
+            "channels": 18
+        },
+        {
+            "name": "RGBW-SharBar",
+            "channels": 24
+        }
+    ],
+    "powerPlug": "PowerCon TRUE1"
+}

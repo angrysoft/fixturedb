@@ -1,0 +1,20 @@
+{
+    "type": "light",
+	"name": "Arolla Spot MP",
+    "manufacture": "Clay Paky",
+	"weight": 23.7,
+    "power": 740,
+    "powerPassage": false,
+    "connector": [
+        "DMX 5pin",
+        "RJ45IN"
+    ],
+    "dmxModes": [
+        {
+            "name": "arolla-spot-mp",
+            "channels": 29
+        }
+    ],
+    "powerPlug": "PowerCon TRUE1",
+    "outdoor": false
+}

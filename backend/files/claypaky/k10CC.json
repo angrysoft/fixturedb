@@ -1,0 +1,18 @@
+{
+    "type": "light",
+	"name": "A.leda B-EYE K10 CC",
+    "manufacture": "Clay Paky",
+	"weight": 14.5,
+    "power": 350,
+    "powerPassage": false,
+    "connector": [
+        "DMX 5pin"
+    ],
+    "dmxModes": [
+        {
+            "name": "k10CC",
+            "channels": 20
+        }
+    ],
+    "powerPlug": "PowerCon TRUE1"
+}

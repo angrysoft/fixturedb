@@ -1,0 +1,31 @@
+{
+    "type": "light",
+	"name": "Mini-B",
+    "manufacture": "Clay Paky",
+	"weight": 6.5,
+    "power": 375,
+    "powerPassage": true,
+    "connector": [
+        "DMX 5pin",
+        "RJ45IN"
+    ],
+    "dmxModes": [
+        {
+            "name": "Basic RGBW-mini-b",
+            "channels": 17
+        },
+        {
+            "name": "Basic RGBW-16bit-mini-b",
+            "channels": 21
+        },
+        {
+            "name": "Extended RGBW-mini-b",
+            "channels": 21
+        },
+        {
+            "name": "Extended RGBW 16bit-mini-b",
+            "channels": 29
+        }
+    ],
+    "powerPlug": "PowerCon TRUE1"
+}

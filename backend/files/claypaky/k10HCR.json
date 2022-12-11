@@ -1,0 +1,32 @@
+{
+    "type": "light",
+	"name": "B-EYE K10 HCR",
+    "manufacture": "Clay Paky",
+	"weight": 16.5,
+    "power": 450,
+    "powerPassage": false,
+    "connector": [
+        "DMX 5pin",
+        "DMX 3pin",
+        "RJ45IN"
+    ],
+    "dmxModes": [
+        {
+            "name": "Basic RGB-k10HCR",
+            "channels": 19
+        },
+        {
+            "name": "Basic HSV-k10HCR",
+            "channels": 19
+        },
+        {
+            "name": "Extended RGB-k10HCR",
+            "channels": 32
+        },
+        {
+            "name": "Extended HSV-k10HCR",
+            "channels": 32
+        }
+    ],
+    "powerPlug": "PowerCon TRUE1"
+}

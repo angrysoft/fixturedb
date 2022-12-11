@@ -1,0 +1,43 @@
+{
+    "type": "light",
+	"name": "Tambora Batten",
+    "manufacture": "Clay Paky",
+	"weight": 15.5,
+    "power": 660,
+    "powerPassage": true,
+    "connector": [
+        "DMX 5pin",
+        "RJ45IN"
+    ],
+    "dmxModes": [
+        {
+            "name": "Standard RGBW-tambora",
+            "channels": 13
+        },
+        {
+            "name": "Standard RGBW-16bit-tambora",
+            "channels": 17
+        },
+        {
+            "name": "Shape RGBW-tambora",
+            "channels": 27
+        },
+        {
+            "name": "Shape RGBW-16bit-tambora",
+            "channels": 35
+        },
+        {
+            "name": "Advanced-tambora",
+            "channels": 29
+        },
+        {
+            "name": "RGB-tambora",
+            "channels": 48
+        },
+        {
+            "name": "RGBW-tambora",
+            "channels": 64
+        }
+    ],
+    "powerPlug": "PowerCon TRUE1"
+}

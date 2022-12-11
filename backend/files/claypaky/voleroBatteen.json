@@ -7,7 +7,6 @@
     "powerPassage": true,
     "connector": [
         "DMX 5pin",
-        "DMX 3pin",
         "RJ45IN",
         "RJ45OUT",
         "W-DMX"
@@ -35,5 +34,6 @@
         }
 
     ],
-    "powerPlug": "PowerCon TRUE1"
+    "powerPlug": "PowerCon TRUE1",
+    "outdoor": true
 }

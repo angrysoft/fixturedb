@@ -1,0 +1,25 @@
+{
+    "type": "light",
+	"name": "Axcor Profile 600 / Teatro",
+    "manufacture": "Clay Paky",
+	"weight": 33,
+    "power": 800,
+    "powerPassage": true,
+    "connector": [
+        "DMX 3pin",
+        "DMX 5pin",
+        "RJ45IN"
+    ],
+    "dmxModes": [
+        {
+            "name": "standard-axcor-P600",
+            "channels": 40
+        },
+        {
+            "name": "vector-axcor-P600",
+            "channels": 44
+        }
+    ],
+    "powerPlug": "PowerCon TRUE1",
+    "outdoor": false
+}

@@ -1,0 +1,20 @@
+{
+    "type": "light",
+	"name": "Arolla Profile MP",
+    "manufacture": "Clay Paky",
+	"weight": 25,
+    "power": 740,
+    "powerPassage": false,
+    "connector": [
+        "DMX 5pin",
+        "RJ45IN"
+    ],
+    "dmxModes": [
+        {
+            "name": "arolla-profile-mp",
+            "channels": 37
+        }
+    ],
+    "powerPlug": "PowerCon TRUE1",
+    "outdoor": false
+}

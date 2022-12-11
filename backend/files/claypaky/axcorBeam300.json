@@ -1,0 +1,24 @@
+{
+    "type": "light",
+	"name": "Axcor Beam 300",
+    "manufacture": "Clay Paky",
+	"weight": 17.6,
+    "power": 215,
+    "powerPassage": true,
+    "connector": [
+        "DMX 5pin",
+        "RJ45IN"
+    ],
+    "dmxModes": [
+        {
+            "name": "standard-axcor-B300",
+            "channels": 14
+        },
+        {
+            "name": "sharpy-axcor-B300",
+            "channels": 16
+        }
+    ],
+    "powerPlug": "PowerCon TRUE1",
+    "outdoor": false
+}

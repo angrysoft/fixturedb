@@ -1,0 +1,28 @@
+{
+    "type": "light",
+	"name": "Show-Batten 100",
+    "manufacture": "Clay Paky",
+	"weight": 10,
+    "power": 170,
+    "powerPassage": true,
+    "connector": [
+        "DMX 5pin",
+        "RJ45IN",
+        "RJ45OUT"
+    ],
+    "dmxModes": [
+        {
+            "name": "Basic-show-batten",
+            "channels": 18
+        },
+        {
+            "name": "Pixel RGB-show-batten",
+            "channels": 48
+        },
+        {
+            "name": "Pixel RGBW-show-batten",
+            "channels": 58
+        }
+    ],
+    "powerPlug": "PowerCon TRUE1"
+}

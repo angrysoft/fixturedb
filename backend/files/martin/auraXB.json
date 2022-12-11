@@ -1,0 +1,25 @@
+{
+    "type": "light",
+	"name": "Mac Aura XB",
+    "manufacture": "Martin",
+	"weight": 6.5,
+    "power": 400,
+    "powerPassage": true,
+    "connector": [
+        "DMX 5pin",
+        "RJ45IN",
+        "RJ45OUT"
+    ],
+    "dmxModes": [
+        {
+            "name": "Standard-AXB",
+            "channels": 14
+        },
+        {
+            "name": "Extended-AXB",
+            "channels": 25
+        }
+    ],
+    "powerPlug": "PowerCon TRUE1",
+    "outdoor": false
+}

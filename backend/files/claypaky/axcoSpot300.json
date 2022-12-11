@@ -1,0 +1,20 @@
+{
+    "type": "light",
+	"name": "Axcor Spot 300",
+    "manufacture": "Clay Paky",
+	"weight": 20.2,
+    "power": 340,
+    "powerPassage": true,
+    "connector": [
+        "DMX 5pin",
+        "RJ45IN"
+    ],
+    "dmxModes": [
+        {
+            "name": "axcor-S300",
+            "channels": 23
+        }
+    ],
+    "powerPlug": "PowerCon TRUE1",
+    "outdoor": false
+}

@@ -1,0 +1,32 @@
+{
+    "type": "light",
+	"name": "A.leda B-EYE K10",
+    "manufacture": "Clay Paky",
+	"weight": 15,
+    "power": 450,
+    "powerPassage": false,
+    "connector": [
+        "DMX 5pin",
+        "RJ45IN"
+    ],
+    "dmxModes": [
+        {
+            "name": "standard-k10",
+            "channels": 21
+        },
+        {
+            "name": "shapes-k10",
+            "channels": 35
+        },
+        {
+            "name": "RGB-k10",
+            "channels": 57
+        },
+        {
+            "name": "RGBW-k10",
+            "channels": 76
+        }
+
+    ],
+    "powerPlug": "PowerCon TRUE1"
+}

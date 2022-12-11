@@ -1,0 +1,32 @@
+{
+    "type": "light",
+	"name": "A.leda B-EYE K20",
+    "manufacture": "Clay Paky",
+	"weight": 21,
+    "power": 750,
+    "powerPassage": false,
+    "connector": [
+        "DMX 5pin",
+        "DMX 3pin",
+        "RJ45IN"
+    ],
+    "dmxModes": [
+        {
+            "name": "standard-k20",
+            "channels": 21
+        },
+        {
+            "name": "shapes-k20",
+            "channels": 35
+        },
+        {
+            "name": "RGB-k20",
+            "channels": 111
+        },
+        {
+            "name": "RGBW-k20",
+            "channels": 148
+        }
+    ],
+    "powerPlug": "PowerCon TRUE1"
+}

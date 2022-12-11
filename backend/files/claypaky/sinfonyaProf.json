@@ -1,0 +1,28 @@
+{
+    "type": "light",
+	"name": "Sinfonya Profile 600",
+    "manufacture": "Clay Paky",
+	"weight": 36.8,
+    "power": 770,
+    "powerPassage": true,
+    "connector": [
+        "DMX 5pin",
+        "RJ45IN"
+    ],
+    "dmxModes": [
+        {
+            "name": "standard-sinfonyaen",
+            "channels": 58
+        },
+        {
+            "name": "easy-sinfonyaen",
+            "channels": 50
+        },
+        {
+            "name": "white-sinfonyaen",
+            "channels": 43
+        }
+    ],
+    "powerPlug": "PowerCon TRUE1",
+    "outdoor": false
+}

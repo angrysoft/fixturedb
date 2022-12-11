@@ -1,8 +1,8 @@
 {
     "type": "light",
-	"name": "B-EYE K25",
+	"name": "B-EYE K25 / Teatro",
     "manufacture": "Clay Paky",
-	"weight": 27,
+	"weight": 27.5,
     "power": 1250,
     "powerPassage": false,
     "connector": [

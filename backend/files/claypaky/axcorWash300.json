@@ -1,0 +1,20 @@
+{
+    "type": "light",
+	"name": "Axcor Wash 300",
+    "manufacture": "Clay Paky",
+	"weight": 19.9,
+    "power": 290,
+    "powerPassage": false,
+    "connector": [
+        "DMX 5pin",
+        "RJ45IN"
+    ],
+    "dmxModes": [
+        {
+            "name": "standard-axcor-W300",
+            "channels": 16
+        }
+    ],
+    "powerPlug": "PowerCon TRUE1",
+    "outdoor": false
+}
