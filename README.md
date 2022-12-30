@@ -18,6 +18,7 @@
 ### Built With
 * FrontEnd ( TypeScript )
   * [React.js](https://reactjs.org/)
+  * [Tailwindcss](https://tailwindcss.com/)
 * Backend
   * [Golang](https://go.dev)
     * [Gorm](https://gorm.io/) - orm
