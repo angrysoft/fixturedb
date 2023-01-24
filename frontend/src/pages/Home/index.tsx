@@ -27,7 +27,7 @@ const Header: React.FC = () => {
 
   return (
     <header className="grid grid-flow-col bg-surface items-center shadow z-10 shadow-primary">
-      <h1 className="text-onSurface text-bold py-1 px-2">FixtureDB</h1>
+      <h1 className="text-onSurface text-bold py-1 px-2 notranslate">FixtureDB</h1>
       <div className="text-right p-1 text-onSurface font-bold text-[2rem]" onClick={handleClick}>
         <MaterialIcons name="search" />
       </div>

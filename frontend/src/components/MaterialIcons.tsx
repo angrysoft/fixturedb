@@ -8,7 +8,7 @@ interface MaterialIconsProps {
 
 const MaterialIcons = (props:MaterialIconsProps) => {
   return (
-    <span className='material-icons leading-1'>{props.name}</span>
+    <span className='material-icons leading-1 notranslate'>{props.name}</span>
   );
 };
 
