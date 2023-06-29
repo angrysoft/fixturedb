@@ -1,0 +1,30 @@
+{
+    "type": "led",
+    "name": "AR5.95",
+    "manufacture": "Infiled",
+    "weight": 12,
+    "power": 300,
+    "powerPassage": true,
+    "connector": [
+        "RJ45IN",
+        "RJ45OUT"
+    ],
+    "width": 500,
+    "height": 1000,
+    "thickness": 66,
+    "resolutionH": 84,
+    "resolutionV": 168,
+    "pixel": 5.95,
+    "powerPlug": "PowerCon True 1",
+    "outdoor": true,
+    "desc": "Aram",
+    "tags": [
+        "aram"
+    ],
+    "files": [
+        {
+            "name": "config",
+            "url": "/download/led/infiled-a5.95.rcfgx"
+        }
+    ]
+}

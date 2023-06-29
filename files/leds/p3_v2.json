@@ -1,0 +1,30 @@
+{
+    "type": "led",
+    "name": "AF2-391",
+    "manufacture": "Dicolor",
+    "weight": 8.3,
+    "power": 105,
+    "powerPassage": true,
+    "connector": [
+        "RJ45IN",
+        "RJ45OUT"
+    ],
+    "width": 500,
+    "height": 500,
+    "thickness": 80,
+    "resolutionH": 128,
+    "resolutionV": 128,
+    "pixel": 3.91,
+    "powerPlug": "PowerCon",
+    "outdoor": false,
+    "desc": "Ves p3 v2",
+    "files": [
+        {
+            "name": "config",
+            "url": "/files/led/dicolor-af2-391.rcfgx"
+        }
+    ],
+    "tags": [
+        "ves"
+    ]
+}

@@ -1,0 +1,80 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+    provider = "prisma-client-js"
+}
+
+datasource db {
+    provider = "sqlite"
+    url      = env("DATABASE_URL")
+}
+
+model Fixture {
+    id            Int         @id @default(autoincrement())
+    model         String      @unique
+    fixtureType   FixtureType @relation(fields: [fixtureTypeId], references: [id])
+    manufacture   Manufacture @relation(fields: [manufactureId], references: [id])
+    weight        Float
+    power         Int
+    tags          Tag[]
+    fixtureTypeId Int
+    manufactureId Int
+}
+
+model FixtureType {
+    id      Int       @id @default(autoincrement())
+    name    String    @unique
+    Fixture Fixture[]
+}
+
+model Manufacture {
+    id      Int       @id @default(autoincrement())
+    name    String    @unique
+    Fixture Fixture[]
+}
+
+model FixtureDetails {
+    id           Int             @id @default(autoincrement())
+    powerPassage Boolean
+    connectors   Connector[]
+    dmxMode      String?
+    dmxChannel   Int?
+    powerPlug    PowerPlug?      @relation(fields: [powerPlugId], references: [id])
+    powerPlugId  Int?
+    outdor       Boolean         @default(false)
+    files        DownloadFiles[]
+    desc         String
+    width        Int?
+    height       Int?
+    thickness    Int?
+    resolutionH  Int?
+    resolutionV  Int?
+    pixel        Float?
+}
+
+model PowerPlug {
+    id             Int              @id @default(autoincrement())
+    name           String           @unique
+    fixtureDetails FixtureDetails[]
+}
+
+model Connector {
+    id             Int              @id @default(autoincrement())
+    name           String           @unique
+    fixtureDetails FixtureDetails[]
+}
+
+model DownloadFiles {
+    id               Int            @id @default(autoincrement())
+    name             String
+    url              String         @unique
+    fixtureDetails   FixtureDetails @relation(fields: [fixtureDetailsId], references: [id])
+    fixtureDetailsId Int            @unique
+}
+
+model Tag {
+    id       Int       @id @default(autoincrement())
+    name     String    @unique
+    fixtures Fixture[]
+}

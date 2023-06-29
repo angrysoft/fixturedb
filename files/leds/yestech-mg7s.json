@@ -1,0 +1,30 @@
+{
+    "type": "led",
+    "name": "MG7S",
+    "manufacture": "Yestech",
+    "weight": 5.9,
+    "power": 150,
+    "powerPassage": true,
+    "connector": [
+        "RJ45IN",
+        "RJ45OUT"
+    ],
+    "width": 500,
+    "height": 500,
+    "thickness": 73,
+    "resolutionH": 128,
+    "resolutionV": 128,
+    "pixel": 3.9,
+    "powerPlug": "PowerCon",
+    "outdoor": true,
+    "desc": "Ves p3 outdoor 2023",
+    "files": [
+        {
+            "name": "config",
+            "url": "/files/led/yestech-mg7s.rcfgx"
+        }
+    ],
+    "tags": [
+        "ves"
+    ]
+}

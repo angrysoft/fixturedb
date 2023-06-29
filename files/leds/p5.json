@@ -1,0 +1,28 @@
+{
+    "type": "led",
+	"name": "M5-HD",
+    "manufacture": "Yestech",
+	"weight": 6.4,
+    "power": 210,
+    "powerPassage": true,
+    "connector": [
+        "RJ45IN",
+        "RJ45OUT"
+    ],
+    "width": 500,
+    "height": 500,
+    "thickness": 73,
+    "resolutionH": 84,
+    "resolutionV": 84,
+    "pixel": 5.9,
+    "powerPlug": "PowerCon",
+    "outdoor": true,
+    "tags": ["ves"],
+    "desc": "",
+    "files": [
+        {
+            "name": "config",
+            "url": "/download/led/yestech-m5-hd.rcfgx"
+        }
+    ]
+}
