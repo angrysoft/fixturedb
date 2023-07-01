@@ -1,36 +1,52 @@
 import { NextResponse } from "next/server";
+import { PrismaClient } from "@prisma/client";
+
+const prisma = new PrismaClient();
 
 export async function POST(request: Request) {
-  const query =  (await request.formData()).get("query");
-  console.log("query", query);
-
-  const testData = {
-    status:"success",
-    data:[
-      {
-        type: "light",
-        name: "ChromaBatten 500",
-        manufacture: "Pulsar",
-        weight: 6.4,
-        power: 100,
-        powerPassage: false,
-        connector: [
-            "DMX 5pin"
-        ],
-        dmxModes: [
-            {
-                name: "3ch",
-                channels: 3
+  const query:string =  (await request.formData()).get("query")?.toString() || "";
+  const data = await prisma.fixture.findMany({
+    include: {
+      tags: true,
+      fixtureType: true,
+      manufacture: true,
+    },
+    where:{
+      OR:[
+        {
+          model: {
+            contains: query,
+          }
+        },
+        {
+          manufacture:{
+            name: {
+              contains: query
             },
-            {
-                name: "6ch",
-                channels: 6
+          }
+        },
+        {
+          tags: {
+            some: {
+              name: {
+                contains: query
+              }
             }
-        ],
-        powerPlug: "Schuko (230V)"
+          }
+        }
+      ]
+    },
+    orderBy: [
+      {
+        manufacture: {
+          name: "asc",
+        }
+      },
+      {
+        model: "asc",
       }
-  ]};
-
-  return NextResponse.json(testData);
+    ]
+  })
+  return NextResponse.json({status:"success", data:data});
 
 }

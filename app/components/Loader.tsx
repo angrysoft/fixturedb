@@ -2,14 +2,22 @@ import React from 'react';
 
 const Loader = () => {
   return (
-    <div className="flex justify-center items-center w-full h-full">
+    <div className="grid grid-flow-col justify-center content-center gap-1 bg-background h-full w-full text-onBackground">
       <div
-        className="animate-spin inline-block
-                   w-8 h-8 border-[1rem] rounded-full
-                   border-primary border-t-secondary"
+        className="animate-[pulse_1s_0ms_ease-in-out_infinite] bg-primary
+                   w-2 h-2 rounded-full delay-500"
         role="status"
-      >
-      </div>
+      ></div>
+      <div
+        className="animate-[pulse_1s_200ms_ease-in-out_infinite] bg-primary
+                   w-2 h-2 rounded-full duration-1500"
+        role="status"
+      ></div>
+      <div
+        className="animate-[pulse_1s_400ms_ease-in-out_infinite] bg-primary
+                   w-2 h-2 rounded-full duration-500"
+        role="status"
+      ></div>
     </div>
   );
 };

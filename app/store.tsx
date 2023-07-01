@@ -9,8 +9,8 @@ const initialState: RootState = {
     isLoading: false,
   },
   fixture: {
-    light: [],
-    led: [],
+    fixtures: [],
+    clear: true,
     isLoading: false,
   },
   view: {

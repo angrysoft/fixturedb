@@ -11,15 +11,16 @@ datasource db {
 }
 
 model Fixture {
-    id            Int         @id @default(autoincrement())
-    model         String      @unique
-    fixtureType   FixtureType @relation(fields: [fixtureTypeId], references: [id])
-    manufacture   Manufacture @relation(fields: [manufactureId], references: [id])
+    id            Int             @id @default(autoincrement())
+    model         String          @unique
+    fixtureType   FixtureType     @relation(fields: [fixtureTypeId], references: [id])
+    manufacture   Manufacture     @relation(fields: [manufactureId], references: [id])
     weight        Float
-    power         Int
+    power         Float
     tags          Tag[]
     fixtureTypeId Int
     manufactureId Int
+    details       FixtureDetails?
 }
 
 model FixtureType {
@@ -38,11 +39,10 @@ model FixtureDetails {
     id           Int             @id @default(autoincrement())
     powerPassage Boolean
     connectors   Connector[]
-    dmxMode      String?
-    dmxChannel   Int?
+    dmxModes     DmxMode[]
     powerPlug    PowerPlug?      @relation(fields: [powerPlugId], references: [id])
     powerPlugId  Int?
-    outdor       Boolean         @default(false)
+    outdoor       Boolean         @default(false)
     files        DownloadFiles[]
     desc         String
     width        Int?
@@ -51,6 +51,21 @@ model FixtureDetails {
     resolutionH  Int?
     resolutionV  Int?
     pixel        Float?
+    fixture Fixture @relation(fields: [fixtureId], references: [id])
+    fixtureId Int @unique
+}
+
+model Connector {
+    id             Int              @id @default(autoincrement())
+    name           String           @unique
+    fixtureDetails FixtureDetails[]
+}
+
+model DmxMode {
+    id             Int              @id @default(autoincrement())
+    name           String
+    channels       Int
+    fixtureDetails FixtureDetails[]
 }
 
 model PowerPlug {
@@ -59,11 +74,6 @@ model PowerPlug {
     fixtureDetails FixtureDetails[]
 }
 
-model Connector {
-    id             Int              @id @default(autoincrement())
-    name           String           @unique
-    fixtureDetails FixtureDetails[]
-}
 
 model DownloadFiles {
     id               Int            @id @default(autoincrement())

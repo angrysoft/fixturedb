@@ -14,7 +14,7 @@ export default function RootLayout({
   return (
     <html lang="pl">
       <Provider>
-        <body>
+        <body className="bg-background">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" async defer />
           {children}
           </body>

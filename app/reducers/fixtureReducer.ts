@@ -1,49 +1,22 @@
 import { Action } from ".";
 
-export type FixtureTypeLight = {
-  ID: number,
-  name: string,
+export type FixtureObject  = {
+  id: number,
+  model:string,
+  fixtureType: { id:number, name: string}
   manufacture: {
-    ID: number,
+    id: number,
     name: string,
-  },
-  type: string,
+  }
   weight: number,
   power: number,
-  powerPassage: boolean,
-  connector: Array<{ID: number, name: string}>,
-  powerPlug: {
-    ID: number,
-    type: string,
-  }
-};
 
-export type FixtureTypeLed = {
-  ID: number,
-  name: string,
-  manufacture: {
-    ID: number,
-    name: string,
-  },
-  type: string,
-  weight: number,
-  power: number,
-  powerPassage: boolean,
-  connector: Array<{ID: number, name: string}>,
-  powerPlug: {
-    ID: number,
-    type: string,
-  }
-  width: number,
-  height: number,
-  resolutionH: number,
-  resolutionV: number,
-};
+}
 
 export type fixtureState = {
-   light: Array<FixtureTypeLight>,
-   led: Array<FixtureTypeLed>,
-   isLoading: boolean,
+  fixtures: Array<FixtureObject>,
+  clear: boolean,
+  isLoading: boolean,
 }
 
 
@@ -53,8 +26,8 @@ const fixtureReducer = (state: fixtureState, action: Action): fixtureState => {
       return {
         ...state,
         isLoading: false,
-        light: action.payload.light || [],
-        led: action.payload.led || [],
+        fixtures: [...action.payload.data]|| [],
+        clear: false,
       };
     
     case 'FIXTURE_SEARCH_CALL':
@@ -67,8 +40,8 @@ const fixtureReducer = (state: fixtureState, action: Action): fixtureState => {
       return {
         ...state,
         isLoading: false,
-        light: [],
-        led: [],
+        fixtures: [],
+        clear: true,
       }
 
     default:
