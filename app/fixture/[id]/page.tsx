@@ -1,12 +1,10 @@
 "use client";
+import Link from "next/link";
 import useSWR from "swr";
+import Button from "../../components/Button";
+import { Info } from "../../components/Info";
 import Loader from "../../components/Loader";
 import { fetcher } from "../../utils";
-import { useEffect, useState } from "react";
-import { Info } from "../../components/Info";
-import Button from "../../components/Button";
-import { BackButton } from "../../components/BackButton";
-import Link from "next/link";
 
 const Fixture = ({ params }: { params: { id: number } }) => {
   const { data, error, isLoading } = useSWR(
@@ -19,7 +17,7 @@ const Fixture = ({ params }: { params: { id: number } }) => {
       <div className="grid h-screen place-content-center">
         <Info text="Nic nie znaleziono" />
         <Link href="/">
-          <Button >Wróć do głównej</Button>
+          <Button>Wróć do głównej</Button>
         </Link>
       </div>
     );
