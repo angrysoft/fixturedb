@@ -1,9 +1,10 @@
 import { SyntheticEvent, useContext, useEffect, useRef } from "react";
 import { MaterialIcons } from "./components/MaterialIcons";
 import { AppContext } from "./store";
+import { ClearIcon } from "./components/ClearIcon";
 
 const SearchForm = () => {
-  const {state, dispatch } = useContext(AppContext);
+  const { state, dispatch } = useContext(AppContext);
   const inputRef = useRef<HTMLInputElement>(null);
 
   const search = async (ev: SyntheticEvent) => {
@@ -29,7 +30,7 @@ const SearchForm = () => {
     if (inputRef.current) {
       inputRef.current.value = state.fixture.query;
     }
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
@@ -47,12 +48,12 @@ const SearchForm = () => {
                   text-onSurface text-[2rem]
                   border-none
                   focus:outline-0 focus:border-b-primary
-                  transition-border duration-500"
+                  "
           placeholder="Szukaj"
           ref={inputRef}
         />
         <div
-          className="text-left p-05 text-onSurface font-bold text-[2rem]"
+          className="text-left p-05 grid place-content-center"
           onClick={() => {
             if (inputRef.current) {
               inputRef.current.value = "";
@@ -61,7 +62,8 @@ const SearchForm = () => {
             dispatch({ type: "FIXTURE_LIST_CLEAR" });
           }}
         >
-          <MaterialIcons name="backspace" />
+          <ClearIcon />
+          {/* <MaterialIcons name="backspace" /> */}
         </div>
       </div>
     </form>

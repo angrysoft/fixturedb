@@ -17,7 +17,7 @@ const Home: React.FC<IHomeProps> = (props: IHomeProps) => {
       <SearchForm />
       <div className="">
         {state.fixture.clear ? (
-          <Info text="wpisz tekst aby wyszukać po producencie lub modelu" />
+          <Info text="wpisz tekst aby wyszukać." />
         ) : state.fixture.isSearching ? (
           <Loader />
         ) : (

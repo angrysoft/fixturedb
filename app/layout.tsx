@@ -4,7 +4,7 @@ import { Provider } from "./store";
 
 export const metadata = {
   title: "FixtureDb",
-  description: "Fixtures/Ledscreens info",
+  description: "Fixtures/Led screens info",
 };
 
 export default function RootLayout({
@@ -14,14 +14,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pl">
+      <head>
+        
+      </head>
       <Provider>
         <body className="bg-background">
-          <link
-            href="https://fonts.googleapis.com/icon?family=Material+Icons"
-            rel="stylesheet"
-            async
-            defer
-          />
           <div
             className="md:container md:mx-auto 
                    md:border-x-surface md:border-x-2

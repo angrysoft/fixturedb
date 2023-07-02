@@ -1,16 +1,18 @@
-'use client'
-import React from 'react';
-
+"use client";
+import React from "react";
 
 interface MaterialIconsProps {
   name: string;
 }
 
-
-const MaterialIcons = (props:MaterialIconsProps) => {
+const MaterialIcons = (props: MaterialIconsProps) => {
   return (
-    <span className='material-icons leading-1 notranslate'>{props.name}</span>
+    
+    <span className="material-symbols-outlined select-none notranslate text-[1.5rem]">
+      {props.name}
+    </span>
   );
 };
 
-export {MaterialIcons};
+
+export { MaterialIcons };

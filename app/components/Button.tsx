@@ -10,7 +10,7 @@ type ButtonOutlineProps = {
 const Button = (props: ButtonOutlineProps) => {
   const handleClick = useCallback(() => (
     props.handleClick && props.handleClick()
-  ), [props.handleClick]);
+  ), [props]);
 
   return (
     <button
