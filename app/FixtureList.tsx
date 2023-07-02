@@ -44,20 +44,16 @@ const FixtureList: React.FC<IFixtureListProps> = (props: IFixtureListProps) => {
       threshold: 0.1,
     };
 
-    console.log(observerRef.current);
     const observer = new IntersectionObserver((entries, observer) => {
       if (entries.at(0)?.isIntersecting) {
-        console.log("pull");
         pullData();
       }
     }, observerOptions);
     if (observerRef.current) {
-      console.log("connect");
       observer.observe(observerRef.current);
     }
 
     return () => {
-      console.log("disconnect");
       observer.disconnect();
     };
   }, [observerRef, pullData]);
