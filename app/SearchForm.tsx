@@ -19,9 +19,9 @@ const SearchForm = () => {
   return (
     <form
       onSubmit={async (ev: SyntheticEvent) => await search(ev)}
-      className="items-center text-onSurface border-y-primary border-y"
+      className="items-center text-onSurface border-b-primary border-b"
     >
-      <div className="flex p-05 rounded-xl bg-surface">
+      <div className="flex px-1 py-05 bg-surface">
         <input
           id="query"
           name="query"

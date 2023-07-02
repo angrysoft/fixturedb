@@ -1,16 +1,21 @@
 import { Action } from ".";
 
-export type FixtureObject  = {
-  id: number,
-  model:string,
-  fixtureType: { id:number, name: string}
+export interface FixtureObject {
+  id: number;
+  model:string;
+  fixtureType: { id:number, name: string};
   manufacture: {
     id: number,
     name: string,
-  }
-  weight: number,
-  power: number,
+  };
+  weight: number;
+  power: number;
+  tags: Array<Tag>;
+}
 
+interface Tag {
+    id:number;
+    name:string;
 }
 
 export type fixtureState = {

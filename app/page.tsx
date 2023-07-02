@@ -1,7 +1,7 @@
 "use client";
 import { useContext } from "react";
 import { FixtureList } from "./FixtureList";
-import { Header } from "./Header";
+import { Header } from "./components/Header";
 import { SearchForm } from "./SearchForm";
 import Loader from "./components/Loader";
 import { FixtureObject } from "./reducers/fixtureReducer";
@@ -17,13 +17,7 @@ const Home: React.FC<IHomeProps> = (props: IHomeProps) => {
   let fixturesData: Array<FixtureObject> = [];
 
   return (
-    <div
-      className="md:container md:mx-auto 
-                  md:border-x-surface md:border-x-2
-                    grid grid-rows-[auto_auto_1fr]
-                    bg-background h-screen"
-    >
-      <Header />
+    <>
       <SearchForm />
       <div className="">
         {state.fixture.clear ? (
@@ -34,7 +28,7 @@ const Home: React.FC<IHomeProps> = (props: IHomeProps) => {
           <FixtureList data={state.fixture.fixtures} />
         )}
       </div>
-    </div>
+    </>
   );
 };
 

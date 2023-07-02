@@ -1,10 +1,52 @@
 "use client";
 import Link from "next/link";
 import useSWR from "swr";
+import { BackButton } from "../../components/BackButton";
 import Button from "../../components/Button";
 import { Info } from "../../components/Info";
 import Loader from "../../components/Loader";
+import { FixtureObject } from "../../reducers/fixtureReducer";
 import { fetcher } from "../../utils";
+import { FixtureTypeLight } from "./FixtureTypeLight";
+import { FixtureTypeLed } from "./FixtureTypeLed";
+
+export interface FixtureObjectDetails extends FixtureObject {
+  details: {
+    powerPassage: boolean;
+    connectors: Array<Connectors>;
+    dmxModes: Array<DmxMode>;
+    powerPlug: {
+      id: number;
+      name: string;
+    } | null;
+    outdoor: boolean;
+    files: DownloadFile[];
+    desc: string;
+    width: number | null;
+    height: number | null;
+    thickness: number | null;
+    resolutionH?: number | null;
+    resolutionV?: number | null;
+    pixel?: number | null;
+  };
+}
+
+interface Connectors {
+  id: number;
+  name: string;
+}
+
+interface DmxMode {
+  id: number;
+  name: string;
+  channels: number;
+}
+
+interface DownloadFile {
+  id: number;
+  name: string;
+  url: string;
+}
 
 const Fixture = ({ params }: { params: { id: number } }) => {
   const { data, error, isLoading } = useSWR(
@@ -38,14 +80,25 @@ const Fixture = ({ params }: { params: { id: number } }) => {
     );
   }
 
+  let details = <></>;
+  switch (data.data.fixtureType.name) {
+    case "light": {
+      details = <FixtureTypeLight data={data.data} />;
+      break;
+    }
+    case "led": {
+      details = <FixtureTypeLed data={data.data} />;
+      break;
+    }
+  }
+
   return (
-    <div
-      className="grid gap-1  content-baseline
-                 h-screen w-screen
-               bg-background text-onBackground"
-    >
-      {data.data.model}
-    </div>
+    <>
+      <BackButton backTo="/" title={data.data.model} />
+      <div className="grid gap-1 content-baseline overflow-y-auto p-2">
+        {details}
+      </div>
+    </>
   );
 };
 

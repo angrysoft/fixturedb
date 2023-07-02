@@ -1,31 +1,35 @@
-import React from 'react';
-import { useLocation } from 'react-router-dom';
-import { DetailsWrapper } from './DetailsWrapper';
-import { InfoDmxModes } from './InfoDmxModes';
-import { InfoItem } from './InfoItem';
-import { InfoListItems } from './InfoListItems';
-
+import React from "react";
+import { InfoDesc } from "./InfoDesc";
+import { InfoDmxModes } from "./InfoDmxModes";
+import { InfoFileList } from "./InfoFilesList";
+import { InfoItem } from "./InfoItem";
+import { InfoListItems } from "./InfoListItems";
+import { FixtureObjectDetails } from "./page";
 
 interface IFixtureTypeLightProps {
-
-  children?: JSX.Element | JSX.Element[];
+  data: FixtureObjectDetails;
 }
 
-
-const FixtureTypeLight:React.FC<IFixtureTypeLightProps> = (props:IFixtureTypeLightProps) => {
-  const {state} = useLocation();
+const FixtureTypeLight: React.FC<IFixtureTypeLightProps> = (
+  props: IFixtureTypeLightProps,
+) => {
+  const details = props.data.details;
   return (
-    <DetailsWrapper manufacture={state.manufacture.name} name={state.name}>
-      <div className="grid grid-flow-row">
-        <InfoItem name="Waga" value={state.weight} unit="Kg" />
-        <InfoItem name="Moc" value={state.power} unit="W" />
-        <InfoItem name="Wejście prądowe" value={state.powerPlug.type} />
-        <InfoItem name="Przelot zasilania" value={state.powerPassage ? "Tak" : "Nie"} />
-        <InfoListItems name="Gniazda" items={state.connector} />
-        <InfoDmxModes name="Dmx Mode" items={state.modes || []} />
-      </div>
-    </DetailsWrapper>
+    <div className="grid grid-flow-row">
+      <InfoItem name="Waga" value={props.data.weight} unit="Kg" />
+      <InfoItem name="Moc" value={props.data.power} unit="W" />
+      <InfoItem name="Wejście prądowe" value={details.powerPlug?.name} />
+      <InfoItem
+        name="Przelot zasilania"
+        value={details.powerPassage ? "Tak" : "Nie"}
+      />
+      <InfoListItems name="Gniazda" items={details.connectors} />
+      <InfoDmxModes name="Dmx Mode" items={details.dmxModes} />
+      <InfoFileList files={details.files} />
+      <InfoDesc text={details.desc} />
+      <InfoListItems horizontal name="Tagi" items={props.data.tags} />
+    </div>
   );
 };
 
-export {FixtureTypeLight};
+export { FixtureTypeLight };
