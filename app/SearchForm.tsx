@@ -1,20 +1,36 @@
-import { SyntheticEvent, useContext, useRef } from "react";
+import { SyntheticEvent, useContext, useEffect, useRef } from "react";
 import { MaterialIcons } from "./components/MaterialIcons";
 import { AppContext } from "./store";
 
 const SearchForm = () => {
-  const { dispatch } = useContext(AppContext);
+  const {state, dispatch } = useContext(AppContext);
   const inputRef = useRef<HTMLInputElement>(null);
 
   const search = async (ev: SyntheticEvent) => {
-    dispatch({type:"FIXTURE_SEARCH_CALL"});
+    dispatch({ type: "FIXTURE_SEARCH_CALL" });
     ev.preventDefault();
+    const data = {
+      query: inputRef?.current?.value || "",
+      cursor: 0,
+      items: 10,
+    };
     const formData: FormData = new FormData(ev.target as HTMLFormElement);
-    const res = await fetch("/api/search", { method: "POST", body: formData });
+    if (formData.get("query")?.length === 0) return;
+    const res = await fetch("/api/search", {
+      method: "POST",
+      body: JSON.stringify(data),
+    });
     if (res.ok) {
       dispatch({ type: "FIXTURE_LIST_LOADED", payload: await res.json() });
     }
   };
+
+  useEffect(() => {
+    if (inputRef.current) {
+      inputRef.current.value = state.fixture.query;
+    }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   return (
     <form

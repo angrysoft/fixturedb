@@ -4,8 +4,13 @@ import { PrismaClient } from "@prisma/client";
 const prisma = new PrismaClient();
 
 export async function POST(request: Request) {
-  const query:string =  (await request.formData()).get("query")?.toString() || "";
-  const data = await prisma.fixture.findMany({
+  const inputData = await request.json();
+  const query:string =  inputData.query || "";
+  let cursor: number = inputData.cursor || 0;
+  const items: number = inputData.items|| 5;
+  
+  let dbQuery:any = {
+    take: items,
     include: {
       tags: true,
       fixtureType: true,
@@ -38,15 +43,18 @@ export async function POST(request: Request) {
     },
     orderBy: [
       {
-        manufacture: {
-          name: "asc",
-        }
-      },
-      {
-        model: "asc",
+        id: "asc"
       }
     ]
-  })
-  return NextResponse.json({status:"success", data:data});
+  };
+    if (cursor > 0) {
+      dbQuery.skip = 1;
+      dbQuery["cursor"] = {id: cursor};
+    }
+  const data = await prisma.fixture.findMany(dbQuery);
+  if (data.length >0) {
+    cursor = data.at(-1)?.id || 0;
+  }
+  return NextResponse.json({status:"success", data:data, cursor:cursor, query:query});
 
 }

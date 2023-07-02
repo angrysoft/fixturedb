@@ -22,6 +22,10 @@ export type fixtureState = {
   fixtures: Array<FixtureObject>,
   clear: boolean,
   isLoading: boolean,
+  isSearching: boolean,
+  cursor: number,
+  oldCursor: number,
+  query: string,
 }
 
 
@@ -31,11 +35,31 @@ const fixtureReducer = (state: fixtureState, action: Action): fixtureState => {
       return {
         ...state,
         isLoading: false,
+        isSearching: false,
         fixtures: [...action.payload.data]|| [],
+        cursor: action.payload.cursor,
         clear: false,
+        query: action.payload.query,
       };
+
+      case 'FIXTURE_LIST_APPEND':
+        return {
+          ...state,
+          isLoading: false,
+          fixtures: [...state.fixtures, ...action.payload.data]|| [],
+          oldCursor: state.cursor,
+          cursor: action.payload.cursor,
+          clear: false,
+          query: action.payload.query,
+        };
     
     case 'FIXTURE_SEARCH_CALL':
+      return {
+        ...state,
+        isSearching: true,
+      };
+    
+    case "FIXTURE_IS_LOADING":
       return {
         ...state,
         isLoading: true,
@@ -46,7 +70,9 @@ const fixtureReducer = (state: fixtureState, action: Action): fixtureState => {
         ...state,
         isLoading: false,
         fixtures: [],
+        cursor: 0,
         clear: true,
+        query: "",
       }
 
     default:

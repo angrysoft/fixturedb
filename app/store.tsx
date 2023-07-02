@@ -12,10 +12,11 @@ const initialState: RootState = {
     fixtures: [],
     clear: true,
     isLoading: false,
+    isSearching: false,
+    cursor: 0,
+    oldCursor: -1,
+    query: "",
   },
-  view: {
-    viewSearch: false,
-  }
 };
 
 interface IProviderProps {
