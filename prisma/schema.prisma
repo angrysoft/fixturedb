@@ -36,13 +36,13 @@ model Manufacture {
 }
 
 model FixtureDetails {
-    id           Int             @id @default(autoincrement())
+    id           Int            @id @default(autoincrement())
     powerPassage Boolean
     connectors   Connector[]
     dmxModes     DmxMode[]
-    powerPlug    PowerPlug?      @relation(fields: [powerPlugId], references: [id])
+    powerPlug    PowerPlug?     @relation(fields: [powerPlugId], references: [id])
     powerPlugId  Int?
-    outdoor       Boolean         @default(false)
+    outdoor      Boolean        @default(false)
     files        DownloadFile[]
     desc         String
     width        Int?
@@ -51,8 +51,8 @@ model FixtureDetails {
     resolutionH  Int?
     resolutionV  Int?
     pixel        Float?
-    fixture Fixture @relation(fields: [fixtureId], references: [id])
-    fixtureId Int @unique
+    fixture      Fixture        @relation(fields: [fixtureId], references: [id])
+    fixtureId    Int            @unique
 }
 
 model Connector {
@@ -74,7 +74,6 @@ model PowerPlug {
     fixtureDetails FixtureDetails[]
 }
 
-
 model DownloadFile {
     id               Int            @id @default(autoincrement())
     name             String
@@ -87,4 +86,9 @@ model Tag {
     id       Int       @id @default(autoincrement())
     name     String    @unique
     fixtures Fixture[]
+}
+
+model User {
+    id    Int    @id @default(autoincrement())
+    email String @unique
 }

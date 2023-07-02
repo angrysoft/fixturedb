@@ -8,6 +8,9 @@ interface IInfoListItemProps {
 }
 
 const InfoListItems:React.FC<IInfoListItemProps> = (props:IInfoListItemProps) => {
+  if (props.items.length === 0)
+    return <></>
+    
   const items = props.items.map((item) => {
     return (
       <div key={item.id} className='text-onSurface py-05 pl-1'>
@@ -15,6 +18,7 @@ const InfoListItems:React.FC<IInfoListItemProps> = (props:IInfoListItemProps) =>
       </div>
     );
   });
+
   return (
     <div className='border-b-surface border-b-2 text-onSurface py-1'>
       <div className="font-bold">{props.name}:</div>

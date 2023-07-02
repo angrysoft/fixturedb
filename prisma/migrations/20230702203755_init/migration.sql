@@ -75,6 +75,12 @@ CREATE TABLE "Tag" (
 );
 
 -- CreateTable
+CREATE TABLE "User" (
+    "id" INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+    "email" TEXT NOT NULL
+);
+
+-- CreateTable
 CREATE TABLE "_FixtureToTag" (
     "A" INTEGER NOT NULL,
     "B" INTEGER NOT NULL,
@@ -124,6 +130,9 @@ CREATE UNIQUE INDEX "DownloadFile_fixtureDetailsId_key" ON "DownloadFile"("fixtu
 
 -- CreateIndex
 CREATE UNIQUE INDEX "Tag_name_key" ON "Tag"("name");
+
+-- CreateIndex
+CREATE UNIQUE INDEX "User_email_key" ON "User"("email");
 
 -- CreateIndex
 CREATE UNIQUE INDEX "_FixtureToTag_AB_unique" ON "_FixtureToTag"("A", "B");

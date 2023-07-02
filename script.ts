@@ -181,6 +181,12 @@ async function main() {
   fixtures.forEach(async (fix, indx) => {
     await importFixture(fix, indx);
   });
+
+  const user = await prisma.user.create({
+    data: {
+      email:"sebastian.zwierzchowski@gmail.com"
+    }
+  })
 }
 
 main()
