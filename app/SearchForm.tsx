@@ -1,7 +1,6 @@
 import { SyntheticEvent, useContext, useEffect, useRef } from "react";
-import { MaterialIcons } from "./components/MaterialIcons";
-import { AppContext } from "./store";
 import { ClearIcon } from "./components/ClearIcon";
+import { AppContext } from "./store";
 
 const SearchForm = () => {
   const { state, dispatch } = useContext(AppContext);
@@ -22,6 +21,7 @@ const SearchForm = () => {
       body: JSON.stringify(data),
     });
     if (res.ok) {
+      inputRef?.current?.blur();
       dispatch({ type: "FIXTURE_LIST_LOADED", payload: await res.json() });
     }
   };

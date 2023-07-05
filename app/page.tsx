@@ -16,7 +16,6 @@ const Home: React.FC<IHomeProps> = (props: IHomeProps) => {
     <>
       <Header />
       <SearchForm />
-      <div className="">
         {state.fixture.clear ? (
           <Info text="wpisz tekst aby wyszukać." />
         ) : state.fixture.isSearching ? (
@@ -24,7 +23,6 @@ const Home: React.FC<IHomeProps> = (props: IHomeProps) => {
         ) : (
           <FixtureList />
         )}
-      </div>
     </>
   );
 };
