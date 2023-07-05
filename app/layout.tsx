@@ -1,4 +1,3 @@
-import { Header } from "./components/Header";
 import "./globals.css";
 import { Provider } from "./store";
 
@@ -25,7 +24,6 @@ export default function RootLayout({
                      grid grid-rows-[auto_auto_1fr]
                     bg-background h-screen"
           >
-            <Header />
             {children}
           </div>
         </body>

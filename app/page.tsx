@@ -5,15 +5,16 @@ import { SearchForm } from "./SearchForm";
 import { Info } from "./components/Info";
 import Loader from "./components/Loader";
 import { AppContext } from "./store";
+import { Header } from "./components/Header";
 
-interface IHomeProps {
-}
+interface IHomeProps {}
 
 const Home: React.FC<IHomeProps> = (props: IHomeProps) => {
   const { state } = useContext(AppContext);
 
   return (
     <>
+      <Header />
       <SearchForm />
       <div className="">
         {state.fixture.clear ? (
