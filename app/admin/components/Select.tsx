@@ -1,8 +1,9 @@
-import React, { SyntheticEvent, useContext, useEffect, useState } from "react";
-import { FormContext } from "./Form";
+"use client";
+import React, { ChangeEventHandler } from "react";
+import { Label } from "./Label";
 
 export interface IOptions {
-  id: string;
+  id: number;
   name: string;
 }
 
@@ -11,53 +12,33 @@ interface ISelectProps {
   label: string;
   items: Array<IOptions>;
   required?: boolean;
+  fistEmpty?: boolean;
+  onChange?: ChangeEventHandler<HTMLSelectElement>;
 }
 
 const Select: React.FC<ISelectProps> = (props: ISelectProps) => {
-  const form = useContext(FormContext);
-  const [selected, setSelected] = useState<string>("");
-  const isRequired: boolean = form.isRequired(props.id);
-
   const optionItems = props.items.map((item) => {
     return (
-      <option id={item.id} value={item.id} key={item.id} >
+      <option id={item.id.toString()} value={item.name} key={item.id}>
         {item.name}
       </option>
     );
   });
 
-  useEffect(() => {
-    const _value = form.getValue(props.id);
-    if (_value && optionItems.length > 0) {
-      setSelected(_value);
-    }
-  }, [form.getValue, optionItems]);
-
-  const handleChange = (ev: SyntheticEvent) => {
-    const select = ev.target as HTMLSelectElement;
-    console.log("select", select.value);
-    form.setValue(
-        props.id,
-        select.value,
-    );
-    setSelected(select.value);
-  };
-
   return (
     <div className="grid grid-cols-1 md:grid-cols-3 items-center">
-      <label htmlFor={props.id} className="font-bold text-onSurface">
-        {props.label}:
-      </label>
+      <Label for={props.id.toString()} name={props.label} />
+
       <select
         className="p-05 bg-surface text-onSurface
                    border border-gray-100 rounded
                    focus:outline-0 focus:border-primary"
         name={props.label.toLowerCase()}
         id={props.id}
-        value={selected}
-        required={isRequired}
-        onChange={handleChange}
+        required={props.required}
+        onChange={props.onChange && props.onChange}
       >
+        {props.fistEmpty && <option></option>}
         {optionItems}
       </select>
     </div>

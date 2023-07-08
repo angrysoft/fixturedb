@@ -51,7 +51,7 @@ module.exports = {
           onBackground: "#d8d8d8",
           onSurface:"#e1e1e1",
           onPrimary: "#00000000",
-          onSecondary: "#0000",
+          onSecondary: "#080808",
       },
 
       minHeight: {

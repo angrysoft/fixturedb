@@ -1,4 +1,4 @@
-import React, { useCallback } from 'react';
+import React, { SyntheticEvent, useCallback } from 'react';
 
 type ButtonOutlineProps = {
   id?: string;
@@ -8,8 +8,8 @@ type ButtonOutlineProps = {
 };
 
 const Button = (props: ButtonOutlineProps) => {
-  const handleClick = useCallback(() => (
-    props.handleClick && props.handleClick()
+  const handleClick = useCallback((ev:SyntheticEvent) => (
+    props.handleClick && props.handleClick(ev)
   ), [props]);
 
   return (
