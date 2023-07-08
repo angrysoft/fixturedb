@@ -93,12 +93,17 @@ const Fixture = ({ params }: { params: { id: number } }) => {
   }
 
   return (
-    <>
+    <div
+            className="md:container md:mx-auto 
+                   md:border-x-surface md:border-x-2
+                     grid grid-rows-[auto_auto_1fr]
+                    bg-background h-screen"
+    >
       <BackButton backTo="/" title={data.data.model} />
       <div className="grid gap-1 content-baseline overflow-y-auto p-2">
         {details}
       </div>
-    </>
+    </div>
   );
 };
 

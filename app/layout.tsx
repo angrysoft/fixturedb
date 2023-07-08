@@ -13,20 +13,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pl">
-      <head>
-        
-      </head>
+      <head></head>
       <Provider>
-        <body className="bg-background">
-          <div
-            className="md:container md:mx-auto 
-                   md:border-x-surface md:border-x-2
-                     grid grid-rows-[auto_auto_1fr]
-                    bg-background h-screen"
-          >
-            {children}
-          </div>
-        </body>
+        <body className="bg-background">{children}</body>
       </Provider>
     </html>
   );

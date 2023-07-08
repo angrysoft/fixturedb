@@ -1,11 +1,15 @@
 "use client";
 
-import { signIn, signOut, useSession } from "next-auth/react";
-import Button from "../components/Button";
+import { signIn, useSession } from "next-auth/react";
 import Loader from "../components/Loader";
+import { AdminHeader } from "./components/AdminHeader";
+import { SideMenu } from "./components/SideMenu";
+import { MenuAction } from "./components/MenuAction";
+import Table from "./components/Table";
+import { SearchForm } from "../SearchForm";
 
 const User = () => {
-  const { status } = useSession({
+  const { status, data: session } = useSession({
     required: true,
     onUnauthenticated() {
       signIn();
@@ -13,11 +17,16 @@ const User = () => {
   });
 
   if (status === "loading") return <Loader />;
-
   return (
     <>
-      <h1>Client Session</h1>
-      <Button handleClick={signOut}>SignOut</Button>
+      <AdminHeader img={session.user?.image || ""} />
+      <SearchForm />
+      <div className="grid grid-flow-col h-full grid-cols-[auto_1fr]">
+        <SideMenu>
+          <MenuAction name="Add" url="add" />
+        </SideMenu>
+        <Table id="fixtures" data={[]} header={["Manufacture", "Model"]} />
+      </div>
     </>
   );
 };
