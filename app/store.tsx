@@ -1,13 +1,10 @@
-'use client'
+"use client";
 import React from "react";
 import { createContext, useReducer } from "react";
 import rootReducer, { RootState } from "./reducers/rootReducer";
 
 const initialState: RootState = {
-  user: {
-    user: {},
-    isLoading: false,
-  },
+  table: {},
   fixture: {
     fixtures: [],
     clear: true,
