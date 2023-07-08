@@ -50,6 +50,7 @@ const SearchForm = () => {
                   focus:outline-0 focus:border-b-primary
                   "
           placeholder="Szukaj"
+          autoComplete="off"
           ref={inputRef}
         />
         <div
@@ -63,7 +64,6 @@ const SearchForm = () => {
           }}
         >
           <ClearIcon />
-          {/* <MaterialIcons name="backspace" /> */}
         </div>
       </div>
     </form>
