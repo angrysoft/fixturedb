@@ -14,7 +14,7 @@ export async function GET(request: Request) {
       plugs: await prisma.powerPlug.findMany(),
       connectors: await prisma.connector.findMany(),
       tags: await prisma.tag.findMany(),
-    }
+    }                                   
     return NextResponse.json({
       data: data,
       status: "success",

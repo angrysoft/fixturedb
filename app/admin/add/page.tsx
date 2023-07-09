@@ -22,6 +22,7 @@ export interface IHintsResponse {
     plugs?: Array<{ id: number; name: string }>;
     tags?: Array<{ id: number; name: string }>;
     connectors?: Array<{ id: number; name: string }>;
+    dmxModes?: Array<{ id: number; name: string }>;
   };
 }
 
@@ -33,6 +34,7 @@ const AddFixture: React.FC<IAddFixtureProps> = (props: IAddFixtureProps) => {
 
   const handleSubmit = (ev: SyntheticEvent<HTMLFormElement>, opts: any) => {
     ev.preventDefault();
+    console.log("subimt")
     const data = new FormData(ev.target as HTMLFormElement);
     data.forEach((val, key) => console.log(`${key} = ${val}`));
   };
