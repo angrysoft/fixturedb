@@ -61,6 +61,8 @@ const AddFixture: React.FC<IAddFixtureProps> = (props: IAddFixtureProps) => {
         setDetailsElement(<LightForm hints={hints}/>);
         break;
       }
+      default:
+        setDetailsElement(<></>);
     }
   };
 

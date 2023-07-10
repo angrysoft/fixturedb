@@ -51,6 +51,7 @@ const SearchForm = () => {
                   "
           placeholder="Szukaj"
           autoComplete="off"
+          minLength={3}
           ref={inputRef}
         />
         <div

@@ -21,7 +21,7 @@ const User = () => {
     <>
       <AdminHeader img={session.user?.image || ""} />
       <SearchForm />
-      <div className="grid grid-flow-col h-full grid-cols-[auto_1fr]">
+      <div className="grid grid-rows-[auto_1fr] md:grid-rows-1 md:grid-flow-col h-full md:grid-cols-[auto_1fr]">
         <SideMenu>
           <MenuAction name="Add" url="add" />
         </SideMenu>

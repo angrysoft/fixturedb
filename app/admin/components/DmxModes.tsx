@@ -18,14 +18,21 @@ interface IDmxModesProps {
 
 const DmxModes: React.FC<IDmxModesProps> = (props: IDmxModesProps) => {
   const [items, setItems] = useState<Array<string>>([]);
-  const inputRef = useRef<HTMLInputElement>(null);
+  const nameRef = useRef<HTMLInputElement>(null);
+  const channelRef = useRef<HTMLInputElement>(null);
   const handleAddClick = (ev: SyntheticEvent) => {
     ev.preventDefault();
-    if (inputRef.current && inputRef.current.value.length !== 0) {
+    if (
+      nameRef.current &&
+      nameRef.current.value.length !== 0 &&
+      channelRef.current &&
+      channelRef.current.value.length !== 0
+    ) {
       const newItems = new Set(items);
-      newItems.add(inputRef.current.value);
+      newItems.add(`${nameRef.current.value}:${channelRef.current.value}`);
       setItems(Array.from(newItems));
-      inputRef.current.value = "";
+      nameRef.current.value = "";
+      channelRef.current.value = "";
     }
   };
 
@@ -38,28 +45,37 @@ const DmxModes: React.FC<IDmxModesProps> = (props: IDmxModesProps) => {
   return (
     <div className="grid gap-05 grid-cols-1 md:grid-cols-3 items-center">
       <Label for={`dmxModes-editor`} name={"DmxModes"} />
-      <div className="grid gap-05 gird-cols-1 md:grid-cols-3 md:col-span-2">
+      <div className="grid gap-05 gird-cols-1 md:grid-cols-4 md:col-span-2 items-end">
         <div className="md:col-span-3 gap-05 grid grid-flow-col justify-start">
           {items.map((el, index) => (
             <DmxMode key={index} name={el} onClick={handleDelClick} />
           ))}
         </div>
-        <input
-          id={`dmxModes-editor`}
-          // name={props.id}
-          list={`datalist-dmxModes`}
-          className=" w-full md:p-05 md:col-span-2
+        <div className="col-span-2">
+          <Label name="Name" for="dmxModes-editor-name" />
+          <input
+            id={`dmxModes-editor-name`}
+            className=" w-full md:p-05
                 bg-surface
                  border border-gray-300 rounded
                  focus:outline-0 focus:border-primary
                  transition-border duration-500"
-          ref={inputRef}
-        />
-        <datalist id={`datalist-dmxModes`}>
-          {props.listItems.map((item) => (
-            <option key={item.id} value={item.name} />
-          ))}
-        </datalist>
+            ref={nameRef}
+          />
+        </div>
+        <div className="">
+          <Label name="Channels" for="dmxModes-editor-channel" />
+          <input
+            id={`dmxModes-editor-channel`}
+            className=" w-full md:p-05
+                bg-surface
+                 border border-gray-300 rounded
+                 focus:outline-0 focus:border-primary
+                 transition-border duration-500"
+            ref={channelRef}
+          />
+        </div>
+
         <Button handleClick={handleAddClick}>+</Button>
       </div>
     </div>
