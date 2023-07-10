@@ -68,7 +68,7 @@ const AddFixture: React.FC<IAddFixtureProps> = (props: IAddFixtureProps) => {
 
   return (
     <>
-      <BackButton backTo="/admin" title={"Add New Fixture"} />
+      <BackButton backTo="/" title={"Add New Fixture"} />
       <Form onSubmitHandle={handleSubmit} submitMethod="POST">
         <InputGroup>
           <InputDatalist

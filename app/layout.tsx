@@ -13,7 +13,6 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pl">
-      <head></head>
       <Provider>
         <body className="bg-background">{children}</body>
       </Provider>

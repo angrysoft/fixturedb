@@ -4,9 +4,12 @@ import { Fixture } from "./Fixture";
 import { Info } from "./components/Info";
 import { AppContext } from "./store";
 import Loader from "./components/Loader";
+import { useSession } from "next-auth/react";
+import { AddButton } from "./components/AddButton";
 interface IFixtureListProps {}
 
 const FixtureList: React.FC<IFixtureListProps> = (props: IFixtureListProps) => {
+  const { status, data: session } = useSession();
   const { state, dispatch } = useContext(AppContext);
   const observerRef = useRef<HTMLDivElement>(null);
 
@@ -58,17 +61,28 @@ const FixtureList: React.FC<IFixtureListProps> = (props: IFixtureListProps) => {
     };
   }, [observerRef, pullData]);
 
-  if (state.fixture.fixtures.length === 0) {
-    return <Info text="Nic nie znaleziono" />;
+  let listBody = <></>;
+
+  if (state.fixture.clear) listBody = <Info text="wpisz tekst aby wyszukać." />;
+  else if (state.fixture.fixtures.length === 0)
+    listBody = <Info text="Nic nie znaleziono" />;
+  else if (state.fixture.isSearching) return <Loader />;
+  else {
+    listBody = (
+      <>
+        {state.fixture.fixtures.map((fix) => {
+          return <Fixture data={fix} key={fix.id} />;
+        })}
+        <div className="p-1" ref={observerRef}>
+          {state.fixture.isLoading && <Loader />}
+        </div>{" "}
+      </>
+    );
   }
   return (
     <div className="grid auto-rows-min gap-1 h-full overflow-y-auto p-1">
-      {state.fixture.fixtures.map((fix) => {
-        return <Fixture data={fix} key={fix.id} />;
-      })}
-      <div className="p-1" ref={observerRef}>
-        {state.fixture.isLoading && <Loader />}
-      </div>
+      {listBody}
+      {session && <AddButton />}
     </div>
   );
 };

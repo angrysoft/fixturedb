@@ -1,7 +1,5 @@
 import { NextResponse } from "next/server";
-import { PrismaClient } from "@prisma/client";
-
-const prisma = new PrismaClient();
+import {prisma} from "../../prisma";
 
 export async function GET(request: Request, { params }: {params: {id: number}}) {
   const data = await prisma.fixture.findUnique({
