@@ -71,7 +71,7 @@ const FixtureList: React.FC<IFixtureListProps> = (props: IFixtureListProps) => {
     listBody = (
       <>
         {state.fixture.fixtures.map((fix) => {
-          return <Fixture data={fix} key={fix.id} />;
+          return <Fixture data={fix} key={fix.id} edit={session && true || false}/>;
         })}
         <div className="p-1" ref={observerRef}>
           {state.fixture.isLoading && <Loader />}
