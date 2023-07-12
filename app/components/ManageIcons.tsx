@@ -1,10 +1,12 @@
 import Link from "next/link";
 import React from "react";
 
-const ManageIcons: React.FC = () => {
+
+
+const ManageIcons: React.FC<{fixture:number}> = ({fixture}: {fixture: number}) => {
   return (
     <div className="grid gap-1 grid-flow-col items-center justify-end ">
-      <Link className="border border-primary p-05 rounded" href={"/admin/edit/"}>
+      <Link className="border border-primary p-05 rounded" href={`/admin/edit/${fixture}`}>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
@@ -20,7 +22,7 @@ const ManageIcons: React.FC = () => {
           />
         </svg>
       </Link>
-      <Link className="border border-primary p-05 rounded" href={"/admin/del/"}>
+      <Link className="border border-primary p-05 rounded" href={`/admin/del/${fixture}`}>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"

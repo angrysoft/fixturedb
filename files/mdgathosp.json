@@ -10,8 +10,8 @@
     ],
     "dmxModes": [
         {
-            "name": "1ch",
-            "channels": 1
+            "name": "2ch",
+            "channels": 2
         }
     ],
     "powerPlug": "Schuko (230V)"

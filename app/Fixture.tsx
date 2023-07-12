@@ -15,7 +15,7 @@ const Fixture: React.FC<IFixtureProps> = (props: IFixtureProps) => {
     >
       <h3 className="font-bold capitalize grid grid-flow-col">
         {props.data.manufacture.name} - {props.data.model}
-        {props.edit && <ManageIcons />}
+        {props.edit && <ManageIcons fixture={props.data.id}/>}
       </h3>
       <div className="grid grid-flow-col">
         <div>

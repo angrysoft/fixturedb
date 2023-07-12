@@ -1,0 +1,19 @@
+{
+    "name": "FixtureDB",
+    "short_name": "FixtureDB",
+    "icons": [
+        {
+            "src": "android-chrome-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "android-chrome-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ],
+    "theme_color": "#bb87fa",
+    "background_color": "#bb87fa",
+    "display": "standalone"
+}

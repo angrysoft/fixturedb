@@ -4,8 +4,6 @@ import { useContext } from "react";
 import { FixtureList } from "./FixtureList";
 import { SearchForm } from "./SearchForm";
 import { Header } from "./components/Header";
-import { Info } from "./components/Info";
-import Loader from "./components/Loader";
 import { AppContext } from "./store";
 
 interface IHomeProps {}
