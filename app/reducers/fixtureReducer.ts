@@ -52,6 +52,12 @@ const fixtureReducer = (state: fixtureState, action: Action): fixtureState => {
           clear: false,
           query: action.payload.query,
         };
+      
+      case "REMOVE_FIXTURE":
+        return {
+          ...state,
+          fixtures: [...state.fixtures.filter((fx) => fx.id != action.payload.id)]
+        }
     
     case 'FIXTURE_SEARCH_CALL':
       return {

@@ -3,7 +3,7 @@ CREATE TABLE "Fixture" (
     "id" INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
     "model" TEXT NOT NULL,
     "weight" REAL NOT NULL,
-    "power" REAL NOT NULL,
+    "power" REAL,
     "fixtureTypeId" INTEGER NOT NULL,
     "manufactureId" INTEGER NOT NULL,
     CONSTRAINT "Fixture_fixtureTypeId_fkey" FOREIGN KEY ("fixtureTypeId") REFERENCES "FixtureType" ("id") ON DELETE RESTRICT ON UPDATE CASCADE,
@@ -37,7 +37,7 @@ CREATE TABLE "FixtureDetails" (
     "pixel" REAL,
     "fixtureId" INTEGER NOT NULL,
     CONSTRAINT "FixtureDetails_powerPlugId_fkey" FOREIGN KEY ("powerPlugId") REFERENCES "PowerPlug" ("id") ON DELETE SET NULL ON UPDATE CASCADE,
-    CONSTRAINT "FixtureDetails_fixtureId_fkey" FOREIGN KEY ("fixtureId") REFERENCES "Fixture" ("id") ON DELETE RESTRICT ON UPDATE CASCADE
+    CONSTRAINT "FixtureDetails_fixtureId_fkey" FOREIGN KEY ("fixtureId") REFERENCES "Fixture" ("id") ON DELETE CASCADE ON UPDATE CASCADE
 );
 
 -- CreateTable
@@ -50,7 +50,9 @@ CREATE TABLE "Connector" (
 CREATE TABLE "DmxMode" (
     "id" INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
     "name" TEXT NOT NULL,
-    "channels" INTEGER NOT NULL
+    "channels" INTEGER NOT NULL,
+    "fixtureDetailsId" INTEGER NOT NULL,
+    CONSTRAINT "DmxMode_fixtureDetailsId_fkey" FOREIGN KEY ("fixtureDetailsId") REFERENCES "FixtureDetails" ("id") ON DELETE CASCADE ON UPDATE CASCADE
 );
 
 -- CreateTable
@@ -65,7 +67,7 @@ CREATE TABLE "DownloadFile" (
     "name" TEXT NOT NULL,
     "url" TEXT NOT NULL,
     "fixtureDetailsId" INTEGER NOT NULL,
-    CONSTRAINT "DownloadFile_fixtureDetailsId_fkey" FOREIGN KEY ("fixtureDetailsId") REFERENCES "FixtureDetails" ("id") ON DELETE RESTRICT ON UPDATE CASCADE
+    CONSTRAINT "DownloadFile_fixtureDetailsId_fkey" FOREIGN KEY ("fixtureDetailsId") REFERENCES "FixtureDetails" ("id") ON DELETE CASCADE ON UPDATE CASCADE
 );
 
 -- CreateTable
@@ -94,14 +96,6 @@ CREATE TABLE "_ConnectorToFixtureDetails" (
     "B" INTEGER NOT NULL,
     CONSTRAINT "_ConnectorToFixtureDetails_A_fkey" FOREIGN KEY ("A") REFERENCES "Connector" ("id") ON DELETE CASCADE ON UPDATE CASCADE,
     CONSTRAINT "_ConnectorToFixtureDetails_B_fkey" FOREIGN KEY ("B") REFERENCES "FixtureDetails" ("id") ON DELETE CASCADE ON UPDATE CASCADE
-);
-
--- CreateTable
-CREATE TABLE "_DmxModeToFixtureDetails" (
-    "A" INTEGER NOT NULL,
-    "B" INTEGER NOT NULL,
-    CONSTRAINT "_DmxModeToFixtureDetails_A_fkey" FOREIGN KEY ("A") REFERENCES "DmxMode" ("id") ON DELETE CASCADE ON UPDATE CASCADE,
-    CONSTRAINT "_DmxModeToFixtureDetails_B_fkey" FOREIGN KEY ("B") REFERENCES "FixtureDetails" ("id") ON DELETE CASCADE ON UPDATE CASCADE
 );
 
 -- CreateIndex
@@ -145,9 +139,3 @@ CREATE UNIQUE INDEX "_ConnectorToFixtureDetails_AB_unique" ON "_ConnectorToFixtu
 
 -- CreateIndex
 CREATE INDEX "_ConnectorToFixtureDetails_B_index" ON "_ConnectorToFixtureDetails"("B");
-
--- CreateIndex
-CREATE UNIQUE INDEX "_DmxModeToFixtureDetails_AB_unique" ON "_DmxModeToFixtureDetails"("A", "B");
-
--- CreateIndex
-CREATE INDEX "_DmxModeToFixtureDetails_B_index" ON "_DmxModeToFixtureDetails"("B");

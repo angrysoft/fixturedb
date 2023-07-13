@@ -9,8 +9,6 @@ import { Label } from "./Label";
 import Button from "../../components/Button";
 
 interface IDmxModesProps {
-  // label: string;
-  // id: string;
   required?: boolean;
   hints?: IHintsResponse;
   listItems: Array<{ id: number; name: string }>;
@@ -26,7 +24,8 @@ const DmxModes: React.FC<IDmxModesProps> = (props: IDmxModesProps) => {
       nameRef.current &&
       nameRef.current.value.length !== 0 &&
       channelRef.current &&
-      channelRef.current.value.length !== 0
+      channelRef.current.value.length !== 0 &&
+      Number(channelRef.current.value) <= 512
     ) {
       const newItems = new Set(items);
       newItems.add(`${nameRef.current.value}:${channelRef.current.value}`);
@@ -44,6 +43,13 @@ const DmxModes: React.FC<IDmxModesProps> = (props: IDmxModesProps) => {
 
   return (
     <div className="grid gap-05 grid-cols-1 md:grid-cols-3 items-center">
+      <input
+        id={"dmxModes"}
+        name="dmxModes"
+        value={items}
+        readOnly
+        className="hidden"
+      />
       <Label for={`dmxModes-editor`} name={"DmxModes"} />
       <div className="grid gap-05 gird-cols-1 md:grid-cols-4 md:col-span-2 items-end">
         <div className="md:col-span-3 gap-05 grid grid-flow-col justify-start">
@@ -66,6 +72,9 @@ const DmxModes: React.FC<IDmxModesProps> = (props: IDmxModesProps) => {
         <div className="">
           <Label name="Channels" for="dmxModes-editor-channel" />
           <input
+            type="number"
+            max={512}
+            min={1}
             id={`dmxModes-editor-channel`}
             className=" w-full md:p-05
                 bg-surface
@@ -90,13 +99,6 @@ interface IMultiItemProps {
 const DmxMode = (props: IMultiItemProps) => {
   return (
     <div className="grid grid-flow-col gap-05 p-05 bg-secondary rounded-lg items-center">
-      <input
-        id={"dmxModes"}
-        name="dmxModes[]"
-        value={props.name}
-        readOnly
-        className="hidden"
-      />
       <div className="text-[1rem] text-onSecondary">{props.name}</div>
       <div
         className="cursor-pointer border border-onSecondary rounded"

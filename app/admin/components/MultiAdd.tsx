@@ -54,7 +54,6 @@ const MultiAdd: React.FC<IMultiAddProps> = (props: IMultiAddProps) => {
         </div>
         <input
           id={`${props.id}-editor`}
-          // name={props.id}
           list={`datalist-${props.id}`}
           className=" w-full md:p-05 md:col-span-2
                 bg-surface

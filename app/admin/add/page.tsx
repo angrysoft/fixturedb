@@ -9,6 +9,8 @@ import { InputDatalist } from "../components/Datalist";
 import { LedForm } from "../components/LedForm";
 import { LightForm } from "../components/LightForm";
 import { MultiAdd } from "../components/MultiAdd";
+import { useRouter } from "next/navigation";
+import { useSession } from "next-auth/react";
 
 interface IAddFixtureProps {
   children?: JSX.Element | JSX.Element[];
@@ -27,21 +29,38 @@ export interface IHintsResponse {
 }
 
 const AddFixture: React.FC<IAddFixtureProps> = (props: IAddFixtureProps) => {
+  const {data:session} = useSession({required: true});
+  const router = useRouter();
   const [hints, setHints] = useState<IHintsResponse>();
+  const [error, setError] = useState("");
   const [detailsElement, setDetailsElement] = useState<React.JSX.Element>(
     <></>,
   );
 
-  const handleSubmit = (ev: SyntheticEvent<HTMLFormElement>, opts: any) => {
+  const sendData = async (data: string) => {
+    setError("");
+    const resp = await fetch("/api/fixture", { method: "POST", body: data });
+    if (resp.ok) {
+      return resp.json();
+    } else {
+      setError(`${resp.status} - ${resp.statusText}`);
+    }
+  };
+
+  const handleSubmit = async (ev: SyntheticEvent<HTMLFormElement>, opts: any) => {
     ev.preventDefault();
-    console.log("subimt")
     const data = new FormData(ev.target as HTMLFormElement);
-    data.forEach((val, key) => console.log(`${key} = ${val}`));
+    const jsonData = Object.fromEntries(data.entries());
+    const ret = await sendData(JSON.stringify(jsonData));
+    if (ret.added)
+      router.push(`/fixture/${ret.added}`)
+
+      
   };
 
   useEffect(() => {
     const getHints = async () => {
-      const res = await fetch("/api/admin/hints");
+      const res = await fetch("/api/hints");
       if (!res.ok) {
         throw new Error("Failed to fetch data");
       }
@@ -54,11 +73,11 @@ const AddFixture: React.FC<IAddFixtureProps> = (props: IAddFixtureProps) => {
     const sel = ev.target as HTMLSelectElement;
     switch (sel.value) {
       case "led": {
-        setDetailsElement(<LedForm  hints={hints}/>);
+        setDetailsElement(<LedForm hints={hints} />);
         break;
       }
       case "light": {
-        setDetailsElement(<LightForm hints={hints}/>);
+        setDetailsElement(<LightForm hints={hints} />);
         break;
       }
       default:
@@ -86,9 +105,14 @@ const AddFixture: React.FC<IAddFixtureProps> = (props: IAddFixtureProps) => {
             inputArgs={{ autoComplete: "off" }}
           />
           <Input type="number" label="Weight" id="weight" required />
+          <Input type="number" label="Power" id="power" />
         </InputGroup>
         <InputGroup>
-          <MultiAdd label="Tags" id="tags" listItems={hints?.data?.tags || []} />
+          <MultiAdd
+            label="Tags"
+            id="tags"
+            listItems={hints?.data?.tags || []}
+          />
         </InputGroup>
         <InputGroup>
           <Select
@@ -101,6 +125,13 @@ const AddFixture: React.FC<IAddFixtureProps> = (props: IAddFixtureProps) => {
           />
         </InputGroup>
         {detailsElement}
+        {error.length > 0 ? (
+          <InputGroup>
+            <span className="text-red-500 ">{error}</span>
+          </InputGroup>
+        ) : (
+          <></>
+        )}
         <InputGroup>
           <input
             className="w-full p-05 rounded
@@ -119,3 +150,4 @@ const AddFixture: React.FC<IAddFixtureProps> = (props: IAddFixtureProps) => {
 };
 
 export default AddFixture;
+0;

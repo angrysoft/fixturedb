@@ -16,7 +16,7 @@ model Fixture {
     fixtureType   FixtureType     @relation(fields: [fixtureTypeId], references: [id])
     manufacture   Manufacture     @relation(fields: [manufactureId], references: [id])
     weight        Float
-    power         Float
+    power         Float?
     tags          Tag[]
     fixtureTypeId Int
     manufactureId Int
@@ -51,7 +51,7 @@ model FixtureDetails {
     resolutionH  Int?
     resolutionV  Int?
     pixel        Float?
-    fixture      Fixture        @relation(fields: [fixtureId], references: [id])
+    fixture      Fixture        @relation(fields: [fixtureId], references: [id], onDelete: Cascade, onUpdate: Cascade)
     fixtureId    Int            @unique
 }
 
@@ -65,7 +65,8 @@ model DmxMode {
     id             Int              @id @default(autoincrement())
     name           String
     channels       Int
-    fixtureDetails FixtureDetails[]
+    fixtureDetails FixtureDetails @relation(fields: [fixtureDetailsId], references: [id], onDelete: Cascade, onUpdate: Cascade)
+    fixtureDetailsId Int
 }
 
 model PowerPlug {
@@ -78,7 +79,7 @@ model DownloadFile {
     id               Int            @id @default(autoincrement())
     name             String
     url              String         @unique
-    fixtureDetails   FixtureDetails @relation(fields: [fixtureDetailsId], references: [id])
+    fixtureDetails   FixtureDetails @relation(fields: [fixtureDetailsId], references: [id], onDelete: Cascade, onUpdate: Cascade)
     fixtureDetailsId Int            @unique
 }
 

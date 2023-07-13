@@ -17,7 +17,7 @@ const Home: React.FC<IHomeProps> = (props: IHomeProps) => {
         className="md:container md:mx-auto 
                    md:border-x-surface md:border-x-2
                      grid grid-rows-[auto_auto_1fr]
-                    bg-background h-screen"
+                    bg-background h-screen relative"
       >
         <Header />
         <SearchForm />
