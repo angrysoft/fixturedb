@@ -17,7 +17,6 @@ const ImportExport: React.FC<IAddFixtureProps> = (props: IAddFixtureProps) => {
   useSession({ required: true });
   const ref = useRef<HTMLAnchorElement>(null);
   const router = useRouter();
-  const [data, setData] = useState("");
 
   const [error, setError] = useState("");
 
@@ -45,12 +44,12 @@ const ImportExport: React.FC<IAddFixtureProps> = (props: IAddFixtureProps) => {
     opts: any,
   ) => {
     ev.preventDefault();
-    const data = await getData();
-    const obj = URL.createObjectURL(new Blob(data, {type:"text/plain"}));
-    setData(obj);
-    // if (ref.current)
-    //   ref.current.click();
-    // URL.revokeObjectURL(obj);
+    const _data = await getData();
+    
+    if (ref.current) {
+      ref.current.href = 'data:text/plain;charset=utf-8,' + encodeURIComponent(JSON.stringify(_data));
+      ref.current.click();
+    }
   };
 
   return (
@@ -59,7 +58,7 @@ const ImportExport: React.FC<IAddFixtureProps> = (props: IAddFixtureProps) => {
       <div className="p-1 grid">
         <InputGroup>
           <Label for={"export"} name={"Export"} />
-          <a className="" href={data} ref={ref} >export</a>
+          <a className="hidden" ref={ref} download={"export.json"}>export</a>
           <Button id="export" handleClick={handleExport}>Export</Button>
         </InputGroup>
         <InputGroup>
