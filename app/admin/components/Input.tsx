@@ -10,10 +10,15 @@ interface InputProps {
   label: string;
   inputArgs?: any;
   value?: any;
+  inputRef?: React.RefObject<HTMLInputElement>;
 }
 
 const Input = (props: InputProps) => {
-  const inputRef = useRef<HTMLInputElement>();
+  let inputRef: React.RefObject<HTMLInputElement> = useRef<HTMLInputElement>(null);
+
+  if (props.inputRef)
+    inputRef = props.inputRef;
+
   useEffect(() => {
     if (inputRef.current && props.value) inputRef.current.value = props.value;
   }, [props.value]);
@@ -31,7 +36,7 @@ const Input = (props: InputProps) => {
                    focus:outline-0 focus:border-primary
                    transition-border duration-500"
         required={props.required}
-        ref={inputRef}
+        ref={props.inputRef}
         {...props.inputArgs}
       />
     </div>

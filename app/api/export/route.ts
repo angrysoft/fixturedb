@@ -75,10 +75,23 @@ export async function GET(request: Request) {
       newEl?.details?.connectors.forEach((el: any) => {
           delete el.id;
       });
+    
+      newEl?.tags.forEach((el: any) => {
+          delete el.id;
+      });
+
       newEl?.details?.dmxModes.forEach((el: any) => {
           delete el.id;
+          delete el.fixtureDetailsId;
           
       });
+
+      newEl?.details?.files.forEach((el: any) => {
+          delete el.id;
+          delete el.fixtureDetailsId;
+          
+      });
+
       delete newEl.details.powerPlug.id;
 
     return newEl;

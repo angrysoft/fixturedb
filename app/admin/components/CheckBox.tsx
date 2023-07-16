@@ -6,10 +6,14 @@ interface ICheckBoxProps {
   required?: boolean;
   label: string;
   checked?: boolean;
+  checkboxRef?: React.RefObject<HTMLInputElement>;
 }
 
 const CheckBox: React.FC<ICheckBoxProps> = (props: ICheckBoxProps) => {
-  const inputRef = useRef<HTMLInputElement>();
+  let inputRef: React.RefObject<HTMLInputElement> = useRef<HTMLInputElement>(null);
+  if (props.checkboxRef)
+    inputRef = props.checkboxRef;
+
   useEffect(() => {
     if (inputRef.current && props.checked)
       inputRef.current.checked = props.checked;
@@ -31,6 +35,7 @@ const CheckBox: React.FC<ICheckBoxProps> = (props: ICheckBoxProps) => {
                    focus:outline-0 focus:border-primary
                    transition-border duration-500 h-2 w-2"
         required={props.required}
+        ref={inputRef}
       />
     </div>
   );
