@@ -63,15 +63,15 @@ export async function POST(request: Request) {
 
     for (const fix of importData.data) {
       const status = await importFixture(fix);
-      switch(status) {
+      switch(status.status) {
         case "added":
-          data.added.push(fix);
+          data.added.push(status.data);
           break;
         case "conflict":
-          data.conflicts.push(fix);
+          data.conflicts.push(status.data);
           break;
         case "error":
-          data.errors.push(fix);
+          data.errors.push(status.data);
           break;
       }
     }
@@ -99,9 +99,10 @@ async function importFixture(fixtureObj: fixtureObjType):Promise<any> {
   }) || [];
 
   try {
-    const fixture = await prisma.fixture.create({
+    const fixture: any = await prisma.fixture.create({
       include: {
         tags: true,
+        manufacture: true,
         details:{
           include: {
             connectors: true,
@@ -157,21 +158,44 @@ async function importFixture(fixtureObj: fixtureObjType):Promise<any> {
         },
       }
     });
+    console.log(fixture);
 
-    return "added";
+    const retFixture = {
+      id: fixture.id,
+      model: fixture.model,
+      fixtureType: fixture.fixtureType,
+      manufacture: fixture.manufacture,
+      weight: fixture.weight,
+      power: fixture.power,
+      tags: fixture.tags
+    }
+
+    return {
+      status: "added",
+      data: retFixture,
+    }
   } catch (e: any) {
     if (e instanceof Prisma.PrismaClientKnownRequestError) {
       if (e.code === 'P2002') {
         // console.log(
         //   'There is a unique constraint violation'
         // )
-        return 'conflict'
+        return {
+          status: 'conflict',
+          data: fixtureObj.model,
+        }
       }
-      return "error"
+      return {
+        status: "error",
+        data: fixtureObj.model,
+      }
     } else if (e instanceof Prisma.PrismaClientUnknownRequestError){
       return await importFixture(fixtureObj);
     } else{
-      return "error"
+      return {
+        status: "error",
+        data: fixtureObj.model,
+      }
     }
   }
 }

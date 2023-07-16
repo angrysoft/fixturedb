@@ -1,6 +1,6 @@
 "use client";
 import { useRouter } from "next/navigation";
-import React, { SyntheticEvent, useRef, useState } from "react";
+import React, { SyntheticEvent, useContext, useRef, useState } from "react";
 import { BackButton } from "../../components/BackButton";
 import { Form } from "../components/Form";
 import { Input } from "../components/Input";
@@ -10,6 +10,7 @@ import { Label } from "../components/Label";
 import Button from "../../components/Button";
 import { CheckBox } from "../components/CheckBox";
 import Loader from "../../components/Loader";
+import { AppContext } from "../../store";
 
 interface IAddFixtureProps {
   children?: JSX.Element | JSX.Element[];
@@ -17,6 +18,7 @@ interface IAddFixtureProps {
 
 const ImportExport: React.FC<IAddFixtureProps> = (props: IAddFixtureProps) => {
   useSession({ required: true });
+  const {dispatch} = useContext(AppContext);
   const [loading, setLoading] = useState(false);
   const ref = useRef<HTMLAnchorElement>(null);
   const checkboxRef = useRef<HTMLInputElement>(null);
@@ -72,22 +74,25 @@ const ImportExport: React.FC<IAddFixtureProps> = (props: IAddFixtureProps) => {
       cleanDb: checkboxRef?.current?.checked || false,
       data: {},
     };
-    let status = {};
-
+    
     if (fileRef.current.files && fileRef.current.files.length > 0) {
       const reader = new FileReader();
       reader.addEventListener("load", async (event: any) => {
-        status = await sendData(
+        const status = await sendData(
           JSON.stringify({ ...data, ...JSON.parse(event?.target?.result) }),
         );
-        console.log(status);
+        setLoading(false);
+        if (status.data.added.length > 0) {
+          dispatch({type: "FIXTURE_LIST_LOADED", payload: {data:status.data.added, query:"Imported"}});
+          router.push("/");
+        }
       });
       reader.readAsText(fileRef?.current?.files[0]);
     } else {
       fileRef.current?.setCustomValidity("File is not set");
       fileRef.current.reportValidity();
+      setLoading(false);
     }
-    setLoading(false);
   };
 
   if (loading) {
