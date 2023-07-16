@@ -36,7 +36,7 @@ const Input = (props: InputProps) => {
                    focus:outline-0 focus:border-primary
                    transition-border duration-500"
         required={props.required}
-        ref={props.inputRef}
+        ref={inputRef}
         {...props.inputArgs}
       />
     </div>

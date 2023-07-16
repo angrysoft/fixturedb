@@ -101,7 +101,7 @@ const ImportExport: React.FC<IAddFixtureProps> = (props: IAddFixtureProps) => {
 
   return (
     <>
-      <BackButton backTo="/" title={"Add New Fixture"} />
+      <BackButton backTo="/" title={"Import / Export Fixture"} />
       <div className="p-1 grid">
         <InputGroup>
           <Label for={"export"} name={"Export"} />
