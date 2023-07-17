@@ -47,6 +47,7 @@ const DmxModes: React.FC<IDmxModesProps> = (props: IDmxModesProps) => {
         id={"dmxModes"}
         name="dmxModes"
         value={items}
+        multiple
         readOnly
         className="hidden"
       />

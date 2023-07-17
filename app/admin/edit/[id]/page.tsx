@@ -1,19 +1,19 @@
 "use client";
 import React, { SyntheticEvent, useEffect, useState } from "react";
-import { BackButton } from "../../components/BackButton";
-import { Form } from "../components/Form";
-import { InputGroup } from "../components/InputGroup";
-import { Input } from "../components/Input";
-import { Select } from "../components/Select";
-import { InputDatalist } from "../components/Datalist";
-import { LedForm } from "../components/LedForm";
-import { LightForm } from "../components/LightForm";
-import { MultiAdd } from "../components/MultiAdd";
+import { BackButton } from "../../../components/BackButton";
+import { Form } from "../../components/Form";
+import { InputGroup } from "../../components/InputGroup";
+import { Input } from "../../components/Input";
+import { Select } from "../../components/Select";
+import { InputDatalist } from "../../components/Datalist";
+import { LedForm } from "../../components/LedForm";
+import { LightForm } from "../../components/LightForm";
+import { MultiAdd } from "../../components/MultiAdd";
 import { useRouter } from "next/navigation";
 import { useSession } from "next-auth/react";
 
-interface IAddFixtureProps {
-  children?: JSX.Element | JSX.Element[];
+interface IEditFixtureProps {
+  params: {id: number}
 }
 
 export interface IHintsResponse {
@@ -28,18 +28,20 @@ export interface IHintsResponse {
   };
 }
 
-const AddFixture: React.FC<IAddFixtureProps> = (props: IAddFixtureProps) => {
-  const {data:session} = useSession({required: true});
+const AddFixture: React.FC<IEditFixtureProps> = (props: IEditFixtureProps) => {
+  useSession({ required: true });
+  
   const router = useRouter();
   const [hints, setHints] = useState<IHintsResponse>();
   const [error, setError] = useState("");
   const [detailsElement, setDetailsElement] = useState<React.JSX.Element>(
     <></>,
   );
+  const [fixture, setFixture] = useState<any>({});
 
   const sendData = async (data: string) => {
     setError("");
-    const resp = await fetch("/api/fixture", { method: "POST", body: data });
+    const resp = await fetch(`/api/fixture/${props.params.id}`, { method: "PUT", body: data });
     if (resp.ok) {
       return resp.json();
     } else {
@@ -47,15 +49,15 @@ const AddFixture: React.FC<IAddFixtureProps> = (props: IAddFixtureProps) => {
     }
   };
 
-  const handleSubmit = async (ev: SyntheticEvent<HTMLFormElement>, opts: any) => {
+  const handleSubmit = async (
+    ev: SyntheticEvent<HTMLFormElement>,
+    opts: any,
+  ) => {
     ev.preventDefault();
     const data = new FormData(ev.target as HTMLFormElement);
     const jsonData = Object.fromEntries(data.entries());
     const ret = await sendData(JSON.stringify(jsonData));
-    if (ret.data.added)
-      router.push(`/fixture/${ret.data.added}`)
-
-      
+    // if (ret.data.added) router.push(`/fixture/${ret.data.added}`);
   };
 
   useEffect(() => {
@@ -67,6 +69,18 @@ const AddFixture: React.FC<IAddFixtureProps> = (props: IAddFixtureProps) => {
       setHints(await res.json());
     };
     getHints();
+  }, []);
+
+  useEffect(() => {
+    const getFixture = async () => {
+      const res = await fetch(`/api/fixture/${props.params.id}`);
+      if (!res.ok) {
+        throw new Error("Failed to fetch data");
+      }
+      const data = await res.json();
+      setFixture(data.data);
+    };
+    getFixture();
   }, []);
 
   const handleFixtureTypeChange = (ev: SyntheticEvent<HTMLSelectElement>) => {
@@ -85,6 +99,10 @@ const AddFixture: React.FC<IAddFixtureProps> = (props: IAddFixtureProps) => {
     }
   };
 
+  useEffect(() => {
+    console.log(fixture);
+  }, [fixture]);
+
   return (
     <>
       <BackButton backTo="/" title={"Add New Fixture"} />
@@ -96,6 +114,7 @@ const AddFixture: React.FC<IAddFixtureProps> = (props: IAddFixtureProps) => {
             required
             listItems={hints?.data?.manufactures || []}
             inputArgs={{ autoComplete: "off" }}
+            value={fixture?.manufacture?.name || ""}
           />
           <Input
             type="text"
@@ -103,15 +122,17 @@ const AddFixture: React.FC<IAddFixtureProps> = (props: IAddFixtureProps) => {
             id="model"
             required
             inputArgs={{ autoComplete: "off" }}
+            value={fixture.model || ""}
           />
-          <Input type="number" label="Weight" id="weight" required inputArgs={{step:"0.1"}}/>
-          <Input type="number" label="Power" id="power" />
+          <Input type="number" label="Weight" id="weight" required value={fixture.weight}/>
+          <Input type="number" label="Power" id="power" value={fixture.power}/>
         </InputGroup>
         <InputGroup>
           <MultiAdd
             label="Tags"
             id="tags"
             listItems={hints?.data?.tags || []}
+            value={fixture?.tags?.map((el: { name: any; })=> el.name)|| []}
           />
         </InputGroup>
         <InputGroup>
@@ -122,6 +143,7 @@ const AddFixture: React.FC<IAddFixtureProps> = (props: IAddFixtureProps) => {
             required
             onChange={handleFixtureTypeChange}
             fistEmpty
+            value={fixture?.fixtureType?.name || ""}
           />
         </InputGroup>
         {detailsElement}

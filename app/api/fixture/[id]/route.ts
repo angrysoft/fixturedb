@@ -43,7 +43,6 @@ export async function DELETE(request: Request, { params }: {params: {id: number}
         id: Number(params.id),
       }
     });
-    console.log(deletedFixture)
     return NextResponse.json({
       data: {deleted: deletedFixture},
       status: "success",

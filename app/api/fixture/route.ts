@@ -45,7 +45,7 @@ async function addFixture(fixtureObj: any) {
     }
   }) || [];
 
-  const connectors = fixtureObj.connector?.split(',').map((conn: string)=> {
+  const connectors = fixtureObj.connectors?.split(',').map((conn: string)=> {
     return {
       where: {
         name: conn
@@ -69,6 +69,8 @@ async function addFixture(fixtureObj: any) {
     const fixture = await prisma.fixture.create({
       include: {
         tags: true,
+        manufacture: true,
+        fixtureType:true,
         details:{
           include: {
             connectors: true,
@@ -136,14 +138,14 @@ async function addFixture(fixtureObj: any) {
         },
       }
     });
+    return fixture;
 
-  console.log(fixture);
   } catch (e: any) {
     if (e instanceof Prisma.PrismaClientKnownRequestError) {
       console.log(e)
       if (e.code === 'P2002') {
         console.log(
-          'There is a unique constraint violation, a new user cannot be created with this email'
+          'There is a unique constraint violation'
         )
       }
     } else if (e instanceof Prisma.PrismaClientUnknownRequestError){
@@ -159,7 +161,7 @@ export async function POST(request: Request) {
   if (session) {
     const data = await request.json();
     const fixture: any = await addFixture(data);
-    
+    console.log(fixture);
     return NextResponse.json({
       data: {added: fixture.id},
       status: "success",

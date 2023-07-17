@@ -1,5 +1,5 @@
 "use client";
-import React, { ChangeEventHandler } from "react";
+import React, { ChangeEventHandler, useEffect, useRef } from "react";
 import { Label } from "./Label";
 
 export interface IOptions {
@@ -14,10 +14,23 @@ interface ISelectProps {
   required?: boolean;
   fistEmpty?: boolean;
   onChange?: ChangeEventHandler<HTMLSelectElement>;
+  value?: string;
+  inputRef?: React.RefObject<HTMLSelectElement>;
 }
 
 const Select: React.FC<ISelectProps> = (props: ISelectProps) => {
+  let inputRef: React.RefObject<HTMLSelectElement> = useRef<HTMLSelectElement>(null);
+
+  if (props.inputRef)
+    inputRef = props.inputRef;
+
+  useEffect(() => {
+    if (inputRef.current && props.value) inputRef.current.value = props.value;
+    inputRef.current?.dispatchEvent(new Event("change"));
+  }, [props.value]);
+
   const optionItems = props.items.map((item) => {
+    console.log(props.value, item.name);
     return (
       <option id={item.id.toString()} value={item.name} key={item.id}>
         {item.name}
@@ -37,6 +50,7 @@ const Select: React.FC<ISelectProps> = (props: ISelectProps) => {
         id={props.id}
         required={props.required}
         onChange={props.onChange && props.onChange}
+        ref={inputRef}
       >
         {props.fistEmpty && <option></option>}
         {optionItems}

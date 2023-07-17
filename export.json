@@ -1,0 +1,4958 @@
+{
+    "data": [
+        {
+            "model": "600",
+            "weight": 31,
+            "power": 500,
+            "tags": [],
+            "fixtureType": {
+                "name": "light"
+            },
+            "manufacture": {
+                "name": "Studio due"
+            },
+            "details": {
+                "powerPassage": false,
+                "outdoor": false,
+                "desc": "",
+                "connectors": [
+                    {
+                        "name": "DMX 3pin"
+                    }
+                ],
+                "dmxModes": [
+                    {
+                        "name": "6ch",
+                        "channels": 6
+                    },
+                    {
+                        "name": "12ch",
+                        "channels": 12
+                    }
+                ],
+                "powerPlug": {
+                    "name": "Schuko (230V)"
+                },
+                "files": []
+            }
+        },
+        {
+            "model": "A-391",
+            "weight": 8.3,
+            "power": 135,
+            "tags": [
+                {
+                    "name": "ves"
+                }
+            ],
+            "fixtureType": {
+                "name": "led"
+            },
+            "manufacture": {
+                "name": "Dicolor"
+            },
+            "details": {
+                "powerPassage": true,
+                "outdoor": false,
+                "desc": "Ves p3 v1",
+                "width": 500,
+                "height": 500,
+                "thickness": 80,
+                "resolutionH": 128,
+                "resolutionV": 128,
+                "pixel": 3.91,
+                "connectors": [
+                    {
+                        "name": "RJ45IN"
+                    },
+                    {
+                        "name": "RJ45OUT"
+                    }
+                ],
+                "dmxModes": [],
+                "powerPlug": {
+                    "name": "PowerCon"
+                },
+                "files": [
+                    {
+                        "name": "config",
+                        "url": "/files/led/dicolor-a391.rcfgx"
+                    }
+                ]
+            }
+        },
+        {
+            "model": "A.leda B-EYE K10",
+            "weight": 15,
+            "power": 450,
+            "tags": [],
+            "fixtureType": {
+                "name": "light"
+            },
+            "manufacture": {
+                "name": "Clay Paky"
+            },
+            "details": {
+                "powerPassage": false,
+                "outdoor": false,
+                "desc": "",
+                "connectors": [
+                    {
+                        "name": "RJ45IN"
+                    },
+                    {
+                        "name": "DMX 5pin"
+                    }
+                ],
+                "dmxModes": [
+                    {
+                        "name": "standard-k10",
+                        "channels": 21
+                    },
+                    {
+                        "name": "shapes-k10",
+                        "channels": 35
+                    },
+                    {
+                        "name": "RGB-k10",
+                        "channels": 57
+                    },
+                    {
+                        "name": "RGBW-k10",
+                        "channels": 76
+                    }
+                ],
+                "powerPlug": {
+                    "name": "PowerCon TRUE1"
+                },
+                "files": []
+            }
+        },
+        {
+            "model": "A.leda B-EYE K10 CC",
+            "weight": 14.5,
+            "power": 350,
+            "tags": [],
+            "fixtureType": {
+                "name": "light"
+            },
+            "manufacture": {
+                "name": "Clay Paky"
+            },
+            "details": {
+                "powerPassage": false,
+                "outdoor": false,
+                "desc": "",
+                "connectors": [
+                    {
+                        "name": "DMX 5pin"
+                    }
+                ],
+                "dmxModes": [
+                    {
+                        "name": "k10CC",
+                        "channels": 20
+                    }
+                ],
+                "powerPlug": {
+                    "name": "PowerCon TRUE1"
+                },
+                "files": []
+            }
+        },
+        {
+            "model": "A.leda B-EYE K20",
+            "weight": 21,
+            "power": 750,
+            "tags": [],
+            "fixtureType": {
+                "name": "light"
+            },
+            "manufacture": {
+                "name": "Clay Paky"
+            },
+            "details": {
+                "powerPassage": false,
+                "outdoor": false,
+                "desc": "",
+                "connectors": [
+                    {
+                        "name": "DMX 3pin"
+                    },
+                    {
+                        "name": "RJ45IN"
+                    },
+                    {
+                        "name": "DMX 5pin"
+                    }
+                ],
+                "dmxModes": [
+                    {
+                        "name": "standard-k20",
+                        "channels": 21
+                    },
+                    {
+                        "name": "shapes-k20",
+                        "channels": 35
+                    },
+                    {
+                        "name": "RGB-k20",
+                        "channels": 111
+                    },
+                    {
+                        "name": "RGBW-k20",
+                        "channels": 148
+                    }
+                ],
+                "powerPlug": {
+                    "name": "PowerCon TRUE1"
+                },
+                "files": []
+            }
+        },
+        {
+            "model": "A.leda B-EYE K20 CC",
+            "weight": 21,
+            "power": 550,
+            "tags": [],
+            "fixtureType": {
+                "name": "light"
+            },
+            "manufacture": {
+                "name": "Clay Paky"
+            },
+            "details": {
+                "powerPassage": false,
+                "outdoor": false,
+                "desc": "",
+                "connectors": [
+                    {
+                        "name": "DMX 5pin"
+                    }
+                ],
+                "dmxModes": [
+                    {
+                        "name": "k20CC",
+                        "channels": 20
+                    }
+                ],
+                "powerPlug": {
+                    "name": "PowerCon TRUE1"
+                },
+                "files": []
+            }
+        },
+        {
+            "model": "AF2-391",
+            "weight": 8.3,
+            "power": 105,
+            "tags": [
+                {
+                    "name": "ves"
+                }
+            ],
+            "fixtureType": {
+                "name": "led"
+            },
+            "manufacture": {
+                "name": "Dicolor"
+            },
+            "details": {
+                "powerPassage": true,
+                "outdoor": false,
+                "desc": "Ves p3 v2",
+                "width": 500,
+                "height": 500,
+                "thickness": 80,
+                "resolutionH": 128,
+                "resolutionV": 128,
+                "pixel": 3.91,
+                "connectors": [
+                    {
+                        "name": "RJ45IN"
+                    },
+                    {
+                        "name": "RJ45OUT"
+                    }
+                ],
+                "dmxModes": [],
+                "powerPlug": {
+                    "name": "PowerCon"
+                },
+                "files": [
+                    {
+                        "name": "config",
+                        "url": "/files/led/dicolor-af2-391.rcfgx"
+                    }
+                ]
+            }
+        },
+        {
+            "model": "AR5.95",
+            "weight": 12,
+            "power": 300,
+            "tags": [
+                {
+                    "name": "aram"
+                }
+            ],
+            "fixtureType": {
+                "name": "led"
+            },
+            "manufacture": {
+                "name": "Infiled"
+            },
+            "details": {
+                "powerPassage": true,
+                "outdoor": true,
+                "desc": "Aram",
+                "width": 500,
+                "height": 1000,
+                "thickness": 66,
+                "resolutionH": 84,
+                "resolutionV": 168,
+                "pixel": 5.95,
+                "connectors": [
+                    {
+                        "name": "RJ45IN"
+                    },
+                    {
+                        "name": "RJ45OUT"
+                    }
+                ],
+                "dmxModes": [],
+                "powerPlug": {
+                    "name": "PowerCon TRUE1"
+                },
+                "files": [
+                    {
+                        "name": "config",
+                        "url": "/download/led/infiled-a5.95.rcfgx"
+                    }
+                ]
+            }
+        },
+        {
+            "model": "ATMOSPHEREAPS",
+            "weight": 19,
+            "power": 715,
+            "tags": [],
+            "fixtureType": {
+                "name": "light"
+            },
+            "manufacture": {
+                "name": "MDG"
+            },
+            "details": {
+                "powerPassage": false,
+                "outdoor": false,
+                "desc": "",
+                "connectors": [
+                    {
+                        "name": "DMX 5pin"
+                    }
+                ],
+                "dmxModes": [
+                    {
+                        "name": "2ch",
+                        "channels": 2
+                    }
+                ],
+                "powerPlug": {
+                    "name": "Schuko (230V)"
+                },
+                "files": []
+            }
+        },
+        {
+            "model": "Arolla Profile HP",
+            "weight": 44.7,
+            "power": 1650,
+            "tags": [],
+            "fixtureType": {
+                "name": "light"
+            },
+            "manufacture": {
+                "name": "Clay Paky"
+            },
+            "details": {
+                "powerPassage": false,
+                "outdoor": false,
+                "desc": "",
+                "connectors": [
+                    {
+                        "name": "DMX 3pin"
+                    },
+                    {
+                        "name": "RJ45IN"
+                    },
+                    {
+                        "name": "DMX 5pin"
+                    }
+                ],
+                "dmxModes": [
+                    {
+                        "name": "arolla-profile-hp",
+                        "channels": 39
+                    }
+                ],
+                "powerPlug": {
+                    "name": "PowerCon TRUE1"
+                },
+                "files": []
+            }
+        },
+        {
+            "model": "Arolla Profile MP",
+            "weight": 25,
+            "power": 740,
+            "tags": [],
+            "fixtureType": {
+                "name": "light"
+            },
+            "manufacture": {
+                "name": "Clay Paky"
+            },
+            "details": {
+                "powerPassage": false,
+                "outdoor": false,
+                "desc": "",
+                "connectors": [
+                    {
+                        "name": "RJ45IN"
+                    },
+                    {
+                        "name": "DMX 5pin"
+                    }
+                ],
+                "dmxModes": [
+                    {
+                        "name": "arolla-profile-mp",
+                        "channels": 37
+                    }
+                ],
+                "powerPlug": {
+                    "name": "PowerCon TRUE1"
+                },
+                "files": []
+            }
+        },
+        {
+            "model": "Arolla Spot MP",
+            "weight": 23.7,
+            "power": 740,
+            "tags": [],
+            "fixtureType": {
+                "name": "light"
+            },
+            "manufacture": {
+                "name": "Clay Paky"
+            },
+            "details": {
+                "powerPassage": false,
+                "outdoor": false,
+                "desc": "",
+                "connectors": [
+                    {
+                        "name": "RJ45IN"
+                    },
+                    {
+                        "name": "DMX 5pin"
+                    }
+                ],
+                "dmxModes": [
+                    {
+                        "name": "arolla-spot-mp",
+                        "channels": 29
+                    }
+                ],
+                "powerPlug": {
+                    "name": "PowerCon TRUE1"
+                },
+                "files": []
+            }
+        },
+        {
+            "model": "Atomic 3000 LED",
+            "weight": 7.8,
+            "power": 740,
+            "tags": [],
+            "fixtureType": {
+                "name": "light"
+            },
+            "manufacture": {
+                "name": "Martin"
+            },
+            "details": {
+                "powerPassage": false,
+                "outdoor": false,
+                "desc": "",
+                "connectors": [
+                    {
+                        "name": "DMX 5pin"
+                    }
+                ],
+                "dmxModes": [
+                    {
+                        "name": "3ch",
+                        "channels": 3
+                    },
+                    {
+                        "name": "4ch",
+                        "channels": 4
+                    },
+                    {
+                        "name": "14ch",
+                        "channels": 14
+                    }
+                ],
+                "powerPlug": {
+                    "name": "PowerCon"
+                },
+                "files": []
+            }
+        },
+        {
+            "model": "Axcor Beam 300",
+            "weight": 17.6,
+            "power": 215,
+            "tags": [],
+            "fixtureType": {
+                "name": "light"
+            },
+            "manufacture": {
+                "name": "Clay Paky"
+            },
+            "details": {
+                "powerPassage": true,
+                "outdoor": false,
+                "desc": "",
+                "connectors": [
+                    {
+                        "name": "RJ45IN"
+                    },
+                    {
+                        "name": "DMX 5pin"
+                    }
+                ],
+                "dmxModes": [
+                    {
+                        "name": "standard-axcor-B300",
+                        "channels": 14
+                    },
+                    {
+                        "name": "sharpy-axcor-B300",
+                        "channels": 16
+                    }
+                ],
+                "powerPlug": {
+                    "name": "PowerCon TRUE1"
+                },
+                "files": []
+            }
+        },
+        {
+            "model": "Axcor Profile 400",
+            "weight": 27,
+            "power": 500,
+            "tags": [],
+            "fixtureType": {
+                "name": "light"
+            },
+            "manufacture": {
+                "name": "Clay Paky"
+            },
+            "details": {
+                "powerPassage": true,
+                "outdoor": false,
+                "desc": "",
+                "connectors": [
+                    {
+                        "name": "RJ45IN"
+                    },
+                    {
+                        "name": "DMX 5pin"
+                    }
+                ],
+                "dmxModes": [
+                    {
+                        "name": "axcor-P400",
+                        "channels": 36
+                    }
+                ],
+                "powerPlug": {
+                    "name": "PowerCon TRUE1"
+                },
+                "files": []
+            }
+        },
+        {
+            "model": "Axcor Profile 600 / Teatro",
+            "weight": 33,
+            "power": 800,
+            "tags": [],
+            "fixtureType": {
+                "name": "light"
+            },
+            "manufacture": {
+                "name": "Clay Paky"
+            },
+            "details": {
+                "powerPassage": true,
+                "outdoor": false,
+                "desc": "",
+                "connectors": [
+                    {
+                        "name": "DMX 3pin"
+                    },
+                    {
+                        "name": "RJ45IN"
+                    },
+                    {
+                        "name": "DMX 5pin"
+                    }
+                ],
+                "dmxModes": [
+                    {
+                        "name": "standard-axcor-P600",
+                        "channels": 40
+                    },
+                    {
+                        "name": "vector-axcor-P600",
+                        "channels": 44
+                    }
+                ],
+                "powerPlug": {
+                    "name": "PowerCon TRUE1"
+                },
+                "files": []
+            }
+        },
+        {
+            "model": "Axcor Profile 900",
+            "weight": 45,
+            "power": 1400,
+            "tags": [],
+            "fixtureType": {
+                "name": "light"
+            },
+            "manufacture": {
+                "name": "Clay Paky"
+            },
+            "details": {
+                "powerPassage": false,
+                "outdoor": false,
+                "desc": "",
+                "connectors": [
+                    {
+                        "name": "RJ45IN"
+                    },
+                    {
+                        "name": "DMX 5pin"
+                    }
+                ],
+                "dmxModes": [
+                    {
+                        "name": "axcor-profile-900",
+                        "channels": 38
+                    }
+                ],
+                "powerPlug": {
+                    "name": "PowerCon TRUE1"
+                },
+                "files": []
+            }
+        },
+        {
+            "model": "Axcor Spot 300",
+            "weight": 20.2,
+            "power": 340,
+            "tags": [],
+            "fixtureType": {
+                "name": "light"
+            },
+            "manufacture": {
+                "name": "Clay Paky"
+            },
+            "details": {
+                "powerPassage": true,
+                "outdoor": false,
+                "desc": "",
+                "connectors": [
+                    {
+                        "name": "RJ45IN"
+                    },
+                    {
+                        "name": "DMX 5pin"
+                    }
+                ],
+                "dmxModes": [
+                    {
+                        "name": "axcor-S300",
+                        "channels": 23
+                    }
+                ],
+                "powerPlug": {
+                    "name": "PowerCon TRUE1"
+                },
+                "files": []
+            }
+        },
+        {
+            "model": "Axcor Spot 400",
+            "weight": 26,
+            "power": 540,
+            "tags": [],
+            "fixtureType": {
+                "name": "light"
+            },
+            "manufacture": {
+                "name": "Clay Paky"
+            },
+            "details": {
+                "powerPassage": true,
+                "outdoor": false,
+                "desc": "",
+                "connectors": [
+                    {
+                        "name": "RJ45IN"
+                    },
+                    {
+                        "name": "DMX 5pin"
+                    }
+                ],
+                "dmxModes": [
+                    {
+                        "name": "axcor-S400",
+                        "channels": 28
+                    }
+                ],
+                "powerPlug": {
+                    "name": "PowerCon TRUE1"
+                },
+                "files": []
+            }
+        },
+        {
+            "model": "Axcor Wash 300",
+            "weight": 19.9,
+            "power": 290,
+            "tags": [],
+            "fixtureType": {
+                "name": "light"
+            },
+            "manufacture": {
+                "name": "Clay Paky"
+            },
+            "details": {
+                "powerPassage": false,
+                "outdoor": false,
+                "desc": "",
+                "connectors": [
+                    {
+                        "name": "RJ45IN"
+                    },
+                    {
+                        "name": "DMX 5pin"
+                    }
+                ],
+                "dmxModes": [
+                    {
+                        "name": "standard-axcor-W300",
+                        "channels": 16
+                    }
+                ],
+                "powerPlug": {
+                    "name": "PowerCon TRUE1"
+                },
+                "files": []
+            }
+        },
+        {
+            "model": "Axcor Wash 600",
+            "weight": 33,
+            "power": 800,
+            "tags": [],
+            "fixtureType": {
+                "name": "light"
+            },
+            "manufacture": {
+                "name": "Clay Paky"
+            },
+            "details": {
+                "powerPassage": false,
+                "outdoor": false,
+                "desc": "",
+                "connectors": [
+                    {
+                        "name": "DMX 3pin"
+                    },
+                    {
+                        "name": "RJ45IN"
+                    },
+                    {
+                        "name": "DMX 5pin"
+                    }
+                ],
+                "dmxModes": [
+                    {
+                        "name": "standard-axcor-W600",
+                        "channels": 26
+                    },
+                    {
+                        "name": "vector-axcor-W600",
+                        "channels": 30
+                    }
+                ],
+                "powerPlug": {
+                    "name": "PowerCon TRUE1"
+                },
+                "files": []
+            }
+        },
+        {
+            "model": "B-EYE K10 HCR",
+            "weight": 16.5,
+            "power": 450,
+            "tags": [],
+            "fixtureType": {
+                "name": "light"
+            },
+            "manufacture": {
+                "name": "Clay Paky"
+            },
+            "details": {
+                "powerPassage": false,
+                "outdoor": false,
+                "desc": "",
+                "connectors": [
+                    {
+                        "name": "DMX 3pin"
+                    },
+                    {
+                        "name": "RJ45IN"
+                    },
+                    {
+                        "name": "DMX 5pin"
+                    }
+                ],
+                "dmxModes": [
+                    {
+                        "name": "Basic RGB-k10HCR",
+                        "channels": 19
+                    },
+                    {
+                        "name": "Basic HSV-k10HCR",
+                        "channels": 19
+                    },
+                    {
+                        "name": "Extended RGB-k10HCR",
+                        "channels": 32
+                    },
+                    {
+                        "name": "Extended HSV-k10HCR",
+                        "channels": 32
+                    }
+                ],
+                "powerPlug": {
+                    "name": "PowerCon TRUE1"
+                },
+                "files": []
+            }
+        },
+        {
+            "model": "B-EYE K15",
+            "weight": 20.7,
+            "power": 700,
+            "tags": [],
+            "fixtureType": {
+                "name": "light"
+            },
+            "manufacture": {
+                "name": "Clay Paky"
+            },
+            "details": {
+                "powerPassage": false,
+                "outdoor": false,
+                "desc": "",
+                "connectors": [
+                    {
+                        "name": "DMX 3pin"
+                    },
+                    {
+                        "name": "RJ45IN"
+                    },
+                    {
+                        "name": "DMX 5pin"
+                    }
+                ],
+                "dmxModes": [
+                    {
+                        "name": "standard-k15",
+                        "channels": 22
+                    },
+                    {
+                        "name": "shapes-k15",
+                        "channels": 36
+                    },
+                    {
+                        "name": "RGB-k15",
+                        "channels": 57
+                    },
+                    {
+                        "name": "RGBW-k15",
+                        "channels": 76
+                    }
+                ],
+                "powerPlug": {
+                    "name": "PowerCon TRUE1"
+                },
+                "files": []
+            }
+        },
+        {
+            "model": "B-EYE K20 HCR",
+            "weight": 22.5,
+            "power": 750,
+            "tags": [],
+            "fixtureType": {
+                "name": "light"
+            },
+            "manufacture": {
+                "name": "Clay Paky"
+            },
+            "details": {
+                "powerPassage": false,
+                "outdoor": false,
+                "desc": "",
+                "connectors": [
+                    {
+                        "name": "DMX 3pin"
+                    },
+                    {
+                        "name": "RJ45IN"
+                    },
+                    {
+                        "name": "DMX 5pin"
+                    }
+                ],
+                "dmxModes": [
+                    {
+                        "name": "Basic RGB-k20HCR",
+                        "channels": 19
+                    },
+                    {
+                        "name": "Basic HSV-k20HCR",
+                        "channels": 19
+                    },
+                    {
+                        "name": "Extended RGB-k20HCR",
+                        "channels": 32
+                    },
+                    {
+                        "name": "Extended HSV-k20HCR",
+                        "channels": 32
+                    }
+                ],
+                "powerPlug": {
+                    "name": "PowerCon TRUE1"
+                },
+                "files": []
+            }
+        },
+        {
+            "model": "B-EYE K25 / Teatro",
+            "weight": 27.5,
+            "power": 1250,
+            "tags": [],
+            "fixtureType": {
+                "name": "light"
+            },
+            "manufacture": {
+                "name": "Clay Paky"
+            },
+            "details": {
+                "powerPassage": false,
+                "outdoor": false,
+                "desc": "",
+                "connectors": [
+                    {
+                        "name": "DMX 3pin"
+                    },
+                    {
+                        "name": "RJ45IN"
+                    },
+                    {
+                        "name": "DMX 5pin"
+                    }
+                ],
+                "dmxModes": [
+                    {
+                        "name": "standard-k25",
+                        "channels": 22
+                    },
+                    {
+                        "name": "shapes-k25",
+                        "channels": 36
+                    },
+                    {
+                        "name": "RGB-k25",
+                        "channels": 111
+                    },
+                    {
+                        "name": "RGBW-k25",
+                        "channels": 148
+                    }
+                ],
+                "powerPlug": {
+                    "name": "PowerCon TRUE1"
+                },
+                "files": []
+            }
+        },
+        {
+            "model": "CL-Par-360-RGBW",
+            "weight": 360,
+            "power": 13,
+            "tags": [],
+            "fixtureType": {
+                "name": "light"
+            },
+            "manufacture": {
+                "name": "CharmLed"
+            },
+            "details": {
+                "powerPassage": true,
+                "outdoor": false,
+                "desc": "",
+                "connectors": [
+                    {
+                        "name": "DMX 3pin"
+                    }
+                ],
+                "dmxModes": [
+                    {
+                        "name": "4ch",
+                        "channels": 4
+                    },
+                    {
+                        "name": "5ch",
+                        "channels": 5
+                    },
+                    {
+                        "name": "9ch",
+                        "channels": 9
+                    }
+                ],
+                "powerPlug": {
+                    "name": "Schuko (230V)"
+                },
+                "files": []
+            }
+        },
+        {
+            "model": "ChromaBatten 500",
+            "weight": 6.4,
+            "power": 100,
+            "tags": [],
+            "fixtureType": {
+                "name": "light"
+            },
+            "manufacture": {
+                "name": "Pulsar"
+            },
+            "details": {
+                "powerPassage": false,
+                "outdoor": false,
+                "desc": "",
+                "connectors": [
+                    {
+                        "name": "DMX 5pin"
+                    }
+                ],
+                "dmxModes": [
+                    {
+                        "name": "3ch",
+                        "channels": 3
+                    },
+                    {
+                        "name": "6ch",
+                        "channels": 6
+                    }
+                ],
+                "powerPlug": {
+                    "name": "Schuko (230V)"
+                },
+                "files": []
+            }
+        },
+        {
+            "model": "Dual800",
+            "weight": 39,
+            "power": 600,
+            "tags": [],
+            "fixtureType": {
+                "name": "light"
+            },
+            "manufacture": {
+                "name": "Studio due"
+            },
+            "details": {
+                "powerPassage": false,
+                "outdoor": false,
+                "desc": "",
+                "connectors": [
+                    {
+                        "name": "DMX 3pin"
+                    }
+                ],
+                "dmxModes": [
+                    {
+                        "name": "8ch",
+                        "channels": 8
+                    },
+                    {
+                        "name": "4ch",
+                        "channels": 4
+                    },
+                    {
+                        "name": "13ch",
+                        "channels": 13
+                    }
+                ],
+                "powerPlug": {
+                    "name": "Schuko (230V)"
+                },
+                "files": []
+            }
+        },
+        {
+            "model": "Esprite",
+            "weight": 28.2,
+            "power": 950,
+            "tags": [],
+            "fixtureType": {
+                "name": "light"
+            },
+            "manufacture": {
+                "name": "Robe"
+            },
+            "details": {
+                "powerPassage": false,
+                "outdoor": false,
+                "desc": "",
+                "connectors": [
+                    {
+                        "name": "DMX 3pin"
+                    },
+                    {
+                        "name": "RJ45IN"
+                    },
+                    {
+                        "name": "RJ45OUT"
+                    },
+                    {
+                        "name": "DMX 5pin"
+                    }
+                ],
+                "dmxModes": [
+                    {
+                        "name": "1-Standard 16bit",
+                        "channels": 49
+                    },
+                    {
+                        "name": "2-Reduced 8bit",
+                        "channels": 42
+                    },
+                    {
+                        "name": " 3-Standard 16bit + green corre",
+                        "channels": 50
+                    },
+                    {
+                        "name": "4-Reduced 8bit + green corre",
+                        "channels": 43
+                    }
+                ],
+                "powerPlug": {
+                    "name": "PowerCon TRUE1"
+                },
+                "files": []
+            }
+        },
+        {
+            "model": "Esprite FS",
+            "weight": 29.4,
+            "power": 950,
+            "tags": [],
+            "fixtureType": {
+                "name": "light"
+            },
+            "manufacture": {
+                "name": "Robe"
+            },
+            "details": {
+                "powerPassage": false,
+                "outdoor": false,
+                "desc": "",
+                "connectors": [
+                    {
+                        "name": "DMX 3pin"
+                    },
+                    {
+                        "name": "RJ45IN"
+                    },
+                    {
+                        "name": "RJ45OUT"
+                    },
+                    {
+                        "name": "DMX 5pin"
+                    }
+                ],
+                "dmxModes": [
+                    {
+                        "name": "1-Standard 16bit",
+                        "channels": 49
+                    },
+                    {
+                        "name": "2-Reduced 8bit",
+                        "channels": 42
+                    },
+                    {
+                        "name": " 3-Standard 16bit + green corre",
+                        "channels": 50
+                    },
+                    {
+                        "name": "4-Reduced 8bit + green corre",
+                        "channels": 43
+                    }
+                ],
+                "powerPlug": {
+                    "name": "PowerCon TRUE1"
+                },
+                "files": []
+            }
+        },
+        {
+            "model": "Esprite Fresnel",
+            "weight": 26,
+            "power": 950,
+            "tags": [],
+            "fixtureType": {
+                "name": "light"
+            },
+            "manufacture": {
+                "name": "Robe"
+            },
+            "details": {
+                "powerPassage": false,
+                "outdoor": false,
+                "desc": "",
+                "connectors": [
+                    {
+                        "name": "DMX 3pin"
+                    },
+                    {
+                        "name": "RJ45IN"
+                    },
+                    {
+                        "name": "RJ45OUT"
+                    },
+                    {
+                        "name": "DMX 5pin"
+                    }
+                ],
+                "dmxModes": [
+                    {
+                        "name": "1-Standard 16bit-fresnel",
+                        "channels": 34
+                    },
+                    {
+                        "name": "2-Reduced 8bit-fresnel",
+                        "channels": 30
+                    },
+                    {
+                        "name": " 3-Standard 16bit + green corre-fresnel",
+                        "channels": 35
+                    },
+                    {
+                        "name": "4-Reduced 8bit + green corre-fresnel",
+                        "channels": 31
+                    }
+                ],
+                "powerPlug": {
+                    "name": "PowerCon TRUE1"
+                },
+                "files": []
+            }
+        },
+        {
+            "model": "Esprite PC",
+            "weight": 26,
+            "power": 950,
+            "tags": [],
+            "fixtureType": {
+                "name": "light"
+            },
+            "manufacture": {
+                "name": "Robe"
+            },
+            "details": {
+                "powerPassage": false,
+                "outdoor": false,
+                "desc": "",
+                "connectors": [
+                    {
+                        "name": "DMX 3pin"
+                    },
+                    {
+                        "name": "RJ45IN"
+                    },
+                    {
+                        "name": "RJ45OUT"
+                    },
+                    {
+                        "name": "DMX 5pin"
+                    }
+                ],
+                "dmxModes": [
+                    {
+                        "name": "1-Standard 16bit-pc",
+                        "channels": 34
+                    },
+                    {
+                        "name": "2-Reduced 8bit-pc",
+                        "channels": 30
+                    },
+                    {
+                        "name": " 3-Standard 16bit + green corre-pc",
+                        "channels": 35
+                    },
+                    {
+                        "name": "4-Reduced 8bit + green corre-pc",
+                        "channels": 31
+                    }
+                ],
+                "powerPlug": {
+                    "name": "PowerCon TRUE1"
+                },
+                "files": []
+            }
+        },
+        {
+            "model": "FQ100",
+            "weight": 16,
+            "power": 1500,
+            "tags": [],
+            "fixtureType": {
+                "name": "light"
+            },
+            "manufacture": {
+                "name": "HighEnd"
+            },
+            "details": {
+                "powerPassage": false,
+                "outdoor": false,
+                "desc": "",
+                "connectors": [
+                    {
+                        "name": "DMX 3pin"
+                    },
+                    {
+                        "name": "DMX 5pin"
+                    }
+                ],
+                "dmxModes": [
+                    {
+                        "name": "1ch",
+                        "channels": 1
+                    }
+                ],
+                "powerPlug": {
+                    "name": "Schuko (230V)"
+                },
+                "files": []
+            }
+        },
+        {
+            "model": "FlatCob 40",
+            "weight": 1.5,
+            "power": 34.3,
+            "tags": [],
+            "fixtureType": {
+                "name": "light"
+            },
+            "manufacture": {
+                "name": "Prolights"
+            },
+            "details": {
+                "powerPassage": true,
+                "outdoor": false,
+                "desc": "",
+                "connectors": [
+                    {
+                        "name": "DMX 3pin"
+                    }
+                ],
+                "dmxModes": [
+                    {
+                        "name": "3ch",
+                        "channels": 3
+                    },
+                    {
+                        "name": "8ch",
+                        "channels": 8
+                    }
+                ],
+                "powerPlug": {
+                    "name": "C13"
+                },
+                "files": []
+            }
+        },
+        {
+            "model": "Footsie1",
+            "weight": 11.3,
+            "power": 45,
+            "tags": [
+                {
+                    "name": "IP65"
+                }
+            ],
+            "fixtureType": {
+                "name": "light"
+            },
+            "manufacture": {
+                "name": "Robe"
+            },
+            "details": {
+                "powerPassage": true,
+                "outdoor": true,
+                "desc": "",
+                "connectors": [
+                    {
+                        "name": "DMX 5pin"
+                    }
+                ],
+                "dmxModes": [
+                    {
+                        "name": "WW",
+                        "channels": 11
+                    },
+                    {
+                        "name": "TW",
+                        "channels": 19
+                    },
+                    {
+                        "name": "RGBW",
+                        "channels": 28
+                    }
+                ],
+                "powerPlug": {
+                    "name": "PowerCon TRUE1"
+                },
+                "files": []
+            }
+        },
+        {
+            "model": "Footsie2",
+            "weight": 21.2,
+            "power": 85,
+            "tags": [
+                {
+                    "name": "IP65"
+                }
+            ],
+            "fixtureType": {
+                "name": "light"
+            },
+            "manufacture": {
+                "name": "Robe"
+            },
+            "details": {
+                "powerPassage": true,
+                "outdoor": true,
+                "desc": "",
+                "connectors": [
+                    {
+                        "name": "DMX 5pin"
+                    }
+                ],
+                "dmxModes": [
+                    {
+                        "name": "WW",
+                        "channels": 13
+                    },
+                    {
+                        "name": "TW",
+                        "channels": 20
+                    },
+                    {
+                        "name": "RGBW",
+                        "channels": 36
+                    }
+                ],
+                "powerPlug": {
+                    "name": "PowerCon TRUE1"
+                },
+                "files": []
+            }
+        },
+        {
+            "model": "Forte",
+            "weight": 41,
+            "power": 1250,
+            "tags": [],
+            "fixtureType": {
+                "name": "light"
+            },
+            "manufacture": {
+                "name": "Robe"
+            },
+            "details": {
+                "powerPassage": false,
+                "outdoor": false,
+                "desc": "",
+                "connectors": [
+                    {
+                        "name": "DMX 3pin"
+                    },
+                    {
+                        "name": "RJ45IN"
+                    },
+                    {
+                        "name": "RJ45OUT"
+                    },
+                    {
+                        "name": "DMX 5pin"
+                    }
+                ],
+                "dmxModes": [
+                    {
+                        "name": "1-forte",
+                        "channels": 54
+                    },
+                    {
+                        "name": "2-forte",
+                        "channels": 56
+                    }
+                ],
+                "powerPlug": {
+                    "name": "PowerCon TRUE1"
+                },
+                "files": []
+            }
+        },
+        {
+            "model": "Forte FS",
+            "weight": 42.2,
+            "power": 1250,
+            "tags": [],
+            "fixtureType": {
+                "name": "light"
+            },
+            "manufacture": {
+                "name": "Robe"
+            },
+            "details": {
+                "powerPassage": false,
+                "outdoor": false,
+                "desc": "",
+                "connectors": [
+                    {
+                        "name": "DMX 3pin"
+                    },
+                    {
+                        "name": "RJ45IN"
+                    },
+                    {
+                        "name": "RJ45OUT"
+                    },
+                    {
+                        "name": "DMX 5pin"
+                    }
+                ],
+                "dmxModes": [
+                    {
+                        "name": "1-forte",
+                        "channels": 54
+                    },
+                    {
+                        "name": "2-forte",
+                        "channels": 56
+                    }
+                ],
+                "powerPlug": {
+                    "name": "PowerCon TRUE1"
+                },
+                "files": []
+            }
+        },
+        {
+            "model": "H3-HD-LU",
+            "weight": 3.5,
+            "power": 51,
+            "tags": [
+                {
+                    "name": "aram"
+                }
+            ],
+            "fixtureType": {
+                "name": "led"
+            },
+            "manufacture": {
+                "name": "Yestech"
+            },
+            "details": {
+                "powerPassage": true,
+                "outdoor": false,
+                "desc": "Aram",
+                "width": 707,
+                "height": 354,
+                "thickness": 79,
+                "resolutionH": 128,
+                "resolutionV": 128,
+                "pixel": 5.95,
+                "connectors": [
+                    {
+                        "name": "RJ45IN"
+                    },
+                    {
+                        "name": "RJ45OUT"
+                    }
+                ],
+                "dmxModes": [],
+                "powerPlug": {
+                    "name": "PowerCon"
+                },
+                "files": [
+                    {
+                        "name": "config",
+                        "url": "/download/led/yestech-h3-hd-lu.rcfgx"
+                    }
+                ]
+            }
+        },
+        {
+            "model": "H3-HD-RU",
+            "weight": 3.5,
+            "power": 51,
+            "tags": [
+                {
+                    "name": "aram"
+                }
+            ],
+            "fixtureType": {
+                "name": "led"
+            },
+            "manufacture": {
+                "name": "Yestech"
+            },
+            "details": {
+                "powerPassage": true,
+                "outdoor": false,
+                "desc": "Aram",
+                "width": 707,
+                "height": 354,
+                "thickness": 79,
+                "resolutionH": 128,
+                "resolutionV": 128,
+                "pixel": 5.95,
+                "connectors": [
+                    {
+                        "name": "RJ45IN"
+                    },
+                    {
+                        "name": "RJ45OUT"
+                    }
+                ],
+                "dmxModes": [],
+                "powerPlug": {
+                    "name": "PowerCon"
+                },
+                "files": [
+                    {
+                        "name": "config",
+                        "url": "/download/led/yestech-h3-hd-ru.rcfgx"
+                    }
+                ]
+            }
+        },
+        {
+            "model": "Jem ZR24 7 Hazer",
+            "weight": 11,
+            "power": 950,
+            "tags": [],
+            "fixtureType": {
+                "name": "light"
+            },
+            "manufacture": {
+                "name": "Martin"
+            },
+            "details": {
+                "powerPassage": false,
+                "outdoor": false,
+                "desc": "",
+                "connectors": [
+                    {
+                        "name": "DMX 3pin"
+                    },
+                    {
+                        "name": "DMX 5pin"
+                    }
+                ],
+                "dmxModes": [
+                    {
+                        "name": "2ch",
+                        "channels": 2
+                    }
+                ],
+                "powerPlug": {
+                    "name": "Schuko (230V)"
+                },
+                "files": []
+            }
+        },
+        {
+            "model": "LedBeam 150",
+            "weight": 5.7,
+            "power": 220,
+            "tags": [
+                {
+                    "name": ""
+                }
+            ],
+            "fixtureType": {
+                "name": "light"
+            },
+            "manufacture": {
+                "name": "Robe"
+            },
+            "details": {
+                "powerPassage": true,
+                "outdoor": false,
+                "desc": "",
+                "connectors": [
+                    {
+                        "name": "DMX 5pin"
+                    }
+                ],
+                "dmxModes": [
+                    {
+                        "name": "1",
+                        "channels": 22
+                    },
+                    {
+                        "name": "2",
+                        "channels": 16
+                    }
+                ],
+                "powerPlug": {
+                    "name": "PowerCon"
+                },
+                "files": []
+            }
+        },
+        {
+            "model": "LedBeam 150 FWQ",
+            "weight": 5.7,
+            "power": 220,
+            "tags": [
+                {
+                    "name": ""
+                }
+            ],
+            "fixtureType": {
+                "name": "light"
+            },
+            "manufacture": {
+                "name": "Robe"
+            },
+            "details": {
+                "powerPassage": true,
+                "outdoor": false,
+                "desc": "",
+                "connectors": [
+                    {
+                        "name": "DMX 5pin"
+                    }
+                ],
+                "dmxModes": [
+                    {
+                        "name": "1",
+                        "channels": 22
+                    },
+                    {
+                        "name": "2",
+                        "channels": 16
+                    }
+                ],
+                "powerPlug": {
+                    "name": "PowerCon"
+                },
+                "files": []
+            }
+        },
+        {
+            "model": "LedBeam 350",
+            "weight": 9.9,
+            "power": 450,
+            "tags": [
+                {
+                    "name": ""
+                }
+            ],
+            "fixtureType": {
+                "name": "light"
+            },
+            "manufacture": {
+                "name": "Robe"
+            },
+            "details": {
+                "powerPassage": true,
+                "outdoor": false,
+                "desc": "",
+                "connectors": [
+                    {
+                        "name": "RJ45IN"
+                    },
+                    {
+                        "name": "DMX 5pin"
+                    }
+                ],
+                "dmxModes": [
+                    {
+                        "name": "1",
+                        "channels": 22
+                    },
+                    {
+                        "name": "2",
+                        "channels": 16
+                    },
+                    {
+                        "name": "3",
+                        "channels": 24
+                    }
+                ],
+                "powerPlug": {
+                    "name": "PowerCon TRUE1"
+                },
+                "files": []
+            }
+        },
+        {
+            "model": "LedBeam 350 FW",
+            "weight": 9.9,
+            "power": 450,
+            "tags": [
+                {
+                    "name": ""
+                }
+            ],
+            "fixtureType": {
+                "name": "light"
+            },
+            "manufacture": {
+                "name": "Robe"
+            },
+            "details": {
+                "powerPassage": true,
+                "outdoor": false,
+                "desc": "",
+                "connectors": [
+                    {
+                        "name": "RJ45IN"
+                    },
+                    {
+                        "name": "DMX 5pin"
+                    }
+                ],
+                "dmxModes": [
+                    {
+                        "name": "1",
+                        "channels": 22
+                    },
+                    {
+                        "name": "2",
+                        "channels": 16
+                    },
+                    {
+                        "name": "3",
+                        "channels": 24
+                    }
+                ],
+                "powerPlug": {
+                    "name": "PowerCon TRUE1"
+                },
+                "files": []
+            }
+        },
+        {
+            "model": "LedWash 300X",
+            "weight": 8.2,
+            "power": 200,
+            "tags": [
+                {
+                    "name": ""
+                }
+            ],
+            "fixtureType": {
+                "name": "light"
+            },
+            "manufacture": {
+                "name": "Robe"
+            },
+            "details": {
+                "powerPassage": false,
+                "outdoor": false,
+                "desc": "",
+                "connectors": [
+                    {
+                        "name": "DMX 3pin"
+                    },
+                    {
+                        "name": "RJ45IN"
+                    },
+                    {
+                        "name": "DMX 5pin"
+                    }
+                ],
+                "dmxModes": [
+                    {
+                        "name": "1",
+                        "channels": 37
+                    },
+                    {
+                        "name": "2",
+                        "channels": 21
+                    },
+                    {
+                        "name": "3",
+                        "channels": 15
+                    },
+                    {
+                        "name": "4",
+                        "channels": 10
+                    },
+                    {
+                        "name": "5",
+                        "channels": 37
+                    }
+                ],
+                "powerPlug": {
+                    "name": "PowerCon TRUE1"
+                },
+                "files": []
+            }
+        },
+        {
+            "model": "LedWash 600X",
+            "weight": 10.6,
+            "power": 415,
+            "tags": [
+                {
+                    "name": ""
+                }
+            ],
+            "fixtureType": {
+                "name": "light"
+            },
+            "manufacture": {
+                "name": "Robe"
+            },
+            "details": {
+                "powerPassage": false,
+                "outdoor": false,
+                "desc": "",
+                "connectors": [
+                    {
+                        "name": "DMX 3pin"
+                    },
+                    {
+                        "name": "RJ45IN"
+                    },
+                    {
+                        "name": "DMX 5pin"
+                    }
+                ],
+                "dmxModes": [
+                    {
+                        "name": "1",
+                        "channels": 37
+                    },
+                    {
+                        "name": "2",
+                        "channels": 21
+                    },
+                    {
+                        "name": "3",
+                        "channels": 15
+                    },
+                    {
+                        "name": "4",
+                        "channels": 10
+                    },
+                    {
+                        "name": "5",
+                        "channels": 37
+                    },
+                    {
+                        "name": "6",
+                        "channels": 24
+                    }
+                ],
+                "powerPlug": {
+                    "name": "PowerCon TRUE1"
+                },
+                "files": []
+            }
+        },
+        {
+            "model": "LedWash 800X",
+            "weight": 10.7,
+            "power": 430,
+            "tags": [
+                {
+                    "name": ""
+                }
+            ],
+            "fixtureType": {
+                "name": "light"
+            },
+            "manufacture": {
+                "name": "Robe"
+            },
+            "details": {
+                "powerPassage": false,
+                "outdoor": false,
+                "desc": "",
+                "connectors": [
+                    {
+                        "name": "DMX 3pin"
+                    },
+                    {
+                        "name": "RJ45IN"
+                    },
+                    {
+                        "name": "DMX 5pin"
+                    }
+                ],
+                "dmxModes": [
+                    {
+                        "name": "1",
+                        "channels": 38
+                    },
+                    {
+                        "name": "2",
+                        "channels": 22
+                    },
+                    {
+                        "name": "3",
+                        "channels": 16
+                    },
+                    {
+                        "name": "4",
+                        "channels": 11
+                    },
+                    {
+                        "name": "5",
+                        "channels": 38
+                    },
+                    {
+                        "name": "6",
+                        "channels": 37
+                    }
+                ],
+                "powerPlug": {
+                    "name": "PowerCon TRUE1"
+                },
+                "files": []
+            }
+        },
+        {
+            "model": "Luma 1500 SH",
+            "weight": 31,
+            "power": 650,
+            "tags": [],
+            "fixtureType": {
+                "name": "light"
+            },
+            "manufacture": {
+                "name": "Prolights"
+            },
+            "details": {
+                "powerPassage": false,
+                "outdoor": false,
+                "desc": "",
+                "connectors": [
+                    {
+                        "name": "DMX 3pin"
+                    },
+                    {
+                        "name": "DMX 5pin"
+                    },
+                    {
+                        "name": "W-DMX"
+                    }
+                ],
+                "dmxModes": [
+                    {
+                        "name": "Basic 16bit",
+                        "channels": 30
+                    },
+                    {
+                        "name": "Basic 8bit",
+                        "channels": 28
+                    },
+                    {
+                        "name": "Standard",
+                        "channels": 37
+                    },
+                    {
+                        "name": "Extended",
+                        "channels": 38
+                    }
+                ],
+                "powerPlug": {
+                    "name": "PowerCon TRUE1"
+                },
+                "files": []
+            }
+        },
+        {
+            "model": "Luma 700",
+            "weight": 23,
+            "power": 355,
+            "tags": [],
+            "fixtureType": {
+                "name": "light"
+            },
+            "manufacture": {
+                "name": "Prolights"
+            },
+            "details": {
+                "powerPassage": false,
+                "outdoor": false,
+                "desc": "",
+                "connectors": [
+                    {
+                        "name": "DMX 3pin"
+                    },
+                    {
+                        "name": "DMX 5pin"
+                    },
+                    {
+                        "name": "W-DMX"
+                    }
+                ],
+                "dmxModes": [
+                    {
+                        "name": "Basic 16bit - L700",
+                        "channels": 20
+                    },
+                    {
+                        "name": "Basic 8bit - L700",
+                        "channels": 19
+                    },
+                    {
+                        "name": "Standard - L700",
+                        "channels": 28
+                    },
+                    {
+                        "name": "Extended - L700",
+                        "channels": 29
+                    }
+                ],
+                "powerPlug": {
+                    "name": "PowerCon TRUE1"
+                },
+                "files": []
+            }
+        },
+        {
+            "model": "M5-HD",
+            "weight": 6.4,
+            "power": 210,
+            "tags": [
+                {
+                    "name": "ves"
+                }
+            ],
+            "fixtureType": {
+                "name": "led"
+            },
+            "manufacture": {
+                "name": "Yestech"
+            },
+            "details": {
+                "powerPassage": true,
+                "outdoor": true,
+                "desc": "",
+                "width": 500,
+                "height": 500,
+                "thickness": 73,
+                "resolutionH": 84,
+                "resolutionV": 84,
+                "pixel": 5.9,
+                "connectors": [
+                    {
+                        "name": "RJ45IN"
+                    },
+                    {
+                        "name": "RJ45OUT"
+                    }
+                ],
+                "dmxModes": [],
+                "powerPlug": {
+                    "name": "PowerCon"
+                },
+                "files": [
+                    {
+                        "name": "config",
+                        "url": "/download/led/yestech-m5-hd.rcfgx"
+                    }
+                ]
+            }
+        },
+        {
+            "model": "MAC Axiom Hybrid",
+            "weight": 24.8,
+            "power": 600,
+            "tags": [],
+            "fixtureType": {
+                "name": "light"
+            },
+            "manufacture": {
+                "name": "Martin"
+            },
+            "details": {
+                "powerPassage": false,
+                "outdoor": false,
+                "desc": "",
+                "connectors": [
+                    {
+                        "name": "DMX 5pin"
+                    }
+                ],
+                "dmxModes": [
+                    {
+                        "name": "axiom",
+                        "channels": 23
+                    }
+                ],
+                "powerPlug": {
+                    "name": "PowerCon TRUE1"
+                },
+                "files": []
+            }
+        },
+        {
+            "model": "MAC Encore Performance CLD",
+            "weight": 31,
+            "power": 580,
+            "tags": [],
+            "fixtureType": {
+                "name": "light"
+            },
+            "manufacture": {
+                "name": "Martin"
+            },
+            "details": {
+                "powerPassage": false,
+                "outdoor": false,
+                "desc": "",
+                "connectors": [
+                    {
+                        "name": "DMX 5pin"
+                    }
+                ],
+                "dmxModes": [
+                    {
+                        "name": "38ch",
+                        "channels": 38
+                    }
+                ],
+                "powerPlug": {
+                    "name": "PowerCon TRUE1"
+                },
+                "files": []
+            }
+        },
+        {
+            "model": "MAC Encore Performance WRM",
+            "weight": 31,
+            "power": 580,
+            "tags": [],
+            "fixtureType": {
+                "name": "light"
+            },
+            "manufacture": {
+                "name": "Martin"
+            },
+            "details": {
+                "powerPassage": false,
+                "outdoor": false,
+                "desc": "",
+                "connectors": [
+                    {
+                        "name": "DMX 5pin"
+                    }
+                ],
+                "dmxModes": [
+                    {
+                        "name": "38ch",
+                        "channels": 38
+                    }
+                ],
+                "powerPlug": {
+                    "name": "PowerCon TRUE1"
+                },
+                "files": []
+            }
+        },
+        {
+            "model": "MAC Encore Wash CLD",
+            "weight": 28.5,
+            "power": 580,
+            "tags": [],
+            "fixtureType": {
+                "name": "light"
+            },
+            "manufacture": {
+                "name": "Martin"
+            },
+            "details": {
+                "powerPassage": false,
+                "outdoor": false,
+                "desc": "",
+                "connectors": [
+                    {
+                        "name": "DMX 5pin"
+                    }
+                ],
+                "dmxModes": [
+                    {
+                        "name": "24ch",
+                        "channels": 24
+                    }
+                ],
+                "powerPlug": {
+                    "name": "PowerCon TRUE1"
+                },
+                "files": []
+            }
+        },
+        {
+            "model": "MAC Encore Wash WRM",
+            "weight": 28.5,
+            "power": 580,
+            "tags": [],
+            "fixtureType": {
+                "name": "light"
+            },
+            "manufacture": {
+                "name": "Martin"
+            },
+            "details": {
+                "powerPassage": false,
+                "outdoor": false,
+                "desc": "",
+                "connectors": [
+                    {
+                        "name": "DMX 5pin"
+                    }
+                ],
+                "dmxModes": [
+                    {
+                        "name": "24ch",
+                        "channels": 24
+                    }
+                ],
+                "powerPlug": {
+                    "name": "PowerCon TRUE1"
+                },
+                "files": []
+            }
+        },
+        {
+            "model": "MAC Ultra Performance",
+            "weight": 44,
+            "power": 1450,
+            "tags": [],
+            "fixtureType": {
+                "name": "light"
+            },
+            "manufacture": {
+                "name": "Martin"
+            },
+            "details": {
+                "powerPassage": false,
+                "outdoor": false,
+                "desc": "",
+                "connectors": [
+                    {
+                        "name": "RJ45IN"
+                    },
+                    {
+                        "name": "RJ45OUT"
+                    },
+                    {
+                        "name": "DMX 5pin"
+                    }
+                ],
+                "dmxModes": [
+                    {
+                        "name": "standard-ultra",
+                        "channels": 48
+                    },
+                    {
+                        "name": "extended-ultra",
+                        "channels": 58
+                    }
+                ],
+                "powerPlug": {
+                    "name": "PowerCon TRUE1"
+                },
+                "files": []
+            }
+        },
+        {
+            "model": "MAC Ultra Wash",
+            "weight": 39,
+            "power": 1450,
+            "tags": [],
+            "fixtureType": {
+                "name": "light"
+            },
+            "manufacture": {
+                "name": "Martin"
+            },
+            "details": {
+                "powerPassage": false,
+                "outdoor": false,
+                "desc": "",
+                "connectors": [
+                    {
+                        "name": "RJ45IN"
+                    },
+                    {
+                        "name": "RJ45OUT"
+                    },
+                    {
+                        "name": "DMX 5pin"
+                    }
+                ],
+                "dmxModes": [
+                    {
+                        "name": "29ch",
+                        "channels": 29
+                    }
+                ],
+                "powerPlug": {
+                    "name": "PowerCon TRUE1"
+                },
+                "files": []
+            }
+        },
+        {
+            "model": "MAC Viper AirFX",
+            "weight": 35.7,
+            "power": 1186,
+            "tags": [],
+            "fixtureType": {
+                "name": "light"
+            },
+            "manufacture": {
+                "name": "Martin"
+            },
+            "details": {
+                "powerPassage": false,
+                "outdoor": false,
+                "desc": "",
+                "connectors": [
+                    {
+                        "name": "DMX 5pin"
+                    }
+                ],
+                "dmxModes": [
+                    {
+                        "name": "standard-viper-airfx",
+                        "channels": 20
+                    },
+                    {
+                        "name": "extended-viper-airfx",
+                        "channels": 28
+                    }
+                ],
+                "powerPlug": {
+                    "name": "PowerCon"
+                },
+                "files": []
+            }
+        },
+        {
+            "model": "MAC Viper Performance",
+            "weight": 37.9,
+            "power": 1186,
+            "tags": [],
+            "fixtureType": {
+                "name": "light"
+            },
+            "manufacture": {
+                "name": "Martin"
+            },
+            "details": {
+                "powerPassage": false,
+                "outdoor": false,
+                "desc": "",
+                "connectors": [
+                    {
+                        "name": "DMX 5pin"
+                    }
+                ],
+                "dmxModes": [
+                    {
+                        "name": "standard-viper-perf",
+                        "channels": 32
+                    },
+                    {
+                        "name": "extended-viper-perf",
+                        "channels": 40
+                    }
+                ],
+                "powerPlug": {
+                    "name": "PowerCon"
+                },
+                "files": []
+            }
+        },
+        {
+            "model": "MAC Viper Profile",
+            "weight": 37.2,
+            "power": 1186,
+            "tags": [],
+            "fixtureType": {
+                "name": "light"
+            },
+            "manufacture": {
+                "name": "Martin"
+            },
+            "details": {
+                "powerPassage": false,
+                "outdoor": false,
+                "desc": "",
+                "connectors": [
+                    {
+                        "name": "DMX 5pin"
+                    }
+                ],
+                "dmxModes": [
+                    {
+                        "name": "standard-viper-profile",
+                        "channels": 26
+                    },
+                    {
+                        "name": "extended-viper-profile",
+                        "channels": 34
+                    }
+                ],
+                "powerPlug": {
+                    "name": "PowerCon"
+                },
+                "files": []
+            }
+        },
+        {
+            "model": "MAC Viper Wash",
+            "weight": 33,
+            "power": 1186,
+            "tags": [],
+            "fixtureType": {
+                "name": "light"
+            },
+            "manufacture": {
+                "name": "Martin"
+            },
+            "details": {
+                "powerPassage": false,
+                "outdoor": false,
+                "desc": "",
+                "connectors": [
+                    {
+                        "name": "DMX 5pin"
+                    }
+                ],
+                "dmxModes": [
+                    {
+                        "name": "standard-viper-wash",
+                        "channels": 18
+                    },
+                    {
+                        "name": "extended-viper-wash",
+                        "channels": 24
+                    }
+                ],
+                "powerPlug": {
+                    "name": "PowerCon"
+                },
+                "files": []
+            }
+        },
+        {
+            "model": "MAC Viper Wash DX",
+            "weight": 34.1,
+            "power": 1186,
+            "tags": [],
+            "fixtureType": {
+                "name": "light"
+            },
+            "manufacture": {
+                "name": "Martin"
+            },
+            "details": {
+                "powerPassage": false,
+                "outdoor": false,
+                "desc": "",
+                "connectors": [
+                    {
+                        "name": "DMX 5pin"
+                    }
+                ],
+                "dmxModes": [
+                    {
+                        "name": "standard-viper-washdx",
+                        "channels": 18
+                    },
+                    {
+                        "name": "extended-viper-washdx",
+                        "channels": 24
+                    }
+                ],
+                "powerPlug": {
+                    "name": "PowerCon"
+                },
+                "files": []
+            }
+        },
+        {
+            "model": "MG7S",
+            "weight": 5.9,
+            "power": 150,
+            "tags": [
+                {
+                    "name": "ves"
+                }
+            ],
+            "fixtureType": {
+                "name": "led"
+            },
+            "manufacture": {
+                "name": "Yestech"
+            },
+            "details": {
+                "powerPassage": true,
+                "outdoor": true,
+                "desc": "Ves p3 outdoor 2023",
+                "width": 500,
+                "height": 500,
+                "thickness": 73,
+                "resolutionH": 128,
+                "resolutionV": 128,
+                "pixel": 3.9,
+                "connectors": [
+                    {
+                        "name": "RJ45IN"
+                    },
+                    {
+                        "name": "RJ45OUT"
+                    }
+                ],
+                "dmxModes": [],
+                "powerPlug": {
+                    "name": "PowerCon"
+                },
+                "files": [
+                    {
+                        "name": "config",
+                        "url": "/files/led/yestech-mg7s.rcfgx"
+                    }
+                ]
+            }
+        },
+        {
+            "model": "Mac Aura",
+            "weight": 6,
+            "power": 230,
+            "tags": [],
+            "fixtureType": {
+                "name": "light"
+            },
+            "manufacture": {
+                "name": "Martin"
+            },
+            "details": {
+                "powerPassage": true,
+                "outdoor": false,
+                "desc": "",
+                "connectors": [
+                    {
+                        "name": "DMX 5pin"
+                    }
+                ],
+                "dmxModes": [
+                    {
+                        "name": "Std",
+                        "channels": 14
+                    },
+                    {
+                        "name": "Ext",
+                        "channels": 25
+                    }
+                ],
+                "powerPlug": {
+                    "name": "PowerCon"
+                },
+                "files": []
+            }
+        },
+        {
+            "model": "Mac Aura PXL",
+            "weight": 15.6,
+            "power": 560,
+            "tags": [],
+            "fixtureType": {
+                "name": "light"
+            },
+            "manufacture": {
+                "name": "Martin"
+            },
+            "details": {
+                "powerPassage": true,
+                "outdoor": false,
+                "desc": "",
+                "connectors": [
+                    {
+                        "name": "RJ45IN"
+                    },
+                    {
+                        "name": "RJ45OUT"
+                    },
+                    {
+                        "name": "DMX 5pin"
+                    }
+                ],
+                "dmxModes": [
+                    {
+                        "name": "Compact-APXL",
+                        "channels": 17
+                    },
+                    {
+                        "name": "Basic-APXL",
+                        "channels": 32
+                    },
+                    {
+                        "name": "Extended-APXL",
+                        "channels": 89
+                    },
+                    {
+                        "name": "Ludicrous-APXL",
+                        "channels": 512
+                    }
+                ],
+                "powerPlug": {
+                    "name": "PowerCon TRUE1"
+                },
+                "files": []
+            }
+        },
+        {
+            "model": "Mac Aura XB",
+            "weight": 6.5,
+            "power": 400,
+            "tags": [],
+            "fixtureType": {
+                "name": "light"
+            },
+            "manufacture": {
+                "name": "Martin"
+            },
+            "details": {
+                "powerPassage": true,
+                "outdoor": false,
+                "desc": "",
+                "connectors": [
+                    {
+                        "name": "RJ45IN"
+                    },
+                    {
+                        "name": "RJ45OUT"
+                    },
+                    {
+                        "name": "DMX 5pin"
+                    }
+                ],
+                "dmxModes": [
+                    {
+                        "name": "Standard-AXB",
+                        "channels": 14
+                    },
+                    {
+                        "name": "Extended-AXB",
+                        "channels": 25
+                    }
+                ],
+                "powerPlug": {
+                    "name": "PowerCon TRUE1"
+                },
+                "files": []
+            }
+        },
+        {
+            "model": "Mac Aura XIP",
+            "weight": 8.9,
+            "power": 340,
+            "tags": [],
+            "fixtureType": {
+                "name": "light"
+            },
+            "manufacture": {
+                "name": "Martin"
+            },
+            "details": {
+                "powerPassage": true,
+                "outdoor": true,
+                "desc": "",
+                "connectors": [
+                    {
+                        "name": "RJ45IN"
+                    },
+                    {
+                        "name": "RJ45OUT"
+                    },
+                    {
+                        "name": "DMX 5pin"
+                    }
+                ],
+                "dmxModes": [
+                    {
+                        "name": "Compact-AXIP",
+                        "channels": 20
+                    },
+                    {
+                        "name": "Basic-AXIP",
+                        "channels": 36
+                    },
+                    {
+                        "name": "Extended-AXIP",
+                        "channels": 57
+                    },
+                    {
+                        "name": "Ludicrous-AXIP",
+                        "channels": 93
+                    }
+                ],
+                "powerPlug": {
+                    "name": "PowerCon TRUE1"
+                },
+                "files": []
+            }
+        },
+        {
+            "model": "Mac Quantum Profile",
+            "weight": 23.2,
+            "power": 750,
+            "tags": [],
+            "fixtureType": {
+                "name": "light"
+            },
+            "manufacture": {
+                "name": "Martin"
+            },
+            "details": {
+                "powerPassage": false,
+                "outdoor": false,
+                "desc": "",
+                "connectors": [
+                    {
+                        "name": "DMX 5pin"
+                    }
+                ],
+                "dmxModes": [
+                    {
+                        "name": "Basic - QProfile",
+                        "channels": 19
+                    },
+                    {
+                        "name": "Extended - QProfile",
+                        "channels": 27
+                    }
+                ],
+                "powerPlug": {
+                    "name": "PowerCon"
+                },
+                "files": []
+            }
+        },
+        {
+            "model": "Mac Quantum Wash",
+            "weight": 21,
+            "power": 1020,
+            "tags": [],
+            "fixtureType": {
+                "name": "light"
+            },
+            "manufacture": {
+                "name": "Martin"
+            },
+            "details": {
+                "powerPassage": false,
+                "outdoor": false,
+                "desc": "",
+                "connectors": [
+                    {
+                        "name": "DMX 5pin"
+                    }
+                ],
+                "dmxModes": [
+                    {
+                        "name": "Basic - QWash",
+                        "channels": 17
+                    },
+                    {
+                        "name": "Extended - QWash",
+                        "channels": 33
+                    }
+                ],
+                "powerPlug": {
+                    "name": "PowerCon"
+                },
+                "files": []
+            }
+        },
+        {
+            "model": "MegaPointe",
+            "weight": 22,
+            "power": 670,
+            "tags": [],
+            "fixtureType": {
+                "name": "light"
+            },
+            "manufacture": {
+                "name": "Robe"
+            },
+            "details": {
+                "powerPassage": false,
+                "outdoor": false,
+                "desc": "",
+                "connectors": [
+                    {
+                        "name": "DMX 3pin"
+                    },
+                    {
+                        "name": "RJ45IN"
+                    },
+                    {
+                        "name": "DMX 5pin"
+                    }
+                ],
+                "dmxModes": [
+                    {
+                        "name": "1-mpointe",
+                        "channels": 39
+                    },
+                    {
+                        "name": "2-mpointe",
+                        "channels": 34
+                    }
+                ],
+                "powerPlug": {
+                    "name": "PowerCon TRUE1"
+                },
+                "files": []
+            }
+        },
+        {
+            "model": "Midi-B",
+            "weight": 17,
+            "power": 830,
+            "tags": [],
+            "fixtureType": {
+                "name": "light"
+            },
+            "manufacture": {
+                "name": "Clay Paky"
+            },
+            "details": {
+                "powerPassage": false,
+                "outdoor": false,
+                "desc": "",
+                "connectors": [
+                    {
+                        "name": "RJ45IN"
+                    },
+                    {
+                        "name": "DMX 5pin"
+                    }
+                ],
+                "dmxModes": [
+                    {
+                        "name": "Basic RGBW-midi-b",
+                        "channels": 17
+                    },
+                    {
+                        "name": "Basic RGBW-16bit-midi-b",
+                        "channels": 21
+                    },
+                    {
+                        "name": "Extended RGBW-midi-b",
+                        "channels": 25
+                    },
+                    {
+                        "name": "Extended RGBW 16bit-midi-b",
+                        "channels": 37
+                    }
+                ],
+                "powerPlug": {
+                    "name": "PowerCon TRUE1"
+                },
+                "files": []
+            }
+        },
+        {
+            "model": "Mini-B",
+            "weight": 6.5,
+            "power": 375,
+            "tags": [],
+            "fixtureType": {
+                "name": "light"
+            },
+            "manufacture": {
+                "name": "Clay Paky"
+            },
+            "details": {
+                "powerPassage": true,
+                "outdoor": false,
+                "desc": "",
+                "connectors": [
+                    {
+                        "name": "RJ45IN"
+                    },
+                    {
+                        "name": "DMX 5pin"
+                    }
+                ],
+                "dmxModes": [
+                    {
+                        "name": "Basic RGBW-mini-b",
+                        "channels": 17
+                    },
+                    {
+                        "name": "Basic RGBW-16bit-mini-b",
+                        "channels": 21
+                    },
+                    {
+                        "name": "Extended RGBW-mini-b",
+                        "channels": 21
+                    },
+                    {
+                        "name": "Extended RGBW 16bit-mini-b",
+                        "channels": 29
+                    }
+                ],
+                "powerPlug": {
+                    "name": "PowerCon TRUE1"
+                },
+                "files": []
+            }
+        },
+        {
+            "model": "Painte",
+            "weight": 19.6,
+            "power": 440,
+            "tags": [],
+            "fixtureType": {
+                "name": "light"
+            },
+            "manufacture": {
+                "name": "Robe"
+            },
+            "details": {
+                "powerPassage": false,
+                "outdoor": false,
+                "desc": "",
+                "connectors": [
+                    {
+                        "name": "RJ45IN"
+                    },
+                    {
+                        "name": "RJ45OUT"
+                    },
+                    {
+                        "name": "DMX 5pin"
+                    }
+                ],
+                "dmxModes": [
+                    {
+                        "name": "1-painte",
+                        "channels": 44
+                    },
+                    {
+                        "name": "2-painte",
+                        "channels": 45
+                    }
+                ],
+                "powerPlug": {
+                    "name": "PowerCon TRUE1"
+                },
+                "files": []
+            }
+        },
+        {
+            "model": "Painte spot",
+            "weight": 18.1,
+            "power": 440,
+            "tags": [
+                {
+                    "name": ""
+                }
+            ],
+            "fixtureType": {
+                "name": "light"
+            },
+            "manufacture": {
+                "name": "Robe"
+            },
+            "details": {
+                "powerPassage": true,
+                "outdoor": false,
+                "desc": "",
+                "connectors": [
+                    {
+                        "name": "RJ45IN"
+                    },
+                    {
+                        "name": "DMX 5pin"
+                    }
+                ],
+                "dmxModes": [
+                    {
+                        "name": "1",
+                        "channels": 35
+                    },
+                    {
+                        "name": "2",
+                        "channels": 36
+                    }
+                ],
+                "powerPlug": {
+                    "name": "PowerCon TRUE1"
+                },
+                "files": []
+            }
+        },
+        {
+            "model": "PixelLine 1044",
+            "weight": 12.2,
+            "power": 140,
+            "tags": [],
+            "fixtureType": {
+                "name": "light"
+            },
+            "manufacture": {
+                "name": "James Thomas"
+            },
+            "details": {
+                "powerPassage": true,
+                "outdoor": false,
+                "desc": "",
+                "connectors": [
+                    {
+                        "name": "DMX 5pin"
+                    }
+                ],
+                "dmxModes": [
+                    {
+                        "name": "3ch",
+                        "channels": 3
+                    },
+                    {
+                        "name": "6ch",
+                        "channels": 6
+                    },
+                    {
+                        "name": "9ch",
+                        "channels": 9
+                    },
+                    {
+                        "name": "18ch",
+                        "channels": 18
+                    },
+                    {
+                        "name": "27ch",
+                        "channels": 27
+                    },
+                    {
+                        "name": "54ch",
+                        "channels": 54
+                    }
+                ],
+                "powerPlug": {
+                    "name": "16A 1F"
+                },
+                "files": []
+            }
+        },
+        {
+            "model": "PixelPar 90",
+            "weight": 7,
+            "power": 120,
+            "tags": [],
+            "fixtureType": {
+                "name": "light"
+            },
+            "manufacture": {
+                "name": "James Thomas"
+            },
+            "details": {
+                "powerPassage": false,
+                "outdoor": false,
+                "desc": "",
+                "connectors": [
+                    {
+                        "name": "DMX 5pin"
+                    }
+                ],
+                "dmxModes": [
+                    {
+                        "name": "3ch",
+                        "channels": 3
+                    },
+                    {
+                        "name": "EF-D",
+                        "channels": 7
+                    },
+                    {
+                        "name": "MA-2",
+                        "channels": 10
+                    },
+                    {
+                        "name": "16bit - PixelPar90",
+                        "channels": 6
+                    }
+                ],
+                "powerPlug": {
+                    "name": "Schuko (230V)"
+                },
+                "files": []
+            }
+        },
+        {
+            "model": "PixiBeam",
+            "weight": 4,
+            "power": 85,
+            "tags": [],
+            "fixtureType": {
+                "name": "light"
+            },
+            "manufacture": {
+                "name": "Prolights"
+            },
+            "details": {
+                "powerPassage": true,
+                "outdoor": false,
+                "desc": "",
+                "connectors": [
+                    {
+                        "name": "DMX 5pin"
+                    }
+                ],
+                "dmxModes": [
+                    {
+                        "name": "BA1",
+                        "channels": 14
+                    },
+                    {
+                        "name": "STD",
+                        "channels": 16
+                    }
+                ],
+                "powerPlug": {
+                    "name": "PowerCon"
+                },
+                "files": []
+            }
+        },
+        {
+            "model": "PixiWash XB",
+            "weight": 13.6,
+            "power": 240,
+            "tags": [],
+            "fixtureType": {
+                "name": "light"
+            },
+            "manufacture": {
+                "name": "Prolights"
+            },
+            "details": {
+                "powerPassage": true,
+                "outdoor": false,
+                "desc": "",
+                "connectors": [
+                    {
+                        "name": "RJ45IN"
+                    },
+                    {
+                        "name": "RJ45OUT"
+                    },
+                    {
+                        "name": "DMX 5pin"
+                    },
+                    {
+                        "name": "W-DMX"
+                    }
+                ],
+                "dmxModes": [
+                    {
+                        "name": "13ch",
+                        "channels": 13
+                    },
+                    {
+                        "name": "15",
+                        "channels": 15
+                    },
+                    {
+                        "name": "16ch",
+                        "channels": 16
+                    },
+                    {
+                        "name": "18",
+                        "channels": 18
+                    },
+                    {
+                        "name": "22",
+                        "channels": 22
+                    },
+                    {
+                        "name": "23",
+                        "channels": 23
+                    },
+                    {
+                        "name": "27",
+                        "channels": 27
+                    }
+                ],
+                "powerPlug": {
+                    "name": "PowerCon TRUE1"
+                },
+                "files": []
+            }
+        },
+        {
+            "model": "Pointe",
+            "weight": 15,
+            "power": 470,
+            "tags": [],
+            "fixtureType": {
+                "name": "light"
+            },
+            "manufacture": {
+                "name": "Robe"
+            },
+            "details": {
+                "powerPassage": false,
+                "outdoor": false,
+                "desc": "",
+                "connectors": [
+                    {
+                        "name": "DMX 3pin"
+                    },
+                    {
+                        "name": "RJ45IN"
+                    },
+                    {
+                        "name": "DMX 5pin"
+                    }
+                ],
+                "dmxModes": [
+                    {
+                        "name": "1",
+                        "channels": 24
+                    },
+                    {
+                        "name": "2",
+                        "channels": 16
+                    },
+                    {
+                        "name": "3",
+                        "channels": 30
+                    }
+                ],
+                "powerPlug": {
+                    "name": "PowerCon"
+                },
+                "files": []
+            }
+        },
+        {
+            "model": "RUSH MH 10 Beam FX",
+            "weight": 7.5,
+            "power": 108,
+            "tags": [],
+            "fixtureType": {
+                "name": "light"
+            },
+            "manufacture": {
+                "name": "Martin"
+            },
+            "details": {
+                "powerPassage": true,
+                "outdoor": false,
+                "desc": "",
+                "connectors": [
+                    {
+                        "name": "DMX 3pin"
+                    },
+                    {
+                        "name": "DMX 5pin"
+                    }
+                ],
+                "dmxModes": [
+                    {
+                        "name": "Basic-RushBeam",
+                        "channels": 24
+                    },
+                    {
+                        "name": "Extended-RushBeam",
+                        "channels": 93
+                    }
+                ],
+                "powerPlug": {
+                    "name": "PowerCon TRUE1"
+                },
+                "files": []
+            }
+        },
+        {
+            "model": "RUSH MH 5 Profile",
+            "weight": 9,
+            "power": 157,
+            "tags": [],
+            "fixtureType": {
+                "name": "light"
+            },
+            "manufacture": {
+                "name": "Martin"
+            },
+            "details": {
+                "powerPassage": true,
+                "outdoor": false,
+                "desc": "",
+                "connectors": [
+                    {
+                        "name": "DMX 3pin"
+                    },
+                    {
+                        "name": "DMX 5pin"
+                    }
+                ],
+                "dmxModes": [
+                    {
+                        "name": "RushProfile",
+                        "channels": 16
+                    }
+                ],
+                "powerPlug": {
+                    "name": "PowerCon"
+                },
+                "files": []
+            }
+        },
+        {
+            "model": "RUSH MH 7 Hybrid",
+            "weight": 24,
+            "power": 372,
+            "tags": [],
+            "fixtureType": {
+                "name": "light"
+            },
+            "manufacture": {
+                "name": "Martin"
+            },
+            "details": {
+                "powerPassage": true,
+                "outdoor": false,
+                "desc": "",
+                "connectors": [
+                    {
+                        "name": "DMX 3pin"
+                    },
+                    {
+                        "name": "DMX 5pin"
+                    }
+                ],
+                "dmxModes": [
+                    {
+                        "name": "RushHybrid",
+                        "channels": 21
+                    }
+                ],
+                "powerPlug": {
+                    "name": "PowerCon"
+                },
+                "files": []
+            }
+        },
+        {
+            "model": "SHARPY",
+            "weight": 7.5,
+            "power": 240,
+            "tags": [],
+            "fixtureType": {
+                "name": "light"
+            },
+            "manufacture": {
+                "name": "Clay Paky"
+            },
+            "details": {
+                "powerPassage": false,
+                "outdoor": false,
+                "desc": "",
+                "connectors": [
+                    {
+                        "name": "DMX 3pin"
+                    },
+                    {
+                        "name": "RJ45IN"
+                    },
+                    {
+                        "name": "DMX 5pin"
+                    }
+                ],
+                "dmxModes": [
+                    {
+                        "name": "standard",
+                        "channels": 16
+                    },
+                    {
+                        "name": "vector",
+                        "channels": 20
+                    }
+                ],
+                "powerPlug": {
+                    "name": "PowerCon"
+                },
+                "files": []
+            }
+        },
+        {
+            "model": "SHARPY Wash 330",
+            "weight": 18.5,
+            "power": 416,
+            "tags": [],
+            "fixtureType": {
+                "name": "light"
+            },
+            "manufacture": {
+                "name": "Clay Paky"
+            },
+            "details": {
+                "powerPassage": false,
+                "outdoor": false,
+                "desc": "",
+                "connectors": [
+                    {
+                        "name": "DMX 3pin"
+                    },
+                    {
+                        "name": "RJ45IN"
+                    },
+                    {
+                        "name": "DMX 5pin"
+                    }
+                ],
+                "dmxModes": [
+                    {
+                        "name": "standard",
+                        "channels": 16
+                    },
+                    {
+                        "name": "vector",
+                        "channels": 20
+                    }
+                ],
+                "powerPlug": {
+                    "name": "PowerCon"
+                },
+                "files": []
+            }
+        },
+        {
+            "model": "SharBar",
+            "weight": 15,
+            "power": 300,
+            "tags": [],
+            "fixtureType": {
+                "name": "light"
+            },
+            "manufacture": {
+                "name": "Clay Paky"
+            },
+            "details": {
+                "powerPassage": true,
+                "outdoor": false,
+                "desc": "",
+                "connectors": [
+                    {
+                        "name": "RJ45IN"
+                    },
+                    {
+                        "name": "RJ45OUT"
+                    },
+                    {
+                        "name": "DMX 5pin"
+                    }
+                ],
+                "dmxModes": [
+                    {
+                        "name": "Standard-SharBar",
+                        "channels": 24
+                    },
+                    {
+                        "name": "Shape-SharBar",
+                        "channels": 30
+                    },
+                    {
+                        "name": "RGB-SharBar",
+                        "channels": 18
+                    },
+                    {
+                        "name": "RGBW-SharBar",
+                        "channels": 24
+                    }
+                ],
+                "powerPlug": {
+                    "name": "PowerCon TRUE1"
+                },
+                "files": []
+            }
+        },
+        {
+            "model": "Show-Batten 100",
+            "weight": 10,
+            "power": 170,
+            "tags": [],
+            "fixtureType": {
+                "name": "light"
+            },
+            "manufacture": {
+                "name": "Clay Paky"
+            },
+            "details": {
+                "powerPassage": true,
+                "outdoor": false,
+                "desc": "",
+                "connectors": [
+                    {
+                        "name": "RJ45IN"
+                    },
+                    {
+                        "name": "RJ45OUT"
+                    },
+                    {
+                        "name": "DMX 5pin"
+                    }
+                ],
+                "dmxModes": [
+                    {
+                        "name": "Basic-show-batten",
+                        "channels": 18
+                    },
+                    {
+                        "name": "Pixel RGB-show-batten",
+                        "channels": 48
+                    },
+                    {
+                        "name": "Pixel RGBW-show-batten",
+                        "channels": 58
+                    }
+                ],
+                "powerPlug": {
+                    "name": "PowerCon TRUE1"
+                },
+                "files": []
+            }
+        },
+        {
+            "model": "Sinfonya Profile 600",
+            "weight": 36.8,
+            "power": 770,
+            "tags": [],
+            "fixtureType": {
+                "name": "light"
+            },
+            "manufacture": {
+                "name": "Clay Paky"
+            },
+            "details": {
+                "powerPassage": true,
+                "outdoor": false,
+                "desc": "",
+                "connectors": [
+                    {
+                        "name": "RJ45IN"
+                    },
+                    {
+                        "name": "DMX 5pin"
+                    }
+                ],
+                "dmxModes": [
+                    {
+                        "name": "standard-sinfonyaen",
+                        "channels": 58
+                    },
+                    {
+                        "name": "easy-sinfonyaen",
+                        "channels": 50
+                    },
+                    {
+                        "name": "white-sinfonyaen",
+                        "channels": 43
+                    }
+                ],
+                "powerPlug": {
+                    "name": "PowerCon TRUE1"
+                },
+                "files": []
+            }
+        },
+        {
+            "model": "Spiider",
+            "weight": 13.3,
+            "power": 600,
+            "tags": [],
+            "fixtureType": {
+                "name": "light"
+            },
+            "manufacture": {
+                "name": "Robe"
+            },
+            "details": {
+                "powerPassage": false,
+                "outdoor": false,
+                "desc": "",
+                "connectors": [
+                    {
+                        "name": "DMX 3pin"
+                    },
+                    {
+                        "name": "RJ45IN"
+                    },
+                    {
+                        "name": "RJ45OUT"
+                    },
+                    {
+                        "name": "DMX 5pin"
+                    }
+                ],
+                "dmxModes": [
+                    {
+                        "name": "1-3 Zones",
+                        "channels": 49
+                    },
+                    {
+                        "name": "2-Basic",
+                        "channels": 27
+                    },
+                    {
+                        "name": "3-Advance",
+                        "channels": 33
+                    },
+                    {
+                        "name": "4-FullRGBW",
+                        "channels": 90
+                    },
+                    {
+                        "name": "5-Wash",
+                        "channels": 27
+                    },
+                    {
+                        "name": "6-Pattern",
+                        "channels": 47
+                    },
+                    {
+                        "name": "7-PixelRGB",
+                        "channels": 91
+                    },
+                    {
+                        "name": "8-PixelRGBW",
+                        "channels": 110
+                    },
+                    {
+                        "name": "9-Pattern FullRGB",
+                        "channels": 104
+                    },
+                    {
+                        "name": "10-Pattern FullRGBW",
+                        "channels": 123
+                    }
+                ],
+                "powerPlug": {
+                    "name": "PowerCon TRUE1"
+                },
+                "files": []
+            }
+        },
+        {
+            "model": "Spike+",
+            "weight": 7.3,
+            "power": 100,
+            "tags": [],
+            "fixtureType": {
+                "name": "light"
+            },
+            "manufacture": {
+                "name": "Robe"
+            },
+            "details": {
+                "powerPassage": true,
+                "outdoor": false,
+                "desc": "",
+                "connectors": [
+                    {
+                        "name": "DMX 5pin"
+                    }
+                ],
+                "dmxModes": [
+                    {
+                        "name": "1-Standard 16bit Spike",
+                        "channels": 27
+                    },
+                    {
+                        "name": "2-Reduced 8bit Spike",
+                        "channels": 21
+                    }
+                ],
+                "powerPlug": {
+                    "name": "PowerCon TRUE1"
+                },
+                "files": []
+            }
+        },
+        {
+            "model": "Sunstrip",
+            "weight": 5.3,
+            "power": 750,
+            "tags": [],
+            "fixtureType": {
+                "name": "light"
+            },
+            "manufacture": {
+                "name": "Showtec"
+            },
+            "details": {
+                "powerPassage": true,
+                "outdoor": false,
+                "desc": "",
+                "connectors": [
+                    {
+                        "name": "DMX 3pin"
+                    }
+                ],
+                "dmxModes": [
+                    {
+                        "name": "1ch",
+                        "channels": 1
+                    },
+                    {
+                        "name": "2ch",
+                        "channels": 2
+                    },
+                    {
+                        "name": "5ch",
+                        "channels": 5
+                    },
+                    {
+                        "name": "10",
+                        "channels": 10
+                    }
+                ],
+                "powerPlug": {
+                    "name": "PowerCon"
+                },
+                "files": []
+            }
+        },
+        {
+            "model": "Tambora Batten",
+            "weight": 15.5,
+            "power": 660,
+            "tags": [],
+            "fixtureType": {
+                "name": "light"
+            },
+            "manufacture": {
+                "name": "Clay Paky"
+            },
+            "details": {
+                "powerPassage": true,
+                "outdoor": false,
+                "desc": "",
+                "connectors": [
+                    {
+                        "name": "RJ45IN"
+                    },
+                    {
+                        "name": "DMX 5pin"
+                    }
+                ],
+                "dmxModes": [
+                    {
+                        "name": "Standard RGBW-tambora",
+                        "channels": 13
+                    },
+                    {
+                        "name": "Standard RGBW-16bit-tambora",
+                        "channels": 17
+                    },
+                    {
+                        "name": "Shape RGBW-tambora",
+                        "channels": 27
+                    },
+                    {
+                        "name": "Shape RGBW-16bit-tambora",
+                        "channels": 35
+                    },
+                    {
+                        "name": "Advanced-tambora",
+                        "channels": 29
+                    },
+                    {
+                        "name": "RGB-tambora",
+                        "channels": 48
+                    },
+                    {
+                        "name": "RGBW-tambora",
+                        "channels": 64
+                    }
+                ],
+                "powerPlug": {
+                    "name": "PowerCon TRUE1"
+                },
+                "files": []
+            }
+        },
+        {
+            "model": "Tarrantula",
+            "weight": 21.2,
+            "power": 1000,
+            "tags": [],
+            "fixtureType": {
+                "name": "light"
+            },
+            "manufacture": {
+                "name": "Robe"
+            },
+            "details": {
+                "powerPassage": false,
+                "outdoor": false,
+                "desc": "",
+                "connectors": [
+                    {
+                        "name": "DMX 3pin"
+                    },
+                    {
+                        "name": "RJ45IN"
+                    },
+                    {
+                        "name": "RJ45OUT"
+                    },
+                    {
+                        "name": "DMX 5pin"
+                    }
+                ],
+                "dmxModes": [
+                    {
+                        "name": "1-Wash-tarr",
+                        "channels": 28
+                    },
+                    {
+                        "name": "2-Pattern-tarr",
+                        "channels": 48
+                    },
+                    {
+                        "name": "7-PixelRGB-tarr",
+                        "channels": 146
+                    },
+                    {
+                        "name": "4-PixelRGBW-tarr",
+                        "channels": 183
+                    },
+                    {
+                        "name": "5-Pattern FullRGB-tarr",
+                        "channels": 159
+                    },
+                    {
+                        "name": "6-Pattern FullRGBW-tarr",
+                        "channels": 196
+                    }
+                ],
+                "powerPlug": {
+                    "name": "PowerCon TRUE1"
+                },
+                "files": []
+            }
+        },
+        {
+            "model": "Tetra1",
+            "weight": 11.3,
+            "power": 300,
+            "tags": [
+                {
+                    "name": ""
+                }
+            ],
+            "fixtureType": {
+                "name": "light"
+            },
+            "manufacture": {
+                "name": "Robe"
+            },
+            "details": {
+                "powerPassage": true,
+                "outdoor": false,
+                "desc": "",
+                "connectors": [
+                    {
+                        "name": "RJ45IN"
+                    },
+                    {
+                        "name": "DMX 5pin"
+                    }
+                ],
+                "dmxModes": [
+                    {
+                        "name": "1",
+                        "channels": 24
+                    },
+                    {
+                        "name": "2",
+                        "channels": 45
+                    },
+                    {
+                        "name": "3",
+                        "channels": 59
+                    },
+                    {
+                        "name": "4",
+                        "channels": 68
+                    },
+                    {
+                        "name": "5",
+                        "channels": 72
+                    }
+                ],
+                "powerPlug": {
+                    "name": "PowerCon TRUE1"
+                },
+                "files": []
+            }
+        },
+        {
+            "model": "Tetra2",
+            "weight": 18.1,
+            "power": 600,
+            "tags": [
+                {
+                    "name": ""
+                }
+            ],
+            "fixtureType": {
+                "name": "light"
+            },
+            "manufacture": {
+                "name": "Robe"
+            },
+            "details": {
+                "powerPassage": true,
+                "outdoor": false,
+                "desc": "",
+                "connectors": [
+                    {
+                        "name": "RJ45IN"
+                    },
+                    {
+                        "name": "RJ45OUT"
+                    },
+                    {
+                        "name": "DMX 5pin"
+                    }
+                ],
+                "dmxModes": [
+                    {
+                        "name": "1",
+                        "channels": 34
+                    },
+                    {
+                        "name": "2",
+                        "channels": 56
+                    },
+                    {
+                        "name": "3",
+                        "channels": 97
+                    },
+                    {
+                        "name": "4",
+                        "channels": 115
+                    },
+                    {
+                        "name": "5",
+                        "channels": 110
+                    },
+                    {
+                        "name": "6",
+                        "channels": 128
+                    }
+                ],
+                "powerPlug": {
+                    "name": "PowerCon TRUE1"
+                },
+                "files": []
+            }
+        },
+        {
+            "model": "TetraX",
+            "weight": 15.7,
+            "power": 320,
+            "tags": [
+                {
+                    "name": ""
+                }
+            ],
+            "fixtureType": {
+                "name": "light"
+            },
+            "manufacture": {
+                "name": "Robe"
+            },
+            "details": {
+                "powerPassage": true,
+                "outdoor": false,
+                "desc": "",
+                "connectors": [
+                    {
+                        "name": "RJ45IN"
+                    },
+                    {
+                        "name": "DMX 5pin"
+                    }
+                ],
+                "dmxModes": [
+                    {
+                        "name": "1",
+                        "channels": 41
+                    },
+                    {
+                        "name": "2",
+                        "channels": 61
+                    },
+                    {
+                        "name": "3",
+                        "channels": 75
+                    },
+                    {
+                        "name": "4",
+                        "channels": 84
+                    },
+                    {
+                        "name": "5",
+                        "channels": 88
+                    },
+                    {
+                        "name": "6",
+                        "channels": 97
+                    }
+                ],
+                "powerPlug": {
+                    "name": "PowerCon TRUE1"
+                },
+                "files": []
+            }
+        },
+        {
+            "model": "UT-390",
+            "weight": 6.5,
+            "power": 250,
+            "tags": [
+                {
+                    "name": "ves"
+                },
+                {
+                    "name": "transparent"
+                }
+            ],
+            "fixtureType": {
+                "name": "led"
+            },
+            "manufacture": {
+                "name": "Dicolor"
+            },
+            "details": {
+                "powerPassage": true,
+                "outdoor": true,
+                "desc": "Ves kurtyna 3.91x7.81",
+                "width": 1000,
+                "height": 500,
+                "thickness": 94,
+                "resolutionH": 256,
+                "resolutionV": 128,
+                "pixel": 3.91,
+                "connectors": [
+                    {
+                        "name": "RJ45IN"
+                    },
+                    {
+                        "name": "RJ45OUT"
+                    }
+                ],
+                "dmxModes": [],
+                "powerPlug": {
+                    "name": "PowerCon TRUE1"
+                },
+                "files": [
+                    {
+                        "name": "config",
+                        "url": "/files/led/dicolor-ut-390.rcfgx"
+                    }
+                ]
+            }
+        },
+        {
+            "model": "Vip 300",
+            "weight": 7.5,
+            "power": 450,
+            "tags": [],
+            "fixtureType": {
+                "name": "light"
+            },
+            "manufacture": {
+                "name": "Clay Paky"
+            },
+            "details": {
+                "powerPassage": false,
+                "outdoor": false,
+                "desc": "",
+                "connectors": [],
+                "dmxModes": [],
+                "powerPlug": {
+                    "name": "C13"
+                },
+                "files": []
+            }
+        },
+        {
+            "model": "Volero Batten Aqua",
+            "weight": 29.4,
+            "power": 800,
+            "tags": [],
+            "fixtureType": {
+                "name": "light"
+            },
+            "manufacture": {
+                "name": "Clay Paky"
+            },
+            "details": {
+                "powerPassage": true,
+                "outdoor": true,
+                "desc": "",
+                "connectors": [
+                    {
+                        "name": "RJ45IN"
+                    },
+                    {
+                        "name": "RJ45OUT"
+                    },
+                    {
+                        "name": "DMX 5pin"
+                    },
+                    {
+                        "name": "W-DMX"
+                    }
+                ],
+                "dmxModes": [
+                    {
+                        "name": "standard-batten",
+                        "channels": 16
+                    },
+                    {
+                        "name": "shapes-batten",
+                        "channels": 34
+                    },
+                    {
+                        "name": "advanced-batten",
+                        "channels": 33
+                    },
+                    {
+                        "name": "RGB-batten",
+                        "channels": 30
+                    },
+                    {
+                        "name": "RGBW-batten",
+                        "channels": 40
+                    }
+                ],
+                "powerPlug": {
+                    "name": "PowerCon TRUE1"
+                },
+                "files": []
+            }
+        },
+        {
+            "model": "Volero Wave",
+            "weight": 20.8,
+            "power": 400,
+            "tags": [],
+            "fixtureType": {
+                "name": "light"
+            },
+            "manufacture": {
+                "name": "Clay Paky"
+            },
+            "details": {
+                "powerPassage": true,
+                "outdoor": false,
+                "desc": "",
+                "connectors": [
+                    {
+                        "name": "DMX 3pin"
+                    },
+                    {
+                        "name": "RJ45IN"
+                    },
+                    {
+                        "name": "RJ45OUT"
+                    },
+                    {
+                        "name": "DMX 5pin"
+                    }
+                ],
+                "dmxModes": [
+                    {
+                        "name": "standard-wave",
+                        "channels": 23
+                    },
+                    {
+                        "name": "shapes-wave",
+                        "channels": 29
+                    },
+                    {
+                        "name": "RGB-wave",
+                        "channels": 24
+                    },
+                    {
+                        "name": "RGBW-wave",
+                        "channels": 32
+                    }
+                ],
+                "powerPlug": {
+                    "name": "PowerCon TRUE1"
+                },
+                "files": []
+            }
+        },
+        {
+            "model": "X Rover Pro",
+            "weight": 30,
+            "power": 350,
+            "tags": [],
+            "fixtureType": {
+                "name": "light"
+            },
+            "manufacture": {
+                "name": "Hassuny"
+            },
+            "details": {
+                "powerPassage": true,
+                "outdoor": false,
+                "desc": "",
+                "connectors": [
+                    {
+                        "name": "RJ45IN"
+                    },
+                    {
+                        "name": "RJ45OUT"
+                    },
+                    {
+                        "name": "DMX 5pin"
+                    }
+                ],
+                "dmxModes": [
+                    {
+                        "name": "Standard-lights",
+                        "channels": 64
+                    },
+                    {
+                        "name": "Reduced-noLights",
+                        "channels": 6
+                    }
+                ],
+                "powerPlug": {
+                    "name": "PowerCon TRUE1"
+                },
+                "files": []
+            }
+        },
+        {
+            "model": "dupa",
+            "weight": 1222,
+            "power": 321,
+            "tags": [
+                {
+                    "name": "ves"
+                },
+                {
+                    "name": "aram"
+                }
+            ],
+            "fixtureType": {
+                "name": "light"
+            },
+            "manufacture": {
+                "name": "Studio due"
+            },
+            "details": {
+                "powerPassage": true,
+                "outdoor": true,
+                "desc": "",
+                "connectors": [
+                    {
+                        "name": "DMX 3pin"
+                    },
+                    {
+                        "name": "RJ45IN"
+                    }
+                ],
+                "dmxModes": [
+                    {
+                        "name": "std",
+                        "channels": 12
+                    },
+                    {
+                        "name": "gfhgfg",
+                        "channels": 43
+                    }
+                ],
+                "powerPlug": {
+                    "name": "Schuko (230V)"
+                },
+                "files": []
+            }
+        },
+        {
+            "model": "iBar 15",
+            "weight": 11.1,
+            "power": 170,
+            "tags": [
+                {
+                    "name": "IP65"
+                }
+            ],
+            "fixtureType": {
+                "name": "light"
+            },
+            "manufacture": {
+                "name": "Robe"
+            },
+            "details": {
+                "powerPassage": true,
+                "outdoor": true,
+                "desc": "",
+                "connectors": [
+                    {
+                        "name": "DMX 5pin"
+                    }
+                ],
+                "dmxModes": [
+                    {
+                        "name": "1",
+                        "channels": 16
+                    },
+                    {
+                        "name": "2",
+                        "channels": 11
+                    },
+                    {
+                        "name": "3",
+                        "channels": 61
+                    },
+                    {
+                        "name": "4",
+                        "channels": 76
+                    }
+                ],
+                "powerPlug": {
+                    "name": "PowerCon TRUE1"
+                },
+                "files": []
+            }
+        },
+        {
+            "model": "iBeam 350",
+            "weight": 15.5,
+            "power": 450,
+            "tags": [
+                {
+                    "name": "IP65"
+                }
+            ],
+            "fixtureType": {
+                "name": "light"
+            },
+            "manufacture": {
+                "name": "Robe"
+            },
+            "details": {
+                "powerPassage": true,
+                "outdoor": true,
+                "desc": "",
+                "connectors": [
+                    {
+                        "name": "RJ45IN"
+                    },
+                    {
+                        "name": "DMX 5pin"
+                    }
+                ],
+                "dmxModes": [
+                    {
+                        "name": "1",
+                        "channels": 22
+                    },
+                    {
+                        "name": "2",
+                        "channels": 16
+                    },
+                    {
+                        "name": "3",
+                        "channels": 24
+                    }
+                ],
+                "powerPlug": {
+                    "name": "PowerCon TRUE1"
+                },
+                "files": []
+            }
+        },
+        {
+            "model": "iEsprite",
+            "weight": 34,
+            "power": 950,
+            "tags": [
+                {
+                    "name": "IP65"
+                }
+            ],
+            "fixtureType": {
+                "name": "light"
+            },
+            "manufacture": {
+                "name": "Robe"
+            },
+            "details": {
+                "powerPassage": false,
+                "outdoor": true,
+                "desc": "",
+                "connectors": [
+                    {
+                        "name": "RJ45IN"
+                    },
+                    {
+                        "name": "RJ45OUT"
+                    },
+                    {
+                        "name": "DMX 5pin"
+                    }
+                ],
+                "dmxModes": [
+                    {
+                        "name": "1",
+                        "channels": 49
+                    },
+                    {
+                        "name": "2",
+                        "channels": 42
+                    },
+                    {
+                        "name": "3",
+                        "channels": 50
+                    },
+                    {
+                        "name": "4",
+                        "channels": 43
+                    },
+                    {
+                        "name": "5",
+                        "channels": 51
+                    }
+                ],
+                "powerPlug": {
+                    "name": "PowerCon TRUE1"
+                },
+                "files": []
+            }
+        },
+        {
+            "model": "iForte",
+            "weight": 42.5,
+            "power": 1250,
+            "tags": [
+                {
+                    "name": "IP65"
+                }
+            ],
+            "fixtureType": {
+                "name": "light"
+            },
+            "manufacture": {
+                "name": "Robe"
+            },
+            "details": {
+                "powerPassage": false,
+                "outdoor": true,
+                "desc": "",
+                "connectors": [
+                    {
+                        "name": "RJ45IN"
+                    },
+                    {
+                        "name": "RJ45OUT"
+                    },
+                    {
+                        "name": "DMX 5pin"
+                    }
+                ],
+                "dmxModes": [
+                    {
+                        "name": "Mode1",
+                        "channels": 54
+                    },
+                    {
+                        "name": "Mode2",
+                        "channels": 56
+                    }
+                ],
+                "powerPlug": {
+                    "name": "PowerCon TRUE1"
+                },
+                "files": []
+            }
+        },
+        {
+            "model": "iForte FS",
+            "weight": 43.8,
+            "power": 1250,
+            "tags": [
+                {
+                    "name": "IP65"
+                }
+            ],
+            "fixtureType": {
+                "name": "light"
+            },
+            "manufacture": {
+                "name": "Robe"
+            },
+            "details": {
+                "powerPassage": false,
+                "outdoor": true,
+                "desc": "",
+                "connectors": [
+                    {
+                        "name": "RJ45IN"
+                    },
+                    {
+                        "name": "RJ45OUT"
+                    },
+                    {
+                        "name": "DMX 5pin"
+                    }
+                ],
+                "dmxModes": [
+                    {
+                        "name": "Mode1",
+                        "channels": 54
+                    },
+                    {
+                        "name": "Mode2",
+                        "channels": 56
+                    }
+                ],
+                "powerPlug": {
+                    "name": "PowerCon TRUE1"
+                },
+                "files": []
+            }
+        },
+        {
+            "model": "iPainte",
+            "weight": 25.5,
+            "power": 440,
+            "tags": [
+                {
+                    "name": "IP65"
+                }
+            ],
+            "fixtureType": {
+                "name": "light"
+            },
+            "manufacture": {
+                "name": "Robe"
+            },
+            "details": {
+                "powerPassage": true,
+                "outdoor": true,
+                "desc": "",
+                "connectors": [
+                    {
+                        "name": "DMX 5pin"
+                    }
+                ],
+                "dmxModes": [
+                    {
+                        "name": "1",
+                        "channels": 44
+                    },
+                    {
+                        "name": "2",
+                        "channels": 45
+                    }
+                ],
+                "powerPlug": {
+                    "name": "PowerCon TRUE1"
+                },
+                "files": []
+            }
+        },
+        {
+            "model": "iPointe65",
+            "weight": 42.8,
+            "power": 550,
+            "tags": [],
+            "fixtureType": {
+                "name": "light"
+            },
+            "manufacture": {
+                "name": "Robe"
+            },
+            "details": {
+                "powerPassage": false,
+                "outdoor": true,
+                "desc": "",
+                "connectors": [
+                    {
+                        "name": "DMX 3pin"
+                    },
+                    {
+                        "name": "RJ45IN"
+                    },
+                    {
+                        "name": "DMX 5pin"
+                    },
+                    {
+                        "name": "CRMX"
+                    }
+                ],
+                "dmxModes": [
+                    {
+                        "name": "1-ipointe",
+                        "channels": 39
+                    },
+                    {
+                        "name": "2-ipointe",
+                        "channels": 34
+                    }
+                ],
+                "powerPlug": {
+                    "name": "PowerCon TRUE1"
+                },
+                "files": []
+            }
+        },
+        {
+            "model": "iSpiider",
+            "weight": 24.9,
+            "power": 660,
+            "tags": [
+                {
+                    "name": "IP65"
+                }
+            ],
+            "fixtureType": {
+                "name": "light"
+            },
+            "manufacture": {
+                "name": "Robe"
+            },
+            "details": {
+                "powerPassage": false,
+                "outdoor": true,
+                "desc": "",
+                "connectors": [
+                    {
+                        "name": "RJ45IN"
+                    },
+                    {
+                        "name": "RJ45OUT"
+                    },
+                    {
+                        "name": "DMX 5pin"
+                    }
+                ],
+                "dmxModes": [
+                    {
+                        "name": "1",
+                        "channels": 49
+                    },
+                    {
+                        "name": "2",
+                        "channels": 27
+                    },
+                    {
+                        "name": "3",
+                        "channels": 33
+                    },
+                    {
+                        "name": "4",
+                        "channels": 90
+                    },
+                    {
+                        "name": "5",
+                        "channels": 27
+                    },
+                    {
+                        "name": "6",
+                        "channels": 47
+                    },
+                    {
+                        "name": "7",
+                        "channels": 91
+                    },
+                    {
+                        "name": "8",
+                        "channels": 110
+                    },
+                    {
+                        "name": "9",
+                        "channels": 104
+                    },
+                    {
+                        "name": "10",
+                        "channels": 123
+                    }
+                ],
+                "powerPlug": {
+                    "name": "PowerCon TRUE1"
+                },
+                "files": []
+            }
+        },
+        {
+            "model": "iTetra2",
+            "weight": 29.3,
+            "power": 600,
+            "tags": [
+                {
+                    "name": "IP65"
+                }
+            ],
+            "fixtureType": {
+                "name": "light"
+            },
+            "manufacture": {
+                "name": "Robe"
+            },
+            "details": {
+                "powerPassage": true,
+                "outdoor": true,
+                "desc": "",
+                "connectors": [
+                    {
+                        "name": "RJ45IN"
+                    },
+                    {
+                        "name": "DMX 5pin"
+                    }
+                ],
+                "dmxModes": [
+                    {
+                        "name": "1",
+                        "channels": 34
+                    },
+                    {
+                        "name": "2",
+                        "channels": 56
+                    },
+                    {
+                        "name": "3",
+                        "channels": 97
+                    },
+                    {
+                        "name": "4",
+                        "channels": 115
+                    },
+                    {
+                        "name": "5",
+                        "channels": 110
+                    },
+                    {
+                        "name": "6",
+                        "channels": 128
+                    }
+                ],
+                "powerPlug": {
+                    "name": "PowerCon TRUE1"
+                },
+                "files": []
+            }
+        },
+        {
+            "model": "miniPointe",
+            "weight": 11.8,
+            "power": 260,
+            "tags": [],
+            "fixtureType": {
+                "name": "light"
+            },
+            "manufacture": {
+                "name": "Robe"
+            },
+            "details": {
+                "powerPassage": true,
+                "outdoor": false,
+                "desc": "",
+                "connectors": [
+                    {
+                        "name": "DMX 5pin"
+                    }
+                ],
+                "dmxModes": [
+                    {
+                        "name": "1-minip",
+                        "channels": 22
+                    },
+                    {
+                        "name": "2-minip",
+                        "channels": 17
+                    },
+                    {
+                        "name": "3-minip",
+                        "channels": 27
+                    }
+                ],
+                "powerPlug": {
+                    "name": "PowerCon"
+                },
+                "files": []
+            }
+        }
+    ],
+    "status": "success"
+}

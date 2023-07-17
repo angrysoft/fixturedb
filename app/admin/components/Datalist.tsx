@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { useEffect, useRef } from "react";
 import { Label } from "./Label";
 
@@ -14,7 +14,8 @@ interface InputDatalistProps {
 const InputDatalist = (props: InputDatalistProps) => {
   const inputRef = useRef<HTMLInputElement>();
   useEffect(() => {
-    if (inputRef.current) inputRef.current.value = props.value;
+    console.log(props.value)
+    if (inputRef.current && props.value) inputRef.current.value = props.value;
   }, [props.value]);
 
   return (
@@ -30,6 +31,7 @@ const InputDatalist = (props: InputDatalistProps) => {
                    focus:outline-0 focus:border-primary
                    transition-border duration-500"
         required={props.required}
+        ref={inputRef}
         {...props.inputArgs}
       />
       <datalist id={`datalist-${props.id}`}>

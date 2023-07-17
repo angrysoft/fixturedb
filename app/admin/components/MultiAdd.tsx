@@ -1,6 +1,7 @@
 import React, {
   MouseEventHandler,
   SyntheticEvent,
+  useEffect,
   useRef,
   useState,
 } from "react";
@@ -14,11 +15,13 @@ interface IMultiAddProps {
   required?: boolean;
   hints?: IHintsResponse;
   listItems: Array<{ id: number; name: string }>;
+  value?: Array<string>;
 }
 
 const MultiAdd: React.FC<IMultiAddProps> = (props: IMultiAddProps) => {
   const [items, setItems] = useState<Array<string>>([]);
   const inputRef = useRef<HTMLInputElement>(null);
+
   const handleAddClick = (ev: SyntheticEvent) => {
     ev.preventDefault();
     if (inputRef.current && inputRef.current.value.length !== 0) {
@@ -28,6 +31,10 @@ const MultiAdd: React.FC<IMultiAddProps> = (props: IMultiAddProps) => {
       inputRef.current.value = "";
     }
   };
+
+  useEffect(() => {
+    setItems(props.value || []);
+  }, [props.value]);
 
   const handleDelClick = (item: string) => {
     const newItems = new Set(items);
