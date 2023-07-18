@@ -1,6 +1,7 @@
 import React, {
   MouseEventHandler,
   SyntheticEvent,
+  useEffect,
   useRef,
   useState,
 } from "react";
@@ -12,6 +13,7 @@ interface IDmxModesProps {
   required?: boolean;
   hints?: IHintsResponse;
   listItems: Array<{ id: number; name: string }>;
+  value?: Array<string>;
 }
 
 const DmxModes: React.FC<IDmxModesProps> = (props: IDmxModesProps) => {
@@ -35,6 +37,10 @@ const DmxModes: React.FC<IDmxModesProps> = (props: IDmxModesProps) => {
     }
   };
 
+  useEffect(() => {
+    setItems(props.value || []);
+  }, [props.value]);
+
   const handleDelClick = (item: string) => {
     const newItems = new Set(items);
     newItems.delete(item);
@@ -52,41 +58,45 @@ const DmxModes: React.FC<IDmxModesProps> = (props: IDmxModesProps) => {
         className="hidden"
       />
       <Label for={`dmxModes-editor`} name={"DmxModes"} />
-      <div className="grid gap-05 gird-cols-1 md:grid-cols-4 md:col-span-2 items-end">
-        <div className="md:col-span-3 gap-05 grid grid-flow-col justify-start">
+      <div className="grid gap-05 gird-cols-1 md:grid-cols-3 col-span-3 md:col-span-2 items-end">
+        <div className="md:col-span-3 gap-05 flex flex-wrap md:justify-start">
           {items.map((el, index) => (
             <DmxMode key={index} name={el} onClick={handleDelClick} />
           ))}
         </div>
-        <div className="col-span-2">
-          <Label name="Name" for="dmxModes-editor-name" />
-          <input
-            id={`dmxModes-editor-name`}
-            className=" w-full md:p-05
-                bg-surface
-                 border border-gray-300 rounded
-                 focus:outline-0 focus:border-primary
-                 transition-border duration-500"
-            ref={nameRef}
-          />
-        </div>
-        <div className="">
-          <Label name="Channels" for="dmxModes-editor-channel" />
-          <input
-            type="number"
-            max={512}
-            min={1}
-            id={`dmxModes-editor-channel`}
-            className=" w-full md:p-05
-                bg-surface
-                 border border-gray-300 rounded
-                 focus:outline-0 focus:border-primary
-                 transition-border duration-500"
-            ref={channelRef}
-          />
-        </div>
 
-        <Button handleClick={handleAddClick}>+</Button>
+        <div className="grid gap-05 col-span-3 md:grid-cols-[8fr_2fr_1fr] md:items-end">
+          <div className="">
+            <Label name="Name" for="dmxModes-editor-name" />
+            <input
+              id={`dmxModes-editor-name`}
+              className=" w-full md:p-05
+                bg-surface
+                 border border-gray-300 rounded
+                 focus:outline-0 focus:border-primary
+                 transition-border duration-500"
+              ref={nameRef}
+            />
+          </div>
+
+          <div className="">
+            <Label name="Channels" for="dmxModes-editor-channel" />
+            <input
+              type="number"
+              max={512}
+              min={1}
+              id={`dmxModes-editor-channel`}
+              className=" w-full md:p-05
+                bg-surface
+                 border border-gray-300 rounded
+                 focus:outline-0 focus:border-primary
+                 transition-border duration-500"
+              ref={channelRef}
+            />
+          </div>
+
+          <Button handleClick={handleAddClick}>+</Button>
+        </div>
       </div>
     </div>
   );
@@ -99,7 +109,7 @@ interface IMultiItemProps {
 
 const DmxMode = (props: IMultiItemProps) => {
   return (
-    <div className="grid grid-flow-col gap-05 p-05 bg-secondary rounded-lg items-center">
+    <div className="grid grid-flow-col gap-05 p-05 bg-secondary rounded-lg items-center justify-between">
       <div className="text-[1rem] text-onSecondary">{props.name}</div>
       <div
         className="cursor-pointer border border-onSecondary rounded"

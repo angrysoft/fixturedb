@@ -54,7 +54,7 @@ const MultiAdd: React.FC<IMultiAddProps> = (props: IMultiAddProps) => {
       />
       <Label for={`${props.id}-editor`} name={props.label} />
       <div className="grid gap-05 gird-cols-1 md:grid-cols-3 md:col-span-2">
-        <div className="md:col-span-3 gap-05 grid grid-flow-col justify-start">
+        <div className="md:col-span-3 gap-05 flex flex-wrap justify-start">
           {items.map((el, index) => (
             <MultiItem key={index} name={el} onClick={handleDelClick} />
           ))}

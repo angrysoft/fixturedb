@@ -11,6 +11,7 @@ export async function GET(request: Request, { params }: {params: {id: number}}) 
     include: {
       tags: true,
       fixtureType: true,
+      manufacture: true,
       details: {
         include:{
           connectors: true,
@@ -45,6 +46,37 @@ export async function DELETE(request: Request, { params }: {params: {id: number}
     });
     return NextResponse.json({
       data: {deleted: deletedFixture},
+      status: "success",
+    });
+  } else {
+    return NextResponse.json({error:"Access denied"}, {status:401})
+  }
+}
+
+export async function PUT(request: Request, { params }: {params: {id: number}}) {
+  const session = await getServerSession(authOptions);
+  if (session) {
+    const data = await request.json();
+    console.log(data);
+
+    // const updated = await prisma.fixture.update({
+    //   include: {
+    //     tags: true,
+    //     manufacture: true,
+    //     fixtureType:true,
+    //     details:{
+    //       include: {
+    //         connectors: true,
+    //       }
+    //     }
+    //   },
+    //   where: {
+    //     id: Number(params.id),
+    //   },
+    //   data: data
+    // });
+    return NextResponse.json({
+      data: {edited: updated},
       status: "success",
     });
   } else {

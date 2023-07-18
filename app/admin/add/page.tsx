@@ -29,7 +29,7 @@ export interface IHintsResponse {
 }
 
 const AddFixture: React.FC<IAddFixtureProps> = (props: IAddFixtureProps) => {
-  const {data:session} = useSession({required: true});
+  const { data: session } = useSession({ required: true });
   const router = useRouter();
   const [hints, setHints] = useState<IHintsResponse>();
   const [error, setError] = useState("");
@@ -47,15 +47,15 @@ const AddFixture: React.FC<IAddFixtureProps> = (props: IAddFixtureProps) => {
     }
   };
 
-  const handleSubmit = async (ev: SyntheticEvent<HTMLFormElement>, opts: any) => {
+  const handleSubmit = async (
+    ev: SyntheticEvent<HTMLFormElement>,
+    opts: any,
+  ) => {
     ev.preventDefault();
     const data = new FormData(ev.target as HTMLFormElement);
     const jsonData = Object.fromEntries(data.entries());
     const ret = await sendData(JSON.stringify(jsonData));
-    if (ret.data.added)
-      router.push(`/fixture/${ret.data.added}`)
-
-      
+    if (ret.data.added) router.push(`/fixture/${ret.data.added}`);
   };
 
   useEffect(() => {
@@ -104,7 +104,13 @@ const AddFixture: React.FC<IAddFixtureProps> = (props: IAddFixtureProps) => {
             required
             inputArgs={{ autoComplete: "off" }}
           />
-          <Input type="number" label="Weight" id="weight" required inputArgs={{step:"0.1"}}/>
+          <Input
+            type="number"
+            label="Weight"
+            id="weight"
+            required
+            inputArgs={{ step: "0.1" }}
+          />
           <Input type="number" label="Power" id="power" />
         </InputGroup>
         <InputGroup>

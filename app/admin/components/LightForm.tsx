@@ -10,31 +10,51 @@ import { Textarea } from "./Textareea";
 
 interface ILightFormProps {
   hints?: IHintsResponse;
+  data?: any;
 }
 
 const LightForm: React.FC<ILightFormProps> = (props: ILightFormProps) => {
+  console.log("d");
   return (
     <>
       <InputGroup>
-        <CheckBox id="powerPassage" label="Power Passage" />
+        <CheckBox
+          id="powerPassage"
+          label="Power Passage"
+          checked={props.data.details.powerPassage}
+        />
         <MultiAdd
           label="Connectors"
           id="connectors"
           listItems={props.hints?.data.connectors || []}
+          value={props.data.connectors?.map(
+            (con: { id: number; name: string }) => con.name,
+          )}
         />
         <InputDatalist
           id="powerPlug"
           label="Power Plug"
           listItems={props.hints?.data.plugs || []}
           required
+          value={props.data.details.powerPlug.name}
         />
       </InputGroup>
       <InputGroup>
-        <DmxModes listItems={[]} />
+        <DmxModes
+          listItems={[]}
+          value={props.data.details.dmxModes.map(
+            (mode: { id: number; name: string; channels: number }) =>
+              `${mode.name}:${mode.channels}`,
+          )}
+        />
       </InputGroup>
-      
+
       <InputGroup>
-        <CheckBox id="outdoor" label="Outdoor" />
+        <CheckBox
+          id="outdoor"
+          label="Outdoor"
+          checked={props.data.details.outdoor}
+        />
       </InputGroup>
       <Textarea label={"Desc"} id={"desc"} />
     </>

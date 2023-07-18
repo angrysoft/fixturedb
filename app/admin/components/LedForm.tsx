@@ -10,6 +10,7 @@ interface ILedFormProps {
   values?: any;
   hints?: IHintsResponse;
   children?: JSX.Element | JSX.Element[];
+  data?: any;
 }
 
 const LedForm: React.FC<ILedFormProps> = (props: ILedFormProps) => {

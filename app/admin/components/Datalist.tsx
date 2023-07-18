@@ -14,7 +14,6 @@ interface InputDatalistProps {
 const InputDatalist = (props: InputDatalistProps) => {
   const inputRef = useRef<HTMLInputElement>();
   useEffect(() => {
-    console.log(props.value)
     if (inputRef.current && props.value) inputRef.current.value = props.value;
   }, [props.value]);
 
