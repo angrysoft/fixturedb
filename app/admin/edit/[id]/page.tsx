@@ -12,6 +12,7 @@ import { MultiAdd } from "../../components/MultiAdd";
 import { useRouter } from "next/navigation";
 import { useSession } from "next-auth/react";
 import Loader from "../../../components/Loader";
+import { json } from "stream/consumers";
 
 interface IEditFixtureProps {
   params: { id: number };
@@ -29,7 +30,7 @@ export interface IHintsResponse {
   };
 }
 
-const AddFixture: React.FC<IEditFixtureProps> = (props: IEditFixtureProps) => {
+const EditFixture: React.FC<IEditFixtureProps> = (props: IEditFixtureProps) => {
   useSession({ required: true });
 
   const router = useRouter();
@@ -54,10 +55,7 @@ const AddFixture: React.FC<IEditFixtureProps> = (props: IEditFixtureProps) => {
     }
   };
 
-  const handleSubmit = async (
-    ev: SyntheticEvent<HTMLFormElement>,
-    opts: any,
-  ) => {
+  const handleSubmit = async (ev: SyntheticEvent<HTMLFormElement>) => {
     ev.preventDefault();
     const data = new FormData(ev.target as HTMLFormElement);
     const jsonData = Object.fromEntries(data.entries());
@@ -89,7 +87,7 @@ const AddFixture: React.FC<IEditFixtureProps> = (props: IEditFixtureProps) => {
       setFixture(data.data);
     };
     getFixture();
-  }, []);
+  }, [props.params.id]);
 
   const setFixtureType = useCallback(
     (fType: string) => {
@@ -114,7 +112,6 @@ const AddFixture: React.FC<IEditFixtureProps> = (props: IEditFixtureProps) => {
   };
 
   useEffect(() => {
-    console.log(fixture);
     if (fixture?.fixtureType?.name) setFixtureType(fixture.fixtureType.name);
   }, [fixture, setFixtureType]);
 
@@ -201,5 +198,4 @@ const AddFixture: React.FC<IEditFixtureProps> = (props: IEditFixtureProps) => {
   );
 };
 
-export default AddFixture;
-0;
+export default EditFixture;
