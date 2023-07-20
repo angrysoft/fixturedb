@@ -1,11 +1,10 @@
 import React from "react";
 import { IHintsResponse } from "../add/page";
-import { InputGroup } from "./InputGroup";
-import { MultiAdd } from "./MultiAdd";
 import { CheckBox } from "./CheckBox";
 import { InputDatalist } from "./Datalist";
-import { Input } from "./Input";
 import { DmxModes } from "./DmxModes";
+import { InputGroup } from "./InputGroup";
+import { MultiAdd } from "./MultiAdd";
 import { Textarea } from "./Textareea";
 
 interface ILightFormProps {

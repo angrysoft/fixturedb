@@ -146,96 +146,21 @@ async function updateFixture(fixtureObj: any, id:number) {
       }
     }
 
-    if (oldFixture?.model !== fixtureObj.model) query.data.model = fixtureObj.model;
-    if (oldFixture?.weight !== fixtureObj.weight) query.data.weight = Number(fixtureObj.weight);
-    if (oldFixture?.power !== fixtureObj.power) query.data.power = Number(fixtureObj.power);
+    updateMainField(oldFixture?.model, fixtureObj.model, "model", query, false);
+    updateMainField(oldFixture?.weight, Number(fixtureObj.weight), "weight", query, false);
+    updateMainField(oldFixture?.power, Number(fixtureObj.power), "power", query, false);
+
     // Tags
-    // Type
-    // details.powerPassage
+    updateMainField(oldFixture?.fixtureType, fixtureObj.type, "fixtureType", query, true);
+    // if (oldFixture?.details?.powerPassage !== fixtureObj.powerPassage) query.data.details.powerPassage = fixtureObj.powerPassage && true || false;
     // details.connectors
     // details.powerPlug
     // details.dmxMode
     // details.outdoor
     // details.desc
+    console.log(query);
 
     const newFixture = await prisma.fixture.update(query);
-      // include: {
-      //   tags: true,
-      //   manufacture: true,
-      //   fixtureType:true,
-      //   details:{
-      //     include: {
-      //       connectors: true,
-      //     }
-      //   }
-      // },
-      // where: {
-      //   id: id
-      // },
-      // data: {
-      //   model: fixtureObj.model,
-      //   fixtureType: {
-      //     update:{
-      //       update:{
-      //         name: fixtureObj.type
-      //       },
-      //       create: {
-      //         name: fixtureObj.type
-      //       }
-      //     }
-      //   },
-      //   manufacture: {
-      //     upsert:{
-      //       update:{
-      //         name: fixtureObj.manufacture
-      //       },
-      //       create:{
-      //         name: fixtureObj.manufacture
-      //       }
-      //     }
-      //   },
-      //   weight: Number(fixtureObj.weight),
-      //   power: Number(fixtureObj.power) || null,
-      //   tags: {
-      //     upsert: tags,
-      //   },
-        // details: {
-        //   update: {
-        //     data: {
-        //       powerPassage: fixtureObj.powerPassage && true || false,
-              // connectors: {
-              //   connectOrCreate: connectors
-              // },
-              // dmxModes: {
-              //   connectOrCreate: dmxModes || [],
-              // },
-
-              // powerPlug: {
-              //   connectOrCreate:{
-              //     where:{
-              //       name: fixtureObj.powerPlug
-              //     },
-              //     create:{
-              //       name: fixtureObj.powerPlug
-              //     }
-              //   }
-              // },
-              // outdoor: fixtureObj.outdoor && true || false,
-              // files: {
-              //   create: fixtureObj.files || [],
-              // },
-              // desc: fixtureObj.desc || "",
-              // width: Number(fixtureObj.width) || null,
-              // height: Number(fixtureObj.height) || null,
-              // thickness: Number(fixtureObj.thickness) || null,
-              // resolutionH: Number(fixtureObj.resolutionH) || null,
-              // resolutionV: Number(fixtureObj.resolutionV) || null,
-              // pixel: Number(fixtureObj.pixel) || null,
-            // }
-          // }
-        // },
-      // }
-    // });
     return newFixture;
 
   } catch (e: any) {
@@ -251,5 +176,24 @@ async function updateFixture(fixtureObj: any, id:number) {
     } else{
       throw e
     }
+  }
+}
+
+const updateMainField = (oldValue:any, newValue:any, name:string, query:any, include:boolean) => {
+  if (oldValue !== newValue) {
+    query.data[name] = newValue;
+  }
+  if (include) {
+    if (! query.include) query.include = {};
+    query.include[name] = true
+  }
+}
+const updateDetailsField = (oldValue:any, newValue:any, name:string, query:any, include:boolean) => {
+  if (oldValue !== newValue) {
+    query.data.details[name] = newValue;
+  }
+  if (include) {
+    if (! query.include) query.include = {};
+    query.include[name] = true
   }
 }
