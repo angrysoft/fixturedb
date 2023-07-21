@@ -58,7 +58,7 @@ const Select: React.FC<ISelectProps> = (props: ISelectProps) => {
         className="p-05 bg-surface text-onSurface
                    border border-gray-100 rounded
                    focus:outline-0 focus:border-primary"
-        name={props.label.toLowerCase()}
+        name={props.id.toString()}
         id={props.id}
         required={props.required}
         onChange={handleChange}

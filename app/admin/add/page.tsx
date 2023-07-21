@@ -122,7 +122,7 @@ const AddFixture: React.FC<IAddFixtureProps> = (props: IAddFixtureProps) => {
         </InputGroup>
         <InputGroup>
           <Select
-            id="type"
+            id="fixtureType"
             label="Type"
             items={hints?.data?.types || []}
             required

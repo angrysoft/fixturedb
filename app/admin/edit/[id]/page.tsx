@@ -1,18 +1,17 @@
 "use client";
+import { useSession } from "next-auth/react";
+import { useRouter } from "next/navigation";
 import React, { SyntheticEvent, useCallback, useEffect, useState } from "react";
 import { BackButton } from "../../../components/BackButton";
-import { Form } from "../../components/Form";
-import { InputGroup } from "../../components/InputGroup";
-import { Input } from "../../components/Input";
-import { Select } from "../../components/Select";
+import Loader from "../../../components/Loader";
 import { InputDatalist } from "../../components/Datalist";
+import { Form } from "../../components/Form";
+import { Input } from "../../components/Input";
+import { InputGroup } from "../../components/InputGroup";
 import { LedForm } from "../../components/LedForm";
 import { LightForm } from "../../components/LightForm";
 import { MultiAdd } from "../../components/MultiAdd";
-import { useRouter } from "next/navigation";
-import { useSession } from "next-auth/react";
-import Loader from "../../../components/Loader";
-import { json } from "stream/consumers";
+import { Select } from "../../components/Select";
 
 interface IEditFixtureProps {
   params: { id: number };
@@ -36,7 +35,7 @@ const EditFixture: React.FC<IEditFixtureProps> = (props: IEditFixtureProps) => {
   const router = useRouter();
   const [hints, setHints] = useState<IHintsResponse>();
   const [error, setError] = useState("");
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
   const [detailsElement, setDetailsElement] = useState<React.JSX.Element>(
     <></>,
   );
@@ -58,6 +57,8 @@ const EditFixture: React.FC<IEditFixtureProps> = (props: IEditFixtureProps) => {
   const handleSubmit = async (ev: SyntheticEvent<HTMLFormElement>) => {
     ev.preventDefault();
     const data = new FormData(ev.target as HTMLFormElement);
+    if (! data.get("powerPassage")) data.set("powerPassage", "");
+    if (! data.get("outdoor")) data.set("outdoor", "");
     const jsonData = Object.fromEntries(data.entries());
     const ret = await sendData(JSON.stringify(jsonData));
     console.log(ret);
@@ -164,7 +165,7 @@ const EditFixture: React.FC<IEditFixtureProps> = (props: IEditFixtureProps) => {
         </InputGroup>
         <InputGroup>
           <Select
-            id="type"
+            id="fixtureType"
             label="Type"
             items={hints?.data?.types || []}
             required

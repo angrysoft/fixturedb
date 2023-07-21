@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Label } from "./Label";
 
 interface ICheckBoxProps {
@@ -10,13 +10,16 @@ interface ICheckBoxProps {
 }
 
 const CheckBox: React.FC<ICheckBoxProps> = (props: ICheckBoxProps) => {
+  const [ value, setValue] = useState("");
   let inputRef: React.RefObject<HTMLInputElement> = useRef<HTMLInputElement>(null);
   if (props.checkboxRef)
     inputRef = props.checkboxRef;
 
   useEffect(() => {
-    if (inputRef.current && props.checked)
+    if (inputRef.current && props.checked) {
       inputRef.current.checked = props.checked;
+      setValue(props.checked.toString());
+    }
   }, [props.checked]);
 
   return (
@@ -36,6 +39,8 @@ const CheckBox: React.FC<ICheckBoxProps> = (props: ICheckBoxProps) => {
                    transition-border duration-500 h-2 w-2"
         required={props.required}
         ref={inputRef}
+        onChange={(el) => setValue(el.target.checked.toString())}
+        value={value}
       />
     </div>
   );

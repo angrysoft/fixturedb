@@ -58,10 +58,11 @@ export async function PUT(request: Request,  { params }: {params: {id: number}})
   const session = await getServerSession(authOptions);
   if (session) {
     const data = await request.json();
+    console.log(data);
     const fixture: any = await updateFixture(data, Number(params.id));
     console.log(fixture);
     return NextResponse.json({
-      data: {updateed: params.id},
+      data: {updated: params.id},
       status: "success",
     });
   } else {
@@ -69,46 +70,9 @@ export async function PUT(request: Request,  { params }: {params: {id: number}})
   }
 }
 
-async function updateFixture(fixtureObj: any, id:number) {
-  const tags = fixtureObj.tags?.split(',')?.map((tag: string)=>{
-    return {
-      where:{
-        name: tag,
-      },
-      update: {
-        name:tag,
-      },
-      create: {
-        name:tag,
-      }
-    }
-  }) || [];
-
-  const connectors = fixtureObj.connectors?.split(',').map((conn: string)=> {
-    return {
-      where: {
-        name: conn
-      },
-      update: {
-        name: conn,
-      },
-      create: {
-        name: conn
-      }
-    }
-  }) || [];
-
-
-  const dmxModes = fixtureObj.dmxModes?.split(',')?.map((dmx: string) => {
-    const [name, channel] = dmx.split(':');
-    return {
-      name: name,
-      channels: Number(channel),
-    }
-  }) || [];
-
+async function updateFixture(fixtureObj:{[key:string]:any}, id:number) {
   try {
-    const oldFixture = await prisma.fixture.findUnique({
+    const oldFixture:any = await prisma.fixture.findUnique({
       where: {
         id: id
       },
@@ -134,33 +98,85 @@ async function updateFixture(fixtureObj: any, id:number) {
       },
       data: {},
     };
+    console.log(oldFixture);
+    for (const [key, val] of Object.entries(fixtureObj)) {
+      
+      console.log(key, val);
+      switch (key) {
+        case "manufacture":
+          if (oldFixture?.manufacture.name !== fixtureObj.manufacture) {
+            insertInclude("manufacture", query);
+            query.data.manufacture = {
+              connectOrCreate: {
+                where: {name: fixtureObj.manufacture},
+                create:{name: fixtureObj.manufacture},
+              },
+            }
+          }
+          break;
+        case "model":
+          updateMainField(oldFixture?.model, fixtureObj.model, "model", query, false);
+          break;
+        case "weight":
+        case "power":
+          if (oldFixture[key])
+            updateMainField(oldFixture[key], Number(val), key, query, false);
+          break;
+        case "tags":
+          // Tags
+          insertInclude("tags", query);
+          const tags = fixtureObj.tags?.split(',')
+            .filter((t) => t.length !== 0)
+            ?.map((tag: string)=>{
+            
+            return {
+              where:{
+                name: tag,
+              },
+              create: {
+                name:tag,
+              }
+            }
+          }) || [];
+          query.data.tags = {
+            connectOrCreate: tags
+          }
+          break;
 
-    if (oldFixture?.manufacture.name !== fixtureObj.manufacture) {
-      if (! query.include) query.include = {};
-      query.include.manufacture = true;
-      query.data.manufacture = {
-        connectOrCreate: {
-          where: {name: fixtureObj.manufacture},
-          create:{name: fixtureObj.manufacture},
-        },
+        case "fixtureType":
+          if (oldFixture?.fixtureType.name !== fixtureObj.fixtureType) {
+            insertInclude("fixtureType", query);
+            query.data.fixtureType = {
+              connectOrCreate:{
+                where:{
+                  name: fixtureObj.type
+                },
+                create:{
+                  name: fixtureObj.type
+                }
+              }
+            }
+          }
+          break;
+        
+        case "powerPassage":
+        case "outdoor":
+          const oldVal = oldFixture.details[key];
+          if (oldVal !== null || oldVal !== undefined)
+            updateDetailsField(oldVal, Boolean(val), key, query, false);
+          break;
       }
     }
 
-    updateMainField(oldFixture?.model, fixtureObj.model, "model", query, false);
-    updateMainField(oldFixture?.weight, Number(fixtureObj.weight), "weight", query, false);
-    updateMainField(oldFixture?.power, Number(fixtureObj.power), "power", query, false);
+    
 
-    // Tags
-    updateMainField(oldFixture?.fixtureType, fixtureObj.type, "fixtureType", query, true);
-    // if (oldFixture?.details?.powerPassage !== fixtureObj.powerPassage) query.data.details.powerPassage = fixtureObj.powerPassage && true || false;
     // details.connectors
     // details.powerPlug
     // details.dmxMode
-    // details.outdoor
     // details.desc
-    console.log(query);
+    console.log(JSON.stringify(query, null, 2));
 
-    const newFixture = await prisma.fixture.update(query);
+    const newFixture = {} //await prisma.fixture.update(query);
     return newFixture;
 
   } catch (e: any) {
@@ -180,20 +196,26 @@ async function updateFixture(fixtureObj: any, id:number) {
 }
 
 const updateMainField = (oldValue:any, newValue:any, name:string, query:any, include:boolean) => {
-  if (oldValue !== newValue) {
-    query.data[name] = newValue;
-  }
-  if (include) {
-    if (! query.include) query.include = {};
-    query.include[name] = true
-  }
+  if (!oldValue || oldValue === newValue) return;
+  if (include)
+    insertInclude(name, query);
+  query.data[name] = newValue;
 }
+
 const updateDetailsField = (oldValue:any, newValue:any, name:string, query:any, include:boolean) => {
-  if (oldValue !== newValue) {
-    query.data.details[name] = newValue;
-  }
+  console.log(name, oldValue, newValue)
+  if (oldValue === newValue) return;
+  if (! query.data.details) query.data.details = {}
+  console.log('up detail', oldValue, newValue, name);
   if (include) {
-    if (! query.include) query.include = {};
-    query.include[name] = true
+    if (! query.include) query.include = {};  
+    if (! query.include.details) query.include.details = {};
+    query.include.details[name] = true;
   }
+  query.data.details[name] = newValue;
 }
+
+const insertInclude = (name: string, query:any) => {
+  if (! query.include) query.include = {};
+    query.include[name] = true
+};

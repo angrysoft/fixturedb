@@ -82,10 +82,10 @@ async function addFixture(fixtureObj: any) {
         fixtureType: {
           connectOrCreate:{
             where:{
-              name: fixtureObj.type
+              name: fixtureObj.fixtureType
             },
             create:{
-              name: fixtureObj.type
+              name: fixtureObj.fixtureType
             }
           }
         },
