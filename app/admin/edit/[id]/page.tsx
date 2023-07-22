@@ -12,6 +12,7 @@ import { LedForm } from "../../components/LedForm";
 import { LightForm } from "../../components/LightForm";
 import { MultiAdd } from "../../components/MultiAdd";
 import { Select } from "../../components/Select";
+import { Textarea } from "../../components/Textarea";
 
 interface IEditFixtureProps {
   params: { id: number };
@@ -57,8 +58,8 @@ const EditFixture: React.FC<IEditFixtureProps> = (props: IEditFixtureProps) => {
   const handleSubmit = async (ev: SyntheticEvent<HTMLFormElement>) => {
     ev.preventDefault();
     const data = new FormData(ev.target as HTMLFormElement);
-    if (! data.get("powerPassage")) data.set("powerPassage", "");
-    if (! data.get("outdoor")) data.set("outdoor", "");
+    if (!data.get("powerPassage")) data.set("powerPassage", "");
+    if (!data.get("outdoor")) data.set("outdoor", "");
     const jsonData = Object.fromEntries(data.entries());
     const ret = await sendData(JSON.stringify(jsonData));
     console.log(ret);
@@ -175,6 +176,7 @@ const EditFixture: React.FC<IEditFixtureProps> = (props: IEditFixtureProps) => {
           />
         </InputGroup>
         {detailsElement}
+        <Textarea label={"Desc"} id={"desc"} value={fixture?.details?.desc} />
         {error.length > 0 ? (
           <InputGroup>
             <span className="text-red-500 ">{error}</span>

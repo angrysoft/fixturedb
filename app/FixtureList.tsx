@@ -80,7 +80,7 @@ const FixtureList: React.FC<IFixtureListProps> = (props: IFixtureListProps) => {
     );
   }
   return (
-    <div className="grid auto-rows-min gap-1 h-full overflow-y-auto p-1">
+    <div className="grid auto-rows-min gap-1 h-full overflow-y-auto p-1 scrollbar-hide">
       {listBody}
       {session && <AddButton />}
     </div>

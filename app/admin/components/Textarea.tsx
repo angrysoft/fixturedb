@@ -4,7 +4,7 @@ import { Label } from "./Label";
 interface ITextareaProps {
   label: string;
   id: string;
-  children?: JSX.Element | JSX.Element[];
+  value?: string;
 }
 
 const Textarea: React.FC<ITextareaProps> = (props: ITextareaProps) => {
@@ -22,7 +22,9 @@ const Textarea: React.FC<ITextareaProps> = (props: ITextareaProps) => {
           id={props.id}
           cols={30}
           rows={10}
-        ></textarea>
+        >
+          {props.value}
+        </textarea>
       </div>
     </>
   );

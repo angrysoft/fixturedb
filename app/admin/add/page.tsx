@@ -11,6 +11,7 @@ import { LightForm } from "../components/LightForm";
 import { MultiAdd } from "../components/MultiAdd";
 import { useRouter } from "next/navigation";
 import { useSession } from "next-auth/react";
+import { Textarea } from "../components/Textarea";
 
 interface IAddFixtureProps {
   children?: JSX.Element | JSX.Element[];
@@ -131,6 +132,7 @@ const AddFixture: React.FC<IAddFixtureProps> = (props: IAddFixtureProps) => {
           />
         </InputGroup>
         {detailsElement}
+        <Textarea label={"Desc"} id={"desc"} />
         {error.length > 0 ? (
           <InputGroup>
             <span className="text-red-500 ">{error}</span>

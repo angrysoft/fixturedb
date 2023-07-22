@@ -5,7 +5,7 @@ import { InputDatalist } from "./Datalist";
 import { DmxModes } from "./DmxModes";
 import { InputGroup } from "./InputGroup";
 import { MultiAdd } from "./MultiAdd";
-import { Textarea } from "./Textareea";
+import { Textarea } from "./Textarea";
 
 interface ILightFormProps {
   hints?: IHintsResponse;
@@ -13,7 +13,6 @@ interface ILightFormProps {
 }
 
 const LightForm: React.FC<ILightFormProps> = (props: ILightFormProps) => {
-  console.log("d");
   return (
     <>
       <InputGroup>
@@ -26,7 +25,7 @@ const LightForm: React.FC<ILightFormProps> = (props: ILightFormProps) => {
           label="Connectors"
           id="connectors"
           listItems={props.hints?.data.connectors || []}
-          value={props.data.connectors?.map(
+          value={props.data.details.connectors?.map(
             (con: { id: number; name: string }) => con.name,
           )}
         />
@@ -55,7 +54,6 @@ const LightForm: React.FC<ILightFormProps> = (props: ILightFormProps) => {
           checked={props.data.details.outdoor}
         />
       </InputGroup>
-      <Textarea label={"Desc"} id={"desc"} />
     </>
   );
 };

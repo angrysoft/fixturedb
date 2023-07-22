@@ -44,7 +44,7 @@ export default function RootLayout({
         <meta name="theme-color" content="#bb87fa" />
       </head>
       <Provider>
-        <body className="bg-background">{children}</body>
+        <body className="bg-background scrollbar-hide">{children}</body>
       </Provider>
     </html>
   );
