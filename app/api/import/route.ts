@@ -19,7 +19,7 @@ interface fixtureObjType {
     dmxModes: Array<{name:string, channels: number}>;
     powerPlug: {name:string};
     outdoor: boolean;
-    files?: Array<{name: string, url:string}>;
+    links?: Array<{name: string, url:string}>;
     width? : number;
     height?: number;
     thickness?: number;
@@ -34,7 +34,6 @@ export async function POST(request: Request) {
   const importData:{data:Array<any>, cleanDb:boolean} = await request.json();
 
   if (importData.cleanDb === true) {
-    console.log("cleaning db");
     const deletedFixture = prisma.fixture.deleteMany();
     const deletedType = prisma.fixtureType.deleteMany();
     const deletedManufacture = prisma.manufacture.deleteMany();
@@ -144,8 +143,8 @@ async function importFixture(fixtureObj: fixtureObjType):Promise<any> {
               }
             },
             outdoor: fixtureObj.details.outdoor || false,
-            files: {
-              create: fixtureObj.details.files || [],
+            links: {
+              create: fixtureObj.details.links || [],
             },
             desc: fixtureObj.details.desc || "",
             width: fixtureObj.details.width,
@@ -158,7 +157,6 @@ async function importFixture(fixtureObj: fixtureObjType):Promise<any> {
         },
       }
     });
-    console.log(fixture);
 
     const retFixture = {
       id: fixture.id,

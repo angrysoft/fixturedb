@@ -20,7 +20,7 @@ export interface FixtureObjectDetails extends FixtureObject {
       name: string;
     } | null;
     outdoor: boolean;
-    files: DownloadFile[];
+    links: Links[];
     desc: string;
     width: number | null;
     height: number | null;
@@ -42,7 +42,7 @@ interface DmxMode {
   channels: number;
 }
 
-interface DownloadFile {
+interface Links {
   id: number;
   name: string;
   url: string;

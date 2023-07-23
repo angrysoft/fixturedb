@@ -62,12 +62,12 @@ CREATE TABLE "PowerPlug" (
 );
 
 -- CreateTable
-CREATE TABLE "DownloadFile" (
+CREATE TABLE "Links" (
     "id" INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
     "name" TEXT NOT NULL,
     "url" TEXT NOT NULL,
     "fixtureDetailsId" INTEGER NOT NULL,
-    CONSTRAINT "DownloadFile_fixtureDetailsId_fkey" FOREIGN KEY ("fixtureDetailsId") REFERENCES "FixtureDetails" ("id") ON DELETE CASCADE ON UPDATE CASCADE
+    CONSTRAINT "Links_fixtureDetailsId_fkey" FOREIGN KEY ("fixtureDetailsId") REFERENCES "FixtureDetails" ("id") ON DELETE CASCADE ON UPDATE CASCADE
 );
 
 -- CreateTable
@@ -117,10 +117,10 @@ CREATE UNIQUE INDEX "Connector_name_key" ON "Connector"("name");
 CREATE UNIQUE INDEX "PowerPlug_name_key" ON "PowerPlug"("name");
 
 -- CreateIndex
-CREATE UNIQUE INDEX "DownloadFile_url_key" ON "DownloadFile"("url");
+CREATE UNIQUE INDEX "Links_url_key" ON "Links"("url");
 
 -- CreateIndex
-CREATE UNIQUE INDEX "DownloadFile_fixtureDetailsId_key" ON "DownloadFile"("fixtureDetailsId");
+CREATE UNIQUE INDEX "Links_fixtureDetailsId_key" ON "Links"("fixtureDetailsId");
 
 -- CreateIndex
 CREATE UNIQUE INDEX "Tag_name_key" ON "Tag"("name");

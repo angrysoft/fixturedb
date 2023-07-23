@@ -1,9 +1,9 @@
 import React from "react";
+import { InfoDesc } from "./InfoDesc";
 import { InfoItem } from "./InfoItem";
 import { InfoListItems } from "./InfoListItems";
 import { FixtureObjectDetails } from "./page";
-import { InfoFileList } from "./InfoFilesList";
-import { InfoDesc } from "./InfoDesc";
+import { InfoLinkList } from "./InfoLinkList";
 
 interface IFixtureTypeLedProps {
   data: FixtureObjectDetails;
@@ -39,7 +39,7 @@ const FixtureTypeLed: React.FC<IFixtureTypeLedProps> = (
       />
       <InfoItem name="Rozstaw Pikseli" value={details.pixel} unit="mm" />
       <InfoItem name="Zewnętrzna" value={details.outdoor ? "Tak" : "Nie"} />
-      <InfoFileList files={details.files} />
+      <InfoLinkList links={details.links} />
       <InfoDesc text={details.desc} />
       <InfoListItems horizontal name="Tagi" items={props.data.tags} />
     </div>

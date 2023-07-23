@@ -1,16 +1,15 @@
 "use client";
+import { useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
 import React, { SyntheticEvent, useContext, useRef, useState } from "react";
 import { BackButton } from "../../components/BackButton";
-import { Form } from "../components/Form";
-import { Input } from "../components/Input";
-import { InputGroup } from "../components/InputGroup";
-import { useSession } from "next-auth/react";
-import { Label } from "../components/Label";
 import Button from "../../components/Button";
-import { CheckBox } from "../components/CheckBox";
 import Loader from "../../components/Loader";
 import { AppContext } from "../../store";
+import { CheckBox } from "../components/CheckBox";
+import { Input } from "../components/Input";
+import { InputGroup } from "../components/InputGroup";
+import { Label } from "../components/Label";
 
 interface IAddFixtureProps {
   children?: JSX.Element | JSX.Element[];

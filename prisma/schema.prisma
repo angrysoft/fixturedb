@@ -43,7 +43,7 @@ model FixtureDetails {
     powerPlug    PowerPlug?     @relation(fields: [powerPlugId], references: [id])
     powerPlugId  Int?
     outdoor      Boolean        @default(false)
-    files        DownloadFile[]
+    links        Links[]
     desc         String
     width        Int?
     height       Int?
@@ -75,7 +75,7 @@ model PowerPlug {
     fixtureDetails FixtureDetails[]
 }
 
-model DownloadFile {
+model Links {
     id               Int            @id @default(autoincrement())
     name             String
     url              String         @unique

@@ -69,7 +69,6 @@
     animation-delay: 4s;
   }
 
-  @variants responsive {
     .scrollbar-hide::-webkit-scrollbar {
         display: none;
     }
@@ -78,7 +77,6 @@
         -ms-overflow-style: none;
         scrollbar-width: none;
     }
-  }
 }
 
 code {

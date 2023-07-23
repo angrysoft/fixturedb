@@ -83,13 +83,14 @@ const EditFixture: React.FC<IEditFixtureProps> = (props: IEditFixtureProps) => {
     const getFixture = async () => {
       const res = await fetch(`/api/fixture/${props.params.id}`);
       if (!res.ok) {
-        throw new Error("Failed to fetch data");
+        // throw new Error("Failed to fetch data");
+        router.push("/404");
       }
       const data = await res.json();
       setFixture(data.data);
     };
     getFixture();
-  }, [props.params.id]);
+  }, [props.params.id, router]);
 
   const setFixtureType = useCallback(
     (fType: string) => {

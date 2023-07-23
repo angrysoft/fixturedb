@@ -135,8 +135,8 @@ async function addFixture(fixtureObj: any) {
               },
             },
             outdoor: (fixtureObj.outdoor && true) || false,
-            files: {
-              create: fixtureObj.files || [],
+            links: {
+              create: fixtureObj.links || [],
             },
             desc: fixtureObj.desc || "",
             width: Number(fixtureObj.width) || null,
@@ -169,7 +169,6 @@ export async function POST(request: Request) {
   if (session) {
     const data = await request.json();
     const fixture: any = await addFixture(data);
-    console.log(fixture);
     return NextResponse.json({
       data: { added: fixture.id },
       status: "success",

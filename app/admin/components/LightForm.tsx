@@ -5,7 +5,6 @@ import { InputDatalist } from "./Datalist";
 import { DmxModes } from "./DmxModes";
 import { InputGroup } from "./InputGroup";
 import { MultiAdd } from "./MultiAdd";
-import { Textarea } from "./Textarea";
 
 interface ILightFormProps {
   hints?: IHintsResponse;

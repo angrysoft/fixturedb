@@ -2,15 +2,15 @@ import Link from "next/link";
 import React from "react";
 
 interface IInfoFileListProps {
-  files: Array<{ id: number; name: string; url: string }>;
+  links: Array<{ id: number; name: string; url: string }>;
 }
 
-const InfoFileList: React.FC<IInfoFileListProps> = (
+const InfoLinkList: React.FC<IInfoFileListProps> = (
   props: IInfoFileListProps,
 ) => {
-  if (props.files.length === 0) return <></>;
+  if (props.links.length === 0) return <></>;
 
-  const items = props.files.map((file) => {
+  const items = props.links.map((file) => {
     return (
       <div key={file.id} className="py-05 pl-1">
         <Link className="text-primary" href={file.url}>
@@ -21,10 +21,10 @@ const InfoFileList: React.FC<IInfoFileListProps> = (
   });
   return (
     <div className="border-b-surface border-b-2 text-onSurface py-1">
-      <div className="font-bold">Pliki:</div>
+      <div className="font-bold">Linki:</div>
       <div>{items}</div>
     </div>
   );
 };
 
-export { InfoFileList };
+export { InfoLinkList };

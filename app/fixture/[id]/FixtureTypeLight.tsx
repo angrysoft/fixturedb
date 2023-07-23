@@ -1,10 +1,10 @@
 import React from "react";
 import { InfoDesc } from "./InfoDesc";
 import { InfoDmxModes } from "./InfoDmxModes";
-import { InfoFileList } from "./InfoFilesList";
 import { InfoItem } from "./InfoItem";
 import { InfoListItems } from "./InfoListItems";
 import { FixtureObjectDetails } from "./page";
+import { InfoLinkList } from "./InfoLinkList";
 
 interface IFixtureTypeLightProps {
   data: FixtureObjectDetails;
@@ -25,7 +25,7 @@ const FixtureTypeLight: React.FC<IFixtureTypeLightProps> = (
       />
       <InfoListItems name="Gniazda" items={details.connectors} />
       <InfoDmxModes name="Dmx Mode" items={details.dmxModes} />
-      <InfoFileList files={details.files} />
+      <InfoLinkList links={details.links} />
       <InfoDesc text={details.desc} />
       <InfoListItems horizontal name="Tagi" items={props.data.tags} />
     </div>

@@ -33,7 +33,7 @@
                 "powerPlug": {
                     "name": "Schuko (230V)"
                 },
-                "files": []
+                "links": []
             }
         },
         {
@@ -73,10 +73,10 @@
                 "powerPlug": {
                     "name": "PowerCon"
                 },
-                "files": [
+                "links": [
                     {
                         "name": "config",
-                        "url": "/files/led/dicolor-a391.rcfgx"
+                        "url": "/links/led/dicolor-a391.rcfgx"
                     }
                 ]
             }
@@ -125,7 +125,7 @@
                 "powerPlug": {
                     "name": "PowerCon TRUE1"
                 },
-                "files": []
+                "links": []
             }
         },
         {
@@ -157,7 +157,7 @@
                 "powerPlug": {
                     "name": "PowerCon TRUE1"
                 },
-                "files": []
+                "links": []
             }
         },
         {
@@ -207,7 +207,7 @@
                 "powerPlug": {
                     "name": "PowerCon TRUE1"
                 },
-                "files": []
+                "links": []
             }
         },
         {
@@ -239,7 +239,7 @@
                 "powerPlug": {
                     "name": "PowerCon TRUE1"
                 },
-                "files": []
+                "links": []
             }
         },
         {
@@ -279,10 +279,10 @@
                 "powerPlug": {
                     "name": "PowerCon"
                 },
-                "files": [
+                "links": [
                     {
                         "name": "config",
-                        "url": "/files/led/dicolor-af2-391.rcfgx"
+                        "url": "/links/led/dicolor-af2-391.rcfgx"
                     }
                 ]
             }
@@ -324,7 +324,7 @@
                 "powerPlug": {
                     "name": "PowerCon TRUE1"
                 },
-                "files": [
+                "links": [
                     {
                         "name": "config",
                         "url": "/download/led/infiled-a5.95.rcfgx"
@@ -361,7 +361,7 @@
                 "powerPlug": {
                     "name": "Schuko (230V)"
                 },
-                "files": []
+                "links": []
             }
         },
         {
@@ -399,7 +399,7 @@
                 "powerPlug": {
                     "name": "PowerCon TRUE1"
                 },
-                "files": []
+                "links": []
             }
         },
         {
@@ -434,7 +434,7 @@
                 "powerPlug": {
                     "name": "PowerCon TRUE1"
                 },
-                "files": []
+                "links": []
             }
         },
         {
@@ -469,7 +469,7 @@
                 "powerPlug": {
                     "name": "PowerCon TRUE1"
                 },
-                "files": []
+                "links": []
             }
         },
         {
@@ -509,7 +509,7 @@
                 "powerPlug": {
                     "name": "PowerCon"
                 },
-                "files": []
+                "links": []
             }
         },
         {
@@ -548,7 +548,7 @@
                 "powerPlug": {
                     "name": "PowerCon TRUE1"
                 },
-                "files": []
+                "links": []
             }
         },
         {
@@ -583,7 +583,7 @@
                 "powerPlug": {
                     "name": "PowerCon TRUE1"
                 },
-                "files": []
+                "links": []
             }
         },
         {
@@ -625,7 +625,7 @@
                 "powerPlug": {
                     "name": "PowerCon TRUE1"
                 },
-                "files": []
+                "links": []
             }
         },
         {
@@ -660,7 +660,7 @@
                 "powerPlug": {
                     "name": "PowerCon TRUE1"
                 },
-                "files": []
+                "links": []
             }
         },
         {
@@ -695,7 +695,7 @@
                 "powerPlug": {
                     "name": "PowerCon TRUE1"
                 },
-                "files": []
+                "links": []
             }
         },
         {
@@ -730,7 +730,7 @@
                 "powerPlug": {
                     "name": "PowerCon TRUE1"
                 },
-                "files": []
+                "links": []
             }
         },
         {
@@ -765,7 +765,7 @@
                 "powerPlug": {
                     "name": "PowerCon TRUE1"
                 },
-                "files": []
+                "links": []
             }
         },
         {
@@ -807,7 +807,7 @@
                 "powerPlug": {
                     "name": "PowerCon TRUE1"
                 },
-                "files": []
+                "links": []
             }
         },
         {
@@ -857,7 +857,7 @@
                 "powerPlug": {
                     "name": "PowerCon TRUE1"
                 },
-                "files": []
+                "links": []
             }
         },
         {
@@ -907,7 +907,7 @@
                 "powerPlug": {
                     "name": "PowerCon TRUE1"
                 },
-                "files": []
+                "links": []
             }
         },
         {
@@ -957,7 +957,7 @@
                 "powerPlug": {
                     "name": "PowerCon TRUE1"
                 },
-                "files": []
+                "links": []
             }
         },
         {
@@ -1007,7 +1007,7 @@
                 "powerPlug": {
                     "name": "PowerCon TRUE1"
                 },
-                "files": []
+                "links": []
             }
         },
         {
@@ -1053,7 +1053,7 @@
                 "powerPlug": {
                     "name": "PowerCon"
                 },
-                "files": []
+                "links": []
             }
         },
         {
@@ -1099,7 +1099,7 @@
                 "powerPlug": {
                     "name": "PowerCon"
                 },
-                "files": []
+                "links": []
             }
         },
         {
@@ -1145,7 +1145,7 @@
                 "powerPlug": {
                     "name": "PowerCon"
                 },
-                "files": []
+                "links": []
             }
         },
         {
@@ -1191,7 +1191,7 @@
                 "powerPlug": {
                     "name": "PowerCon"
                 },
-                "files": []
+                "links": []
             }
         },
         {
@@ -1237,7 +1237,7 @@
                 "powerPlug": {
                     "name": "PowerCon"
                 },
-                "files": []
+                "links": []
             }
         },
         {
@@ -1283,7 +1283,7 @@
                 "powerPlug": {
                     "name": "PowerCon"
                 },
-                "files": []
+                "links": []
             }
         },
         {
@@ -1329,7 +1329,7 @@
                 "powerPlug": {
                     "name": "PowerCon"
                 },
-                "files": []
+                "links": []
             }
         },
         {
@@ -1369,7 +1369,7 @@
                 "powerPlug": {
                     "name": "Schuko (230V)"
                 },
-                "files": []
+                "links": []
             }
         },
         {
@@ -1405,7 +1405,7 @@
                 "powerPlug": {
                     "name": "Schuko (230V)"
                 },
-                "files": []
+                "links": []
             }
         },
         {
@@ -1463,7 +1463,7 @@
                 "powerPlug": {
                     "name": "PowerCon"
                 },
-                "files": []
+                "links": []
             }
         },
         {
@@ -1502,7 +1502,7 @@
                 "powerPlug": {
                     "name": "PowerCon TRUE1"
                 },
-                "files": []
+                "links": []
             }
         },
         {
@@ -1550,7 +1550,7 @@
                 "powerPlug": {
                     "name": "Schuko (230V)"
                 },
-                "files": []
+                "links": []
             }
         },
         {
@@ -1594,7 +1594,7 @@
                 "powerPlug": {
                     "name": "Schuko (230V)"
                 },
-                "files": []
+                "links": []
             }
         },
         {
@@ -1634,7 +1634,7 @@
                 "powerPlug": {
                     "name": "Schuko (230V)"
                 },
-                "files": []
+                "links": []
             }
         },
         {
@@ -1687,7 +1687,7 @@
                 "powerPlug": {
                     "name": "PowerCon TRUE1"
                 },
-                "files": []
+                "links": []
             }
         },
         {
@@ -1740,7 +1740,7 @@
                 "powerPlug": {
                     "name": "PowerCon TRUE1"
                 },
-                "files": []
+                "links": []
             }
         },
         {
@@ -1793,7 +1793,7 @@
                 "powerPlug": {
                     "name": "PowerCon TRUE1"
                 },
-                "files": []
+                "links": []
             }
         },
         {
@@ -1846,7 +1846,7 @@
                 "powerPlug": {
                     "name": "PowerCon TRUE1"
                 },
-                "files": []
+                "links": []
             }
         },
         {
@@ -1881,7 +1881,7 @@
                 "powerPlug": {
                     "name": "Schuko (230V)"
                 },
-                "files": []
+                "links": []
             }
         },
         {
@@ -1917,7 +1917,7 @@
                 "powerPlug": {
                     "name": "C13"
                 },
-                "files": []
+                "links": []
             }
         },
         {
@@ -1961,7 +1961,7 @@
                 "powerPlug": {
                     "name": "PowerCon TRUE1"
                 },
-                "files": []
+                "links": []
             }
         },
         {
@@ -2005,7 +2005,7 @@
                 "powerPlug": {
                     "name": "PowerCon TRUE1"
                 },
-                "files": []
+                "links": []
             }
         },
         {
@@ -2050,7 +2050,7 @@
                 "powerPlug": {
                     "name": "PowerCon TRUE1"
                 },
-                "files": []
+                "links": []
             }
         },
         {
@@ -2095,7 +2095,7 @@
                 "powerPlug": {
                     "name": "PowerCon TRUE1"
                 },
-                "files": []
+                "links": []
             }
         },
         {
@@ -2135,7 +2135,7 @@
                 "powerPlug": {
                     "name": "PowerCon"
                 },
-                "files": [
+                "links": [
                     {
                         "name": "config",
                         "url": "/download/led/yestech-h3-hd-lu.rcfgx"
@@ -2180,7 +2180,7 @@
                 "powerPlug": {
                     "name": "PowerCon"
                 },
-                "files": [
+                "links": [
                     {
                         "name": "config",
                         "url": "/download/led/yestech-h3-hd-ru.rcfgx"
@@ -2220,7 +2220,7 @@
                 "powerPlug": {
                     "name": "Schuko (230V)"
                 },
-                "files": []
+                "links": []
             }
         },
         {
@@ -2260,7 +2260,7 @@
                 "powerPlug": {
                     "name": "PowerCon"
                 },
-                "files": []
+                "links": []
             }
         },
         {
@@ -2300,7 +2300,7 @@
                 "powerPlug": {
                     "name": "PowerCon"
                 },
-                "files": []
+                "links": []
             }
         },
         {
@@ -2347,7 +2347,7 @@
                 "powerPlug": {
                     "name": "PowerCon TRUE1"
                 },
-                "files": []
+                "links": []
             }
         },
         {
@@ -2394,7 +2394,7 @@
                 "powerPlug": {
                     "name": "PowerCon TRUE1"
                 },
-                "files": []
+                "links": []
             }
         },
         {
@@ -2452,7 +2452,7 @@
                 "powerPlug": {
                     "name": "PowerCon TRUE1"
                 },
-                "files": []
+                "links": []
             }
         },
         {
@@ -2514,7 +2514,7 @@
                 "powerPlug": {
                     "name": "PowerCon TRUE1"
                 },
-                "files": []
+                "links": []
             }
         },
         {
@@ -2576,7 +2576,7 @@
                 "powerPlug": {
                     "name": "PowerCon TRUE1"
                 },
-                "files": []
+                "links": []
             }
         },
         {
@@ -2626,7 +2626,7 @@
                 "powerPlug": {
                     "name": "PowerCon TRUE1"
                 },
-                "files": []
+                "links": []
             }
         },
         {
@@ -2676,7 +2676,7 @@
                 "powerPlug": {
                     "name": "PowerCon TRUE1"
                 },
-                "files": []
+                "links": []
             }
         },
         {
@@ -2716,7 +2716,7 @@
                 "powerPlug": {
                     "name": "PowerCon"
                 },
-                "files": [
+                "links": [
                     {
                         "name": "config",
                         "url": "/download/led/yestech-m5-hd.rcfgx"
@@ -2753,7 +2753,7 @@
                 "powerPlug": {
                     "name": "PowerCon TRUE1"
                 },
-                "files": []
+                "links": []
             }
         },
         {
@@ -2785,7 +2785,7 @@
                 "powerPlug": {
                     "name": "PowerCon TRUE1"
                 },
-                "files": []
+                "links": []
             }
         },
         {
@@ -2817,7 +2817,7 @@
                 "powerPlug": {
                     "name": "PowerCon TRUE1"
                 },
-                "files": []
+                "links": []
             }
         },
         {
@@ -2849,7 +2849,7 @@
                 "powerPlug": {
                     "name": "PowerCon TRUE1"
                 },
-                "files": []
+                "links": []
             }
         },
         {
@@ -2881,7 +2881,7 @@
                 "powerPlug": {
                     "name": "PowerCon TRUE1"
                 },
-                "files": []
+                "links": []
             }
         },
         {
@@ -2923,7 +2923,7 @@
                 "powerPlug": {
                     "name": "PowerCon TRUE1"
                 },
-                "files": []
+                "links": []
             }
         },
         {
@@ -2961,7 +2961,7 @@
                 "powerPlug": {
                     "name": "PowerCon TRUE1"
                 },
-                "files": []
+                "links": []
             }
         },
         {
@@ -2997,7 +2997,7 @@
                 "powerPlug": {
                     "name": "PowerCon"
                 },
-                "files": []
+                "links": []
             }
         },
         {
@@ -3033,7 +3033,7 @@
                 "powerPlug": {
                     "name": "PowerCon"
                 },
-                "files": []
+                "links": []
             }
         },
         {
@@ -3069,7 +3069,7 @@
                 "powerPlug": {
                     "name": "PowerCon"
                 },
-                "files": []
+                "links": []
             }
         },
         {
@@ -3105,7 +3105,7 @@
                 "powerPlug": {
                     "name": "PowerCon"
                 },
-                "files": []
+                "links": []
             }
         },
         {
@@ -3141,7 +3141,7 @@
                 "powerPlug": {
                     "name": "PowerCon"
                 },
-                "files": []
+                "links": []
             }
         },
         {
@@ -3181,10 +3181,10 @@
                 "powerPlug": {
                     "name": "PowerCon"
                 },
-                "files": [
+                "links": [
                     {
                         "name": "config",
-                        "url": "/files/led/yestech-mg7s.rcfgx"
+                        "url": "/links/led/yestech-mg7s.rcfgx"
                     }
                 ]
             }
@@ -3222,7 +3222,7 @@
                 "powerPlug": {
                     "name": "PowerCon"
                 },
-                "files": []
+                "links": []
             }
         },
         {
@@ -3272,7 +3272,7 @@
                 "powerPlug": {
                     "name": "PowerCon TRUE1"
                 },
-                "files": []
+                "links": []
             }
         },
         {
@@ -3314,7 +3314,7 @@
                 "powerPlug": {
                     "name": "PowerCon TRUE1"
                 },
-                "files": []
+                "links": []
             }
         },
         {
@@ -3364,7 +3364,7 @@
                 "powerPlug": {
                     "name": "PowerCon TRUE1"
                 },
-                "files": []
+                "links": []
             }
         },
         {
@@ -3400,7 +3400,7 @@
                 "powerPlug": {
                     "name": "PowerCon"
                 },
-                "files": []
+                "links": []
             }
         },
         {
@@ -3436,7 +3436,7 @@
                 "powerPlug": {
                     "name": "PowerCon"
                 },
-                "files": []
+                "links": []
             }
         },
         {
@@ -3478,7 +3478,7 @@
                 "powerPlug": {
                     "name": "PowerCon TRUE1"
                 },
-                "files": []
+                "links": []
             }
         },
         {
@@ -3525,7 +3525,7 @@
                 "powerPlug": {
                     "name": "PowerCon TRUE1"
                 },
-                "files": []
+                "links": []
             }
         },
         {
@@ -3572,7 +3572,7 @@
                 "powerPlug": {
                     "name": "PowerCon TRUE1"
                 },
-                "files": []
+                "links": []
             }
         },
         {
@@ -3614,7 +3614,7 @@
                 "powerPlug": {
                     "name": "PowerCon TRUE1"
                 },
-                "files": []
+                "links": []
             }
         },
         {
@@ -3657,7 +3657,7 @@
                 "powerPlug": {
                     "name": "PowerCon TRUE1"
                 },
-                "files": []
+                "links": []
             }
         },
         {
@@ -3697,7 +3697,7 @@
                 "powerPlug": {
                     "name": "PowerCon"
                 },
-                "files": []
+                "links": []
             }
         },
         {
@@ -3737,7 +3737,7 @@
                 "powerPlug": {
                     "name": "PowerCon"
                 },
-                "files": []
+                "links": []
             }
         },
         {
@@ -3789,7 +3789,7 @@
                 "powerPlug": {
                     "name": "16A 1F"
                 },
-                "files": []
+                "links": []
             }
         },
         {
@@ -3833,7 +3833,7 @@
                 "powerPlug": {
                     "name": "Schuko (230V)"
                 },
-                "files": []
+                "links": []
             }
         },
         {
@@ -3869,7 +3869,7 @@
                 "powerPlug": {
                     "name": "PowerCon"
                 },
-                "files": []
+                "links": []
             }
         },
         {
@@ -3934,7 +3934,7 @@
                 "powerPlug": {
                     "name": "PowerCon TRUE1"
                 },
-                "files": []
+                "links": []
             }
         },
         {
@@ -3980,7 +3980,7 @@
                 "powerPlug": {
                     "name": "PowerCon"
                 },
-                "files": []
+                "links": []
             }
         },
         {
@@ -4025,7 +4025,7 @@
                 "powerPlug": {
                     "name": "PowerCon TRUE1"
                 },
-                "files": []
+                "links": []
             }
         },
         {
@@ -4064,7 +4064,7 @@
                 "powerPlug": {
                     "name": "PowerCon TRUE1"
                 },
-                "files": []
+                "links": []
             }
         },
         {
@@ -4099,7 +4099,7 @@
                 "powerPlug": {
                     "name": "PowerCon"
                 },
-                "files": []
+                "links": []
             }
         },
         {
@@ -4134,7 +4134,7 @@
                 "powerPlug": {
                     "name": "PowerCon"
                 },
-                "files": []
+                "links": []
             }
         },
         {
@@ -4176,7 +4176,7 @@
                 "powerPlug": {
                     "name": "PowerCon"
                 },
-                "files": []
+                "links": []
             }
         },
         {
@@ -4218,7 +4218,7 @@
                 "powerPlug": {
                     "name": "PowerCon"
                 },
-                "files": []
+                "links": []
             }
         },
         {
@@ -4268,7 +4268,7 @@
                 "powerPlug": {
                     "name": "PowerCon TRUE1"
                 },
-                "files": []
+                "links": []
             }
         },
         {
@@ -4314,7 +4314,7 @@
                 "powerPlug": {
                     "name": "PowerCon TRUE1"
                 },
-                "files": []
+                "links": []
             }
         },
         {
@@ -4360,7 +4360,7 @@
                 "powerPlug": {
                     "name": "PowerCon TRUE1"
                 },
-                "files": []
+                "links": []
             }
         },
         {
@@ -4403,7 +4403,7 @@
                 "powerPlug": {
                     "name": "PowerCon TRUE1"
                 },
-                "files": []
+                "links": []
             }
         },
         {
@@ -4480,7 +4480,7 @@
                 "powerPlug": {
                     "name": "PowerCon TRUE1"
                 },
-                "files": []
+                "links": []
             }
         },
         {
@@ -4516,7 +4516,7 @@
                 "powerPlug": {
                     "name": "PowerCon TRUE1"
                 },
-                "files": []
+                "links": []
             }
         },
         {
@@ -4555,7 +4555,7 @@
                 "powerPlug": {
                     "name": "PowerCon TRUE1"
                 },
-                "files": []
+                "links": []
             }
         },
         {
@@ -4599,7 +4599,7 @@
                 "powerPlug": {
                     "name": "PowerCon"
                 },
-                "files": []
+                "links": []
             }
         },
         {
@@ -4658,7 +4658,7 @@
                 "powerPlug": {
                     "name": "PowerCon TRUE1"
                 },
-                "files": []
+                "links": []
             }
         },
         {
@@ -4719,7 +4719,7 @@
                 "powerPlug": {
                     "name": "PowerCon TRUE1"
                 },
-                "files": []
+                "links": []
             }
         },
         {
@@ -4774,7 +4774,7 @@
                 "powerPlug": {
                     "name": "PowerCon TRUE1"
                 },
-                "files": []
+                "links": []
             }
         },
         {
@@ -4836,7 +4836,7 @@
                 "powerPlug": {
                     "name": "PowerCon TRUE1"
                 },
-                "files": []
+                "links": []
             }
         },
         {
@@ -4895,7 +4895,7 @@
                 "powerPlug": {
                     "name": "PowerCon TRUE1"
                 },
-                "files": []
+                "links": []
             }
         },
         {
@@ -4938,10 +4938,10 @@
                 "powerPlug": {
                     "name": "PowerCon TRUE1"
                 },
-                "files": [
+                "links": [
                     {
                         "name": "config",
-                        "url": "/files/led/dicolor-ut-390.rcfgx"
+                        "url": "/links/led/dicolor-ut-390.rcfgx"
                     }
                 ]
             }
@@ -4966,7 +4966,7 @@
                 "powerPlug": {
                     "name": "C13"
                 },
-                "files": []
+                "links": []
             }
         },
         {
@@ -5023,7 +5023,7 @@
                 "powerPlug": {
                     "name": "PowerCon TRUE1"
                 },
-                "files": []
+                "links": []
             }
         },
         {
@@ -5076,7 +5076,7 @@
                 "powerPlug": {
                     "name": "PowerCon TRUE1"
                 },
-                "files": []
+                "links": []
             }
         },
         {
@@ -5118,7 +5118,7 @@
                 "powerPlug": {
                     "name": "PowerCon TRUE1"
                 },
-                "files": []
+                "links": []
             }
         },
         {
@@ -5164,7 +5164,7 @@
                 "powerPlug": {
                     "name": "Schuko (230V)"
                 },
-                "files": []
+                "links": []
             }
         },
         {
@@ -5212,7 +5212,7 @@
                 "powerPlug": {
                     "name": "PowerCon TRUE1"
                 },
-                "files": []
+                "links": []
             }
         },
         {
@@ -5259,7 +5259,7 @@
                 "powerPlug": {
                     "name": "PowerCon TRUE1"
                 },
-                "files": []
+                "links": []
             }
         },
         {
@@ -5317,7 +5317,7 @@
                 "powerPlug": {
                     "name": "PowerCon TRUE1"
                 },
-                "files": []
+                "links": []
             }
         },
         {
@@ -5363,7 +5363,7 @@
                 "powerPlug": {
                     "name": "PowerCon TRUE1"
                 },
-                "files": []
+                "links": []
             }
         },
         {
@@ -5409,7 +5409,7 @@
                 "powerPlug": {
                     "name": "PowerCon TRUE1"
                 },
-                "files": []
+                "links": []
             }
         },
         {
@@ -5449,7 +5449,7 @@
                 "powerPlug": {
                     "name": "PowerCon TRUE1"
                 },
-                "files": []
+                "links": []
             }
         },
         {
@@ -5494,7 +5494,7 @@
                 "powerPlug": {
                     "name": "PowerCon TRUE1"
                 },
-                "files": []
+                "links": []
             }
         },
         {
@@ -5572,7 +5572,7 @@
                 "powerPlug": {
                     "name": "PowerCon TRUE1"
                 },
-                "files": []
+                "links": []
             }
         },
         {
@@ -5631,7 +5631,7 @@
                 "powerPlug": {
                     "name": "PowerCon TRUE1"
                 },
-                "files": []
+                "links": []
             }
         },
         {
@@ -5671,7 +5671,7 @@
                 "powerPlug": {
                     "name": "PowerCon"
                 },
-                "files": []
+                "links": []
             }
         }
     ],

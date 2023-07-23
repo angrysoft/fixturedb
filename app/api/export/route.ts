@@ -22,7 +22,7 @@ interface fixtureObjType {
     powerPlug: {id: number, name:string};
     powerPlugId: number;
     outdoor: boolean;
-    files: Array<{id:number, name: string, url:string}>;
+    links: Array<{id:number, name: string, url:string}>;
   }
 }
 
@@ -38,7 +38,7 @@ export async function GET(request: Request) {
           connectors: true,
           dmxModes: true,
           powerPlug:true,
-          files:true,
+          links:true,
         }
       },
     },
@@ -86,7 +86,7 @@ export async function GET(request: Request) {
           
       });
 
-      newEl?.details?.files.forEach((el: any) => {
+      newEl?.details?.links.forEach((el: any) => {
           delete el.id;
           delete el.fixtureDetailsId;
           
