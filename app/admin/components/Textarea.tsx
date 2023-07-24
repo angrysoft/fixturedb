@@ -18,7 +18,8 @@ const Textarea: React.FC<ITextareaProps> = (props: ITextareaProps) => {
                    border border-gray-300 rounded
                    focus:outline-0 focus:border-primary
                    transition-border duration-500"
-          name={props.label}
+          name={props.id}
+          maxLength={320}
           id={props.id}
           cols={30}
           rows={10}
