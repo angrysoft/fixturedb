@@ -36,23 +36,23 @@ model Manufacture {
 }
 
 model FixtureDetails {
-    id           Int            @id @default(autoincrement())
+    id           Int         @id @default(autoincrement())
     powerPassage Boolean
     connectors   Connector[]
     dmxModes     DmxMode[]
-    powerPlug    PowerPlug?     @relation(fields: [powerPlugId], references: [id])
+    powerPlug    PowerPlug?  @relation(fields: [powerPlugId], references: [id])
     powerPlugId  Int?
-    outdoor      Boolean        @default(false)
+    outdoor      Boolean     @default(false)
     links        Links[]
-    desc         String
+    desc         String      //@db.VarChar(320)
     width        Int?
     height       Int?
     thickness    Int?
     resolutionH  Int?
     resolutionV  Int?
     pixel        Float?
-    fixture      Fixture        @relation(fields: [fixtureId], references: [id], onDelete: Cascade, onUpdate: Cascade)
-    fixtureId    Int            @unique
+    fixture      Fixture     @relation(fields: [fixtureId], references: [id], onDelete: Cascade, onUpdate: Cascade)
+    fixtureId    Int         @unique
 }
 
 model Connector {
@@ -62,10 +62,10 @@ model Connector {
 }
 
 model DmxMode {
-    id             Int              @id @default(autoincrement())
-    name           String
-    channels       Int
-    fixtureDetails FixtureDetails @relation(fields: [fixtureDetailsId], references: [id], onDelete: Cascade, onUpdate: Cascade)
+    id               Int            @id @default(autoincrement())
+    name             String
+    channels         Int
+    fixtureDetails   FixtureDetails @relation(fields: [fixtureDetailsId], references: [id], onDelete: Cascade, onUpdate: Cascade)
     fixtureDetailsId Int
 }
 
