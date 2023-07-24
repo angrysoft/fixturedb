@@ -105,6 +105,7 @@ async function updateFixture(fixtureObj: { [key: string]: any }, id: number) {
       },
       data: {},
     };
+
     console.log(oldFixture);
     for (const [key, val] of Object.entries(fixtureObj)) {
       console.log(key, val);
@@ -251,7 +252,7 @@ async function updateFixture(fixtureObj: { [key: string]: any }, id: number) {
         case "desc": {
           const oldVal = oldFixture.details[key];
           if (oldVal !== null || oldVal !== undefined)
-            updateDetailsField(oldVal, val, key, query, false);
+            updateDetailsField(oldVal, val.substring(0, 319), key, query, false);
           break;
         }
       }
