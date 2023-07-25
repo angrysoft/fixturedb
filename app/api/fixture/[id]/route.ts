@@ -66,9 +66,7 @@ export async function PUT(
   const session = await getServerSession(authOptions);
   if (session) {
     const data = await request.json();
-    console.log(data);
     const fixture: any = await updateFixture(data, Number(params.id));
-    console.log(fixture);
     return NextResponse.json({
       data: { updated: params.id },
       status: "success",
@@ -106,9 +104,10 @@ async function updateFixture(fixtureObj: { [key: string]: any }, id: number) {
       data: {},
     };
 
-    console.log(oldFixture);
     for (const [key, val] of Object.entries(fixtureObj)) {
       console.log(key, val);
+      const details:any = {};
+
       switch (key) {
         case "manufacture":
           if (oldFixture?.manufacture.name !== fixtureObj.manufacture) {
@@ -183,7 +182,7 @@ async function updateFixture(fixtureObj: { [key: string]: any }, id: number) {
           break;
         }
 
-        case "connectors":
+        case "connectors--":
           const connectors =
             fixtureObj.connectors
               ?.split(",")
@@ -200,7 +199,9 @@ async function updateFixture(fixtureObj: { [key: string]: any }, id: number) {
               }) || [];
           insertDetailInclude("connectors", query);
           if (!query.data.details) query.data.details = {};
-          query.data.details.connectors = connectors;
+          query.data.details.connectors = {
+            connectOrCreate: connectors,
+          };
           break;
 
         case "powerPlug": {
@@ -252,15 +253,29 @@ async function updateFixture(fixtureObj: { [key: string]: any }, id: number) {
         case "desc": {
           const oldVal = oldFixture.details[key];
           if (oldVal !== null || oldVal !== undefined)
-            updateDetailsField(oldVal, val.substring(0, 319), key, query, false);
+            updateDetailsField(
+              oldVal,
+              val.substring(0, 319),
+              key,
+              query,
+              false,
+            );
           break;
         }
+      }
+      //TODO: //update details
+      if (Object.keys(details).length !== 0) {
+        query.data.details = {
+          update: {
+            data: details
+          }
+        };
       }
     }
 
     console.log(JSON.stringify(query, null, 2));
 
-    const newFixture = {}; //await prisma.fixture.update(query);
+    const newFixture = await prisma.fixture.update(query);
     return newFixture;
   } catch (e: any) {
     if (e instanceof Prisma.PrismaClientKnownRequestError) {
