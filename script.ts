@@ -176,11 +176,11 @@ async function importFixture(fixtureObj: FixtureObject, indx:number) {
 }
 
 async function main() {
-  walkDir("files", loadFile);
-  console.log("length", fixtures.length);
-  fixtures.forEach(async (fix, indx) => {
-    await importFixture(fix, indx);
-  });
+  // walkDir("files", loadFile);
+  // console.log("length", fixtures.length);
+  // fixtures.forEach(async (fix, indx) => {
+  //   await importFixture(fix, indx);
+  // });
 
   const user = await prisma.user.create({
     data: {
