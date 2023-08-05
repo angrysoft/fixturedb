@@ -103,10 +103,10 @@ async function updateFixture(fixtureObj: { [key: string]: any }, id: number) {
       },
       data: {},
     };
+    const details: any = {};
 
     for (const [key, val] of Object.entries(fixtureObj)) {
       console.log(key, val);
-      const details:any = {};
 
       switch (key) {
         case "manufacture":
@@ -206,8 +206,17 @@ async function updateFixture(fixtureObj: { [key: string]: any }, id: number) {
 
         case "powerPlug": {
           const oldVal = oldFixture.details[key];
-          if (oldVal !== null || oldVal !== undefined)
-            updateDetailsField(oldVal, val, key, query, false);
+          if (
+            (oldVal.name !== null || oldVal.name !== undefined) &&
+            oldVal.name !== val
+          ) {
+            insertDetailInclude("powerPlug", query);
+            details.powerPlug = {
+              connectOrCreate: {
+                name: val,
+              },
+            };
+          }
           break;
         }
 
@@ -234,8 +243,7 @@ async function updateFixture(fixtureObj: { [key: string]: any }, id: number) {
                 };
               }) || [];
           insertDetailInclude("dmxModes", query);
-          if (!query.data.details) query.data.details = {};
-          query.data.details.dmxModes = { upsert: dmxModes };
+          details.dmxModes = { upsert: dmxModes };
           break;
 
         case "width":
@@ -263,19 +271,20 @@ async function updateFixture(fixtureObj: { [key: string]: any }, id: number) {
           break;
         }
       }
-      //TODO: //update details
-      if (Object.keys(details).length !== 0) {
-        query.data.details = {
-          update: {
-            data: details
-          }
-        };
-      }
+    }
+
+    //TODO: //update details
+    if (Object.keys(details).length !== 0) {
+      query.data.details = {
+        update: {
+          data: details,
+        },
+      };
     }
 
     console.log(JSON.stringify(query, null, 2));
 
-    const newFixture = await prisma.fixture.update(query);
+    const newFixture = {}; //await prisma.fixture.update(query);
     return newFixture;
   } catch (e: any) {
     if (e instanceof Prisma.PrismaClientKnownRequestError) {
