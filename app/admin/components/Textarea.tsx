@@ -23,8 +23,9 @@ const Textarea: React.FC<ITextareaProps> = (props: ITextareaProps) => {
           id={props.id}
           cols={30}
           rows={10}
+          defaultValue={props.value}
         >
-          {props.value}
+          
         </textarea>
       </div>
     </>
