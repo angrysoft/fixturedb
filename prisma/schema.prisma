@@ -67,6 +67,7 @@ model DmxMode {
     channels         Int
     fixtureDetails   FixtureDetails @relation(fields: [fixtureDetailsId], references: [id], onDelete: Cascade, onUpdate: Cascade)
     fixtureDetailsId Int
+    @@unique([name, fixtureDetailsId])
 }
 
 model PowerPlug {

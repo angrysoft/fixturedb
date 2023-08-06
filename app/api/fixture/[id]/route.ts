@@ -97,22 +97,26 @@ async function updateFixture(fixtureObj: { [key: string]: any }, id: number) {
       },
     });
 
-    let query: any = {
+    let fixtureQuery: any = {
       where: {
         id: id,
       },
       data: {},
     };
-    const details: any = {};
+
+    let detailsQuery: any = {
+      where: {
+        id: oldFixture.details.id,
+      },
+      data: {},
+    };
 
     for (const [key, val] of Object.entries(fixtureObj)) {
-      console.log(key, val);
-
       switch (key) {
         case "manufacture":
           if (oldFixture?.manufacture.name !== fixtureObj.manufacture) {
-            insertInclude("manufacture", query);
-            query.data.manufacture = {
+            insertInclude("manufacture", fixtureQuery);
+            fixtureQuery.data.manufacture = {
               connectOrCreate: {
                 where: { name: fixtureObj.manufacture },
                 create: { name: fixtureObj.manufacture },
@@ -122,11 +126,11 @@ async function updateFixture(fixtureObj: { [key: string]: any }, id: number) {
           break;
 
         case "model":
-          updateMainField(
+          updateField(
             oldFixture?.model,
             fixtureObj.model,
             "model",
-            query,
+            fixtureQuery,
             false,
           );
           break;
@@ -134,11 +138,12 @@ async function updateFixture(fixtureObj: { [key: string]: any }, id: number) {
         case "weight":
         case "power":
           if (oldFixture[key])
-            updateMainField(oldFixture[key], Number(val), key, query, false);
+            updateField(oldFixture[key], Number(val), key, fixtureQuery, false);
           break;
 
         case "tags":
-          insertInclude("tags", query);
+          insertInclude("tags", fixtureQuery);
+
           const tags =
             fixtureObj.tags
               ?.split(",")
@@ -153,15 +158,17 @@ async function updateFixture(fixtureObj: { [key: string]: any }, id: number) {
                   },
                 };
               }) || [];
-          query.data.tags = {
+          fixtureQuery.data.tags = {
+            set: [],
             connectOrCreate: tags,
           };
+
           break;
 
         case "fixtureType":
           if (oldFixture?.fixtureType.name !== fixtureObj.fixtureType) {
-            insertInclude("fixtureType", query);
-            query.data.fixtureType = {
+            insertInclude("fixtureType", fixtureQuery);
+            fixtureQuery.data.fixtureType = {
               connectOrCreate: {
                 where: {
                   name: fixtureObj.fixtureType,
@@ -174,15 +181,18 @@ async function updateFixture(fixtureObj: { [key: string]: any }, id: number) {
           }
           break;
 
+        // details
         case "powerPassage":
         case "outdoor": {
           const oldVal = oldFixture.details[key];
-          if (oldVal !== null || oldVal !== undefined)
-            updateDetailsField(oldVal, Boolean(val), key, query, false);
+          const newVal = Boolean(val);
+          if (newVal !== oldVal) {
+            detailsQuery.data[key] = newVal;
+          }
           break;
         }
 
-        case "connectors--":
+        case "connectors":
           const connectors =
             fixtureObj.connectors
               ?.split(",")
@@ -197,9 +207,9 @@ async function updateFixture(fixtureObj: { [key: string]: any }, id: number) {
                   },
                 };
               }) || [];
-          insertDetailInclude("connectors", query);
-          if (!query.data.details) query.data.details = {};
-          query.data.details.connectors = {
+          insertInclude("connectors", detailsQuery);
+          detailsQuery.data.connectors = {
+            set: [],
             connectOrCreate: connectors,
           };
           break;
@@ -210,10 +220,15 @@ async function updateFixture(fixtureObj: { [key: string]: any }, id: number) {
             (oldVal.name !== null || oldVal.name !== undefined) &&
             oldVal.name !== val
           ) {
-            insertDetailInclude("powerPlug", query);
-            details.powerPlug = {
+            insertInclude("powerPlug", detailsQuery);
+            detailsQuery.data.powerPlug = {
               connectOrCreate: {
-                name: val,
+                where: {
+                  name: val,
+                },
+                create: {
+                  name: val,
+                },
               },
             };
           }
@@ -229,12 +244,10 @@ async function updateFixture(fixtureObj: { [key: string]: any }, id: number) {
                 const [name, channel] = dmx.split(":");
                 return {
                   where: {
-                    name: name,
-                    fixtureDetailsId: oldFixture.details.id,
-                  },
-                  update: {
-                    name: name,
-                    channels: Number(channel),
+                    name_fixtureDetailsId: {
+                      name: name,
+                      fixtureDetailsId: oldFixture.details.id,
+                    },
                   },
                   create: {
                     name: name,
@@ -242,8 +255,11 @@ async function updateFixture(fixtureObj: { [key: string]: any }, id: number) {
                   },
                 };
               }) || [];
-          insertDetailInclude("dmxModes", query);
-          details.dmxModes = { upsert: dmxModes };
+          insertInclude("dmxModes", detailsQuery);
+          detailsQuery.data.dmxModes = {
+            set: [],
+            connectOrCreate: dmxModes,
+          };
           break;
 
         case "width":
@@ -253,39 +269,31 @@ async function updateFixture(fixtureObj: { [key: string]: any }, id: number) {
         case "resolutionV":
         case "pixel": {
           const oldVal = oldFixture.details[key];
-          if (oldVal !== null || oldVal !== undefined)
-            updateDetailsField(oldVal, Number(val), key, query, false);
+          const newVal = Number(val);
+          if (oldVal !== newVal) {
+            detailsQuery.data[key] = newVal;
+          }
           break;
         }
 
         case "desc": {
           const oldVal = oldFixture.details[key];
-          if (oldVal !== null || oldVal !== undefined)
-            updateDetailsField(
-              oldVal,
-              val.substring(0, 319),
-              key,
-              query,
-              false,
-            );
+          const newVal = val.substring(0, 319);
+          if (oldVal !== newVal) {
+            detailsQuery.data.desc = newVal;
+          }
           break;
         }
       }
     }
 
-    //TODO: //update details
-    if (Object.keys(details).length !== 0) {
-      query.data.details = {
-        update: {
-          data: details,
-        },
-      };
-    }
-
-    console.log(JSON.stringify(query, null, 2));
-
-    const newFixture = {}; //await prisma.fixture.update(query);
-    return newFixture;
+    console.log("MAIN");
+    console.log(JSON.stringify(fixtureQuery, null, 2));
+    console.log("DETAILS");
+    console.log(JSON.stringify(detailsQuery, null, 2));
+    const newFixture = await prisma.fixture.update(fixtureQuery);
+    const newDetails = await prisma.fixtureDetails.update(detailsQuery);
+    return { ...newFixture, ...{ details: newDetails } };
   } catch (e: any) {
     if (e instanceof Prisma.PrismaClientKnownRequestError) {
       console.log(e);
@@ -300,7 +308,7 @@ async function updateFixture(fixtureObj: { [key: string]: any }, id: number) {
   }
 }
 
-const updateMainField = (
+const updateField = (
   oldValue: any,
   newValue: any,
   name: string,
@@ -312,26 +320,19 @@ const updateMainField = (
   query.data[name] = newValue;
 };
 
-const updateDetailsField = (
-  oldValue: any,
-  newValue: any,
-  name: string,
-  query: any,
-  include: boolean,
-) => {
-  if (oldValue === newValue) return;
-  if (!query.data.details) query.data.details = {};
-  if (include) insertDetailInclude(name, query);
-  query.data.details[name] = newValue;
-};
-
 const insertInclude = (name: string, query: any) => {
   if (!query.include) query.include = {};
   query.include[name] = true;
 };
 
-const insertDetailInclude = (name: string, query: any) => {
-  if (!query.include) query.include = {};
-  if (!query.include.details) query.include.details = {};
-  query.include.details[name] = true;
+const compareValues = (oldVal: any, newVal: any) => {
+  if ((oldVal !== null || oldVal !== undefined) && oldVal !== newVal) {
+    return true;
+  }
+  return false;
+};
+
+const compareValueArray = (oldVal: any, newVal: any) => {
+  if (oldVal.length !== newVal.length) return false;
+  return false;
 };
