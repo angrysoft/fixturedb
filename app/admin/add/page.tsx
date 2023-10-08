@@ -13,10 +13,6 @@ import { useRouter } from "next/navigation";
 import { useSession } from "next-auth/react";
 import { Textarea } from "../components/Textarea";
 
-interface IAddFixtureProps {
-  children?: JSX.Element | JSX.Element[];
-}
-
 export interface IHintsResponse {
   status: string;
   data: {
@@ -29,7 +25,7 @@ export interface IHintsResponse {
   };
 }
 
-const AddFixture: React.FC<IAddFixtureProps> = (props: IAddFixtureProps) => {
+const AddFixture: React.FC = () => {
   const { data: session } = useSession({ required: true });
   const router = useRouter();
   const [hints, setHints] = useState<IHintsResponse>();
@@ -158,4 +154,3 @@ const AddFixture: React.FC<IAddFixtureProps> = (props: IAddFixtureProps) => {
 };
 
 export default AddFixture;
-0;

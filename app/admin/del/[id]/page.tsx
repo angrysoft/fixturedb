@@ -13,7 +13,7 @@ const DeleteFixture: React.FC<{ params: { id: number } }> = ({
   params: { id: number };
 }) => {
   const [loading, setLoading] = useState(false);
-  const [error, setErorr] = useState("");
+  const [error, setError] = useState("");
   const router = useRouter();
   const { data: session } = useSession({ required: true });
   const { dispatch } = useContext(AppContext);
@@ -26,7 +26,7 @@ const DeleteFixture: React.FC<{ params: { id: number } }> = ({
       
       router.push("/");
     } else {
-      setErorr(`${res.status} - ${res.statusText}`);
+      setError(`${res.status} - ${res.statusText}`);
     }
 
     setLoading(false);

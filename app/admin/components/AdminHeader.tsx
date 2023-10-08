@@ -1,5 +1,6 @@
 import { signOut } from "next-auth/react";
 import React from "react";
+import Image from "next/image";
 
 interface IAdminHeaderProps {
   img: string;
@@ -10,7 +11,10 @@ const AdminHeader: React.FC<IAdminHeaderProps> = (props: IAdminHeaderProps) => {
     <header className="grid grid-flow-col p-1 md:py-1 md:px-2 bg-surface justify-between h-6 relative items-center border-b-primary border-b">
       <h1>FixtureDb</h1>
       <div className="max-h-4 grid grid-flow-col gap-1 items-center">
-        <img
+        <Image
+          priority
+          width={96}
+          height={96}
           className="h-3 w-auto rounded-full"
           src={props.img}
           alt="Profile"

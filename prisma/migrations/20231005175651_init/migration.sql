@@ -114,6 +114,9 @@ CREATE UNIQUE INDEX "FixtureDetails_fixtureId_key" ON "FixtureDetails"("fixtureI
 CREATE UNIQUE INDEX "Connector_name_key" ON "Connector"("name");
 
 -- CreateIndex
+CREATE UNIQUE INDEX "DmxMode_name_fixtureDetailsId_key" ON "DmxMode"("name", "fixtureDetailsId");
+
+-- CreateIndex
 CREATE UNIQUE INDEX "PowerPlug_name_key" ON "PowerPlug"("name");
 
 -- CreateIndex

@@ -11,13 +11,9 @@ import { Input } from "../components/Input";
 import { InputGroup } from "../components/InputGroup";
 import { Label } from "../components/Label";
 
-interface IAddFixtureProps {
-  children?: JSX.Element | JSX.Element[];
-}
-
-const ImportExport: React.FC<IAddFixtureProps> = (props: IAddFixtureProps) => {
+const ImportExport: React.FC = () => {
   useSession({ required: true });
-  const {dispatch} = useContext(AppContext);
+  const { dispatch } = useContext(AppContext);
   const [loading, setLoading] = useState(false);
   const ref = useRef<HTMLAnchorElement>(null);
   const checkboxRef = useRef<HTMLInputElement>(null);
@@ -73,7 +69,7 @@ const ImportExport: React.FC<IAddFixtureProps> = (props: IAddFixtureProps) => {
       cleanDb: checkboxRef?.current?.checked || false,
       data: {},
     };
-    
+
     if (fileRef.current.files && fileRef.current.files.length > 0) {
       const reader = new FileReader();
       reader.addEventListener("load", async (event: any) => {
@@ -82,7 +78,10 @@ const ImportExport: React.FC<IAddFixtureProps> = (props: IAddFixtureProps) => {
         );
         setLoading(false);
         if (status.data.added.length > 0) {
-          dispatch({type: "FIXTURE_LIST_LOADED", payload: {data:status.data.added, query:"Imported"}});
+          dispatch({
+            type: "FIXTURE_LIST_LOADED",
+            payload: { data: status.data.added, query: "Imported" },
+          });
           router.push("/");
         }
       });
@@ -130,4 +129,3 @@ const ImportExport: React.FC<IAddFixtureProps> = (props: IAddFixtureProps) => {
 };
 
 export default ImportExport;
-0;

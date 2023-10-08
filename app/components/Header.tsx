@@ -33,7 +33,10 @@ const Header: React.FC = () => {
               </svg>
             </Link>
             <LogOut />
-            <img
+            <Image
+              priority
+              width={96}
+              height={96}
               className="h-3 w-auto rounded-full"
               src={session.user?.image || ""}
               alt="Profile"
