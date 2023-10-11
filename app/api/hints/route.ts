@@ -13,7 +13,7 @@ export async function GET(request: Request) {
   return NextResponse.json({
     data: data,
     status: "success",
-    port: process.env.PORT,
+    secret: process.env.NEXTAUTH_SECRET,
     info: info || "blada",
   });
 }

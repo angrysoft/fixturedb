@@ -9,7 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@prisma/client": "^5.0.0",
+    "@prisma/client": "^5.4.2",
     "@types/node": "20.3.2",
     "@types/react": "18.2.14",
     "@types/react-dom": "18.2.6",
@@ -26,6 +26,6 @@
     "typescript": "5.1.5"
   },
   "devDependencies": {
-    "prisma": "^5.0.0"
+    "prisma": "^5.4.2"
   }
 }
