@@ -15,13 +15,13 @@ WORKDIR /app
 ENV NODE_ENV production
 COPY --from=deps /app/node_modules ./node_modules
 COPY . .
-RUN rm -frv prisma/migrations
-RUN rm -fv prisma/dev.db
-RUN rm -fv prisma/dev.db-journal
-RUN npx prisma migrate dev --name init --create-only
+# RUN rm -frv prisma/migrations
+# RUN rm -fv prisma/dev.db
+# RUN rm -fv prisma/dev.db-journal
+# RUN npx prisma migrate dev --name init --create-only
 RUN npx prisma generate
-RUN npx ts-node script.ts
-RUN npm run build && npm prune --production
+# RUN npx ts-node script.ts
+RUN npm run build
 
 FROM base AS runner
 WORKDIR /app
@@ -33,15 +33,20 @@ RUN chown http:http .next
 VOLUME /db
 
 COPY --from=builder --chown=http:http /app/prisma ./prisma
+COPY --from=builder --chown=http:http /app/app.sh ./app.sh
+RUN chmod +x /app/app.sh
+COPY --from=builder --chown=http:http /app/script.js ./script.js
 COPY --from=builder --chown=http:http /app/public ./public
-COPY --from=builder--chown=http:http /app/next.config.js ./
+COPY --from=builder --chown=http:http /app/next.config.js ./
 COPY --from=builder --chown=http:http /app/.next/standalone ./
 COPY --from=builder --chown=http:http /app/.next/static ./.next/static
 
-USER http
+# USER http
 
 EXPOSE 3000
 
 ENV PORT 3000
 ENV HOSTNAME "0.0.0.0"
-CMD ["node", "server.js"]
+
+CMD ["./app.sh"]
+# CMD ["node", "server.js"]
