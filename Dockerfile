@@ -30,9 +30,10 @@ ENV NODE_ENV production
 RUN adduser --system --group http
 RUN mkdir .next
 RUN chown http:http .next
-VOLUME /db
+VOLUME /data
 
 COPY --from=builder --chown=http:http /app/prisma ./prisma
+COPY --from=builder --chown=http:http /app/.env.production ./.env.production
 COPY --from=builder --chown=http:http /app/app.sh ./app.sh
 RUN chmod +x /app/app.sh
 COPY --from=builder --chown=http:http /app/script.js ./script.js
