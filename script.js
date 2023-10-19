@@ -3,16 +3,13 @@ const { PrismaClient, Prisma } = require("@prisma/client");
 const prisma = new PrismaClient();
 
 async function main() {
-  const userExists = prisma.$exists.user({
-    email: "sebastian.zwierzchowski@gmail.com",
-  });
-  
-  if (userExists) {
-    return;
-  }
 
-  const user = await prisma.user.create({
-    data: {
+  const user = await prisma.user.upsert({
+    where: {
+        email: "sebastian.zwierzchowski@gmail.com",
+    },
+    update: {},
+    create: {
       email: "sebastian.zwierzchowski@gmail.com",
     },
   });

@@ -25,7 +25,7 @@ RUN npm run build
 
 FROM base AS runner
 WORKDIR /app
-RUN apt-get update -y && apt-get install -y openssl
+RUN apt-get update -y && apt-get install -y openssl sudo
 ENV NODE_ENV production
 RUN adduser --system --group http
 RUN mkdir .next
@@ -41,7 +41,7 @@ COPY --from=builder --chown=http:http /app/public ./public
 COPY --from=builder --chown=http:http /app/next.config.js ./
 COPY --from=builder --chown=http:http /app/.next/standalone ./
 COPY --from=builder --chown=http:http /app/.next/static ./.next/static
-
+RUN ln -sf /data/.evn.production ./.env.production
 # USER http
 
 EXPOSE 3000
