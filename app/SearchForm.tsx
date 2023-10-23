@@ -15,7 +15,8 @@ const SearchForm = () => {
       items: 10,
     };
     const formData: FormData = new FormData(ev.target as HTMLFormElement);
-    if (formData.get("query")?.length === 0) return;
+    const queryString:string = formData.get("query") as string || "";
+    if (queryString.length === 0) return;
     const res = await fetch("/api/search", {
       method: "POST",
       body: JSON.stringify(data),

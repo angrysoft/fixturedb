@@ -1,0 +1,4 @@
+GOOGLE_CLIENT_ID="871530745368-etmuqvqtltkdck9ad735lff9v5o7ar1t.apps.googleusercontent.com"
+GOOGLE_CLIENT_SECRET="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"
+NEXTAUTH_SECRET="jskldjfsaldjfkl;dajfklaj:lkdfj234324324-0324ifmclsdjfa;"
+NEXTAUTH_URL=http://localhost:3000
