@@ -52,7 +52,7 @@ const AddFixture: React.FC = () => {
     const data = new FormData(ev.target as HTMLFormElement);
     const jsonData = Object.fromEntries(data.entries());
     const ret = await sendData(JSON.stringify(jsonData));
-    if (ret.data.added) router.push(`/fixture/${ret.data.added}`);
+    if (ret && ret.data.added) router.push(`/fixture/${ret.data.added}`);
   };
 
   useEffect(() => {
