@@ -66,9 +66,9 @@ const AddFixture: React.FC = () => {
     getHints();
   }, []);
 
-  const handleFixtureTypeChange = (ev: SyntheticEvent<HTMLSelectElement>) => {
-    const sel = ev.target as HTMLSelectElement;
-    switch (sel.value) {
+  const handleFixtureTypeChange = (selectedFixtureType: string) => {
+    // const sel = ev.target as HTMLSelectElement;
+    switch (selectedFixtureType) {
       case "led": {
         setDetailsElement(<LedForm hints={hints} />);
         break;
