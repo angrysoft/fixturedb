@@ -76,7 +76,7 @@
                 "links": [
                     {
                         "name": "config",
-                        "url": "/links/led/dicolor-a391.rcfgx"
+                        "url": "/download/led/dicolor-a391.rcfgx"
                     }
                 ]
             }
@@ -282,7 +282,7 @@
                 "links": [
                     {
                         "name": "config",
-                        "url": "/links/led/dicolor-af2-391.rcfgx"
+                        "url": "/download/led/dicolor-af2-391.rcfgx"
                     }
                 ]
             }
@@ -3184,7 +3184,7 @@
                 "links": [
                     {
                         "name": "config",
-                        "url": "/links/led/yestech-mg7s.rcfgx"
+                        "url": "/download/led/yestech-mg7s.rcfgx"
                     }
                 ]
             }
@@ -4941,7 +4941,7 @@
                 "links": [
                     {
                         "name": "config",
-                        "url": "/links/led/dicolor-ut-390.rcfgx"
+                        "url": "/download/led/dicolor-ut-390.rcfgx"
                     }
                 ]
             }
