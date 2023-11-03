@@ -43,7 +43,7 @@ model FixtureDetails {
     powerPlug    PowerPlug?  @relation(fields: [powerPlugId], references: [id])
     powerPlugId  Int?
     outdoor      Boolean     @default(false)
-    links        Links[]
+    links        Link[]
     desc         String      //@db.VarChar(320)
     width        Int?
     height       Int?
@@ -76,7 +76,7 @@ model PowerPlug {
     fixtureDetails FixtureDetails[]
 }
 
-model Links {
+model Link {
     id               Int            @id @default(autoincrement())
     name             String
     url              String         @unique
