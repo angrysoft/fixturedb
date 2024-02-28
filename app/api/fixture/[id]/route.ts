@@ -64,16 +64,19 @@ export async function PUT(
   { params }: { params: { id: number } },
 ) {
   const session = await getServerSession(authOptions);
-  if (session) {
-    const data = await request.json();
-    const fixture: any = await updateFixture(data, Number(params.id));
-    return NextResponse.json({
-      data: { updated: params.id },
-      status: "success",
-    });
-  } else {
+  if (!session)
     return NextResponse.json({ error: "Access denied" }, { status: 401 });
+
+  const data = await request.json();
+  if (!data) {
+    return;
   }
+
+  const fixture: any = await updateFixture(data, Number(params.id));
+  return NextResponse.json({
+    data: { updated: params.id },
+    status: "success",
+  });
 }
 
 async function updateFixture(fixtureObj: { [key: string]: any }, id: number) {
@@ -141,7 +144,7 @@ async function updateFixture(fixtureObj: { [key: string]: any }, id: number) {
             updateField(oldFixture[key], Number(val), key, fixtureQuery, false);
           break;
 
-        case "tags":
+        case "tags": {
           insertInclude("tags", fixtureQuery);
 
           const tags =
@@ -164,6 +167,7 @@ async function updateFixture(fixtureObj: { [key: string]: any }, id: number) {
           };
 
           break;
+        }
 
         case "fixtureType":
           if (oldFixture?.fixtureType.name !== fixtureObj.fixtureType) {
@@ -192,7 +196,7 @@ async function updateFixture(fixtureObj: { [key: string]: any }, id: number) {
           break;
         }
 
-        case "connectors":
+        case "connectors": {
           const connectors =
             fixtureObj.connectors
               ?.split(",")
@@ -213,6 +217,7 @@ async function updateFixture(fixtureObj: { [key: string]: any }, id: number) {
             connectOrCreate: connectors,
           };
           break;
+        }
 
         case "powerPlug": {
           const oldVal = oldFixture.details[key];
@@ -235,7 +240,7 @@ async function updateFixture(fixtureObj: { [key: string]: any }, id: number) {
           break;
         }
 
-        case "dmxModes":
+        case "dmxModes": {
           const dmxModes =
             fixtureObj.dmxModes
               ?.split(",")
@@ -261,6 +266,7 @@ async function updateFixture(fixtureObj: { [key: string]: any }, id: number) {
             connectOrCreate: dmxModes,
           };
           break;
+        }
 
         case "width":
         case "height":
