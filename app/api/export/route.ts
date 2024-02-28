@@ -8,55 +8,52 @@ interface fixtureObjType {
   fixtureType: {
     id: number;
     name: string;
-  }
+  };
   manufacture: {
     id: number;
     name: string;
-  }
-  model:string,
+  };
+  model: string;
   details: {
     id: number;
     powerPassage: boolean;
-    connectors: Array<{id:number, name:string}>;
-    dmxModes: Array<{id:number, name:string, channels: number}>;
-    powerPlug: {id: number, name:string};
+    connectors: Array<{ id: number; name: string }>;
+    dmxModes: string;
+    powerPlug: { id: number; name: string };
     powerPlugId: number;
     outdoor: boolean;
-    links: Array<{id:number, name: string, url:string}>;
-  }
+    links: Array<{ id: number; name: string; url: string }>;
+  };
 }
 
 export async function GET(request: Request) {
-  
-  let dbQuery:any = {
+  let dbQuery: any = {
     include: {
       tags: true,
       fixtureType: true,
       manufacture: true,
       details: {
-        include:{
+        include: {
           connectors: true,
-          dmxModes: true,
-          powerPlug:true,
-          links:true,
-        }
+          powerPlug: true,
+          links: true,
+        },
       },
     },
     orderBy: [
       {
-        model: "asc"
-      }
-    ]
+        model: "asc",
+      },
+    ],
   };
 
-  let result:any = {
+  let result: any = {
     data: await prisma.fixture.findMany(dbQuery),
-    status: "success"
-  }
+    status: "success",
+  };
 
-
-  result.data = result.data.map((el:fixtureObjType) => {
-    let newEl:any = {...el};
+  result.data = result.data.map((el: fixtureObjType) => {
+    let newEl: any = { ...el };
     delete newEl.id;
     delete newEl["fixtureTypeId"];
     delete newEl["manufactureId"];
@@ -65,39 +62,30 @@ export async function GET(request: Request) {
     delete newEl.details;
 
     newEl.details = Object.fromEntries(
-      Object.entries(el.details).filter(([key, val])=> {
-        const toSkip = ["id", "fixtureDetailsId", "powerPlugId", "fixtureId"]
-        if (toSkip.includes(key.toString()))
-          return false;
+      Object.entries(el.details).filter(([key, val]) => {
+        const toSkip = ["id", "fixtureDetailsId", "powerPlugId", "fixtureId"];
+        if (toSkip.includes(key.toString())) return false;
         return val !== null;
-      }));
-    
-      newEl?.details?.connectors.forEach((el: any) => {
-          delete el.id;
-      });
-    
-      newEl?.tags.forEach((el: any) => {
-          delete el.id;
-      });
+      }),
+    );
 
-      newEl?.details?.dmxModes.forEach((el: any) => {
-          delete el.id;
-          delete el.fixtureDetailsId;
-          
-      });
+    newEl?.details?.connectors.forEach((el: any) => {
+      delete el.id;
+    });
 
-      newEl?.details?.links.forEach((el: any) => {
-          delete el.id;
-          delete el.fixtureDetailsId;
-          
-      });
+    newEl?.tags.forEach((el: any) => {
+      delete el.id;
+    });
 
-      delete newEl.details.powerPlug.id;
+    newEl?.details?.links.forEach((el: any) => {
+      delete el.id;
+      delete el.fixtureDetailsId;
+    });
+
+    delete newEl.details.powerPlug.id;
 
     return newEl;
   });
-
-  
 
   return NextResponse.json(result);
 }

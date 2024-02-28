@@ -26,7 +26,7 @@ export interface IHintsResponse {
     plugs?: Array<{ id: number; name: string }>;
     tags?: Array<{ id: number; name: string }>;
     connectors?: Array<{ id: number; name: string }>;
-    dmxModes?: Array<{ id: number; name: string }>;
+    dmxModes?: string;
   };
 }
 

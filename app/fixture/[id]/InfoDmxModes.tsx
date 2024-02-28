@@ -1,28 +1,31 @@
-import React from 'react';
-
+import React from "react";
 
 interface IInfoDmxModeProps {
   name: string;
-  items: Array<{id:number, name:string, channels:number}>;
+  items: string;
 }
 
-const InfoDmxModes:React.FC<IInfoDmxModeProps> = (props:IInfoDmxModeProps) => {
-  const items = props.items.map((item) => {
+const InfoDmxModes: React.FC<IInfoDmxModeProps> = (
+  props: IInfoDmxModeProps,
+) => {
+  const items = props.items.split(",").map((item) => {
+    const [name, channels] = item.split(":");
+    if (!name || !channels) return;
+
     return (
-      <div key={item.id} className='text-onSurface py-05 pl-1'>
-        <span className="font-bold">{item.name} - </span>
-        <span className="font-bold">{item.channels} ch</span>
+      <div key={item} className="text-onSurface py-05 pl-1">
+        <span className="font-bold">{name} - </span>
+        <span className="font-bold">{channels} ch</span>
       </div>
     );
   });
+
   return (
-    <div className='border-b-surface border-b-2 text-onSurface py-1'>
+    <div className="border-b-surface border-b-2 text-onSurface py-1">
       <div className="font-bold">{props.name}:</div>
-      <div>
-        {items}
-      </div>
+      <div>{items}</div>
     </div>
   );
 };
 
-export {InfoDmxModes};
+export { InfoDmxModes };

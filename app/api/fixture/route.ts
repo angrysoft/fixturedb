@@ -64,18 +64,6 @@ async function addFixture(fixtureObj: any) {
         };
       }) || [];
 
-  const dmxModes =
-    fixtureObj.dmxModes
-      ?.split(",")
-      .filter((d: any) => d.length >= 3)
-      ?.map((dmx: string) => {
-        const [name, channel] = dmx.split(":");
-        return {
-          name: name,
-          channels: Number(channel),
-        };
-      }) || [];
-
   try {
     const fixture = await prisma.fixture.create({
       include: {
@@ -121,9 +109,7 @@ async function addFixture(fixtureObj: any) {
             connectors: {
               connectOrCreate: connectors,
             },
-            dmxModes: {
-              create: dmxModes || [],
-            },
+            dmxModes: fixtureObj.dmxModes,
             powerPlug: {
               connectOrCreate: {
                 where: {

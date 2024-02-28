@@ -5,33 +5,34 @@ import { Prisma } from "@prisma/client";
 interface fixtureObjType {
   fixtureType: {
     name: string;
-  }
+  };
   manufacture: {
     name: string;
-  }
-  model:string,
-  weight:number,
-  power?:number,
-  tags:Array<{name:string}>,
+  };
+  model: string;
+  weight: number;
+  power?: number;
+  tags: Array<{ name: string }>;
   details: {
     powerPassage: boolean;
-    connectors: Array<{name:string}>;
-    dmxModes: Array<{name:string, channels: number}>;
-    powerPlug: {name:string};
+    connectors: Array<{ name: string }>;
+    dmxModes: string;
+    powerPlug: { name: string };
     outdoor: boolean;
-    links?: Array<{name: string, url:string}>;
-    width? : number;
+    links?: Array<{ name: string; url: string }>;
+    width?: number;
     height?: number;
     thickness?: number;
     resolutionH?: number;
     resolutionV?: number;
     pixel?: number;
     desc: string;
-  }
+  };
 }
 
 export async function POST(request: Request) {
-  const importData:{data:Array<any>, cleanDb:boolean} = await request.json();
+  const importData: { data: Array<any>; cleanDb: boolean } =
+    await request.json();
 
   if (importData.cleanDb === true) {
     const deletedFixture = prisma.fixture.deleteMany();
@@ -40,40 +41,41 @@ export async function POST(request: Request) {
     const deletedConnector = prisma.connector.deleteMany();
     const deletedPlug = prisma.powerPlug.deleteMany();
     const deletedTag = prisma.tag.deleteMany();
-    const transaction = await prisma.$transaction(
-      [
-        deletedFixture,
-        deletedType,
-        deletedManufacture,
-        deletedConnector,
-        deletedPlug,
-        deletedTag
-      ]
-    );
+    const transaction = await prisma.$transaction([
+      deletedFixture,
+      deletedType,
+      deletedManufacture,
+      deletedConnector,
+      deletedPlug,
+      deletedTag,
+    ]);
     console.log(transaction);
   }
-  
-    
-  const data:{added:Array<string>, conflicts:Array<string>, errors:Array<string>} = {        
-      added: [],
-      conflicts: [],
-      errors: [],
-    }
 
-    for (const fix of importData.data) {
-      const status = await importFixture(fix);
-      switch(status.status) {
-        case "added":
-          data.added.push(status.data);
-          break;
-        case "conflict":
-          data.conflicts.push(status.data);
-          break;
-        case "error":
-          data.errors.push(status.data);
-          break;
-      }
+  const data: {
+    added: Array<string>;
+    conflicts: Array<string>;
+    errors: Array<string>;
+  } = {
+    added: [],
+    conflicts: [],
+    errors: [],
+  };
+
+  for (const fix of importData.data) {
+    const status = await importFixture(fix);
+    switch (status.status) {
+      case "added":
+        data.added.push(status.data);
+        break;
+      case "conflict":
+        data.conflicts.push(status.data);
+        break;
+      case "error":
+        data.errors.push(status.data);
+        break;
     }
+  }
 
   return NextResponse.json({
     data: data,
@@ -82,45 +84,47 @@ export async function POST(request: Request) {
   });
 }
 
-async function importFixture(fixtureObj: fixtureObjType):Promise<any> {
-  const tags = fixtureObj.tags?.map((tag)=>{
-    return {
-      where: tag,
-      create: tag,
-    }
-  }) || [];
+async function importFixture(fixtureObj: fixtureObjType): Promise<any> {
+  const tags =
+    fixtureObj.tags?.map((tag) => {
+      return {
+        where: tag,
+        create: tag,
+      };
+    }) || [];
 
-  const connectors = fixtureObj.details.connectors.map((conn)=>{
-    return {
-      where: conn,
-      create: conn
-    }
-  }) || [];
+  const connectors =
+    fixtureObj.details.connectors.map((conn) => {
+      return {
+        where: conn,
+        create: conn,
+      };
+    }) || [];
 
   try {
     const fixture: any = await prisma.fixture.create({
       include: {
         tags: true,
         manufacture: true,
-        details:{
+        details: {
           include: {
             connectors: true,
-          }
-        }
+          },
+        },
       },
       data: {
         model: fixtureObj.model,
         fixtureType: {
-          connectOrCreate:{
-            where:fixtureObj.fixtureType,
-            create: fixtureObj.fixtureType
-          }
+          connectOrCreate: {
+            where: fixtureObj.fixtureType,
+            create: fixtureObj.fixtureType,
+          },
         },
         manufacture: {
-          connectOrCreate:{
-            where:fixtureObj.manufacture,
-            create: fixtureObj.manufacture
-          }
+          connectOrCreate: {
+            where: fixtureObj.manufacture,
+            create: fixtureObj.manufacture,
+          },
         },
         weight: fixtureObj.weight,
         power: fixtureObj.power,
@@ -128,19 +132,17 @@ async function importFixture(fixtureObj: fixtureObjType):Promise<any> {
           connectOrCreate: tags,
         },
         details: {
-        create: {
+          create: {
             powerPassage: fixtureObj.details.powerPassage,
             connectors: {
-              connectOrCreate: connectors
+              connectOrCreate: connectors,
             },
-            dmxModes: {
-              create: fixtureObj.details.dmxModes || [],
-            },
+            dmxModes: fixtureObj.details.dmxModes ?? "",
             powerPlug: {
-              connectOrCreate:{
+              connectOrCreate: {
                 where: fixtureObj.details.powerPlug,
-                create: fixtureObj.details.powerPlug
-              }
+                create: fixtureObj.details.powerPlug,
+              },
             },
             outdoor: fixtureObj.details.outdoor || false,
             links: {
@@ -153,9 +155,9 @@ async function importFixture(fixtureObj: fixtureObjType):Promise<any> {
             resolutionH: fixtureObj.details.resolutionH,
             resolutionV: fixtureObj.details.resolutionV,
             pixel: fixtureObj.details.pixel,
-          }
+          },
         },
-      }
+      },
     });
 
     const retFixture = {
@@ -165,35 +167,35 @@ async function importFixture(fixtureObj: fixtureObjType):Promise<any> {
       manufacture: fixture.manufacture,
       weight: fixture.weight,
       power: fixture.power,
-      tags: fixture.tags
-    }
+      tags: fixture.tags,
+    };
 
     return {
       status: "added",
       data: retFixture,
-    }
+    };
   } catch (e: any) {
     if (e instanceof Prisma.PrismaClientKnownRequestError) {
-      if (e.code === 'P2002') {
+      if (e.code === "P2002") {
         // console.log(
         //   'There is a unique constraint violation'
         // )
         return {
-          status: 'conflict',
+          status: "conflict",
           data: fixtureObj.model,
-        }
+        };
       }
       return {
         status: "error",
         data: fixtureObj.model,
-      }
-    } else if (e instanceof Prisma.PrismaClientUnknownRequestError){
+      };
+    } else if (e instanceof Prisma.PrismaClientUnknownRequestError) {
       return await importFixture(fixtureObj);
-    } else{
+    } else {
       return {
         status: "error",
         data: fixtureObj.model,
-      }
+      };
     }
   }
 }

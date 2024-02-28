@@ -13,21 +13,12 @@
             },
             "details": {
                 "powerPassage": false,
+                "dmxModes": "6ch:6,12ch:12",
                 "outdoor": false,
                 "desc": "",
                 "connectors": [
                     {
                         "name": "DMX 3pin"
-                    }
-                ],
-                "dmxModes": [
-                    {
-                        "name": "6ch",
-                        "channels": 6
-                    },
-                    {
-                        "name": "12ch",
-                        "channels": 12
                     }
                 ],
                 "powerPlug": {
@@ -53,6 +44,7 @@
             },
             "details": {
                 "powerPassage": true,
+                "dmxModes": "",
                 "outdoor": false,
                 "desc": "Ves p3 v1",
                 "width": 500,
@@ -69,7 +61,6 @@
                         "name": "RJ45OUT"
                     }
                 ],
-                "dmxModes": [],
                 "powerPlug": {
                     "name": "PowerCon"
                 },
@@ -94,6 +85,7 @@
             },
             "details": {
                 "powerPassage": false,
+                "dmxModes": "standard-k10:21,shapes-k10:35,RGB-k10:57,RGBW-k10:76",
                 "outdoor": false,
                 "desc": "",
                 "connectors": [
@@ -102,24 +94,6 @@
                     },
                     {
                         "name": "DMX 5pin"
-                    }
-                ],
-                "dmxModes": [
-                    {
-                        "name": "standard-k10",
-                        "channels": 21
-                    },
-                    {
-                        "name": "shapes-k10",
-                        "channels": 35
-                    },
-                    {
-                        "name": "RGB-k10",
-                        "channels": 57
-                    },
-                    {
-                        "name": "RGBW-k10",
-                        "channels": 76
                     }
                 ],
                 "powerPlug": {
@@ -141,17 +115,12 @@
             },
             "details": {
                 "powerPassage": false,
+                "dmxModes": "k10CC:20",
                 "outdoor": false,
                 "desc": "",
                 "connectors": [
                     {
                         "name": "DMX 5pin"
-                    }
-                ],
-                "dmxModes": [
-                    {
-                        "name": "k10CC",
-                        "channels": 20
                     }
                 ],
                 "powerPlug": {
@@ -173,6 +142,7 @@
             },
             "details": {
                 "powerPassage": false,
+                "dmxModes": "standard-k20:21,shapes-k20:35,RGB-k20:111,RGBW-k20:148",
                 "outdoor": false,
                 "desc": "",
                 "connectors": [
@@ -184,24 +154,6 @@
                     },
                     {
                         "name": "DMX 5pin"
-                    }
-                ],
-                "dmxModes": [
-                    {
-                        "name": "standard-k20",
-                        "channels": 21
-                    },
-                    {
-                        "name": "shapes-k20",
-                        "channels": 35
-                    },
-                    {
-                        "name": "RGB-k20",
-                        "channels": 111
-                    },
-                    {
-                        "name": "RGBW-k20",
-                        "channels": 148
                     }
                 ],
                 "powerPlug": {
@@ -223,17 +175,12 @@
             },
             "details": {
                 "powerPassage": false,
+                "dmxModes": "k20CC:20",
                 "outdoor": false,
                 "desc": "",
                 "connectors": [
                     {
                         "name": "DMX 5pin"
-                    }
-                ],
-                "dmxModes": [
-                    {
-                        "name": "k20CC",
-                        "channels": 20
                     }
                 ],
                 "powerPlug": {
@@ -259,6 +206,7 @@
             },
             "details": {
                 "powerPassage": true,
+                "dmxModes": "",
                 "outdoor": false,
                 "desc": "Ves p3 v2",
                 "width": 500,
@@ -275,7 +223,6 @@
                         "name": "RJ45OUT"
                     }
                 ],
-                "dmxModes": [],
                 "powerPlug": {
                     "name": "PowerCon"
                 },
@@ -304,6 +251,7 @@
             },
             "details": {
                 "powerPassage": true,
+                "dmxModes": "",
                 "outdoor": true,
                 "desc": "Aram",
                 "width": 500,
@@ -320,7 +268,6 @@
                         "name": "RJ45OUT"
                     }
                 ],
-                "dmxModes": [],
                 "powerPlug": {
                     "name": "PowerCon TRUE1"
                 },
@@ -345,17 +292,12 @@
             },
             "details": {
                 "powerPassage": false,
+                "dmxModes": "2ch:2",
                 "outdoor": false,
                 "desc": "",
                 "connectors": [
                     {
                         "name": "DMX 5pin"
-                    }
-                ],
-                "dmxModes": [
-                    {
-                        "name": "2ch",
-                        "channels": 2
                     }
                 ],
                 "powerPlug": {
@@ -377,6 +319,7 @@
             },
             "details": {
                 "powerPassage": false,
+                "dmxModes": "arolla-profile-hp:39",
                 "outdoor": false,
                 "desc": "",
                 "connectors": [
@@ -388,12 +331,6 @@
                     },
                     {
                         "name": "DMX 5pin"
-                    }
-                ],
-                "dmxModes": [
-                    {
-                        "name": "arolla-profile-hp",
-                        "channels": 39
                     }
                 ],
                 "powerPlug": {
@@ -415,6 +352,7 @@
             },
             "details": {
                 "powerPassage": false,
+                "dmxModes": "arolla-profile-mp:37",
                 "outdoor": false,
                 "desc": "",
                 "connectors": [
@@ -423,12 +361,6 @@
                     },
                     {
                         "name": "DMX 5pin"
-                    }
-                ],
-                "dmxModes": [
-                    {
-                        "name": "arolla-profile-mp",
-                        "channels": 37
                     }
                 ],
                 "powerPlug": {
@@ -450,6 +382,7 @@
             },
             "details": {
                 "powerPassage": false,
+                "dmxModes": "arolla-spot-mp:29",
                 "outdoor": false,
                 "desc": "",
                 "connectors": [
@@ -458,12 +391,6 @@
                     },
                     {
                         "name": "DMX 5pin"
-                    }
-                ],
-                "dmxModes": [
-                    {
-                        "name": "arolla-spot-mp",
-                        "channels": 29
                     }
                 ],
                 "powerPlug": {
@@ -485,25 +412,12 @@
             },
             "details": {
                 "powerPassage": false,
+                "dmxModes": "3ch:3,4ch:4,14ch:14",
                 "outdoor": false,
                 "desc": "",
                 "connectors": [
                     {
                         "name": "DMX 5pin"
-                    }
-                ],
-                "dmxModes": [
-                    {
-                        "name": "3ch",
-                        "channels": 3
-                    },
-                    {
-                        "name": "4ch",
-                        "channels": 4
-                    },
-                    {
-                        "name": "14ch",
-                        "channels": 14
                     }
                 ],
                 "powerPlug": {
@@ -525,6 +439,7 @@
             },
             "details": {
                 "powerPassage": true,
+                "dmxModes": "standard-axcor-B300:14,sharpy-axcor-B300:16",
                 "outdoor": false,
                 "desc": "",
                 "connectors": [
@@ -533,16 +448,6 @@
                     },
                     {
                         "name": "DMX 5pin"
-                    }
-                ],
-                "dmxModes": [
-                    {
-                        "name": "standard-axcor-B300",
-                        "channels": 14
-                    },
-                    {
-                        "name": "sharpy-axcor-B300",
-                        "channels": 16
                     }
                 ],
                 "powerPlug": {
@@ -564,6 +469,7 @@
             },
             "details": {
                 "powerPassage": true,
+                "dmxModes": "axcor-P400:36",
                 "outdoor": false,
                 "desc": "",
                 "connectors": [
@@ -572,12 +478,6 @@
                     },
                     {
                         "name": "DMX 5pin"
-                    }
-                ],
-                "dmxModes": [
-                    {
-                        "name": "axcor-P400",
-                        "channels": 36
                     }
                 ],
                 "powerPlug": {
@@ -599,6 +499,7 @@
             },
             "details": {
                 "powerPassage": true,
+                "dmxModes": "standard-axcor-P600:40,vector-axcor-P600:44",
                 "outdoor": false,
                 "desc": "",
                 "connectors": [
@@ -610,16 +511,6 @@
                     },
                     {
                         "name": "DMX 5pin"
-                    }
-                ],
-                "dmxModes": [
-                    {
-                        "name": "standard-axcor-P600",
-                        "channels": 40
-                    },
-                    {
-                        "name": "vector-axcor-P600",
-                        "channels": 44
                     }
                 ],
                 "powerPlug": {
@@ -641,6 +532,7 @@
             },
             "details": {
                 "powerPassage": false,
+                "dmxModes": "axcor-profile-900:38",
                 "outdoor": false,
                 "desc": "",
                 "connectors": [
@@ -649,12 +541,6 @@
                     },
                     {
                         "name": "DMX 5pin"
-                    }
-                ],
-                "dmxModes": [
-                    {
-                        "name": "axcor-profile-900",
-                        "channels": 38
                     }
                 ],
                 "powerPlug": {
@@ -676,6 +562,7 @@
             },
             "details": {
                 "powerPassage": true,
+                "dmxModes": "axcor-S300:23",
                 "outdoor": false,
                 "desc": "",
                 "connectors": [
@@ -684,12 +571,6 @@
                     },
                     {
                         "name": "DMX 5pin"
-                    }
-                ],
-                "dmxModes": [
-                    {
-                        "name": "axcor-S300",
-                        "channels": 23
                     }
                 ],
                 "powerPlug": {
@@ -711,6 +592,7 @@
             },
             "details": {
                 "powerPassage": true,
+                "dmxModes": "axcor-S400:28",
                 "outdoor": false,
                 "desc": "",
                 "connectors": [
@@ -719,12 +601,6 @@
                     },
                     {
                         "name": "DMX 5pin"
-                    }
-                ],
-                "dmxModes": [
-                    {
-                        "name": "axcor-S400",
-                        "channels": 28
                     }
                 ],
                 "powerPlug": {
@@ -746,6 +622,7 @@
             },
             "details": {
                 "powerPassage": false,
+                "dmxModes": "standard-axcor-W300:16",
                 "outdoor": false,
                 "desc": "",
                 "connectors": [
@@ -754,12 +631,6 @@
                     },
                     {
                         "name": "DMX 5pin"
-                    }
-                ],
-                "dmxModes": [
-                    {
-                        "name": "standard-axcor-W300",
-                        "channels": 16
                     }
                 ],
                 "powerPlug": {
@@ -781,6 +652,7 @@
             },
             "details": {
                 "powerPassage": false,
+                "dmxModes": "standard-axcor-W600:26,vector-axcor-W600:30",
                 "outdoor": false,
                 "desc": "",
                 "connectors": [
@@ -792,16 +664,6 @@
                     },
                     {
                         "name": "DMX 5pin"
-                    }
-                ],
-                "dmxModes": [
-                    {
-                        "name": "standard-axcor-W600",
-                        "channels": 26
-                    },
-                    {
-                        "name": "vector-axcor-W600",
-                        "channels": 30
                     }
                 ],
                 "powerPlug": {
@@ -823,6 +685,7 @@
             },
             "details": {
                 "powerPassage": false,
+                "dmxModes": "Basic RGB-k10HCR:19,Basic HSV-k10HCR:19,Extended RGB-k10HCR:32,Extended HSV-k10HCR:32",
                 "outdoor": false,
                 "desc": "",
                 "connectors": [
@@ -834,24 +697,6 @@
                     },
                     {
                         "name": "DMX 5pin"
-                    }
-                ],
-                "dmxModes": [
-                    {
-                        "name": "Basic RGB-k10HCR",
-                        "channels": 19
-                    },
-                    {
-                        "name": "Basic HSV-k10HCR",
-                        "channels": 19
-                    },
-                    {
-                        "name": "Extended RGB-k10HCR",
-                        "channels": 32
-                    },
-                    {
-                        "name": "Extended HSV-k10HCR",
-                        "channels": 32
                     }
                 ],
                 "powerPlug": {
@@ -873,6 +718,7 @@
             },
             "details": {
                 "powerPassage": false,
+                "dmxModes": "standard-k15:22,shapes-k15:36,RGB-k15:57,RGBW-k15:76",
                 "outdoor": false,
                 "desc": "",
                 "connectors": [
@@ -884,24 +730,6 @@
                     },
                     {
                         "name": "DMX 5pin"
-                    }
-                ],
-                "dmxModes": [
-                    {
-                        "name": "standard-k15",
-                        "channels": 22
-                    },
-                    {
-                        "name": "shapes-k15",
-                        "channels": 36
-                    },
-                    {
-                        "name": "RGB-k15",
-                        "channels": 57
-                    },
-                    {
-                        "name": "RGBW-k15",
-                        "channels": 76
                     }
                 ],
                 "powerPlug": {
@@ -923,6 +751,7 @@
             },
             "details": {
                 "powerPassage": false,
+                "dmxModes": "Basic RGB-k20HCR:19,Basic HSV-k20HCR:19,Extended RGB-k20HCR:32,Extended HSV-k20HCR:32",
                 "outdoor": false,
                 "desc": "",
                 "connectors": [
@@ -934,24 +763,6 @@
                     },
                     {
                         "name": "DMX 5pin"
-                    }
-                ],
-                "dmxModes": [
-                    {
-                        "name": "Basic RGB-k20HCR",
-                        "channels": 19
-                    },
-                    {
-                        "name": "Basic HSV-k20HCR",
-                        "channels": 19
-                    },
-                    {
-                        "name": "Extended RGB-k20HCR",
-                        "channels": 32
-                    },
-                    {
-                        "name": "Extended HSV-k20HCR",
-                        "channels": 32
                     }
                 ],
                 "powerPlug": {
@@ -973,6 +784,7 @@
             },
             "details": {
                 "powerPassage": false,
+                "dmxModes": "standard-k25:22,shapes-k25:36,RGB-k25:111,RGBW-k25:148",
                 "outdoor": false,
                 "desc": "",
                 "connectors": [
@@ -984,24 +796,6 @@
                     },
                     {
                         "name": "DMX 5pin"
-                    }
-                ],
-                "dmxModes": [
-                    {
-                        "name": "standard-k25",
-                        "channels": 22
-                    },
-                    {
-                        "name": "shapes-k25",
-                        "channels": 36
-                    },
-                    {
-                        "name": "RGB-k25",
-                        "channels": 111
-                    },
-                    {
-                        "name": "RGBW-k25",
-                        "channels": 148
                     }
                 ],
                 "powerPlug": {
@@ -1027,6 +821,7 @@
             },
             "details": {
                 "powerPassage": false,
+                "dmxModes": "1:25,2:21",
                 "outdoor": false,
                 "desc": "",
                 "connectors": [
@@ -1038,16 +833,6 @@
                     },
                     {
                         "name": "DMX 5pin"
-                    }
-                ],
-                "dmxModes": [
-                    {
-                        "name": "1",
-                        "channels": 25
-                    },
-                    {
-                        "name": "2",
-                        "channels": 21
                     }
                 ],
                 "powerPlug": {
@@ -1073,6 +858,7 @@
             },
             "details": {
                 "powerPassage": false,
+                "dmxModes": "1:49,2:42",
                 "outdoor": false,
                 "desc": "",
                 "connectors": [
@@ -1084,16 +870,6 @@
                     },
                     {
                         "name": "DMX 5pin"
-                    }
-                ],
-                "dmxModes": [
-                    {
-                        "name": "1",
-                        "channels": 49
-                    },
-                    {
-                        "name": "2",
-                        "channels": 42
                     }
                 ],
                 "powerPlug": {
@@ -1119,6 +895,7 @@
             },
             "details": {
                 "powerPassage": false,
+                "dmxModes": "1:33,2:27",
                 "outdoor": false,
                 "desc": "",
                 "connectors": [
@@ -1130,16 +907,6 @@
                     },
                     {
                         "name": "DMX 5pin"
-                    }
-                ],
-                "dmxModes": [
-                    {
-                        "name": "1",
-                        "channels": 33
-                    },
-                    {
-                        "name": "2",
-                        "channels": 27
                     }
                 ],
                 "powerPlug": {
@@ -1165,6 +932,7 @@
             },
             "details": {
                 "powerPassage": false,
+                "dmxModes": "1:33,2:27",
                 "outdoor": false,
                 "desc": "",
                 "connectors": [
@@ -1176,16 +944,6 @@
                     },
                     {
                         "name": "DMX 5pin"
-                    }
-                ],
-                "dmxModes": [
-                    {
-                        "name": "1",
-                        "channels": 33
-                    },
-                    {
-                        "name": "2",
-                        "channels": 27
                     }
                 ],
                 "powerPlug": {
@@ -1211,6 +969,7 @@
             },
             "details": {
                 "powerPassage": false,
+                "dmxModes": "1:41,2:33",
                 "outdoor": false,
                 "desc": "",
                 "connectors": [
@@ -1222,16 +981,6 @@
                     },
                     {
                         "name": "DMX 5pin"
-                    }
-                ],
-                "dmxModes": [
-                    {
-                        "name": "1",
-                        "channels": 41
-                    },
-                    {
-                        "name": "2",
-                        "channels": 33
                     }
                 ],
                 "powerPlug": {
@@ -1257,6 +1006,7 @@
             },
             "details": {
                 "powerPassage": false,
+                "dmxModes": "1:34,2:30",
                 "outdoor": false,
                 "desc": "",
                 "connectors": [
@@ -1268,16 +1018,6 @@
                     },
                     {
                         "name": "DMX 5pin"
-                    }
-                ],
-                "dmxModes": [
-                    {
-                        "name": "1",
-                        "channels": 34
-                    },
-                    {
-                        "name": "2",
-                        "channels": 30
                     }
                 ],
                 "powerPlug": {
@@ -1303,6 +1043,7 @@
             },
             "details": {
                 "powerPassage": false,
+                "dmxModes": "1:48,2:41",
                 "outdoor": false,
                 "desc": "",
                 "connectors": [
@@ -1314,16 +1055,6 @@
                     },
                     {
                         "name": "DMX 5pin"
-                    }
-                ],
-                "dmxModes": [
-                    {
-                        "name": "1",
-                        "channels": 48
-                    },
-                    {
-                        "name": "2",
-                        "channels": 41
                     }
                 ],
                 "powerPlug": {
@@ -1345,25 +1076,12 @@
             },
             "details": {
                 "powerPassage": true,
+                "dmxModes": "4ch:4,5ch:5,9ch:9",
                 "outdoor": false,
                 "desc": "",
                 "connectors": [
                     {
                         "name": "DMX 3pin"
-                    }
-                ],
-                "dmxModes": [
-                    {
-                        "name": "4ch",
-                        "channels": 4
-                    },
-                    {
-                        "name": "5ch",
-                        "channels": 5
-                    },
-                    {
-                        "name": "9ch",
-                        "channels": 9
                     }
                 ],
                 "powerPlug": {
@@ -1385,21 +1103,12 @@
             },
             "details": {
                 "powerPassage": false,
+                "dmxModes": "3ch:3,6ch:6",
                 "outdoor": false,
                 "desc": "",
                 "connectors": [
                     {
                         "name": "DMX 5pin"
-                    }
-                ],
-                "dmxModes": [
-                    {
-                        "name": "3ch",
-                        "channels": 3
-                    },
-                    {
-                        "name": "6ch",
-                        "channels": 6
                     }
                 ],
                 "powerPlug": {
@@ -1425,6 +1134,7 @@
             },
             "details": {
                 "powerPassage": false,
+                "dmxModes": "1:9,2:14,3:18,4:28,5:84",
                 "outdoor": false,
                 "desc": "",
                 "connectors": [
@@ -1436,28 +1146,6 @@
                     },
                     {
                         "name": "DMX 5pin"
-                    }
-                ],
-                "dmxModes": [
-                    {
-                        "name": "1",
-                        "channels": 9
-                    },
-                    {
-                        "name": "2",
-                        "channels": 14
-                    },
-                    {
-                        "name": "3",
-                        "channels": 18
-                    },
-                    {
-                        "name": "4",
-                        "channels": 28
-                    },
-                    {
-                        "name": "5",
-                        "channels": 84
                     }
                 ],
                 "powerPlug": {
@@ -1483,6 +1171,7 @@
             },
             "details": {
                 "powerPassage": true,
+                "dmxModes": "1:29",
                 "outdoor": false,
                 "desc": "",
                 "connectors": [
@@ -1491,12 +1180,6 @@
                     },
                     {
                         "name": "DMX 5pin"
-                    }
-                ],
-                "dmxModes": [
-                    {
-                        "name": "1",
-                        "channels": 29
                     }
                 ],
                 "powerPlug": {
@@ -1522,29 +1205,12 @@
             },
             "details": {
                 "powerPassage": false,
+                "dmxModes": "1:10,2:22,3:5,4:4",
                 "outdoor": true,
                 "desc": "",
                 "connectors": [
                     {
                         "name": "DMX 5pin"
-                    }
-                ],
-                "dmxModes": [
-                    {
-                        "name": "1",
-                        "channels": 10
-                    },
-                    {
-                        "name": "2",
-                        "channels": 22
-                    },
-                    {
-                        "name": "3",
-                        "channels": 5
-                    },
-                    {
-                        "name": "4",
-                        "channels": 4
                     }
                 ],
                 "powerPlug": {
@@ -1570,25 +1236,12 @@
             },
             "details": {
                 "powerPassage": false,
+                "dmxModes": "1:2,2:3,3:9",
                 "outdoor": true,
                 "desc": "",
                 "connectors": [
                     {
                         "name": "DMX 5pin"
-                    }
-                ],
-                "dmxModes": [
-                    {
-                        "name": "1",
-                        "channels": 2
-                    },
-                    {
-                        "name": "2",
-                        "channels": 3
-                    },
-                    {
-                        "name": "3",
-                        "channels": 9
                     }
                 ],
                 "powerPlug": {
@@ -1610,25 +1263,12 @@
             },
             "details": {
                 "powerPassage": false,
+                "dmxModes": "8ch:8,4ch:4,13ch:13",
                 "outdoor": false,
                 "desc": "",
                 "connectors": [
                     {
                         "name": "DMX 3pin"
-                    }
-                ],
-                "dmxModes": [
-                    {
-                        "name": "8ch",
-                        "channels": 8
-                    },
-                    {
-                        "name": "4ch",
-                        "channels": 4
-                    },
-                    {
-                        "name": "13ch",
-                        "channels": 13
                     }
                 ],
                 "powerPlug": {
@@ -1650,6 +1290,7 @@
             },
             "details": {
                 "powerPassage": false,
+                "dmxModes": "1-Standard 16bit:49,2-Reduced 8bit:42, 3-Standard 16bit + green corre:50,4-Reduced 8bit + green corre:43",
                 "outdoor": false,
                 "desc": "",
                 "connectors": [
@@ -1664,24 +1305,6 @@
                     },
                     {
                         "name": "DMX 5pin"
-                    }
-                ],
-                "dmxModes": [
-                    {
-                        "name": "1-Standard 16bit",
-                        "channels": 49
-                    },
-                    {
-                        "name": "2-Reduced 8bit",
-                        "channels": 42
-                    },
-                    {
-                        "name": " 3-Standard 16bit + green corre",
-                        "channels": 50
-                    },
-                    {
-                        "name": "4-Reduced 8bit + green corre",
-                        "channels": 43
                     }
                 ],
                 "powerPlug": {
@@ -1703,6 +1326,7 @@
             },
             "details": {
                 "powerPassage": false,
+                "dmxModes": "1-Standard 16bit:49,2-Reduced 8bit:42, 3-Standard 16bit + green corre:50,4-Reduced 8bit + green corre:43",
                 "outdoor": false,
                 "desc": "",
                 "connectors": [
@@ -1717,24 +1341,6 @@
                     },
                     {
                         "name": "DMX 5pin"
-                    }
-                ],
-                "dmxModes": [
-                    {
-                        "name": "1-Standard 16bit",
-                        "channels": 49
-                    },
-                    {
-                        "name": "2-Reduced 8bit",
-                        "channels": 42
-                    },
-                    {
-                        "name": " 3-Standard 16bit + green corre",
-                        "channels": 50
-                    },
-                    {
-                        "name": "4-Reduced 8bit + green corre",
-                        "channels": 43
                     }
                 ],
                 "powerPlug": {
@@ -1756,6 +1362,7 @@
             },
             "details": {
                 "powerPassage": false,
+                "dmxModes": "1-Standard 16bit-fresnel:34,2-Reduced 8bit-fresnel:30, 3-Standard 16bit + green corre-fresnel:35,4-Reduced 8bit + green corre-fresnel:31",
                 "outdoor": false,
                 "desc": "",
                 "connectors": [
@@ -1770,24 +1377,6 @@
                     },
                     {
                         "name": "DMX 5pin"
-                    }
-                ],
-                "dmxModes": [
-                    {
-                        "name": "1-Standard 16bit-fresnel",
-                        "channels": 34
-                    },
-                    {
-                        "name": "2-Reduced 8bit-fresnel",
-                        "channels": 30
-                    },
-                    {
-                        "name": " 3-Standard 16bit + green corre-fresnel",
-                        "channels": 35
-                    },
-                    {
-                        "name": "4-Reduced 8bit + green corre-fresnel",
-                        "channels": 31
                     }
                 ],
                 "powerPlug": {
@@ -1809,6 +1398,7 @@
             },
             "details": {
                 "powerPassage": false,
+                "dmxModes": "1-Standard 16bit-pc:34,2-Reduced 8bit-pc:30, 3-Standard 16bit + green corre-pc:35,4-Reduced 8bit + green corre-pc:31",
                 "outdoor": false,
                 "desc": "",
                 "connectors": [
@@ -1823,24 +1413,6 @@
                     },
                     {
                         "name": "DMX 5pin"
-                    }
-                ],
-                "dmxModes": [
-                    {
-                        "name": "1-Standard 16bit-pc",
-                        "channels": 34
-                    },
-                    {
-                        "name": "2-Reduced 8bit-pc",
-                        "channels": 30
-                    },
-                    {
-                        "name": " 3-Standard 16bit + green corre-pc",
-                        "channels": 35
-                    },
-                    {
-                        "name": "4-Reduced 8bit + green corre-pc",
-                        "channels": 31
                     }
                 ],
                 "powerPlug": {
@@ -1862,6 +1434,7 @@
             },
             "details": {
                 "powerPassage": false,
+                "dmxModes": "1ch:1",
                 "outdoor": false,
                 "desc": "",
                 "connectors": [
@@ -1870,12 +1443,6 @@
                     },
                     {
                         "name": "DMX 5pin"
-                    }
-                ],
-                "dmxModes": [
-                    {
-                        "name": "1ch",
-                        "channels": 1
                     }
                 ],
                 "powerPlug": {
@@ -1897,21 +1464,12 @@
             },
             "details": {
                 "powerPassage": true,
+                "dmxModes": "3ch:3,8ch:8",
                 "outdoor": false,
                 "desc": "",
                 "connectors": [
                     {
                         "name": "DMX 3pin"
-                    }
-                ],
-                "dmxModes": [
-                    {
-                        "name": "3ch",
-                        "channels": 3
-                    },
-                    {
-                        "name": "8ch",
-                        "channels": 8
                     }
                 ],
                 "powerPlug": {
@@ -1937,25 +1495,12 @@
             },
             "details": {
                 "powerPassage": true,
+                "dmxModes": "WW:11,TW:19,RGBW:28",
                 "outdoor": true,
                 "desc": "",
                 "connectors": [
                     {
                         "name": "DMX 5pin"
-                    }
-                ],
-                "dmxModes": [
-                    {
-                        "name": "WW",
-                        "channels": 11
-                    },
-                    {
-                        "name": "TW",
-                        "channels": 19
-                    },
-                    {
-                        "name": "RGBW",
-                        "channels": 28
                     }
                 ],
                 "powerPlug": {
@@ -1981,25 +1526,12 @@
             },
             "details": {
                 "powerPassage": true,
+                "dmxModes": "WW:13,TW:20,RGBW:36",
                 "outdoor": true,
                 "desc": "",
                 "connectors": [
                     {
                         "name": "DMX 5pin"
-                    }
-                ],
-                "dmxModes": [
-                    {
-                        "name": "WW",
-                        "channels": 13
-                    },
-                    {
-                        "name": "TW",
-                        "channels": 20
-                    },
-                    {
-                        "name": "RGBW",
-                        "channels": 36
                     }
                 ],
                 "powerPlug": {
@@ -2021,6 +1553,7 @@
             },
             "details": {
                 "powerPassage": false,
+                "dmxModes": "1-forte:54,2-forte:56",
                 "outdoor": false,
                 "desc": "",
                 "connectors": [
@@ -2035,16 +1568,6 @@
                     },
                     {
                         "name": "DMX 5pin"
-                    }
-                ],
-                "dmxModes": [
-                    {
-                        "name": "1-forte",
-                        "channels": 54
-                    },
-                    {
-                        "name": "2-forte",
-                        "channels": 56
                     }
                 ],
                 "powerPlug": {
@@ -2066,6 +1589,7 @@
             },
             "details": {
                 "powerPassage": false,
+                "dmxModes": "1-forte:54,2-forte:56",
                 "outdoor": false,
                 "desc": "",
                 "connectors": [
@@ -2080,16 +1604,6 @@
                     },
                     {
                         "name": "DMX 5pin"
-                    }
-                ],
-                "dmxModes": [
-                    {
-                        "name": "1-forte",
-                        "channels": 54
-                    },
-                    {
-                        "name": "2-forte",
-                        "channels": 56
                     }
                 ],
                 "powerPlug": {
@@ -2115,6 +1629,7 @@
             },
             "details": {
                 "powerPassage": true,
+                "dmxModes": "",
                 "outdoor": false,
                 "desc": "Aram",
                 "width": 707,
@@ -2131,7 +1646,6 @@
                         "name": "RJ45OUT"
                     }
                 ],
-                "dmxModes": [],
                 "powerPlug": {
                     "name": "PowerCon"
                 },
@@ -2160,6 +1674,7 @@
             },
             "details": {
                 "powerPassage": true,
+                "dmxModes": "",
                 "outdoor": false,
                 "desc": "Aram",
                 "width": 707,
@@ -2176,7 +1691,6 @@
                         "name": "RJ45OUT"
                     }
                 ],
-                "dmxModes": [],
                 "powerPlug": {
                     "name": "PowerCon"
                 },
@@ -2201,6 +1715,7 @@
             },
             "details": {
                 "powerPassage": false,
+                "dmxModes": "2ch:2",
                 "outdoor": false,
                 "desc": "",
                 "connectors": [
@@ -2209,12 +1724,6 @@
                     },
                     {
                         "name": "DMX 5pin"
-                    }
-                ],
-                "dmxModes": [
-                    {
-                        "name": "2ch",
-                        "channels": 2
                     }
                 ],
                 "powerPlug": {
@@ -2240,21 +1749,12 @@
             },
             "details": {
                 "powerPassage": true,
+                "dmxModes": "1:22,2:16",
                 "outdoor": false,
                 "desc": "",
                 "connectors": [
                     {
                         "name": "DMX 5pin"
-                    }
-                ],
-                "dmxModes": [
-                    {
-                        "name": "1",
-                        "channels": 22
-                    },
-                    {
-                        "name": "2",
-                        "channels": 16
                     }
                 ],
                 "powerPlug": {
@@ -2280,21 +1780,12 @@
             },
             "details": {
                 "powerPassage": true,
+                "dmxModes": "1:22,2:16",
                 "outdoor": false,
                 "desc": "",
                 "connectors": [
                     {
                         "name": "DMX 5pin"
-                    }
-                ],
-                "dmxModes": [
-                    {
-                        "name": "1",
-                        "channels": 22
-                    },
-                    {
-                        "name": "2",
-                        "channels": 16
                     }
                 ],
                 "powerPlug": {
@@ -2320,6 +1811,7 @@
             },
             "details": {
                 "powerPassage": true,
+                "dmxModes": "1:22,2:16,3:24",
                 "outdoor": false,
                 "desc": "",
                 "connectors": [
@@ -2328,20 +1820,6 @@
                     },
                     {
                         "name": "DMX 5pin"
-                    }
-                ],
-                "dmxModes": [
-                    {
-                        "name": "1",
-                        "channels": 22
-                    },
-                    {
-                        "name": "2",
-                        "channels": 16
-                    },
-                    {
-                        "name": "3",
-                        "channels": 24
                     }
                 ],
                 "powerPlug": {
@@ -2367,6 +1845,7 @@
             },
             "details": {
                 "powerPassage": true,
+                "dmxModes": "1:22,2:16,3:24",
                 "outdoor": false,
                 "desc": "",
                 "connectors": [
@@ -2375,20 +1854,6 @@
                     },
                     {
                         "name": "DMX 5pin"
-                    }
-                ],
-                "dmxModes": [
-                    {
-                        "name": "1",
-                        "channels": 22
-                    },
-                    {
-                        "name": "2",
-                        "channels": 16
-                    },
-                    {
-                        "name": "3",
-                        "channels": 24
                     }
                 ],
                 "powerPlug": {
@@ -2414,6 +1879,7 @@
             },
             "details": {
                 "powerPassage": false,
+                "dmxModes": "1:37,2:21,3:15,4:10,5:37",
                 "outdoor": false,
                 "desc": "",
                 "connectors": [
@@ -2425,28 +1891,6 @@
                     },
                     {
                         "name": "DMX 5pin"
-                    }
-                ],
-                "dmxModes": [
-                    {
-                        "name": "1",
-                        "channels": 37
-                    },
-                    {
-                        "name": "2",
-                        "channels": 21
-                    },
-                    {
-                        "name": "3",
-                        "channels": 15
-                    },
-                    {
-                        "name": "4",
-                        "channels": 10
-                    },
-                    {
-                        "name": "5",
-                        "channels": 37
                     }
                 ],
                 "powerPlug": {
@@ -2472,6 +1916,7 @@
             },
             "details": {
                 "powerPassage": false,
+                "dmxModes": "1:37,2:21,3:15,4:10,5:37,6:24",
                 "outdoor": false,
                 "desc": "",
                 "connectors": [
@@ -2483,32 +1928,6 @@
                     },
                     {
                         "name": "DMX 5pin"
-                    }
-                ],
-                "dmxModes": [
-                    {
-                        "name": "1",
-                        "channels": 37
-                    },
-                    {
-                        "name": "2",
-                        "channels": 21
-                    },
-                    {
-                        "name": "3",
-                        "channels": 15
-                    },
-                    {
-                        "name": "4",
-                        "channels": 10
-                    },
-                    {
-                        "name": "5",
-                        "channels": 37
-                    },
-                    {
-                        "name": "6",
-                        "channels": 24
                     }
                 ],
                 "powerPlug": {
@@ -2534,6 +1953,7 @@
             },
             "details": {
                 "powerPassage": false,
+                "dmxModes": "1:38,2:22,3:16,4:11,5:38,6:37",
                 "outdoor": false,
                 "desc": "",
                 "connectors": [
@@ -2545,32 +1965,6 @@
                     },
                     {
                         "name": "DMX 5pin"
-                    }
-                ],
-                "dmxModes": [
-                    {
-                        "name": "1",
-                        "channels": 38
-                    },
-                    {
-                        "name": "2",
-                        "channels": 22
-                    },
-                    {
-                        "name": "3",
-                        "channels": 16
-                    },
-                    {
-                        "name": "4",
-                        "channels": 11
-                    },
-                    {
-                        "name": "5",
-                        "channels": 38
-                    },
-                    {
-                        "name": "6",
-                        "channels": 37
                     }
                 ],
                 "powerPlug": {
@@ -2592,6 +1986,7 @@
             },
             "details": {
                 "powerPassage": false,
+                "dmxModes": "Basic 16bit:30,Basic 8bit:28,Standard:37,Extended:38",
                 "outdoor": false,
                 "desc": "",
                 "connectors": [
@@ -2603,24 +1998,6 @@
                     },
                     {
                         "name": "W-DMX"
-                    }
-                ],
-                "dmxModes": [
-                    {
-                        "name": "Basic 16bit",
-                        "channels": 30
-                    },
-                    {
-                        "name": "Basic 8bit",
-                        "channels": 28
-                    },
-                    {
-                        "name": "Standard",
-                        "channels": 37
-                    },
-                    {
-                        "name": "Extended",
-                        "channels": 38
                     }
                 ],
                 "powerPlug": {
@@ -2642,6 +2019,7 @@
             },
             "details": {
                 "powerPassage": false,
+                "dmxModes": "Basic 16bit - L700:20,Basic 8bit - L700:19,Standard - L700:28,Extended - L700:29",
                 "outdoor": false,
                 "desc": "",
                 "connectors": [
@@ -2653,24 +2031,6 @@
                     },
                     {
                         "name": "W-DMX"
-                    }
-                ],
-                "dmxModes": [
-                    {
-                        "name": "Basic 16bit - L700",
-                        "channels": 20
-                    },
-                    {
-                        "name": "Basic 8bit - L700",
-                        "channels": 19
-                    },
-                    {
-                        "name": "Standard - L700",
-                        "channels": 28
-                    },
-                    {
-                        "name": "Extended - L700",
-                        "channels": 29
                     }
                 ],
                 "powerPlug": {
@@ -2696,6 +2056,7 @@
             },
             "details": {
                 "powerPassage": true,
+                "dmxModes": "",
                 "outdoor": true,
                 "desc": "",
                 "width": 500,
@@ -2712,7 +2073,6 @@
                         "name": "RJ45OUT"
                     }
                 ],
-                "dmxModes": [],
                 "powerPlug": {
                     "name": "PowerCon"
                 },
@@ -2737,17 +2097,12 @@
             },
             "details": {
                 "powerPassage": false,
+                "dmxModes": "axiom:23",
                 "outdoor": false,
                 "desc": "",
                 "connectors": [
                     {
                         "name": "DMX 5pin"
-                    }
-                ],
-                "dmxModes": [
-                    {
-                        "name": "axiom",
-                        "channels": 23
                     }
                 ],
                 "powerPlug": {
@@ -2769,17 +2124,12 @@
             },
             "details": {
                 "powerPassage": false,
+                "dmxModes": "38ch:38",
                 "outdoor": false,
                 "desc": "",
                 "connectors": [
                     {
                         "name": "DMX 5pin"
-                    }
-                ],
-                "dmxModes": [
-                    {
-                        "name": "38ch",
-                        "channels": 38
                     }
                 ],
                 "powerPlug": {
@@ -2801,17 +2151,12 @@
             },
             "details": {
                 "powerPassage": false,
+                "dmxModes": "38ch:38",
                 "outdoor": false,
                 "desc": "",
                 "connectors": [
                     {
                         "name": "DMX 5pin"
-                    }
-                ],
-                "dmxModes": [
-                    {
-                        "name": "38ch",
-                        "channels": 38
                     }
                 ],
                 "powerPlug": {
@@ -2833,17 +2178,12 @@
             },
             "details": {
                 "powerPassage": false,
+                "dmxModes": "24ch:24",
                 "outdoor": false,
                 "desc": "",
                 "connectors": [
                     {
                         "name": "DMX 5pin"
-                    }
-                ],
-                "dmxModes": [
-                    {
-                        "name": "24ch",
-                        "channels": 24
                     }
                 ],
                 "powerPlug": {
@@ -2865,17 +2205,12 @@
             },
             "details": {
                 "powerPassage": false,
+                "dmxModes": "24ch:24",
                 "outdoor": false,
                 "desc": "",
                 "connectors": [
                     {
                         "name": "DMX 5pin"
-                    }
-                ],
-                "dmxModes": [
-                    {
-                        "name": "24ch",
-                        "channels": 24
                     }
                 ],
                 "powerPlug": {
@@ -2897,6 +2232,7 @@
             },
             "details": {
                 "powerPassage": false,
+                "dmxModes": "standard-ultra:48,extended-ultra:58",
                 "outdoor": false,
                 "desc": "",
                 "connectors": [
@@ -2908,16 +2244,6 @@
                     },
                     {
                         "name": "DMX 5pin"
-                    }
-                ],
-                "dmxModes": [
-                    {
-                        "name": "standard-ultra",
-                        "channels": 48
-                    },
-                    {
-                        "name": "extended-ultra",
-                        "channels": 58
                     }
                 ],
                 "powerPlug": {
@@ -2939,6 +2265,7 @@
             },
             "details": {
                 "powerPassage": false,
+                "dmxModes": "29ch:29",
                 "outdoor": false,
                 "desc": "",
                 "connectors": [
@@ -2950,12 +2277,6 @@
                     },
                     {
                         "name": "DMX 5pin"
-                    }
-                ],
-                "dmxModes": [
-                    {
-                        "name": "29ch",
-                        "channels": 29
                     }
                 ],
                 "powerPlug": {
@@ -2977,21 +2298,12 @@
             },
             "details": {
                 "powerPassage": false,
+                "dmxModes": "standard-viper-airfx:20,extended-viper-airfx:28",
                 "outdoor": false,
                 "desc": "",
                 "connectors": [
                     {
                         "name": "DMX 5pin"
-                    }
-                ],
-                "dmxModes": [
-                    {
-                        "name": "standard-viper-airfx",
-                        "channels": 20
-                    },
-                    {
-                        "name": "extended-viper-airfx",
-                        "channels": 28
                     }
                 ],
                 "powerPlug": {
@@ -3013,21 +2325,12 @@
             },
             "details": {
                 "powerPassage": false,
+                "dmxModes": "standard-viper-perf:32,extended-viper-perf:40",
                 "outdoor": false,
                 "desc": "",
                 "connectors": [
                     {
                         "name": "DMX 5pin"
-                    }
-                ],
-                "dmxModes": [
-                    {
-                        "name": "standard-viper-perf",
-                        "channels": 32
-                    },
-                    {
-                        "name": "extended-viper-perf",
-                        "channels": 40
                     }
                 ],
                 "powerPlug": {
@@ -3049,21 +2352,12 @@
             },
             "details": {
                 "powerPassage": false,
+                "dmxModes": "standard-viper-profile:26,extended-viper-profile:34",
                 "outdoor": false,
                 "desc": "",
                 "connectors": [
                     {
                         "name": "DMX 5pin"
-                    }
-                ],
-                "dmxModes": [
-                    {
-                        "name": "standard-viper-profile",
-                        "channels": 26
-                    },
-                    {
-                        "name": "extended-viper-profile",
-                        "channels": 34
                     }
                 ],
                 "powerPlug": {
@@ -3085,21 +2379,12 @@
             },
             "details": {
                 "powerPassage": false,
+                "dmxModes": "standard-viper-wash:18,extended-viper-wash:24",
                 "outdoor": false,
                 "desc": "",
                 "connectors": [
                     {
                         "name": "DMX 5pin"
-                    }
-                ],
-                "dmxModes": [
-                    {
-                        "name": "standard-viper-wash",
-                        "channels": 18
-                    },
-                    {
-                        "name": "extended-viper-wash",
-                        "channels": 24
                     }
                 ],
                 "powerPlug": {
@@ -3121,21 +2406,12 @@
             },
             "details": {
                 "powerPassage": false,
+                "dmxModes": "standard-viper-washdx:18,extended-viper-washdx:24",
                 "outdoor": false,
                 "desc": "",
                 "connectors": [
                     {
                         "name": "DMX 5pin"
-                    }
-                ],
-                "dmxModes": [
-                    {
-                        "name": "standard-viper-washdx",
-                        "channels": 18
-                    },
-                    {
-                        "name": "extended-viper-washdx",
-                        "channels": 24
                     }
                 ],
                 "powerPlug": {
@@ -3161,6 +2437,7 @@
             },
             "details": {
                 "powerPassage": true,
+                "dmxModes": "",
                 "outdoor": true,
                 "desc": "Ves p3 outdoor 2023",
                 "width": 500,
@@ -3177,7 +2454,6 @@
                         "name": "RJ45OUT"
                     }
                 ],
-                "dmxModes": [],
                 "powerPlug": {
                     "name": "PowerCon"
                 },
@@ -3202,21 +2478,12 @@
             },
             "details": {
                 "powerPassage": true,
+                "dmxModes": "Std:14,Ext:25",
                 "outdoor": false,
                 "desc": "",
                 "connectors": [
                     {
                         "name": "DMX 5pin"
-                    }
-                ],
-                "dmxModes": [
-                    {
-                        "name": "Std",
-                        "channels": 14
-                    },
-                    {
-                        "name": "Ext",
-                        "channels": 25
                     }
                 ],
                 "powerPlug": {
@@ -3238,6 +2505,7 @@
             },
             "details": {
                 "powerPassage": true,
+                "dmxModes": "Compact-APXL:17,Basic-APXL:32,Extended-APXL:89,Ludicrous-APXL:512",
                 "outdoor": false,
                 "desc": "",
                 "connectors": [
@@ -3249,24 +2517,6 @@
                     },
                     {
                         "name": "DMX 5pin"
-                    }
-                ],
-                "dmxModes": [
-                    {
-                        "name": "Compact-APXL",
-                        "channels": 17
-                    },
-                    {
-                        "name": "Basic-APXL",
-                        "channels": 32
-                    },
-                    {
-                        "name": "Extended-APXL",
-                        "channels": 89
-                    },
-                    {
-                        "name": "Ludicrous-APXL",
-                        "channels": 512
                     }
                 ],
                 "powerPlug": {
@@ -3288,6 +2538,7 @@
             },
             "details": {
                 "powerPassage": true,
+                "dmxModes": "Standard-AXB:14,Extended-AXB:25",
                 "outdoor": false,
                 "desc": "",
                 "connectors": [
@@ -3299,16 +2550,6 @@
                     },
                     {
                         "name": "DMX 5pin"
-                    }
-                ],
-                "dmxModes": [
-                    {
-                        "name": "Standard-AXB",
-                        "channels": 14
-                    },
-                    {
-                        "name": "Extended-AXB",
-                        "channels": 25
                     }
                 ],
                 "powerPlug": {
@@ -3330,6 +2571,7 @@
             },
             "details": {
                 "powerPassage": true,
+                "dmxModes": "Compact-AXIP:20,Basic-AXIP:36,Extended-AXIP:57,Ludicrous-AXIP:93",
                 "outdoor": true,
                 "desc": "",
                 "connectors": [
@@ -3341,24 +2583,6 @@
                     },
                     {
                         "name": "DMX 5pin"
-                    }
-                ],
-                "dmxModes": [
-                    {
-                        "name": "Compact-AXIP",
-                        "channels": 20
-                    },
-                    {
-                        "name": "Basic-AXIP",
-                        "channels": 36
-                    },
-                    {
-                        "name": "Extended-AXIP",
-                        "channels": 57
-                    },
-                    {
-                        "name": "Ludicrous-AXIP",
-                        "channels": 93
                     }
                 ],
                 "powerPlug": {
@@ -3380,21 +2604,12 @@
             },
             "details": {
                 "powerPassage": false,
+                "dmxModes": "Basic - QProfile:19,Extended - QProfile:27",
                 "outdoor": false,
                 "desc": "",
                 "connectors": [
                     {
                         "name": "DMX 5pin"
-                    }
-                ],
-                "dmxModes": [
-                    {
-                        "name": "Basic - QProfile",
-                        "channels": 19
-                    },
-                    {
-                        "name": "Extended - QProfile",
-                        "channels": 27
                     }
                 ],
                 "powerPlug": {
@@ -3416,21 +2631,12 @@
             },
             "details": {
                 "powerPassage": false,
+                "dmxModes": "Basic - QWash:17,Extended - QWash:33",
                 "outdoor": false,
                 "desc": "",
                 "connectors": [
                     {
                         "name": "DMX 5pin"
-                    }
-                ],
-                "dmxModes": [
-                    {
-                        "name": "Basic - QWash",
-                        "channels": 17
-                    },
-                    {
-                        "name": "Extended - QWash",
-                        "channels": 33
                     }
                 ],
                 "powerPlug": {
@@ -3452,6 +2658,7 @@
             },
             "details": {
                 "powerPassage": false,
+                "dmxModes": "1-mpointe:39,2-mpointe:34",
                 "outdoor": false,
                 "desc": "",
                 "connectors": [
@@ -3463,16 +2670,6 @@
                     },
                     {
                         "name": "DMX 5pin"
-                    }
-                ],
-                "dmxModes": [
-                    {
-                        "name": "1-mpointe",
-                        "channels": 39
-                    },
-                    {
-                        "name": "2-mpointe",
-                        "channels": 34
                     }
                 ],
                 "powerPlug": {
@@ -3494,6 +2691,7 @@
             },
             "details": {
                 "powerPassage": false,
+                "dmxModes": "Basic RGBW-midi-b:17,Basic RGBW-16bit-midi-b:21,Extended RGBW-midi-b:25,Extended RGBW 16bit-midi-b:37",
                 "outdoor": false,
                 "desc": "",
                 "connectors": [
@@ -3502,24 +2700,6 @@
                     },
                     {
                         "name": "DMX 5pin"
-                    }
-                ],
-                "dmxModes": [
-                    {
-                        "name": "Basic RGBW-midi-b",
-                        "channels": 17
-                    },
-                    {
-                        "name": "Basic RGBW-16bit-midi-b",
-                        "channels": 21
-                    },
-                    {
-                        "name": "Extended RGBW-midi-b",
-                        "channels": 25
-                    },
-                    {
-                        "name": "Extended RGBW 16bit-midi-b",
-                        "channels": 37
                     }
                 ],
                 "powerPlug": {
@@ -3541,6 +2721,7 @@
             },
             "details": {
                 "powerPassage": true,
+                "dmxModes": "Basic RGBW-mini-b:17,Basic RGBW-16bit-mini-b:21,Extended RGBW-mini-b:21,Extended RGBW 16bit-mini-b:29",
                 "outdoor": false,
                 "desc": "",
                 "connectors": [
@@ -3549,24 +2730,6 @@
                     },
                     {
                         "name": "DMX 5pin"
-                    }
-                ],
-                "dmxModes": [
-                    {
-                        "name": "Basic RGBW-mini-b",
-                        "channels": 17
-                    },
-                    {
-                        "name": "Basic RGBW-16bit-mini-b",
-                        "channels": 21
-                    },
-                    {
-                        "name": "Extended RGBW-mini-b",
-                        "channels": 21
-                    },
-                    {
-                        "name": "Extended RGBW 16bit-mini-b",
-                        "channels": 29
                     }
                 ],
                 "powerPlug": {
@@ -3588,6 +2751,7 @@
             },
             "details": {
                 "powerPassage": false,
+                "dmxModes": "1-painte:44,2-painte:45",
                 "outdoor": false,
                 "desc": "",
                 "connectors": [
@@ -3599,16 +2763,6 @@
                     },
                     {
                         "name": "DMX 5pin"
-                    }
-                ],
-                "dmxModes": [
-                    {
-                        "name": "1-painte",
-                        "channels": 44
-                    },
-                    {
-                        "name": "2-painte",
-                        "channels": 45
                     }
                 ],
                 "powerPlug": {
@@ -3634,6 +2788,7 @@
             },
             "details": {
                 "powerPassage": true,
+                "dmxModes": "1:35,2:36",
                 "outdoor": false,
                 "desc": "",
                 "connectors": [
@@ -3642,16 +2797,6 @@
                     },
                     {
                         "name": "DMX 5pin"
-                    }
-                ],
-                "dmxModes": [
-                    {
-                        "name": "1",
-                        "channels": 35
-                    },
-                    {
-                        "name": "2",
-                        "channels": 36
                     }
                 ],
                 "powerPlug": {
@@ -3677,21 +2822,12 @@
             },
             "details": {
                 "powerPassage": true,
+                "dmxModes": "1:17,2:11",
                 "outdoor": false,
                 "desc": "",
                 "connectors": [
                     {
                         "name": "DMX 5pin"
-                    }
-                ],
-                "dmxModes": [
-                    {
-                        "name": "1",
-                        "channels": 17
-                    },
-                    {
-                        "name": "2",
-                        "channels": 11
                     }
                 ],
                 "powerPlug": {
@@ -3717,21 +2853,12 @@
             },
             "details": {
                 "powerPassage": true,
+                "dmxModes": "1:17,2:11",
                 "outdoor": false,
                 "desc": "",
                 "connectors": [
                     {
                         "name": "DMX 5pin"
-                    }
-                ],
-                "dmxModes": [
-                    {
-                        "name": "1",
-                        "channels": 17
-                    },
-                    {
-                        "name": "2",
-                        "channels": 11
                     }
                 ],
                 "powerPlug": {
@@ -3753,37 +2880,12 @@
             },
             "details": {
                 "powerPassage": true,
+                "dmxModes": "3ch:3,6ch:6,9ch:9,18ch:18,27ch:27,54ch:54",
                 "outdoor": false,
                 "desc": "",
                 "connectors": [
                     {
                         "name": "DMX 5pin"
-                    }
-                ],
-                "dmxModes": [
-                    {
-                        "name": "3ch",
-                        "channels": 3
-                    },
-                    {
-                        "name": "6ch",
-                        "channels": 6
-                    },
-                    {
-                        "name": "9ch",
-                        "channels": 9
-                    },
-                    {
-                        "name": "18ch",
-                        "channels": 18
-                    },
-                    {
-                        "name": "27ch",
-                        "channels": 27
-                    },
-                    {
-                        "name": "54ch",
-                        "channels": 54
                     }
                 ],
                 "powerPlug": {
@@ -3805,29 +2907,12 @@
             },
             "details": {
                 "powerPassage": false,
+                "dmxModes": "3ch:3,EF-D:7,MA-2:10,16bit - PixelPar90:6",
                 "outdoor": false,
                 "desc": "",
                 "connectors": [
                     {
                         "name": "DMX 5pin"
-                    }
-                ],
-                "dmxModes": [
-                    {
-                        "name": "3ch",
-                        "channels": 3
-                    },
-                    {
-                        "name": "EF-D",
-                        "channels": 7
-                    },
-                    {
-                        "name": "MA-2",
-                        "channels": 10
-                    },
-                    {
-                        "name": "16bit - PixelPar90",
-                        "channels": 6
                     }
                 ],
                 "powerPlug": {
@@ -3849,21 +2934,12 @@
             },
             "details": {
                 "powerPassage": true,
+                "dmxModes": "BA1:14,STD:16",
                 "outdoor": false,
                 "desc": "",
                 "connectors": [
                     {
                         "name": "DMX 5pin"
-                    }
-                ],
-                "dmxModes": [
-                    {
-                        "name": "BA1",
-                        "channels": 14
-                    },
-                    {
-                        "name": "STD",
-                        "channels": 16
                     }
                 ],
                 "powerPlug": {
@@ -3885,6 +2961,7 @@
             },
             "details": {
                 "powerPassage": true,
+                "dmxModes": "13ch:13,15:15,16ch:16,18:18,22:22,23:23,27:27",
                 "outdoor": false,
                 "desc": "",
                 "connectors": [
@@ -3899,36 +2976,6 @@
                     },
                     {
                         "name": "W-DMX"
-                    }
-                ],
-                "dmxModes": [
-                    {
-                        "name": "13ch",
-                        "channels": 13
-                    },
-                    {
-                        "name": "15",
-                        "channels": 15
-                    },
-                    {
-                        "name": "16ch",
-                        "channels": 16
-                    },
-                    {
-                        "name": "18",
-                        "channels": 18
-                    },
-                    {
-                        "name": "22",
-                        "channels": 22
-                    },
-                    {
-                        "name": "23",
-                        "channels": 23
-                    },
-                    {
-                        "name": "27",
-                        "channels": 27
                     }
                 ],
                 "powerPlug": {
@@ -3950,6 +2997,7 @@
             },
             "details": {
                 "powerPassage": false,
+                "dmxModes": "1:24,2:16,3:30",
                 "outdoor": false,
                 "desc": "",
                 "connectors": [
@@ -3961,20 +3009,6 @@
                     },
                     {
                         "name": "DMX 5pin"
-                    }
-                ],
-                "dmxModes": [
-                    {
-                        "name": "1",
-                        "channels": 24
-                    },
-                    {
-                        "name": "2",
-                        "channels": 16
-                    },
-                    {
-                        "name": "3",
-                        "channels": 30
                     }
                 ],
                 "powerPlug": {
@@ -4000,6 +3034,7 @@
             },
             "details": {
                 "powerPassage": true,
+                "dmxModes": "1:25",
                 "outdoor": false,
                 "desc": "",
                 "connectors": [
@@ -4014,12 +3049,6 @@
                     },
                     {
                         "name": "USB A 2.0"
-                    }
-                ],
-                "dmxModes": [
-                    {
-                        "name": "1",
-                        "channels": 25
                     }
                 ],
                 "powerPlug": {
@@ -4041,6 +3070,7 @@
             },
             "details": {
                 "powerPassage": true,
+                "dmxModes": "Basic-RushBeam:24,Extended-RushBeam:93",
                 "outdoor": false,
                 "desc": "",
                 "connectors": [
@@ -4049,16 +3079,6 @@
                     },
                     {
                         "name": "DMX 5pin"
-                    }
-                ],
-                "dmxModes": [
-                    {
-                        "name": "Basic-RushBeam",
-                        "channels": 24
-                    },
-                    {
-                        "name": "Extended-RushBeam",
-                        "channels": 93
                     }
                 ],
                 "powerPlug": {
@@ -4080,6 +3100,7 @@
             },
             "details": {
                 "powerPassage": true,
+                "dmxModes": "RushProfile:16",
                 "outdoor": false,
                 "desc": "",
                 "connectors": [
@@ -4088,12 +3109,6 @@
                     },
                     {
                         "name": "DMX 5pin"
-                    }
-                ],
-                "dmxModes": [
-                    {
-                        "name": "RushProfile",
-                        "channels": 16
                     }
                 ],
                 "powerPlug": {
@@ -4115,6 +3130,7 @@
             },
             "details": {
                 "powerPassage": true,
+                "dmxModes": "RushHybrid:21",
                 "outdoor": false,
                 "desc": "",
                 "connectors": [
@@ -4123,12 +3139,6 @@
                     },
                     {
                         "name": "DMX 5pin"
-                    }
-                ],
-                "dmxModes": [
-                    {
-                        "name": "RushHybrid",
-                        "channels": 21
                     }
                 ],
                 "powerPlug": {
@@ -4150,6 +3160,7 @@
             },
             "details": {
                 "powerPassage": false,
+                "dmxModes": "standard:16,vector:20",
                 "outdoor": false,
                 "desc": "",
                 "connectors": [
@@ -4161,16 +3172,6 @@
                     },
                     {
                         "name": "DMX 5pin"
-                    }
-                ],
-                "dmxModes": [
-                    {
-                        "name": "standard",
-                        "channels": 16
-                    },
-                    {
-                        "name": "vector",
-                        "channels": 20
                     }
                 ],
                 "powerPlug": {
@@ -4192,6 +3193,7 @@
             },
             "details": {
                 "powerPassage": false,
+                "dmxModes": "standard:16,vector:20",
                 "outdoor": false,
                 "desc": "",
                 "connectors": [
@@ -4203,16 +3205,6 @@
                     },
                     {
                         "name": "DMX 5pin"
-                    }
-                ],
-                "dmxModes": [
-                    {
-                        "name": "standard",
-                        "channels": 16
-                    },
-                    {
-                        "name": "vector",
-                        "channels": 20
                     }
                 ],
                 "powerPlug": {
@@ -4234,6 +3226,7 @@
             },
             "details": {
                 "powerPassage": true,
+                "dmxModes": "Standard-SharBar:24,Shape-SharBar:30,RGB-SharBar:18,RGBW-SharBar:24",
                 "outdoor": false,
                 "desc": "",
                 "connectors": [
@@ -4245,24 +3238,6 @@
                     },
                     {
                         "name": "DMX 5pin"
-                    }
-                ],
-                "dmxModes": [
-                    {
-                        "name": "Standard-SharBar",
-                        "channels": 24
-                    },
-                    {
-                        "name": "Shape-SharBar",
-                        "channels": 30
-                    },
-                    {
-                        "name": "RGB-SharBar",
-                        "channels": 18
-                    },
-                    {
-                        "name": "RGBW-SharBar",
-                        "channels": 24
                     }
                 ],
                 "powerPlug": {
@@ -4284,6 +3259,7 @@
             },
             "details": {
                 "powerPassage": true,
+                "dmxModes": "Basic-show-batten:18,Pixel RGB-show-batten:48,Pixel RGBW-show-batten:58",
                 "outdoor": false,
                 "desc": "",
                 "connectors": [
@@ -4295,20 +3271,6 @@
                     },
                     {
                         "name": "DMX 5pin"
-                    }
-                ],
-                "dmxModes": [
-                    {
-                        "name": "Basic-show-batten",
-                        "channels": 18
-                    },
-                    {
-                        "name": "Pixel RGB-show-batten",
-                        "channels": 48
-                    },
-                    {
-                        "name": "Pixel RGBW-show-batten",
-                        "channels": 58
                     }
                 ],
                 "powerPlug": {
@@ -4334,6 +3296,7 @@
             },
             "details": {
                 "powerPassage": false,
+                "dmxModes": "1:32,2:26",
                 "outdoor": false,
                 "desc": "",
                 "connectors": [
@@ -4345,16 +3308,6 @@
                     },
                     {
                         "name": "DMX 5pin"
-                    }
-                ],
-                "dmxModes": [
-                    {
-                        "name": "1",
-                        "channels": 32
-                    },
-                    {
-                        "name": "2",
-                        "channels": 26
                     }
                 ],
                 "powerPlug": {
@@ -4376,6 +3329,7 @@
             },
             "details": {
                 "powerPassage": true,
+                "dmxModes": "standard-sinfonyaen:58,easy-sinfonyaen:50,white-sinfonyaen:43",
                 "outdoor": false,
                 "desc": "",
                 "connectors": [
@@ -4384,20 +3338,6 @@
                     },
                     {
                         "name": "DMX 5pin"
-                    }
-                ],
-                "dmxModes": [
-                    {
-                        "name": "standard-sinfonyaen",
-                        "channels": 58
-                    },
-                    {
-                        "name": "easy-sinfonyaen",
-                        "channels": 50
-                    },
-                    {
-                        "name": "white-sinfonyaen",
-                        "channels": 43
                     }
                 ],
                 "powerPlug": {
@@ -4419,6 +3359,7 @@
             },
             "details": {
                 "powerPassage": false,
+                "dmxModes": "1-3 Zones:49,2-Basic:27,3-Advance:33,4-FullRGBW:90,5-Wash:27,6-Pattern:47,7-PixelRGB:91,8-PixelRGBW:110,9-Pattern FullRGB:104,10-Pattern FullRGBW:123",
                 "outdoor": false,
                 "desc": "",
                 "connectors": [
@@ -4433,48 +3374,6 @@
                     },
                     {
                         "name": "DMX 5pin"
-                    }
-                ],
-                "dmxModes": [
-                    {
-                        "name": "1-3 Zones",
-                        "channels": 49
-                    },
-                    {
-                        "name": "2-Basic",
-                        "channels": 27
-                    },
-                    {
-                        "name": "3-Advance",
-                        "channels": 33
-                    },
-                    {
-                        "name": "4-FullRGBW",
-                        "channels": 90
-                    },
-                    {
-                        "name": "5-Wash",
-                        "channels": 27
-                    },
-                    {
-                        "name": "6-Pattern",
-                        "channels": 47
-                    },
-                    {
-                        "name": "7-PixelRGB",
-                        "channels": 91
-                    },
-                    {
-                        "name": "8-PixelRGBW",
-                        "channels": 110
-                    },
-                    {
-                        "name": "9-Pattern FullRGB",
-                        "channels": 104
-                    },
-                    {
-                        "name": "10-Pattern FullRGBW",
-                        "channels": 123
                     }
                 ],
                 "powerPlug": {
@@ -4496,21 +3395,12 @@
             },
             "details": {
                 "powerPassage": true,
+                "dmxModes": "1-Standard 16bit Spike:27,2-Reduced 8bit Spike:21",
                 "outdoor": false,
                 "desc": "",
                 "connectors": [
                     {
                         "name": "DMX 5pin"
-                    }
-                ],
-                "dmxModes": [
-                    {
-                        "name": "1-Standard 16bit Spike",
-                        "channels": 27
-                    },
-                    {
-                        "name": "2-Reduced 8bit Spike",
-                        "channels": 21
                     }
                 ],
                 "powerPlug": {
@@ -4536,6 +3426,7 @@
             },
             "details": {
                 "powerPassage": true,
+                "dmxModes": "1:25",
                 "outdoor": false,
                 "desc": "",
                 "connectors": [
@@ -4544,12 +3435,6 @@
                     },
                     {
                         "name": "DMX 5pin"
-                    }
-                ],
-                "dmxModes": [
-                    {
-                        "name": "1",
-                        "channels": 25
                     }
                 ],
                 "powerPlug": {
@@ -4571,29 +3456,12 @@
             },
             "details": {
                 "powerPassage": true,
+                "dmxModes": "1ch:1,2ch:2,5ch:5,10:10",
                 "outdoor": false,
                 "desc": "",
                 "connectors": [
                     {
                         "name": "DMX 3pin"
-                    }
-                ],
-                "dmxModes": [
-                    {
-                        "name": "1ch",
-                        "channels": 1
-                    },
-                    {
-                        "name": "2ch",
-                        "channels": 2
-                    },
-                    {
-                        "name": "5ch",
-                        "channels": 5
-                    },
-                    {
-                        "name": "10",
-                        "channels": 10
                     }
                 ],
                 "powerPlug": {
@@ -4615,6 +3483,7 @@
             },
             "details": {
                 "powerPassage": true,
+                "dmxModes": "Standard RGBW-tambora:13,Standard RGBW-16bit-tambora:17,Shape RGBW-tambora:27,Shape RGBW-16bit-tambora:35,Advanced-tambora:29,RGB-tambora:48,RGBW-tambora:64",
                 "outdoor": false,
                 "desc": "",
                 "connectors": [
@@ -4623,36 +3492,6 @@
                     },
                     {
                         "name": "DMX 5pin"
-                    }
-                ],
-                "dmxModes": [
-                    {
-                        "name": "Standard RGBW-tambora",
-                        "channels": 13
-                    },
-                    {
-                        "name": "Standard RGBW-16bit-tambora",
-                        "channels": 17
-                    },
-                    {
-                        "name": "Shape RGBW-tambora",
-                        "channels": 27
-                    },
-                    {
-                        "name": "Shape RGBW-16bit-tambora",
-                        "channels": 35
-                    },
-                    {
-                        "name": "Advanced-tambora",
-                        "channels": 29
-                    },
-                    {
-                        "name": "RGB-tambora",
-                        "channels": 48
-                    },
-                    {
-                        "name": "RGBW-tambora",
-                        "channels": 64
                     }
                 ],
                 "powerPlug": {
@@ -4674,6 +3513,7 @@
             },
             "details": {
                 "powerPassage": false,
+                "dmxModes": "1-Wash-tarr:28,2-Pattern-tarr:48,7-PixelRGB-tarr:146,4-PixelRGBW-tarr:183,5-Pattern FullRGB-tarr:159,6-Pattern FullRGBW-tarr:196",
                 "outdoor": false,
                 "desc": "",
                 "connectors": [
@@ -4688,32 +3528,6 @@
                     },
                     {
                         "name": "DMX 5pin"
-                    }
-                ],
-                "dmxModes": [
-                    {
-                        "name": "1-Wash-tarr",
-                        "channels": 28
-                    },
-                    {
-                        "name": "2-Pattern-tarr",
-                        "channels": 48
-                    },
-                    {
-                        "name": "7-PixelRGB-tarr",
-                        "channels": 146
-                    },
-                    {
-                        "name": "4-PixelRGBW-tarr",
-                        "channels": 183
-                    },
-                    {
-                        "name": "5-Pattern FullRGB-tarr",
-                        "channels": 159
-                    },
-                    {
-                        "name": "6-Pattern FullRGBW-tarr",
-                        "channels": 196
                     }
                 ],
                 "powerPlug": {
@@ -4739,6 +3553,7 @@
             },
             "details": {
                 "powerPassage": true,
+                "dmxModes": "1:24,2:45,3:59,4:68,5:72",
                 "outdoor": false,
                 "desc": "",
                 "connectors": [
@@ -4747,28 +3562,6 @@
                     },
                     {
                         "name": "DMX 5pin"
-                    }
-                ],
-                "dmxModes": [
-                    {
-                        "name": "1",
-                        "channels": 24
-                    },
-                    {
-                        "name": "2",
-                        "channels": 45
-                    },
-                    {
-                        "name": "3",
-                        "channels": 59
-                    },
-                    {
-                        "name": "4",
-                        "channels": 68
-                    },
-                    {
-                        "name": "5",
-                        "channels": 72
                     }
                 ],
                 "powerPlug": {
@@ -4794,6 +3587,7 @@
             },
             "details": {
                 "powerPassage": true,
+                "dmxModes": "1:34,2:56,3:97,4:115,5:110,6:128",
                 "outdoor": false,
                 "desc": "",
                 "connectors": [
@@ -4805,32 +3599,6 @@
                     },
                     {
                         "name": "DMX 5pin"
-                    }
-                ],
-                "dmxModes": [
-                    {
-                        "name": "1",
-                        "channels": 34
-                    },
-                    {
-                        "name": "2",
-                        "channels": 56
-                    },
-                    {
-                        "name": "3",
-                        "channels": 97
-                    },
-                    {
-                        "name": "4",
-                        "channels": 115
-                    },
-                    {
-                        "name": "5",
-                        "channels": 110
-                    },
-                    {
-                        "name": "6",
-                        "channels": 128
                     }
                 ],
                 "powerPlug": {
@@ -4856,6 +3624,7 @@
             },
             "details": {
                 "powerPassage": true,
+                "dmxModes": "1:41,2:61,3:75,4:84,5:88,6:97",
                 "outdoor": false,
                 "desc": "",
                 "connectors": [
@@ -4864,32 +3633,6 @@
                     },
                     {
                         "name": "DMX 5pin"
-                    }
-                ],
-                "dmxModes": [
-                    {
-                        "name": "1",
-                        "channels": 41
-                    },
-                    {
-                        "name": "2",
-                        "channels": 61
-                    },
-                    {
-                        "name": "3",
-                        "channels": 75
-                    },
-                    {
-                        "name": "4",
-                        "channels": 84
-                    },
-                    {
-                        "name": "5",
-                        "channels": 88
-                    },
-                    {
-                        "name": "6",
-                        "channels": 97
                     }
                 ],
                 "powerPlug": {
@@ -4918,6 +3661,7 @@
             },
             "details": {
                 "powerPassage": true,
+                "dmxModes": "",
                 "outdoor": true,
                 "desc": "Ves kurtyna 3.91x7.81",
                 "width": 1000,
@@ -4934,7 +3678,6 @@
                         "name": "RJ45OUT"
                     }
                 ],
-                "dmxModes": [],
                 "powerPlug": {
                     "name": "PowerCon TRUE1"
                 },
@@ -4959,10 +3702,10 @@
             },
             "details": {
                 "powerPassage": false,
+                "dmxModes": "",
                 "outdoor": false,
                 "desc": "",
                 "connectors": [],
-                "dmxModes": [],
                 "powerPlug": {
                     "name": "C13"
                 },
@@ -4982,6 +3725,7 @@
             },
             "details": {
                 "powerPassage": true,
+                "dmxModes": "standard-batten:16,shapes-batten:34,advanced-batten:33,RGB-batten:30,RGBW-batten:40",
                 "outdoor": true,
                 "desc": "",
                 "connectors": [
@@ -4996,28 +3740,6 @@
                     },
                     {
                         "name": "W-DMX"
-                    }
-                ],
-                "dmxModes": [
-                    {
-                        "name": "standard-batten",
-                        "channels": 16
-                    },
-                    {
-                        "name": "shapes-batten",
-                        "channels": 34
-                    },
-                    {
-                        "name": "advanced-batten",
-                        "channels": 33
-                    },
-                    {
-                        "name": "RGB-batten",
-                        "channels": 30
-                    },
-                    {
-                        "name": "RGBW-batten",
-                        "channels": 40
                     }
                 ],
                 "powerPlug": {
@@ -5039,6 +3761,7 @@
             },
             "details": {
                 "powerPassage": true,
+                "dmxModes": "standard-wave:23,shapes-wave:29,RGB-wave:24,RGBW-wave:32",
                 "outdoor": false,
                 "desc": "",
                 "connectors": [
@@ -5053,24 +3776,6 @@
                     },
                     {
                         "name": "DMX 5pin"
-                    }
-                ],
-                "dmxModes": [
-                    {
-                        "name": "standard-wave",
-                        "channels": 23
-                    },
-                    {
-                        "name": "shapes-wave",
-                        "channels": 29
-                    },
-                    {
-                        "name": "RGB-wave",
-                        "channels": 24
-                    },
-                    {
-                        "name": "RGBW-wave",
-                        "channels": 32
                     }
                 ],
                 "powerPlug": {
@@ -5092,6 +3797,7 @@
             },
             "details": {
                 "powerPassage": true,
+                "dmxModes": "Standard-lights:64,Reduced-noLights:6",
                 "outdoor": false,
                 "desc": "",
                 "connectors": [
@@ -5103,16 +3809,6 @@
                     },
                     {
                         "name": "DMX 5pin"
-                    }
-                ],
-                "dmxModes": [
-                    {
-                        "name": "Standard-lights",
-                        "channels": 64
-                    },
-                    {
-                        "name": "Reduced-noLights",
-                        "channels": 6
                     }
                 ],
                 "powerPlug": {
@@ -5141,6 +3837,7 @@
             },
             "details": {
                 "powerPassage": true,
+                "dmxModes": "std:12,gfhgfg:43",
                 "outdoor": true,
                 "desc": "",
                 "connectors": [
@@ -5149,16 +3846,6 @@
                     },
                     {
                         "name": "RJ45IN"
-                    }
-                ],
-                "dmxModes": [
-                    {
-                        "name": "std",
-                        "channels": 12
-                    },
-                    {
-                        "name": "gfhgfg",
-                        "channels": 43
                     }
                 ],
                 "powerPlug": {
@@ -5184,29 +3871,12 @@
             },
             "details": {
                 "powerPassage": true,
+                "dmxModes": "1:16,2:11,3:61,4:76",
                 "outdoor": true,
                 "desc": "",
                 "connectors": [
                     {
                         "name": "DMX 5pin"
-                    }
-                ],
-                "dmxModes": [
-                    {
-                        "name": "1",
-                        "channels": 16
-                    },
-                    {
-                        "name": "2",
-                        "channels": 11
-                    },
-                    {
-                        "name": "3",
-                        "channels": 61
-                    },
-                    {
-                        "name": "4",
-                        "channels": 76
                     }
                 ],
                 "powerPlug": {
@@ -5232,6 +3902,7 @@
             },
             "details": {
                 "powerPassage": true,
+                "dmxModes": "1:22,2:16,3:24",
                 "outdoor": true,
                 "desc": "",
                 "connectors": [
@@ -5240,20 +3911,6 @@
                     },
                     {
                         "name": "DMX 5pin"
-                    }
-                ],
-                "dmxModes": [
-                    {
-                        "name": "1",
-                        "channels": 22
-                    },
-                    {
-                        "name": "2",
-                        "channels": 16
-                    },
-                    {
-                        "name": "3",
-                        "channels": 24
                     }
                 ],
                 "powerPlug": {
@@ -5279,6 +3936,7 @@
             },
             "details": {
                 "powerPassage": false,
+                "dmxModes": "1:49,2:42,3:50,4:43,5:51",
                 "outdoor": true,
                 "desc": "",
                 "connectors": [
@@ -5290,28 +3948,6 @@
                     },
                     {
                         "name": "DMX 5pin"
-                    }
-                ],
-                "dmxModes": [
-                    {
-                        "name": "1",
-                        "channels": 49
-                    },
-                    {
-                        "name": "2",
-                        "channels": 42
-                    },
-                    {
-                        "name": "3",
-                        "channels": 50
-                    },
-                    {
-                        "name": "4",
-                        "channels": 43
-                    },
-                    {
-                        "name": "5",
-                        "channels": 51
                     }
                 ],
                 "powerPlug": {
@@ -5337,6 +3973,7 @@
             },
             "details": {
                 "powerPassage": false,
+                "dmxModes": "Mode1:54,Mode2:56",
                 "outdoor": true,
                 "desc": "",
                 "connectors": [
@@ -5348,16 +3985,6 @@
                     },
                     {
                         "name": "DMX 5pin"
-                    }
-                ],
-                "dmxModes": [
-                    {
-                        "name": "Mode1",
-                        "channels": 54
-                    },
-                    {
-                        "name": "Mode2",
-                        "channels": 56
                     }
                 ],
                 "powerPlug": {
@@ -5383,6 +4010,7 @@
             },
             "details": {
                 "powerPassage": false,
+                "dmxModes": "Mode1:54,Mode2:56",
                 "outdoor": true,
                 "desc": "",
                 "connectors": [
@@ -5394,16 +4022,6 @@
                     },
                     {
                         "name": "DMX 5pin"
-                    }
-                ],
-                "dmxModes": [
-                    {
-                        "name": "Mode1",
-                        "channels": 54
-                    },
-                    {
-                        "name": "Mode2",
-                        "channels": 56
                     }
                 ],
                 "powerPlug": {
@@ -5429,21 +4047,12 @@
             },
             "details": {
                 "powerPassage": true,
+                "dmxModes": "1:44,2:45",
                 "outdoor": true,
                 "desc": "",
                 "connectors": [
                     {
                         "name": "DMX 5pin"
-                    }
-                ],
-                "dmxModes": [
-                    {
-                        "name": "1",
-                        "channels": 44
-                    },
-                    {
-                        "name": "2",
-                        "channels": 45
                     }
                 ],
                 "powerPlug": {
@@ -5465,6 +4074,7 @@
             },
             "details": {
                 "powerPassage": false,
+                "dmxModes": "1-ipointe:39,2-ipointe:34",
                 "outdoor": true,
                 "desc": "",
                 "connectors": [
@@ -5479,16 +4089,6 @@
                     },
                     {
                         "name": "CRMX"
-                    }
-                ],
-                "dmxModes": [
-                    {
-                        "name": "1-ipointe",
-                        "channels": 39
-                    },
-                    {
-                        "name": "2-ipointe",
-                        "channels": 34
                     }
                 ],
                 "powerPlug": {
@@ -5514,6 +4114,7 @@
             },
             "details": {
                 "powerPassage": false,
+                "dmxModes": "1:49,2:27,3:33,4:90,5:27,6:47,7:91,8:110,9:104,10:123",
                 "outdoor": true,
                 "desc": "",
                 "connectors": [
@@ -5525,48 +4126,6 @@
                     },
                     {
                         "name": "DMX 5pin"
-                    }
-                ],
-                "dmxModes": [
-                    {
-                        "name": "1",
-                        "channels": 49
-                    },
-                    {
-                        "name": "2",
-                        "channels": 27
-                    },
-                    {
-                        "name": "3",
-                        "channels": 33
-                    },
-                    {
-                        "name": "4",
-                        "channels": 90
-                    },
-                    {
-                        "name": "5",
-                        "channels": 27
-                    },
-                    {
-                        "name": "6",
-                        "channels": 47
-                    },
-                    {
-                        "name": "7",
-                        "channels": 91
-                    },
-                    {
-                        "name": "8",
-                        "channels": 110
-                    },
-                    {
-                        "name": "9",
-                        "channels": 104
-                    },
-                    {
-                        "name": "10",
-                        "channels": 123
                     }
                 ],
                 "powerPlug": {
@@ -5592,6 +4151,7 @@
             },
             "details": {
                 "powerPassage": true,
+                "dmxModes": "1:34,2:56,3:97,4:115,5:110,6:128",
                 "outdoor": true,
                 "desc": "",
                 "connectors": [
@@ -5600,32 +4160,6 @@
                     },
                     {
                         "name": "DMX 5pin"
-                    }
-                ],
-                "dmxModes": [
-                    {
-                        "name": "1",
-                        "channels": 34
-                    },
-                    {
-                        "name": "2",
-                        "channels": 56
-                    },
-                    {
-                        "name": "3",
-                        "channels": 97
-                    },
-                    {
-                        "name": "4",
-                        "channels": 115
-                    },
-                    {
-                        "name": "5",
-                        "channels": 110
-                    },
-                    {
-                        "name": "6",
-                        "channels": 128
                     }
                 ],
                 "powerPlug": {
@@ -5647,25 +4181,12 @@
             },
             "details": {
                 "powerPassage": true,
+                "dmxModes": "1-minip:22,2-minip:17,3-minip:27",
                 "outdoor": false,
                 "desc": "",
                 "connectors": [
                     {
                         "name": "DMX 5pin"
-                    }
-                ],
-                "dmxModes": [
-                    {
-                        "name": "1-minip",
-                        "channels": 22
-                    },
-                    {
-                        "name": "2-minip",
-                        "channels": 17
-                    },
-                    {
-                        "name": "3-minip",
-                        "channels": 27
                     }
                 ],
                 "powerPlug": {

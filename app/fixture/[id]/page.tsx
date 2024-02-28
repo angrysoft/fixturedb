@@ -14,7 +14,7 @@ export interface FixtureObjectDetails extends FixtureObject {
   details: {
     powerPassage: boolean;
     connectors: Array<Connectors>;
-    dmxModes: Array<DmxMode>;
+    dmxModes: string;
     powerPlug: {
       id: number;
       name: string;

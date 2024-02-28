@@ -19,7 +19,6 @@ export async function GET(
       details: {
         include: {
           connectors: true,
-          dmxModes: true,
           powerPlug: true,
           links: true,
         },
@@ -92,7 +91,6 @@ async function updateFixture(fixtureObj: { [key: string]: any }, id: number) {
         details: {
           include: {
             connectors: true,
-            dmxModes: true,
             powerPlug: true,
             links: true,
           },
@@ -241,30 +239,14 @@ async function updateFixture(fixtureObj: { [key: string]: any }, id: number) {
         }
 
         case "dmxModes": {
-          const dmxModes =
-            fixtureObj.dmxModes
-              ?.split(",")
-              .filter((d: any) => d.length >= 3)
-              ?.map((dmx: string) => {
-                const [name, channel] = dmx.split(":");
-                return {
-                  where: {
-                    name_fixtureDetailsId: {
-                      name: name,
-                      fixtureDetailsId: oldFixture.details.id,
-                    },
-                  },
-                  create: {
-                    name: name,
-                    channels: Number(channel),
-                  },
-                };
-              }) || [];
-          insertInclude("dmxModes", detailsQuery);
-          detailsQuery.data.dmxModes = {
-            set: [],
-            connectOrCreate: dmxModes,
-          };
+          console.log("wtf:  ", oldFixture, fixtureObj.dmxModes);
+          updateField(
+            oldFixture?.dmxModes,
+            fixtureObj.dmxModes,
+            "dmxModes",
+            fixtureQuery,
+            false,
+          );
           break;
         }
 

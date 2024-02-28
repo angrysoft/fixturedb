@@ -39,10 +39,10 @@ const LightForm: React.FC<ILightFormProps> = (props: ILightFormProps) => {
       <InputGroup>
         <DmxModes
           listItems={[]}
-          value={props.data?.details.dmxModes.map(
-            (mode: { id: number; name: string; channels: number }) =>
-              `${mode.name}:${mode.channels}`,
-          )}
+          value={props.data?.details.dmxModes.split(",").map((mode: string) => {
+            const [name, channels] = mode.split(":");
+            return `${name}:${channels}`;
+          })}
         />
       </InputGroup>
 
