@@ -44,7 +44,7 @@ model FixtureDetails {
     powerPlugId  Int?
     outdoor      Boolean     @default(false)
     links        Link[]
-    desc         String      //@db.VarChar(320)
+    desc         String //@db.VarChar(320)
     width        Int?
     height       Int?
     thickness    Int?
@@ -67,6 +67,7 @@ model DmxMode {
     channels         Int
     fixtureDetails   FixtureDetails @relation(fields: [fixtureDetailsId], references: [id], onDelete: Cascade, onUpdate: Cascade)
     fixtureDetailsId Int
+
     @@unique([name, fixtureDetailsId])
 }
 
