@@ -30,7 +30,7 @@ ENV NODE_ENV production
 RUN adduser --system --group http
 RUN mkdir .next
 RUN chown http:http .next
-VOLUME /fixturedb-data
+# VOLUME /fixturedb-data
 
 COPY --from=builder --chown=http:http /app/prisma ./prisma
 COPY --from=builder --chown=http:http /app/app.sh ./app.sh
@@ -47,11 +47,11 @@ EXPOSE 3000
 
 ENV PORT 3000
 ENV HOSTNAME "0.0.0.0"
-ENV DATABASE_URL=""
-ENV GOOGLE_CLIENT_ID=""
-ENV GOOGLE_CLIENT_SECRET=""
-ENV NEXTAUTH_SECRET=""
-ENV NEXTAUTH_URL=""
+# ENV DATABASE_URL=""
+# ENV GOOGLE_CLIENT_ID=""
+# ENV GOOGLE_CLIENT_SECRET=""
+# ENV NEXTAUTH_SECRET=""
+# ENV NEXTAUTH_URL=""
 
 CMD ["./app.sh"]
 # CMD ["node", "server.js"]
