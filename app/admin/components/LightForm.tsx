@@ -18,13 +18,13 @@ const LightForm: React.FC<ILightFormProps> = (props: ILightFormProps) => {
         <CheckBox
           id="powerPassage"
           label="Power Passage"
-          checked={props.data.details.powerPassage}
+          checked={props.data?.details.powerPassage || false}
         />
         <MultiAdd
           label="Connectors"
           id="connectors"
           listItems={props.hints?.data.connectors || []}
-          value={props.data.details.connectors?.map(
+          value={props.data?.details.connectors?.map(
             (con: { id: number; name: string }) => con.name,
           )}
         />
@@ -33,13 +33,13 @@ const LightForm: React.FC<ILightFormProps> = (props: ILightFormProps) => {
           label="Power Plug"
           listItems={props.hints?.data.plugs || []}
           required
-          value={props.data.details.powerPlug.name}
+          value={props.data?.details.powerPlug.name}
         />
       </InputGroup>
       <InputGroup>
         <DmxModes
           listItems={[]}
-          value={props.data.details.dmxModes.map(
+          value={props.data?.details.dmxModes.map(
             (mode: { id: number; name: string; channels: number }) =>
               `${mode.name}:${mode.channels}`,
           )}
@@ -50,7 +50,7 @@ const LightForm: React.FC<ILightFormProps> = (props: ILightFormProps) => {
         <CheckBox
           id="outdoor"
           label="Outdoor"
-          checked={props.data.details.outdoor}
+          checked={props.data?.details.outdoor}
         />
       </InputGroup>
     </>

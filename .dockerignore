@@ -5,6 +5,6 @@ npm-debug.log
 README.md
 .next
 .git
-.env.local
+.env*
 .env.production
 export.json
