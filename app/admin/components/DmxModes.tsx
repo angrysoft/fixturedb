@@ -38,7 +38,7 @@ const DmxModes: React.FC<IDmxModesProps> = (props: IDmxModesProps) => {
   };
 
   useEffect(() => {
-    setItems(props.value || []);
+    setItems(props.value ?? []);
   }, [props.value]);
 
   const handleDelClick = (item: string) => {
