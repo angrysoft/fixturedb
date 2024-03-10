@@ -239,14 +239,15 @@ async function updateFixture(fixtureObj: { [key: string]: any }, id: number) {
         }
 
         case "dmxModes": {
-          console.log("wtf:  ", oldFixture, fixtureObj.dmxModes);
-          updateField(
-            oldFixture?.dmxModes,
-            fixtureObj.dmxModes,
-            "dmxModes",
-            fixtureQuery,
-            false,
-          );
+          // updateField(
+          //   oldFixture?.dmxModes,
+          //   fixtureObj.dmxModes,
+          //   "dmxModes",
+          //   detailsQuery,
+          //   false,
+          // );
+          if (oldFixture.dmxModes !== fixtureObj.dmxModes)
+            detailsQuery.data.dmxModes = fixtureObj.dmxModes;
           break;
         }
 
