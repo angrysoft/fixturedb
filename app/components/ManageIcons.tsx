@@ -5,7 +5,7 @@ import React from "react";
 
 const ManageIcons: React.FC<{fixture:number}> = ({fixture}: {fixture: number}) => {
   return (
-    <div className="grid gap-1 grid-flow-col items-center justify-end ">
+    <div className="grid gap-1 sm:grid-flow-col items-center justify-end ">
       <Link className="border border-primary p-05 rounded" href={`/admin/edit/${fixture}`}>
         <svg
           xmlns="http://www.w3.org/2000/svg"

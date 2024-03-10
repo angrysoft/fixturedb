@@ -14,8 +14,8 @@ const Home: React.FC<IHomeProps> = (props: IHomeProps) => {
   return (
     <SessionProvider>
       <div
-        className="md:container md:mx-auto 
-                   md:border-x-surface md:border-x-2
+        className="sm:container sm:mx-auto 
+                   sm:border-x-surface sm:border-x-2
                      grid grid-rows-[auto_auto_1fr]
                     bg-background h-screen relative"
       >

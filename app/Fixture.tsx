@@ -9,7 +9,7 @@ interface IFixtureProps {
 
 const Fixture: React.FC<IFixtureProps> = (props: IFixtureProps) => {
   return (
-    <div className="grid grid-flow-col bg-surface rounded-lg p-2">
+    <div className="grid grid-flow-col gap-1 bg-surface rounded-lg p-2">
       <Link
         className="grid gap-1 text-onSurface"
         href={"/fixture/" + props.data.id}
