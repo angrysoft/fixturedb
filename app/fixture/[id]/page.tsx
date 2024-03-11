@@ -20,7 +20,7 @@ export interface FixtureObjectDetails extends FixtureObject {
       name: string;
     } | null;
     outdoor: boolean;
-    links: Links[];
+    links: string;
     desc: string;
     width: number | null;
     height: number | null;
