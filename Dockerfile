@@ -6,8 +6,6 @@ RUN apt-get update -y && apt-get install -y openssl
 COPY package.json .
 COPY package-lock.json .
 RUN npm ci
-RUN npm i ts-node
-
 
 FROM deps AS builder
 WORKDIR /app
@@ -30,9 +28,6 @@ RUN npm i sharp
 RUN npm i prisma
 
 COPY --from=builder --chown=http:http /app/prisma/schema.prisma ./prisma/schema.prisma
-COPY --from=builder --chown=http:http /app/prisma/migrations ./prisma/migrations
-COPY --from=builder --chown=http:http /app/app.sh ./app.sh
-RUN chmod +x /app/app.sh
 COPY --from=builder --chown=http:http /app/script.js ./script.js
 COPY --from=builder --chown=http:http /app/public ./public
 COPY --from=builder --chown=http:http /app/next.config.js ./
@@ -40,9 +35,10 @@ COPY --from=builder --chown=http:http /app/.next/standalone ./
 COPY --from=builder --chown=http:http /app/.next/static ./.next/static
 RUN ln -sf /data/.env.production ./.env.production
 
+USER http
 EXPOSE 3000
 ENV DATABASE_URL="file:/data/fixture.db"
 ENV PORT 3000
 ENV HOSTNAME "0.0.0.0"
 
-CMD ["./app.sh"]
+CMD ["node", "server.js"]
