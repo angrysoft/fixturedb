@@ -23,9 +23,9 @@ ENV NODE_ENV production
 RUN adduser --system --group http
 RUN mkdir .next
 RUN chown http:http .next
-RUN mkdir ./prisma
+# RUN mkdir ./prisma
 RUN npm i sharp
-RUN npm i prisma
+RUN npm i prismaa
 
 COPY --from=builder --chown=http:http /app/prisma/schema.prisma ./prisma/schema.prisma
 COPY --from=builder --chown=http:http /app/script.js ./script.js
