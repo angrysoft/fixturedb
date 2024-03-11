@@ -35,6 +35,7 @@ COPY --from=builder --chown=http:http /app/next.config.js ./
 COPY --from=builder --chown=http:http /app/.next/standalone ./
 COPY --from=builder --chown=http:http /app/.next/static ./.next/static
 RUN ln -sf /data/.env.production ./.env.production
+RUN chown -R http:http .
 
 USER http
 EXPOSE 3000
