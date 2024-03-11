@@ -22,10 +22,11 @@ RUN apt-get update -y && apt-get install -y openssl sudo
 ENV NODE_ENV production
 RUN adduser --system --group http
 RUN mkdir .next
-RUN chown http:http .next
-# RUN mkdir ./prisma
+RUN chown -R http:http .next
+RUN mkdir ./prisma
+RUN chown -R http:http prisma
 RUN npm i sharp
-RUN npm i prismaa
+RUN npm i prisma
 
 COPY --from=builder --chown=http:http /app/prisma/schema.prisma ./prisma/schema.prisma
 COPY --from=builder --chown=http:http /app/script.js ./script.js
