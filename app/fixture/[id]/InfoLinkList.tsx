@@ -2,7 +2,7 @@ import Link from "next/link";
 import React from "react";
 
 interface IInfoFileListProps {
-  links: Array<{ id: number; name: string; url: string }>;
+  links: string;
 }
 
 const InfoLinkList: React.FC<IInfoFileListProps> = (
@@ -10,11 +10,13 @@ const InfoLinkList: React.FC<IInfoFileListProps> = (
 ) => {
   if (props.links.length === 0) return <></>;
 
-  const items = props.links.map((file) => {
+  const items = props.links?.split(",").map((el: string) => {
+    const [name, url] = el.split("=>");
+    if (!name || !url) return;
     return (
-      <div key={file.id} className="py-05 pl-1">
-        <Link className="text-primary" href={file.url}>
-          <span className="font-bold">{file.name} </span>
+      <div key={url} className="py-05 pl-1">
+        <Link className="text-primary" href={url}>
+          <span className="font-bold">{name} </span>
         </Link>
       </div>
     );

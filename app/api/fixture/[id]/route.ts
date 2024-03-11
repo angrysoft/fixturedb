@@ -3,6 +3,7 @@ import { prisma } from "../../prisma";
 import { getServerSession } from "next-auth";
 import { authOptions } from "../../../lib/auth";
 import { Prisma } from "@prisma/client";
+import { getConOrCreateFromString } from "../utils";
 
 export async function GET(
   request: Request,
@@ -20,7 +21,6 @@ export async function GET(
         include: {
           connectors: true,
           powerPlug: true,
-          links: true,
         },
       },
     },
@@ -32,7 +32,8 @@ export async function GET(
     data: data,
   };
   if (data == null) {
-    (result.status = "fail"), (result.message = "Not found");
+    result.status = "fail";
+    result.message = "Not found";
   }
   return NextResponse.json(result);
 }
@@ -70,216 +71,41 @@ export async function PUT(
   if (!data) {
     return;
   }
+  await updateFixture(data, Number(params.id));
 
-  const fixture: any = await updateFixture(data, Number(params.id));
   return NextResponse.json({
     data: { updated: params.id },
     status: "success",
   });
 }
 
-async function updateFixture(fixtureObj: { [key: string]: any }, id: number) {
+async function updateFixture(
+  fixtureObj: { [key: string]: any },
+  fixtureId: number,
+) {
+  const oldFixture: any = await getOldFixture(fixtureId);
+  console.log(oldFixture);
+  let fixtureQuery: any = {
+    where: {
+      id: fixtureId,
+    },
+    data: {},
+  };
+
+  let detailsQuery: any = {
+    where: {
+      id: oldFixture.details.id,
+    },
+    data: {},
+  };
+
+  parseFixtureData(fixtureObj, oldFixture, fixtureQuery, detailsQuery);
+
+  console.log("MAIN");
+  console.log(JSON.stringify(fixtureQuery, null, 2));
+  console.log("DETAILS");
+  console.log(JSON.stringify(detailsQuery, null, 2));
   try {
-    const oldFixture: any = await prisma.fixture.findUnique({
-      where: {
-        id: id,
-      },
-      include: {
-        tags: true,
-        fixtureType: true,
-        manufacture: true,
-        details: {
-          include: {
-            connectors: true,
-            powerPlug: true,
-            links: true,
-          },
-        },
-      },
-    });
-
-    let fixtureQuery: any = {
-      where: {
-        id: id,
-      },
-      data: {},
-    };
-
-    let detailsQuery: any = {
-      where: {
-        id: oldFixture.details.id,
-      },
-      data: {},
-    };
-
-    for (const [key, val] of Object.entries(fixtureObj)) {
-      switch (key) {
-        case "manufacture":
-          if (oldFixture?.manufacture.name !== fixtureObj.manufacture) {
-            insertInclude("manufacture", fixtureQuery);
-            fixtureQuery.data.manufacture = {
-              connectOrCreate: {
-                where: { name: fixtureObj.manufacture },
-                create: { name: fixtureObj.manufacture },
-              },
-            };
-          }
-          break;
-
-        case "model":
-          updateField(
-            oldFixture?.model,
-            fixtureObj.model,
-            "model",
-            fixtureQuery,
-            false,
-          );
-          break;
-
-        case "weight":
-        case "power":
-          if (oldFixture[key])
-            updateField(oldFixture[key], Number(val), key, fixtureQuery, false);
-          break;
-
-        case "tags": {
-          insertInclude("tags", fixtureQuery);
-
-          const tags =
-            fixtureObj.tags
-              ?.split(",")
-              .filter((t: any) => t.length !== 0)
-              ?.map((tag: string) => {
-                return {
-                  where: {
-                    name: tag,
-                  },
-                  create: {
-                    name: tag,
-                  },
-                };
-              }) || [];
-          fixtureQuery.data.tags = {
-            set: [],
-            connectOrCreate: tags,
-          };
-
-          break;
-        }
-
-        case "fixtureType":
-          if (oldFixture?.fixtureType.name !== fixtureObj.fixtureType) {
-            insertInclude("fixtureType", fixtureQuery);
-            fixtureQuery.data.fixtureType = {
-              connectOrCreate: {
-                where: {
-                  name: fixtureObj.fixtureType,
-                },
-                create: {
-                  name: fixtureObj.fixtureType,
-                },
-              },
-            };
-          }
-          break;
-
-        // details
-        case "powerPassage":
-        case "outdoor": {
-          const oldVal = oldFixture.details[key];
-          const newVal = Boolean(val);
-          if (newVal !== oldVal) {
-            detailsQuery.data[key] = newVal;
-          }
-          break;
-        }
-
-        case "connectors": {
-          const connectors =
-            fixtureObj.connectors
-              ?.split(",")
-              .filter((c: any) => c.length !== 0)
-              .map((conn: string) => {
-                return {
-                  where: {
-                    name: conn,
-                  },
-                  create: {
-                    name: conn,
-                  },
-                };
-              }) || [];
-          insertInclude("connectors", detailsQuery);
-          detailsQuery.data.connectors = {
-            set: [],
-            connectOrCreate: connectors,
-          };
-          break;
-        }
-
-        case "powerPlug": {
-          const oldVal = oldFixture.details[key];
-          if (
-            (oldVal.name !== null || oldVal.name !== undefined) &&
-            oldVal.name !== val
-          ) {
-            insertInclude("powerPlug", detailsQuery);
-            detailsQuery.data.powerPlug = {
-              connectOrCreate: {
-                where: {
-                  name: val,
-                },
-                create: {
-                  name: val,
-                },
-              },
-            };
-          }
-          break;
-        }
-
-        case "dmxModes": {
-          // updateField(
-          //   oldFixture?.dmxModes,
-          //   fixtureObj.dmxModes,
-          //   "dmxModes",
-          //   detailsQuery,
-          //   false,
-          // );
-          if (oldFixture.dmxModes !== fixtureObj.dmxModes)
-            detailsQuery.data.dmxModes = fixtureObj.dmxModes;
-          break;
-        }
-
-        case "width":
-        case "height":
-        case "thickness":
-        case "resolutionH":
-        case "resolutionV":
-        case "pixel": {
-          const oldVal = oldFixture.details[key];
-          const newVal = Number(val);
-          if (oldVal !== newVal) {
-            detailsQuery.data[key] = newVal;
-          }
-          break;
-        }
-
-        case "desc": {
-          const oldVal = oldFixture.details[key];
-          const newVal = val.substring(0, 319);
-          if (oldVal !== newVal) {
-            detailsQuery.data.desc = newVal;
-          }
-          break;
-        }
-      }
-    }
-
-    console.log("MAIN");
-    console.log(JSON.stringify(fixtureQuery, null, 2));
-    console.log("DETAILS");
-    console.log(JSON.stringify(detailsQuery, null, 2));
     const newFixture = await prisma.fixture.update(fixtureQuery);
     const newDetails = await prisma.fixtureDetails.update(detailsQuery);
     return { ...newFixture, ...{ details: newDetails } };
@@ -290,7 +116,7 @@ async function updateFixture(fixtureObj: { [key: string]: any }, id: number) {
         console.log("There is a unique constraint violation");
       }
     } else if (e instanceof Prisma.PrismaClientUnknownRequestError) {
-      await updateFixture(fixtureObj, id);
+      await updateFixture(fixtureObj, fixtureId);
     } else {
       throw e;
     }
@@ -314,14 +140,169 @@ const insertInclude = (name: string, query: any) => {
   query.include[name] = true;
 };
 
-const compareValues = (oldVal: any, newVal: any) => {
+const isDifferent = (oldVal: any, newVal: any) => {
   if ((oldVal !== null || oldVal !== undefined) && oldVal !== newVal) {
     return true;
   }
   return false;
 };
 
-const compareValueArray = (oldVal: any, newVal: any) => {
-  if (oldVal.length !== newVal.length) return false;
-  return false;
+const getOldFixture = async (fixtureId: number) => {
+  return await prisma.fixture.findUnique({
+    where: {
+      id: fixtureId,
+    },
+    include: {
+      tags: true,
+      fixtureType: true,
+      manufacture: true,
+      details: {
+        include: {
+          connectors: true,
+          powerPlug: true,
+        },
+      },
+    },
+  });
+};
+
+const parseFixtureData = (
+  fixtureObj: { [key: string]: any },
+  oldFixture: any,
+  fixtureQuery: any,
+  detailsQuery: any,
+) => {
+  for (const [key, val] of Object.entries(fixtureObj)) {
+    switch (key) {
+      case "manufacture":
+        if (oldFixture?.manufacture.name !== fixtureObj.manufacture) {
+          insertInclude("manufacture", fixtureQuery);
+          fixtureQuery.data.manufacture = {
+            connectOrCreate: {
+              where: { name: fixtureObj.manufacture },
+              create: { name: fixtureObj.manufacture },
+            },
+          };
+        }
+        break;
+
+      case "model":
+        updateField(
+          oldFixture?.model,
+          fixtureObj.model,
+          "model",
+          fixtureQuery,
+          false,
+        );
+        break;
+
+      case "weight":
+      case "power":
+        if (oldFixture[key])
+          updateField(oldFixture[key], Number(val), key, fixtureQuery, false);
+        break;
+
+      case "tags": {
+        insertInclude("tags", fixtureQuery);
+        fixtureQuery.data.tags = {
+          set: [],
+          connectOrCreate: getConOrCreateFromString(fixtureObj.tags),
+        };
+
+        break;
+      }
+
+      case "fixtureType":
+        if (oldFixture?.fixtureType.name !== fixtureObj.fixtureType) {
+          insertInclude("fixtureType", fixtureQuery);
+          fixtureQuery.data.fixtureType = {
+            connectOrCreate: {
+              where: {
+                name: fixtureObj.fixtureType,
+              },
+              create: {
+                name: fixtureObj.fixtureType,
+              },
+            },
+          };
+        }
+        break;
+
+      // details
+      case "powerPassage":
+      case "outdoor": {
+        const oldVal = oldFixture.details[key];
+        const newVal = Boolean(val);
+        if (newVal !== oldVal) {
+          detailsQuery.data[key] = newVal;
+        }
+        break;
+      }
+
+      case "connectors": {
+        insertInclude("connectors", detailsQuery);
+        detailsQuery.data.connectors = {
+          set: [],
+          connectOrCreate: getConOrCreateFromString(fixtureObj.connectors),
+        };
+        break;
+      }
+
+      case "powerPlug": {
+        const oldVal = oldFixture.details[key];
+        if (
+          (oldVal.name !== null || oldVal.name !== undefined) &&
+          oldVal.name !== val
+        ) {
+          insertInclude("powerPlug", detailsQuery);
+          detailsQuery.data.powerPlug = {
+            connectOrCreate: {
+              where: {
+                name: val,
+              },
+              create: {
+                name: val,
+              },
+            },
+          };
+        }
+        break;
+      }
+
+      case "dmxModes": {
+        if (oldFixture.dmxModes !== fixtureObj.dmxModes)
+          detailsQuery.data.dmxModes = fixtureObj.dmxModes;
+        break;
+      }
+
+      case "width":
+      case "height":
+      case "thickness":
+      case "resolutionH":
+      case "resolutionV":
+      case "pixel": {
+        const oldVal = oldFixture.details[key];
+        const newVal = Number(val);
+        if (oldVal !== newVal) {
+          detailsQuery.data[key] = newVal;
+        }
+        break;
+      }
+
+      case "desc": {
+        const oldVal = oldFixture.details[key];
+        const newVal = val.substring(0, 319);
+        if (oldVal !== newVal) {
+          detailsQuery.data.desc = newVal;
+        }
+        break;
+      }
+
+      case "links": {
+        if (oldFixture.links !== fixtureObj.links)
+          detailsQuery.data.links = fixtureObj.links;
+        break;
+      }
+    }
+  }
 };

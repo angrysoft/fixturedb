@@ -5,6 +5,7 @@ import { InputDatalist } from "./Datalist";
 import { DmxModes } from "./DmxModes";
 import { InputGroup } from "./InputGroup";
 import { MultiAdd } from "./MultiAdd";
+import { Links } from "./Links";
 
 interface ILightFormProps {
   hints?: IHintsResponse;
@@ -15,11 +16,6 @@ const LightForm: React.FC<ILightFormProps> = (props: ILightFormProps) => {
   return (
     <>
       <InputGroup>
-        <CheckBox
-          id="powerPassage"
-          label="Power Passage"
-          checked={props.data?.details.powerPassage || false}
-        />
         <MultiAdd
           label="Connectors"
           id="connectors"
@@ -27,6 +23,11 @@ const LightForm: React.FC<ILightFormProps> = (props: ILightFormProps) => {
           value={props.data?.details.connectors?.map(
             (con: { id: number; name: string }) => con.name,
           )}
+        />
+        <CheckBox
+          id="powerPassage"
+          label="Power Passage"
+          checked={props.data?.details.powerPassage || false}
         />
         <InputDatalist
           id="powerPlug"
@@ -52,6 +53,9 @@ const LightForm: React.FC<ILightFormProps> = (props: ILightFormProps) => {
           label="Outdoor"
           checked={props.data?.details.outdoor}
         />
+      </InputGroup>
+      <InputGroup>
+        <Links value={props.data?.details.links?.split(",")} />
       </InputGroup>
     </>
   );

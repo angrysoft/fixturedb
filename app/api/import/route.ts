@@ -19,7 +19,7 @@ interface fixtureObjType {
     dmxModes: string;
     powerPlug: { name: string };
     outdoor: boolean;
-    links?: Array<{ name: string; url: string }>;
+    links?: string;
     width?: number;
     height?: number;
     thickness?: number;
@@ -145,9 +145,7 @@ async function importFixture(fixtureObj: fixtureObjType): Promise<any> {
               },
             },
             outdoor: fixtureObj.details.outdoor || false,
-            links: {
-              create: fixtureObj.details.links || [],
-            },
+            links: fixtureObj.details?.links ?? "",
             desc: fixtureObj.details.desc || "",
             width: fixtureObj.details.width,
             height: fixtureObj.details.height,

@@ -22,7 +22,7 @@ interface fixtureObjType {
     powerPlug: { id: number; name: string };
     powerPlugId: number;
     outdoor: boolean;
-    links: Array<{ id: number; name: string; url: string }>;
+    links: string;
   };
 }
 
@@ -36,7 +36,6 @@ export async function GET(request: Request) {
         include: {
           connectors: true,
           powerPlug: true,
-          links: true,
         },
       },
     },
@@ -75,11 +74,6 @@ export async function GET(request: Request) {
 
     newEl?.tags.forEach((el: any) => {
       delete el.id;
-    });
-
-    newEl?.details?.links.forEach((el: any) => {
-      delete el.id;
-      delete el.fixtureDetailsId;
     });
 
     delete newEl.details.powerPlug.id;

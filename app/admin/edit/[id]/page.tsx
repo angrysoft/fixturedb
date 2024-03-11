@@ -63,7 +63,7 @@ const EditFixture: React.FC<IEditFixtureProps> = (props: IEditFixtureProps) => {
     const jsonData = Object.fromEntries(data.entries());
     const ret = await sendData(JSON.stringify(jsonData));
     console.log(ret);
-    if (ret.status === "success") {
+    if (ret && ret.status === "success") {
       router.push(`/fixture/${ret.data.updated}`);
     }
   };

@@ -1,4 +1,4 @@
-FROM node:lts-slim as base
+FROM node:lts-slim AS base
 
 FROM base AS deps
 WORKDIR /app
